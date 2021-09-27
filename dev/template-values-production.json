@@ -1,0 +1,36 @@
+{
+  "repository": {
+    "name": "sanity-kitchen-sink",
+    "owner": "sanity-io",
+    "private": false
+  },
+  "sanity": {
+    "dataset": "production",
+    "projectId": "rwmuledy",
+    "projectTitle": "Kitchen Sink Studio"
+  },
+  "user": {
+    "profileImage": "https://lh3.googleusercontent.com/a-/AOh14GhJCeBX3cTHXh01wgVDHIp91NbnD5Ob0r9CZYCt",
+    "displayName": "Rune Botten",
+    "email": "rune@sanity.io"
+  },
+  "userInput": {},
+  "deployments": {
+    "studio": {
+      "url": "https://sanity-kitchen-studio.netlify.com",
+      "providerName": "netlify",
+      "providerInfo": {
+        "buildHookId": "5f3ea06cd5973b0101a7a0a0",
+        "siteId": "f64b11cb-9e15-4715-a7fc-891ae4aff598"
+      }
+    },
+    "web": {
+      "url": "https://sanity-template-kitchen-sink-web.netlify.app",
+      "providerName": "netlify",
+      "providerInfo": {
+        "buildHookId": "5f3ea005b1f979de9169dfac",
+        "siteId": "b3bdc365-4bf7-42c4-8e22-0f49466de5a8"
+      }
+    }
+  }
+}

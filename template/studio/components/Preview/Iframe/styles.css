@@ -1,0 +1,63 @@
+.componentWrapper {
+  height: 100%;
+}
+
+.componentWrapper p {
+  padding: 1em;
+}
+
+.iframeContainer {
+  position: relative;
+  height: 100%;
+}
+
+.iframeContainer iframe {
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+
+.spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.spinner > div > div > span {
+  width: 2em;
+  height: 2em;
+}
+
+.loadingMessage {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 50%;
+  padding-top: 4em;
+  text-align: center;
+}
+
+.fullscreen {
+  z-index: 100;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  display: block;
+  padding: 2px;
+  font-size: 0;
+  background: rgba(255, 255, 255, 0.8);
+  color: rgba(48, 48, 48, 0.5);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.fullscreen:focus,
+.fullscreen:hover {
+  background: rgba(255, 255, 255, 1);
+  color: rgba(48, 48, 48, 1);
+}
+
+.fullscreen svg {
+  width: 23px;
+  height: 23px;
+}

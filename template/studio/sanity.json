@@ -1,0 +1,59 @@
+{
+  "root": true,
+  "project": {
+    "name": "SAMM Boilerplate"
+  },
+  "api": {
+    "projectId": "8mrvczjr",
+    "dataset": "production"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/components",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "@sanity/dashboard",
+    "dashboard-widget-structure-menu",
+    "dashboard-widget-document-list",
+    "dashboard-widget-netlify",
+    "asset-source-unsplash",
+    "@sanity/code-input",
+    "@sanity/color-input",
+    "mux-input",
+    "google-analytics",
+    "@sanity/production-preview",
+    "order-documents",
+    "@sanity/google-maps-input",
+    "shopify-product-relation",
+    "color-picker",
+    "color-list",
+    "media"
+  ],
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schema/index.js"
+    },
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./components/DeskStructure"
+    },
+    {
+      "name": "part:@sanity/base/new-document-structure",
+      "path": "./components/NewDocumentStructure"
+    },
+    {
+      "implements": "part:@sanity/dashboard/config",
+      "path": "dashboardConfig.js"
+    },
+    {
+      "implements": "part:@sanity/production-preview/resolve-production-url",
+      "path": "./resolvePreviewUrl.js"
+    },
+    {
+      "implements": "part:@sanity/base/brand-logo",
+      "path": "./components/Logo"
+    }
+  ]
+}
