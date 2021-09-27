@@ -2,29 +2,31 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { FC } from 'react'
 import { graphql } from 'gatsby'
-import { Box, Typography } from '@material-ui/core'
 import BlockContent from '@sanity/block-content-to-react'
-import { Link } from '@/atoms/link'
+import { Link } from '@/atoms/Link'
+import Text from '@/atoms/Text'
+import Box from '@/atoms/Box'
 
 const Block = (props: any): JSX.Element | null => {
   const { style = 'body1' } = props.node
   if (props.children) {
     return (
-      <Typography
+      <Text
         component="span"
         variant={style === 'normal' ? 'body1' : style}
       >
+        block
         {props.children}
-      </Typography>
+      </Text>
     )
   } else return null
 }
 
 const serializers = {
   types: {
-    h1: (props: any) => <Typography component="h1" variant="h3" {...props} />,
-    h2: (props: any) => <Typography component="h2" variant="h4" {...props} />,
-    h3: (props: any) => <Typography component="h3" variant="h5" {...props} />,
+    h1: (props: any) => <Text component="h1" variant="h3" {...props} />,
+    h2: (props: any) => <Text component="h2" variant="h4" {...props} />,
+    h3: (props: any) => <Text component="h3" variant="h5" {...props} />,
     li: (props: any) => <li className="special-list-item">{props.children}</li>,
     block: Block
   },

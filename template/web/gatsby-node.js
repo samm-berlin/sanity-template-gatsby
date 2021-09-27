@@ -1,4 +1,9 @@
-const { isFuture } = require("date-fns");
+/* eslint-disable @typescript-eslint/no-var-requires */
+const path = require('path')
+
+const { setEnvVars, createType } = require('./src/utils/build')
+const { getUri } = require('./src/utils/routing')
+// const { isFuture } = require("date-fns");
 /**
  * Implement Gatsby's Node APIs in this file.
  *
@@ -20,74 +25,65 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
   ]);
 };
 
-async function createLandingPages(pathPrefix = "/", graphql, actions, reporter) {
-  const { createPage } = actions;
-  const result = await graphql(`
-    {
-      allSanityRoute(filter: { slug: { current: { ne: null } }, page: { id: { ne: null } } }) {
-        edges {
-          node {
-            id
-            slug {
-              current
-            }
-          }
-        }
+/**
+ * Webpack Config
+ */
+exports.onCreateWebpackConfig = ({ actions }) => {
+  // absolute imports with "@/…"
+  actions.setWebpackConfig({
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, 'src')
       }
     }
-  `);
-
-  if (result.errors) throw result.errors;
-
-  const routeEdges = (result.data.allSanityRoute || {}).edges || [];
-  routeEdges.forEach(edge => {
-    const { id, slug = {} } = edge.node;
-    const path = [pathPrefix, slug.current, "/"].join("");
-    reporter.info(`Creating landing page: ${path}`);
-    createPage({
-      path,
-      component: require.resolve("./src/templates/page.js"),
-      context: { id }
-    });
-  });
+  })
 }
 
-async function createBlogPostPages(pathPrefix = "/blog", graphql, actions, reporter) {
-  const { createPage } = actions;
-  const result = await graphql(`
+
+/**
+ * Main Build Process
+ */
+exports.createPages = async apiProps => {
+  // setup env variables
+  setEnvVars([
+    'STAGE',
+    'SANITY_PROJECT_ID',
+    'SANITY_DATASET',
+    'SHOPIFY_SHOP_NAME',
+    'SHOPIFY_ACCESS_TOKEN',
+    'MAILCHIMP_SUBSCRIBE_URL'
+  ])
+
+  // pages
+  const pages = createType(
     {
-      allSanityPost(filter: { slug: { current: { ne: null } }, isPublished: { eq: true } }) {
-        edges {
-          node {
-            id
-            publishedAt
-            slug {
-              current
-            }
-          }
-        }
-      }
-    }
-  `);
+      type: 'page',
+      path: ({ slug }) => getUri(slug.current, 'page'),
+      component: path.resolve(__dirname, 'src/templates/Page.tsx')
+    },
+    apiProps
+  )
 
-  if (result.errors) throw result.errors;
+  // blog posts stores
+  const posts = createType(
+    {
+      type: 'post',
+      path: ({ slug }) => getUri(slug.current, 'post'),
+      component: path.resolve(__dirname, 'src/templates/Post.tsx')
+    },
+    apiProps
+  )
 
-  const postEdges = (result.data.allSanityPost || {}).edges || [];
-  postEdges
-    .filter(edge => !isFuture(edge.node.publishedAt))
-    .forEach(edge => {
-      const { id, slug = {} } = edge.node;
-      const path = `${pathPrefix}/${slug.current}/`;
-      reporter.info(`Creating blog post page: ${path}`);
-      createPage({
-        path,
-        component: require.resolve("./src/templates/blog-post.js"),
-        context: { id }
-      });
-    });
+  // products
+  const stores = createType(
+    {
+      type: 'product',
+      path: ({ slug }) => getUri(slug.current, 'product'),
+      component: path.resolve(__dirname, 'src/templates/Product.tsx')
+    },
+    apiProps
+  )
+
+  const allContent = await Promise.all([pages/* , stores, posts */])
+  return allContent
 }
-
-exports.createPages = async ({ graphql, actions, reporter }) => {
-  await createLandingPages("/", graphql, actions, reporter);
-  await createBlogPostPages("/blog", graphql, actions, reporter);
-};

@@ -27,6 +27,8 @@ import furtherReading from './objects/furtherReading'
 import images from './objects/images'
 import colorTheme from './objects/colorTheme'
 import videoEmbed from './objects/videoEmbed'
+import activation from './objects/activation'
+import modulePadding from './objects/modulePadding'
 
 import imageModule from './modules/image'
 import heroModule from './modules/hero'
@@ -67,6 +69,8 @@ export default createSchema({
     placeDetails,
     colorTheme,
     videoEmbed,
+    activation,
+    modulePadding,
 
     // modules
     moduleDefaultFields,

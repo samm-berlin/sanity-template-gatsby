@@ -1,21 +1,15 @@
-import React, { FC, useEffect, useContext } from 'react'
-import { NavigationContext } from '@/components/Navigation/NavigationContext'
-import { SanityPage } from 'web/graphql-types'
-import ModuleLoop from '@/containers/ModulesLoop'
+import React, { FC } from 'react'
+import { SanityPage } from 'web/types/graphql-types'
+import ModulesLoop from '@/containers/ModulesLoop'
 
 interface PageProps {
   page: SanityPage
 }
 const PageContainer: FC<PageProps> = ({
-  page: { title, meta, logoType, route, contentModules }
+  page: { title, meta, contentModules },
+  ...props
 }) => {
-  const { setRoute, setLogoType } = useContext(NavigationContext)
-  useEffect(() => {
-    setRoute(route?.current || null)
-    setLogoType(logoType || 'burger')
-  }, [])
-
-  return <ModuleLoop modules={contentModules?.modules} />
+  return <ModulesLoop modules={contentModules?.modules} />
 }
 
 export default PageContainer

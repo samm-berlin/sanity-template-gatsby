@@ -8,7 +8,8 @@ const clientConfig = require("./client-config");
 
 const isProd = process.env.NODE_ENV === "production";
 
-const SITE_URL = '<#< deployments.web.url >#>';
+const SITE_URL = 'localhost:8000';
+// const SITE_URL = '<#< deployments.web.url >#>';
 
 module.exports = {
   siteMetadata: {
@@ -16,7 +17,6 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-typescript',
-    "gatsby-plugin-postcss",
     "gatsby-plugin-react-helmet",
     'gatsby-plugin-react-svg',
     'gatsby-plugin-styled-components',
@@ -28,13 +28,13 @@ module.exports = {
         codegenDelay: 250,
       }
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: path.join(__dirname, `src`, `images`)
-      }
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+      // options: {
+      //   name: `images`,
+      //   path: path.join(__dirname, `src`, `images`)
+      // }
+    // },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

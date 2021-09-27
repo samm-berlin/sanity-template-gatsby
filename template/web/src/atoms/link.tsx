@@ -1,23 +1,46 @@
 import React from 'react'
-import MuiLink, { LinkProps } from '@material-ui/core/Link'
-import { GatsbyLink } from './glink'
+import { Link as GatsbyLink, GatsbyLinkProps } from 'gatsby'
 
-export const Link = React.forwardRef<
-  HTMLAnchorElement,
-  LinkProps & { to?: string }
->((props, ref) => {
-  const { to } = props
-  return to ? (
-    <MuiLink
-      ref={ref}
-      component={GatsbyLink}
-      to={to}
-      {...props}
-      variant="inherit"
-    />
-  ) : (
-    <MuiLink ref={ref} {...props} />
-  )
-})
+interface ALinkProps extends Omit<GatsbyLinkProps<any>, 'to'> {
+  href: string
+}
 
-Link.displayName = 'Link'
+const ALink: React.FC<ALinkProps> = ({
+  href,
+  children,
+  innerRef,
+  ...other
+}) => (
+  <a href={href} ref={innerRef} {...other}>
+    {children}
+  </a>
+)
+
+export const Link = React.forwardRef(
+  (
+    props: Omit<GatsbyLinkProps<unknown>, 'ref'>,
+    ref: React.Ref<HTMLAnchorElement>
+  ) => {
+    const { to, activeClassName, partiallyActive, ...other } = props
+    const internal = /^\/(?!\/)/.test(to)
+
+    // Use Gatsby Link for internal links, and <a> for others
+    if (internal) {
+      const file = /\.[0-9a-z]+$/i.test(to)
+
+      if (file) {
+        return <ALink href={to} innerRef={ref} {...other} />
+      }
+      return (
+        <GatsbyLink
+          to={to}
+          activeClassName={activeClassName}
+          partiallyActive={partiallyActive}
+          innerRef={ref}
+          {...other}
+        />
+      )
+    }
+    return <ALink href={to} innerRef={ref} {...other} />
+  }
+)
