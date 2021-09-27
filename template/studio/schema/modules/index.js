@@ -10,11 +10,11 @@ export default {
       of: [
         {type: 'moduleRichText'},
         {type: 'moduleImage'},
-        {type: 'moduleHero'},
-        {type: 'moduleHeroSlider'},
-        {type: 'moduleFurtherReading'},
-        {type: 'moduleTwoColumn'},
-        {type: 'moduleVideoEmbed'}
+        {type: 'moduleVideoEmbed'},
+        // {type: 'moduleHero'},
+        // {type: 'moduleHeroSlider'},
+        // {type: 'moduleFurtherReading'},
+        {type: 'moduleTwoColumn'}
       ],
       options: {
         editModal: 'modal'
