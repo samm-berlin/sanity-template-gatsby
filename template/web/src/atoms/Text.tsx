@@ -1,114 +1,86 @@
-import React, { FC } from 'react'
 import styled from 'styled-components'
-import Box from './Box'
-// import { pLarge, p, pSmall, h3, h4, h5 } from '@/styles/typography'
-import { theme } from '@/styles/theme'
+import { compose, typography, space, color, TypographyProps, SpaceProps, ColorProps, variant } from 'styled-system'
+import theme from '@/styles/theme';
 
-export enum TextComponent {
-  'h1',
-  'h2',
-  'h3',
-  'h4',
-  'h5',
-  'h6',
-  'span',
-  'p'
-}
+export type TextComponent = 
+  'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span' | 'p' | 'li';
 
-export enum TextSize {
-  'normal',
-  'l',
-  'm',
-  's',
-}
+export type TextVariant =
+  'head' | 'subhead' | 'normal' | 'body' | 'caption';
 
-export enum TextVariant {
-  'head',
-  'subhead',
-  'normal',
-  'body',
-  'caption',
-}
-
-export interface TextProps {
-  as?: TextComponent;
+export interface TextProps extends TypographyProps, SpaceProps, ColorProps {
   component?: TextComponent;
-  size?: TextSize;
-  s?: TextSize;
+  _type?: TextComponent;
   variant?: TextVariant;
   hyphens?: string;
   whiteSpace?: string;
   uppercase?: boolean;
   mono?: boolean;
-  bold: boolean;
+  bold?: boolean;
+  opacity?: string | number;
 }
 
-export default styled.div.attrs((props: TextProps) => ({
-  as: props.as || props.component || 'span',
-  variant: props.variant || 'normal',
-  hyphens: props.hyphens || 'normal',
-  whiteSpace: props.whiteSpace || 'normal',
-  uppercase: props.uppercase,
-  mono: props.mono,
-  bold: props.bold
-}))`
+export default styled('div')<TextProps>(
+  compose(
+    space,
+    typography,
+    color
+  ),
+  variant({
+    variants: {
+      normal: {
+        fontFamily: theme.fonts.sans,
+        fontSize: 3,
+        fontWeight: 300,
+      },
+      caption: {
+        fontFamily: theme.fonts.serif,
+        fontSize: 4,
+        fontStyle: 'italic',
+      },
+      head: {
+        fontFamily: theme.fonts.sans,
+        fontSize: 5,
+        fontWeight: 900,
+        textTransform: 'uppercase'
+      },
+      subhead: {
+        fontFamily: theme.fonts.serif,
+        fontSize: 4,
+        fontWeight: 400,
+      },
+      body: {
+        fontFamily: theme.fonts.sans,
+        fontSize: 3,
+        fontWeight: 300,
+      }
+    }
+  }),
+  `
 
-  hyphens: ${props => (props.hyphens ? 'auto' : 'none')};
-  white-space: ${props => props.whiteSpace};
+  hyphens: ${(props: TextProps) => (props.hyphens ? 'auto' : 'none')};
+  white-space: ${(props: TextProps) => props.whiteSpace};
 
-  ${props =>
+  ${(props: TextProps) =>
     props.mono &&
     `
   `}
 
-  ${props =>
+  ${(props: TextProps) =>
     props.uppercase &&
     `
     text-transform: uppercase;
   `}
 
-  ${props =>
+  ${(props: TextProps) =>
     props.bold &&
     `
-    font-weight: bold;
+    font-weight: 900;
   `}
-`
 
-
-/* export default styled.div.attrs((props: TextProps) => ({
-  as: props.as || props.component || 'span',
-  variant: props.variant || 'normal',
-  hyphens: props.hyphens || 'normal',
-  whiteSpace: props.whiteSpace || 'normal',
-  uppercase: props.uppercase,
-  mono: props.mono,
-  bold: props.bold
-}))`
-  ${props => props.t === -1 && pSmall}
-  ${props => props.t === 0 && p}
-  ${props => props.t === 1 && pLarge}
-  ${props => props.as === 'h3' && h3}
-  ${props => props.as === 'h4' && h4}
-  ${props => props.as === 'h5' && h5}
-
-  hyphens: ${props => (props.hyphens ? 'auto' : 'none')};
-  white-space: ${props => props.whiteSpace};
-
-  ${props =>
-    props.mono &&
+  ${(props: TextProps) =>
+    props.opacity &&
     `
-    ((font-family: ${theme.font.mono};
+    color: ${props.opacity};
   `}
-
-  ${props =>
-    props.uppercase &&
-    `
-    text-transform: uppercase;
-  `}
-
-  ${props =>
-    props.bold &&
-    `
-    font-weight: bold;
-  `}
-` */
+`)

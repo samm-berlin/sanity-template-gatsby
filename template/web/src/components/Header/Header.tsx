@@ -1,11 +1,11 @@
-import Box from '@/atoms/Box'
 import React, { FC } from 'react'
-import styled from 'styled-components'
+import Box from '@/atoms/Box'
+import Text from '@/atoms/Text'
 
 const Header: FC = () => {
   return (
     <Box>
-      <h1>Header</h1>
+      <Text as="h1" variant="caption">Header</Text>
     </Box>
   )
 }

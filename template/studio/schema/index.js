@@ -29,6 +29,9 @@ import colorTheme from './objects/colorTheme'
 import videoEmbed from './objects/videoEmbed'
 import activation from './objects/activation'
 import modulePadding from './objects/modulePadding'
+import aspectRatio from './objects/aspectRatio'
+import headings from './objects/headings'
+import textAlignment from './objects/textAlignment'
 
 import imageModule from './modules/image'
 import heroModule from './modules/hero'
@@ -39,6 +42,7 @@ import twoColumnModule from './modules/twoColumn'
 import hero from './modules/heroOld'
 import moduleDefaultFields from './modules/_defaultFields'
 import moduleVideoEmbed from './modules/videoEmbed'
+import moduleSpacer from './modules/spacer'
 
 export default createSchema({
   name: 'default',
@@ -71,6 +75,9 @@ export default createSchema({
     videoEmbed,
     activation,
     modulePadding,
+    aspectRatio,
+    headings,
+    textAlignment,
 
     // modules
     moduleDefaultFields,
@@ -87,6 +94,7 @@ export default createSchema({
     imagesWithText,
     hero,
     heroSlider,
-    furtherReading
+    furtherReading,
+    moduleSpacer
   ]
 })

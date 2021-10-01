@@ -1,5 +1,5 @@
 export default {
-  title: 'Module padding',
+  title: 'Boundaries',
   name: 'modulePadding',
   type: 'object',
   fields: [
@@ -11,7 +11,7 @@ export default {
       name: 'x',
       type: 'number', // should I rather return a number or a string ?
       options: {
-        list: [{value: 0, title: 'none'}, {value: 20, title: 'large'}]
+        list: [{value: 0, title: 'none'}, {value: 2, title: 'small'}, {value: 3, title: 'medium'}, {value: 4, title: 'large'}]
       }
     },
     {
@@ -19,8 +19,13 @@ export default {
       name: 'y',
       type: 'number', // should I rather return a number or a string ?
       options: {
-        list: [{value: 0, title: 'none'}, {value: 20, title: 'large'}]
+        list: [{value: 0, title: 'none'}, {value: 2, title: 'small'}, {value: 3, title: 'medium'}, {value: 4, title: 'large'}]
       }
+    },
+    {
+      title: 'container',
+      name: 'container',
+      type: 'boolean'
     }
   ]
   // fields: [

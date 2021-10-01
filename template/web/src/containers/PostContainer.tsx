@@ -1,7 +1,7 @@
 import React, { FC, useEffect, useContext } from 'react'
 import styled from 'styled-components'
 import { SanityPost } from 'web/types/graphql-types'
-import ModuleLoop from '@/containers/ModulesLoop'
+import ModuleLoop from '@/modules'
 
 interface PostProps {
   post: SanityPost

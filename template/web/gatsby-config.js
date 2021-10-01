@@ -16,6 +16,16 @@ module.exports = {
     siteUrl: SITE_URL
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-sanity-image",
+      options: {
+        projectId: process.env.GATSBY_SANITY_PROJECT_ID,
+        dataset: process.env.GATSBY_SANITY_DATASET,
+        includeFragments: false,
+        // fragmentName: 'Image',
+        // fragmentTypeName: 'SanityImage'
+      },
+    },
     'gatsby-plugin-typescript',
     "gatsby-plugin-react-helmet",
     'gatsby-plugin-react-svg',

@@ -13,16 +13,6 @@ export default {
       fieldset: 'options'
     },
     {
-      title: 'Title',
-      name: 'title',
-      type: 'string'
-    },
-    {
-      title: 'Subtitle',
-      name: 'subtitle',
-      type: 'richTextSimple'
-    },
-    {
       title: 'First column',
       name: 'firstColumn',
       type: 'contentModules'

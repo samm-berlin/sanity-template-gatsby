@@ -1,19 +1,33 @@
 import React, { FC } from 'react'
-
+// import { GatsbyImage } from "gatsby-plugin-image"
+import SanityImage from "gatsby-plugin-sanity-image"
 import { graphql } from 'gatsby'
 import { SanityModuleImage } from 'web/types/graphql-types'
 import Box from '@/atoms/Box'
+import Text from '@/atoms/Text'
 
 const ImageModule: FC<SanityModuleImage> = ({ image, ...props }) =>
-  image?.asset?.url ? (
-    <Box my={3} mx="auto" maxWidth="1440px" px={6}>
-      <img src={image?.asset?.url || ''} alt={image?.alt || ''} />
+  image?.asset ? (
+    <>
+      {/* this is the old GatsbyImage implementation */}
+      {/* <GatsbyImage image={image?.asset?.gatsbyImageData} alt={image?.alt || ''} /> */}
+      {/* 
+        if we use SanityImage we have a littleless traffic during build
+        time but more traffic on runtime on our SanityCDN - more expensive
+        however hotspot will be supported out of the box.
+      */}
+      <SanityImage {...image} width={4096}
+        style={{
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+        }} />
       {image.subtitle && (
-          <Box pt={1}>
-            {/* <Typography variant="body2"> {image.subtitle}</Typography> */}
-          </Box>
-        )}
-    </Box>
+        <Box pt={1}>
+          <Text variant="body">{image.subtitle}</Text>
+        </Box>
+      )}
+    </>
   ) : null
 
 export default ImageModule
@@ -21,11 +35,48 @@ export default ImageModule
 export const query = graphql`
   fragment moduleImageData on SanityModuleImage {
     image {
-      alt
-      subtitle
-      asset {
-        url
+      ...SammSanityImageWithPreview
+    }
+  }
+
+  fragment SammSanityImage on SanityImageWithAlt {
+    hotspot {
+      height
+      width
+      x
+      y
+    }
+    crop {
+      bottom
+      left
+      right
+      top
+    }
+    asset {
+      _id
+      altText
+    }
+  }
+
+  fragment SammSanityImageWithPreview on SanityImageWithAlt {
+    ...SammSanityImage
+    asset {
+      metadata {
+        preview: lqip
       }
     }
   }
 `
+
+// export const query = graphql`
+//   fragment moduleImageData on SanityModuleImage {
+      // image {
+      //   ...Image
+      //   alt
+      //   subtitle
+      //   asset {
+      //     gatsbyImageData(width: 4096)
+      //   }
+      // }
+//   }
+// `

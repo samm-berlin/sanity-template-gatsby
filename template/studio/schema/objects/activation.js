@@ -5,7 +5,8 @@ export default {
   fields: [
     {
       type: 'boolean',
-      name: 'hidden'
+      name: 'hidden',
+      default: 'false'
     }
   ]
 }

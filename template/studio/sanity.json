@@ -54,6 +54,10 @@
     {
       "implements": "part:@sanity/base/brand-logo",
       "path": "./components/Logo"
+    },
+    {
+      "implements": "part:@sanity/base/theme/variables/override-style",
+      "path": "../web/src/assets/fonts.css"
     }
   ]
 }

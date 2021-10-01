@@ -8,14 +8,9 @@ import Text from '@/atoms/Text'
 import Box from '@/atoms/Box'
 
 const Block = (props: any): JSX.Element | null => {
-  const { style = 'body1' } = props.node
   if (props.children) {
     return (
-      <Text
-        component="span"
-        variant={style === 'normal' ? 'body1' : style}
-      >
-        block
+      <Text as="p">
         {props.children}
       </Text>
     )
@@ -24,12 +19,15 @@ const Block = (props: any): JSX.Element | null => {
 
 const serializers = {
   types: {
-    h1: (props: any) => <Text component="h1" variant="h3" {...props} />,
-    h2: (props: any) => <Text component="h2" variant="h4" {...props} />,
-    h3: (props: any) => <Text component="h3" variant="h5" {...props} />,
-    li: (props: any) => <li className="special-list-item">{props.children}</li>,
+    h1: (props: any) => <Text as="h1" {...props} />,
+    h2: (props: any) => <Text as="h2" {...props} />,
+    h3: (props: any) => <Text as="h3" {...props} />,
+    h4: (props: any) => <Text as="h3" {...props} />,
+    span: (props: any) => <Text {...props} />,
+    listItem: (props: any) => <Text as="li" {...props} />,
     block: Block
   },
+  listItem: (props: any) => <Text as="li" {...props} />,
   marks: {
     link: (props: any) => {
       return (
@@ -37,26 +35,31 @@ const serializers = {
           target={props.mark.targetBlank ? '_blank' : ''}
           to={props.mark.url}
         >
-          {props.children[0]}
+          <Text as="span" color="brand" {...props} />
         </Link>
       )
-    }
+    },
+
+    colorSanity: (props: any) => <Text
+      as={props._type}
+      color={props.mark.hex}
+      opacity={props.mark.alpha}
+      {...props}
+    />
   }
 }
 
-const RichTextModule: FC<any> = ({ text }) => {
-  return (
-    <Box my={3} px={6} mx="auto" maxWidth="1440px">
-      <BlockContent blocks={text.textRaw} serializers={serializers} />
-    </Box>
-  )
-}
+const RichTextModule: FC<any> = ({ text }) => 
+<Box style={{textAlign: text.alignment}}>
+  <BlockContent blocks={text.textRaw} serializers={serializers} />
+</Box>
 
 export default RichTextModule
 
 export const query = graphql`
   fragment moduleRichTextData on SanityModuleRichText {
     text {
+      alignment
       textRaw: _rawText(resolveReferences: { maxDepth: 6 })
     }
   }

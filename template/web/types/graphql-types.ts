@@ -323,6 +323,9 @@ export type SitePlugin = Node & {
 };
 
 export type SitePluginPluginOptions = {
+  projectId?: Maybe<Scalars['String']>;
+  dataset?: Maybe<Scalars['String']>;
+  includeFragments?: Maybe<Scalars['Boolean']>;
   isTSX?: Maybe<Scalars['Boolean']>;
   jsxPragma?: Maybe<Scalars['String']>;
   allExtensions?: Maybe<Scalars['Boolean']>;
@@ -338,8 +341,6 @@ export type SitePluginPluginOptions = {
   stripMetadata?: Maybe<Scalars['Boolean']>;
   defaultQuality?: Maybe<Scalars['Int']>;
   failOnError?: Maybe<Scalars['Boolean']>;
-  projectId?: Maybe<Scalars['String']>;
-  dataset?: Maybe<Scalars['String']>;
   watchMode?: Maybe<Scalars['Boolean']>;
   overlayDrafts?: Maybe<Scalars['Boolean']>;
   output?: Maybe<Scalars['String']>;
@@ -650,6 +651,13 @@ export type SanityActivation = {
   hidden?: Maybe<Scalars['Boolean']>;
 };
 
+export type SanityAspectRatio = {
+  _key?: Maybe<Scalars['String']>;
+  _type?: Maybe<Scalars['String']>;
+  x?: Maybe<Scalars['Float']>;
+  y?: Maybe<Scalars['Float']>;
+};
+
 export type SanityBlock = {
   _key?: Maybe<Scalars['String']>;
   _type?: Maybe<Scalars['String']>;
@@ -724,7 +732,7 @@ export type SanityColorTheme_RawListArgs = {
 export type SanityContentModules = {
   _key?: Maybe<Scalars['String']>;
   _type?: Maybe<Scalars['String']>;
-  modules?: Maybe<Array<Maybe<SanityModuleImageOrModuleRichTextOrModuleTwoColumnOrModuleVideoEmbed>>>;
+  modules?: Maybe<Array<Maybe<SanityModuleImageOrModuleRichTextOrModuleSpacerOrModuleTwoColumnOrModuleVideoEmbed>>>;
   _rawModules?: Maybe<Scalars['JSON']>;
 };
 
@@ -773,6 +781,12 @@ export type SanityGeopoint = {
   lat?: Maybe<Scalars['Float']>;
   lng?: Maybe<Scalars['Float']>;
   alt?: Maybe<Scalars['Float']>;
+};
+
+export type SanityHeadings = {
+  _key?: Maybe<Scalars['String']>;
+  _type?: Maybe<Scalars['String']>;
+  heading?: Maybe<Scalars['String']>;
 };
 
 export type SanityHeroImage = {
@@ -1078,13 +1092,14 @@ export type SanityModuleImage_RawImageArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
 
-export type SanityModuleImageOrModuleRichTextOrModuleTwoColumnOrModuleVideoEmbed = SanityModuleImage | SanityModuleRichText | SanityModuleTwoColumn | SanityModuleVideoEmbed;
+export type SanityModuleImageOrModuleRichTextOrModuleSpacerOrModuleTwoColumnOrModuleVideoEmbed = SanityModuleImage | SanityModuleRichText | SanityModuleSpacer | SanityModuleTwoColumn | SanityModuleVideoEmbed;
 
 export type SanityModulePadding = {
   _key?: Maybe<Scalars['String']>;
   _type?: Maybe<Scalars['String']>;
   x?: Maybe<Scalars['Float']>;
   y?: Maybe<Scalars['Float']>;
+  container?: Maybe<Scalars['Boolean']>;
 };
 
 export type SanityModuleRichText = {
@@ -1106,27 +1121,32 @@ export type SanityModuleRichText_RawTextArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
 
+export type SanityModuleSpacer = {
+  _key?: Maybe<Scalars['String']>;
+  _type?: Maybe<Scalars['String']>;
+  options?: Maybe<SanityModuleDefaultFields>;
+  height?: Maybe<Scalars['Float']>;
+  _rawOptions?: Maybe<Scalars['JSON']>;
+};
+
+
+export type SanityModuleSpacer_RawOptionsArgs = {
+  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+};
+
 export type SanityModuleTwoColumn = {
   _key?: Maybe<Scalars['String']>;
   _type?: Maybe<Scalars['String']>;
   options?: Maybe<SanityModuleDefaultFields>;
-  title?: Maybe<Scalars['String']>;
-  subtitle?: Maybe<SanityRichTextSimple>;
   firstColumn?: Maybe<SanityContentModules>;
   secondColumn?: Maybe<SanityContentModules>;
   _rawOptions?: Maybe<Scalars['JSON']>;
-  _rawSubtitle?: Maybe<Scalars['JSON']>;
   _rawFirstColumn?: Maybe<Scalars['JSON']>;
   _rawSecondColumn?: Maybe<Scalars['JSON']>;
 };
 
 
 export type SanityModuleTwoColumn_RawOptionsArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
-};
-
-
-export type SanityModuleTwoColumn_RawSubtitleArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
 
@@ -1147,14 +1167,15 @@ export type SanityModuleVideoEmbed = {
   title?: Maybe<Scalars['String']>;
   video?: Maybe<SanityVideoEmbed>;
   posterFrame?: Maybe<SanityImage>;
+  aspectRatio?: Maybe<SanityAspectRatio>;
   muted?: Maybe<Scalars['Boolean']>;
   controls?: Maybe<Scalars['Boolean']>;
   loop?: Maybe<Scalars['Boolean']>;
-  preload?: Maybe<Scalars['String']>;
-  autoplay?: Maybe<Scalars['String']>;
+  autoplay?: Maybe<Scalars['Boolean']>;
   _rawOptions?: Maybe<Scalars['JSON']>;
   _rawVideo?: Maybe<Scalars['JSON']>;
   _rawPosterFrame?: Maybe<Scalars['JSON']>;
+  _rawAspectRatio?: Maybe<Scalars['JSON']>;
 };
 
 
@@ -1169,6 +1190,11 @@ export type SanityModuleVideoEmbed_RawVideoArgs = {
 
 
 export type SanityModuleVideoEmbed_RawPosterFrameArgs = {
+  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+};
+
+
+export type SanityModuleVideoEmbed_RawAspectRatioArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
 
@@ -1465,6 +1491,7 @@ export type SanityRgbaColor = {
 export type SanityRichTextExtended = {
   _key?: Maybe<Scalars['String']>;
   _type?: Maybe<Scalars['String']>;
+  alignment?: Maybe<Scalars['String']>;
   text?: Maybe<Array<Maybe<SanityBlock>>>;
   _rawText?: Maybe<Scalars['JSON']>;
 };
@@ -1892,6 +1919,12 @@ export type SanitySpan = {
   _type?: Maybe<Scalars['String']>;
   marks?: Maybe<Array<Maybe<Scalars['String']>>>;
   text?: Maybe<Scalars['String']>;
+};
+
+export type SanityTextAlignment = {
+  _key?: Maybe<Scalars['String']>;
+  _type?: Maybe<Scalars['String']>;
+  alignment?: Maybe<Scalars['String']>;
 };
 
 export type SanityVideoEmbed = {
@@ -3711,6 +3744,9 @@ export type SitePluginFilterInput = {
 };
 
 export type SitePluginPluginOptionsFilterInput = {
+  projectId?: Maybe<StringQueryOperatorInput>;
+  dataset?: Maybe<StringQueryOperatorInput>;
+  includeFragments?: Maybe<BooleanQueryOperatorInput>;
   isTSX?: Maybe<BooleanQueryOperatorInput>;
   jsxPragma?: Maybe<StringQueryOperatorInput>;
   allExtensions?: Maybe<BooleanQueryOperatorInput>;
@@ -3726,8 +3762,6 @@ export type SitePluginPluginOptionsFilterInput = {
   stripMetadata?: Maybe<BooleanQueryOperatorInput>;
   defaultQuality?: Maybe<IntQueryOperatorInput>;
   failOnError?: Maybe<BooleanQueryOperatorInput>;
-  projectId?: Maybe<StringQueryOperatorInput>;
-  dataset?: Maybe<StringQueryOperatorInput>;
   watchMode?: Maybe<BooleanQueryOperatorInput>;
   overlayDrafts?: Maybe<BooleanQueryOperatorInput>;
   output?: Maybe<StringQueryOperatorInput>;
@@ -3841,6 +3875,9 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___browserAPIs'
   | 'pluginCreator___ssrAPIs'
   | 'pluginCreator___pluginFilepath'
+  | 'pluginCreator___pluginOptions___projectId'
+  | 'pluginCreator___pluginOptions___dataset'
+  | 'pluginCreator___pluginOptions___includeFragments'
   | 'pluginCreator___pluginOptions___isTSX'
   | 'pluginCreator___pluginOptions___jsxPragma'
   | 'pluginCreator___pluginOptions___allExtensions'
@@ -3856,8 +3893,6 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___pluginOptions___stripMetadata'
   | 'pluginCreator___pluginOptions___defaultQuality'
   | 'pluginCreator___pluginOptions___failOnError'
-  | 'pluginCreator___pluginOptions___projectId'
-  | 'pluginCreator___pluginOptions___dataset'
   | 'pluginCreator___pluginOptions___watchMode'
   | 'pluginCreator___pluginOptions___overlayDrafts'
   | 'pluginCreator___pluginOptions___output'
@@ -4124,6 +4159,9 @@ export type SitePluginFieldsEnum =
   | 'browserAPIs'
   | 'ssrAPIs'
   | 'pluginFilepath'
+  | 'pluginOptions___projectId'
+  | 'pluginOptions___dataset'
+  | 'pluginOptions___includeFragments'
   | 'pluginOptions___isTSX'
   | 'pluginOptions___jsxPragma'
   | 'pluginOptions___allExtensions'
@@ -4139,8 +4177,6 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___stripMetadata'
   | 'pluginOptions___defaultQuality'
   | 'pluginOptions___failOnError'
-  | 'pluginOptions___projectId'
-  | 'pluginOptions___dataset'
   | 'pluginOptions___watchMode'
   | 'pluginOptions___overlayDrafts'
   | 'pluginOptions___output'
@@ -6862,6 +6898,7 @@ export type SanityImageAssetSortInput = {
 export type SanityRichTextExtendedFilterInput = {
   _key?: Maybe<StringQueryOperatorInput>;
   _type?: Maybe<StringQueryOperatorInput>;
+  alignment?: Maybe<StringQueryOperatorInput>;
   text?: Maybe<SanityBlockFilterListInput>;
   _rawText?: Maybe<JsonQueryOperatorInput>;
 };
@@ -6944,6 +6981,7 @@ export type SanitySiteSettingsInformationFieldsEnum =
   | '_key'
   | 'globalInfo____key'
   | 'globalInfo____type'
+  | 'globalInfo___alignment'
   | 'globalInfo___text'
   | 'globalInfo___text____key'
   | 'globalInfo___text____type'
@@ -7774,20 +7812,128 @@ export type MetaDataFragment = (
   & { ogImage?: Maybe<{ asset?: Maybe<Pick<SanityImageAsset, 'url'>> }> }
 );
 
-export type ContentModulesDataFragment = { modules?: Maybe<Array<Maybe<(
-    Pick<SanityModuleImage, '_key' | '_type'>
-    & ModuleImageDataFragment
-  ) | (
-    Pick<SanityModuleRichText, '_key' | '_type'>
-    & ModuleRichTextDataFragment
-  )>>> };
-
-export type ModuleImageDataFragment = { image?: Maybe<(
-    Pick<SanityImageWithAlt, 'alt' | 'subtitle'>
-    & { asset?: Maybe<Pick<SanityImageAsset, 'url'>> }
+export type ModuleOptionsFragment = { activation?: Maybe<Pick<SanityActivation, 'hidden'>>, padding?: Maybe<Pick<SanityModulePadding, 'container' | 'x' | 'y'>>, theme?: Maybe<(
+    Pick<SanityColorTheme, 'theme'>
+    & { list?: Maybe<Pick<SanityColorlist, 'value' | 'title'>> }
   )> };
 
-export type ModuleRichTextDataFragment = { text?: Maybe<{ textRaw: SanityRichTextExtended['_rawText'] }> };
+export type ModuleImageDataFragment = { image?: Maybe<SammSanityImageWithPreviewFragment> };
+
+export type SammSanityImageFragment = { hotspot?: Maybe<Pick<SanityImageHotspot, 'height' | 'width' | 'x' | 'y'>>, crop?: Maybe<Pick<SanityImageCrop, 'bottom' | 'left' | 'right' | 'top'>>, asset?: Maybe<Pick<SanityImageAsset, '_id' | 'altText'>> };
+
+export type SammSanityImageWithPreviewFragment = (
+  { asset?: Maybe<{ metadata?: Maybe<{ preview: SanityImageMetadata['lqip'] }> }> }
+  & SammSanityImageFragment
+);
+
+export type ModuleRichTextDataFragment = { text?: Maybe<(
+    Pick<SanityRichTextExtended, 'alignment'>
+    & { textRaw: SanityRichTextExtended['_rawText'] }
+  )> };
+
+export type ModuleSpacerDataFragment = Pick<SanityModuleSpacer, 'height'>;
+
+export type ModuleVideoEmbedDataFragment = (
+  Pick<SanityModuleVideoEmbed, 'autoplay' | 'controls' | 'loop' | 'muted' | 'title'>
+  & { video?: Maybe<Pick<SanityVideoEmbed, 'url'>>, aspectRatio?: Maybe<Pick<SanityAspectRatio, 'x' | 'y'>>, posterFrame?: Maybe<{ asset?: Maybe<Pick<SanityImageAsset, 'url'>> }> }
+);
+
+export type ImageFragment = { hotspot?: Maybe<Pick<SanityImageHotspot, 'height' | 'width' | 'x' | 'y'>>, crop?: Maybe<Pick<SanityImageCrop, 'bottom' | 'left' | 'right' | 'top'>>, asset?: Maybe<Pick<SanityImageAsset, '_id' | 'altText'>> };
+
+export type ImageWithPreviewFragment = (
+  { asset?: Maybe<{ metadata?: Maybe<{ preview: SanityImageMetadata['lqip'] }> }> }
+  & ImageFragment
+);
+
+export type ContentModules_SanityModuleImage_Fragment = (
+  Pick<SanityModuleImage, '_key' | '_type'>
+  & { options?: Maybe<ModuleOptionsFragment> }
+  & ModuleImageDataFragment
+);
+
+export type ContentModules_SanityModuleRichText_Fragment = (
+  Pick<SanityModuleRichText, '_key' | '_type'>
+  & { options?: Maybe<ModuleOptionsFragment> }
+  & ModuleRichTextDataFragment
+);
+
+export type ContentModules_SanityModuleSpacer_Fragment = (
+  Pick<SanityModuleSpacer, '_key' | '_type'>
+  & { options?: Maybe<ModuleOptionsFragment> }
+  & ModuleSpacerDataFragment
+);
+
+export type ContentModules_SanityModuleTwoColumn_Fragment = {};
+
+export type ContentModules_SanityModuleVideoEmbed_Fragment = (
+  Pick<SanityModuleVideoEmbed, '_key' | '_type'>
+  & { options?: Maybe<ModuleOptionsFragment> }
+  & ModuleVideoEmbedDataFragment
+);
+
+export type ContentModulesFragment = ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment;
+
+export type ContentModulesDataFragment = { modules?: Maybe<Array<Maybe<ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | (
+    Pick<SanityModuleTwoColumn, '_key' | '_type'>
+    & { firstColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | (
+        Pick<SanityModuleTwoColumn, '_key' | '_type'>
+        & { firstColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | (
+            Pick<SanityModuleTwoColumn, '_key' | '_type'>
+            & { firstColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | (
+                Pick<SanityModuleTwoColumn, '_key' | '_type'>
+                & { firstColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, secondColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, options?: Maybe<ModuleOptionsFragment> }
+                & ContentModules_SanityModuleTwoColumn_Fragment
+              ) | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, secondColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | (
+                Pick<SanityModuleTwoColumn, '_key' | '_type'>
+                & { firstColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, secondColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, options?: Maybe<ModuleOptionsFragment> }
+                & ContentModules_SanityModuleTwoColumn_Fragment
+              ) | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, options?: Maybe<ModuleOptionsFragment> }
+            & ContentModules_SanityModuleTwoColumn_Fragment
+          ) | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, secondColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | (
+            Pick<SanityModuleTwoColumn, '_key' | '_type'>
+            & { firstColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | (
+                Pick<SanityModuleTwoColumn, '_key' | '_type'>
+                & { firstColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, secondColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, options?: Maybe<ModuleOptionsFragment> }
+                & ContentModules_SanityModuleTwoColumn_Fragment
+              ) | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, secondColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | (
+                Pick<SanityModuleTwoColumn, '_key' | '_type'>
+                & { firstColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, secondColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, options?: Maybe<ModuleOptionsFragment> }
+                & ContentModules_SanityModuleTwoColumn_Fragment
+              ) | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, options?: Maybe<ModuleOptionsFragment> }
+            & ContentModules_SanityModuleTwoColumn_Fragment
+          ) | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, options?: Maybe<ModuleOptionsFragment> }
+        & ContentModules_SanityModuleTwoColumn_Fragment
+      ) | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, secondColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | (
+        Pick<SanityModuleTwoColumn, '_key' | '_type'>
+        & { firstColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | (
+            Pick<SanityModuleTwoColumn, '_key' | '_type'>
+            & { firstColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | (
+                Pick<SanityModuleTwoColumn, '_key' | '_type'>
+                & { firstColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, secondColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, options?: Maybe<ModuleOptionsFragment> }
+                & ContentModules_SanityModuleTwoColumn_Fragment
+              ) | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, secondColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | (
+                Pick<SanityModuleTwoColumn, '_key' | '_type'>
+                & { firstColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, secondColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, options?: Maybe<ModuleOptionsFragment> }
+                & ContentModules_SanityModuleTwoColumn_Fragment
+              ) | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, options?: Maybe<ModuleOptionsFragment> }
+            & ContentModules_SanityModuleTwoColumn_Fragment
+          ) | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, secondColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | (
+            Pick<SanityModuleTwoColumn, '_key' | '_type'>
+            & { firstColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | (
+                Pick<SanityModuleTwoColumn, '_key' | '_type'>
+                & { firstColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, secondColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, options?: Maybe<ModuleOptionsFragment> }
+                & ContentModules_SanityModuleTwoColumn_Fragment
+              ) | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, secondColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | (
+                Pick<SanityModuleTwoColumn, '_key' | '_type'>
+                & { firstColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, secondColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, options?: Maybe<ModuleOptionsFragment> }
+                & ContentModules_SanityModuleTwoColumn_Fragment
+              ) | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, options?: Maybe<ModuleOptionsFragment> }
+            & ContentModules_SanityModuleTwoColumn_Fragment
+          ) | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, options?: Maybe<ModuleOptionsFragment> }
+        & ContentModules_SanityModuleTwoColumn_Fragment
+      ) | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, options?: Maybe<ModuleOptionsFragment> }
+    & ContentModules_SanityModuleTwoColumn_Fragment
+  ) | ContentModules_SanityModuleVideoEmbed_Fragment>>> };
 
 export type Unnamed_2_QueryVariables = Exact<{
   id: Scalars['String'];

@@ -1,11 +1,42 @@
 import React from 'react'
 import {IoIosColorPalette} from 'react-icons/io'
+import textVariants from '../../../web/src/styles/textVariants'
+
+const StyledBlock = (props, style) => (
+  <span style={{
+    ...textVariants[style],
+    fontSize: `${textVariants[style].fontSize / 3}rem`
+  }}>{props.children}</span>
+)
 
 export default {
   name: 'richTextExtended',
   title: 'Rich Text',
   type: 'object',
+  fieldsets: [
+    {
+      name: 'alignment',
+      title: 'Alignment',
+      options: {
+        collapsible: true,
+        collapsed: true
+      }
+    }
+  ],
   fields: [
+    {
+      title: 'Alignment',
+      name: 'alignment',
+      type: 'string',
+      fieldset: 'alignment',
+      options: {
+        list: [
+          {title: 'Left', value: 'left'},
+          {title: 'Right', value: 'right'},
+          {title: 'Center', value: 'center'}
+        ]
+      }
+    },
     {
       name: 'text',
       title: 'Text',
@@ -14,16 +45,48 @@ export default {
         {
           type: 'block',
           styles: [
-            {title: 'Normal', value: 'body1'},
-            {title: 'Heading 1', value: 'h1'},
-            {title: 'Heading 2', value: 'h2'},
-            {title: 'Heading 3', value: 'h3'},
-            {title: 'Font XXL', value: 'h2'},
-            {title: 'Font XL', value: 'h3'},
-            {title: 'Font L', value: 'h4'},
-            {title: 'Font M Bold', value: 'h5'},
-            {title: 'Font M', value: 'body1'},
-            {title: 'Font S', value: 'body2'}
+            {
+              title: 'Normal',
+              value: 'normal',
+              blockEditor: {
+                render: props => StyledBlock(props, 'normal')
+              }
+            },
+            {
+              title: 'Heading 1',
+              value: 'h1',
+              blockEditor: {
+                render: props => StyledBlock(props, 'head')
+              }
+            },
+            {
+              title: 'Heading 2',
+              value: 'h2',
+              blockEditor: {
+                render: props => StyledBlock(props, 'head')
+              }
+            },
+            {
+              title: 'Heading 3',
+              value: 'h3',
+              blockEditor: {
+                render: props => StyledBlock(props, 'subhead')
+              }
+            },
+            {
+              title: 'Heading 4',
+              value: 'h4',
+              blockEditor: {
+                render: props => StyledBlock(props, 'subhead')
+              }
+            },
+            {
+              title: 'Caption',
+              value: 'caption',
+              blockEditor: {
+                render: props => StyledBlock(props, 'caption')
+              }
+            }
           ],
           lists: [
             {title: 'Bullets', value: 'bullet'},

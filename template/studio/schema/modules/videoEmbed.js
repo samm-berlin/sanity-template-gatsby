@@ -8,10 +8,11 @@ export default {
       title: 'Settings',
       options: {
         collapsible: true,
-        collapsed: true
+        collapsed: true,
+        columns: 2
       }
     },
-    {name: 'options'}
+    {name: 'options'},
   ],
   preview: {
     select: {
@@ -49,6 +50,11 @@ export default {
       title: 'Poster frame'
     },
     {
+      name: 'aspectRatio',
+      type: 'aspectRatio',
+      title: 'Aspect Ratio'
+    },
+    {
       name: 'muted',
       title: 'Muted',
       description: 'Must be true if autoplay',
@@ -68,37 +74,43 @@ export default {
       type: 'boolean',
       fieldset: 'settings'
     },
-    {
-      name: 'preload',
-      title: 'Preload',
-      type: 'string',
-      fieldset: 'settings',
-      options: {
-        list: ['auto', 'none', 'metadata']
-      }
-    },
+    // {
+    //   name: 'preload',
+    //   title: 'Preload',
+    //   type: 'string',
+    //   fieldset: 'settings',
+    //   options: {
+    //     list: ['auto', 'none', 'metadata']
+    //   }
+    // },
     {
       name: 'autoplay',
       title: 'Auto play',
-      type: 'string',
-      fieldset: 'settings',
-      options: {
-        layout: 'radio',
-        list: [
-          {
-            title: 'None',
-            value: 'off'
-          },
-          {
-            title: 'Always',
-            value: 'on'
-          },
-          {
-            title: 'When in viewport',
-            value: 'viewport'
-          }
-        ]
-      }
+      type: 'boolean',
+      fieldset: 'settings'
     }
+    // {
+    //   name: 'autoplay',
+    //   title: 'Auto play',
+    //   type: 'string',
+    //   fieldset: 'settings',
+    //   options: {
+    //     layout: 'radio',
+    //     list: [
+    //       {
+    //         title: 'None',
+    //         value: 'off'
+    //       },
+    //       {
+    //         title: 'Always',
+    //         value: 'on'
+    //       },
+    //       {
+    //         title: 'When in viewport',
+    //         value: 'viewport'
+    //       }
+    //     ]
+    //   }
+    // }
   ]
 }

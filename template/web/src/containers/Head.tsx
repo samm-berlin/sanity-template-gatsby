@@ -1,7 +1,8 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Helmet, { HelmetProps } from 'react-helmet'
-import { mapToSingleObject } from '@/lib/helpers'
+// import { mapToSingleObject } from '@/lib/helpers'
+import fonts from '@/assets/fonts.css'
 
 type MetaData = {
   robotsIndex: boolean
@@ -81,14 +82,12 @@ const Head = (props: HeadProps): JSX.Element => {
         content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
       />
 
-      <link rel="stylesheet" href="https://use.typekit.net/veh2rse.css" />
-
       <link
         href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css"
         rel="stylesheet"
         type="text/css"
       />
-      <style type="text/css"></style>
+      <style type="text/css">{fonts}</style>
 
       {ogImage && <meta property="og:image" content={ogImage.asset.url} />}
     </Helmet>

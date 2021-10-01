@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { SanityPage } from 'web/types/graphql-types'
-import ModulesLoop from '@/containers/ModulesLoop'
+import ModulesLoop from '@/modules'
 
 interface PageProps {
   page: SanityPage

@@ -14,7 +14,8 @@ export default {
         // {type: 'moduleHero'},
         // {type: 'moduleHeroSlider'},
         // {type: 'moduleFurtherReading'},
-        {type: 'moduleTwoColumn'}
+        {type: 'moduleTwoColumn'},
+        {type: 'moduleSpacer'}
       ],
       options: {
         editModal: 'modal'
