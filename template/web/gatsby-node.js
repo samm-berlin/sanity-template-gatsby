@@ -11,7 +11,9 @@ const { getUri } = require('./src/utils/routing')
  */
 
 exports.createSchemaCustomization = ({ actions, schema }) => {
-  actions.createTypes([
+  const { createTypes } = actions
+  
+  createTypes([
     schema.buildObjectType({
       name: "SanityPost",
       interfaces: ["Node"],
@@ -23,6 +25,13 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
       }
     })
   ]);
+  
+  const typeDefs = `
+    type ContentModule implements Node {
+      joinedAt: Date
+    }
+  `
+  createTypes(typeDefs)
 };
 
 /**

@@ -51,7 +51,7 @@
     // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
     "allowSyntheticDefaultImports": true
   },
-  "include": ["src/**/*", "../jsconfig.json", "types"],
+  "include": ["src/**/*", "../jsconfig.json", "types", "modulesBackup/HeroSlider", "modulesBackup/Hero", "modulesBackup/FurtherReading"],
   "exclude": ["node_modules", "public", ".cache", ".ignore"],
   "files": [
     "types/block-content-to-react.d.ts",
