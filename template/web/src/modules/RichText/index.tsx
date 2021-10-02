@@ -6,6 +6,8 @@ import BlockContent from '@sanity/block-content-to-react'
 import { Link } from '@/atoms/Link'
 import Text from '@/atoms/Text'
 import Box from '@/atoms/Box'
+import Button from '@/atoms/SanityButton'
+import SanityButton from '@/atoms/SanityButton'
 
 const Block = (props: any): JSX.Element | null => {
   if (props.children) {
@@ -25,7 +27,8 @@ const serializers = {
     h4: (props: any) => <Text as="h3" {...props} />,
     span: (props: any) => <Text {...props} />,
     listItem: (props: any) => <Text as="li" {...props} />,
-    block: Block
+    block: Block,
+    button: (props: any) => <SanityButton {...props.node} />
   },
   listItem: (props: any) => <Text as="li" {...props} />,
   marks: {

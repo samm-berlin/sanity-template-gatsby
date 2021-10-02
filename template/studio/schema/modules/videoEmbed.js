@@ -12,7 +12,7 @@ export default {
         columns: 2
       }
     },
-    {name: 'options'},
+    {name: 'options'}
   ],
   preview: {
     select: {

@@ -14,8 +14,19 @@ export default {
     serif: `'EB Garamond', serif`,
     mono: `'Nanum Gothic Coding', monospace`,
   },
+  buttons: {
+    primary: {
+      color: 'white',
+      bg: 'text',
+    },
+    test: {
+      color: 'green',
+      bg: 'blue',
+    }
+  },
   space: [8, 16, 32, 64, 128],
   fontSizes: [12, 14, 16, 20, 24, 32],
+  radii: [0, 1, 2, 4, 6, 8, 16],
   containerWidth: "1440px",
   minComponentWidth: "300px",
   // scale: 12 / 16,

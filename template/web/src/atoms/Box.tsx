@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import {
     compose,
     space, layout, color, flexbox, position, border, shadow,
-    SpaceProps, LayoutProps, ColorProps, FlexboxProps, PositionProps, BorderProps, ShadowProps, flexDirection
+    SpaceProps, LayoutProps, ColorProps, FlexboxProps, PositionProps, BorderProps, ShadowProps
 } from 'styled-system'
 
 interface Props extends PositionProps, LayoutProps, FlexboxProps, ColorProps, SpaceProps, BorderProps, ShadowProps {

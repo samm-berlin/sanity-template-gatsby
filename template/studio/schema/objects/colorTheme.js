@@ -4,6 +4,9 @@ export default {
   name: 'colorTheme',
   title: 'Color Theme',
   type: 'object',
+  initialValue: {
+    theme: 'none'
+  },
   fields: [
     // @TODO
     // maybe move this to a global .env??

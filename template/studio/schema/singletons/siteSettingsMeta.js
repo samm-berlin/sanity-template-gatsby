@@ -10,8 +10,8 @@ export default {
       type: 'meta',
       options: {
         collapsible: false,
-        collapsed: false,
-      },
-    },
-  ],
-};
+        collapsed: false
+      }
+    }
+  ]
+}

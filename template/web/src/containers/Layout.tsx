@@ -1,5 +1,5 @@
 import React, { FC, ReactChild } from 'react'
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider } from 'theme-ui'
 import theme from '@/styles/theme'
 import Box from '@/atoms/Box'
 import Head from './Head'

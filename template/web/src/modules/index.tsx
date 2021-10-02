@@ -42,7 +42,8 @@ const ModuleLoop: FC<SanityContentModules> = ({ modules, ...props }) => (
 export default ModuleLoop
 
 export const query = graphql`
-  fragment ContentModules on SanityModuleImageOrModuleRichTextOrModuleSpacerOrModuleTwoColumnOrModuleVideoEmbed {
+  fragment ContentModules on SanityModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleRichTextOrModuleSpacerOrModuleTwoColumnOrModuleVideoEmbed
+  {
     ... on SanityModuleRichText {
       _key
       _type

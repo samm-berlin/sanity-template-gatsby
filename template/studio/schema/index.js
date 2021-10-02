@@ -14,35 +14,29 @@ import productCategory from './documents/products/productCategory'
 
 import contentModules from './modules'
 import imageWithArtDirection from './objects/imageWithArtDirection'
-import imagesWithText from './objects/imagesWithText'
 import link from './objects/link'
 import meta from './objects/meta'
 import richTextExtended from './objects/richTextExtended'
-import richTextSimple from './objects/richTextSimple'
-import placeDetails from './objects/placeDetails'
-import heroSlider from './objects/heroSlider'
 import imageWithAlt from './objects/imageWithAlt'
-import imageTwoColumns from './objects/imageTwoColumns'
-import furtherReading from './objects/furtherReading'
 import images from './objects/images'
 import colorTheme from './objects/colorTheme'
 import videoEmbed from './objects/videoEmbed'
 import activation from './objects/activation'
 import modulePadding from './objects/modulePadding'
 import aspectRatio from './objects/aspectRatio'
-import headings from './objects/headings'
 import textAlignment from './objects/textAlignment'
+import button, { buttonProperties } from './objects/button'
+import card from './objects/card'
 
 import imageModule from './modules/image'
 import heroModule from './modules/hero'
-import heroSliderModule from './modules/heroSlider'
-import furtherReadingModule from './modules/furtherReading'
+import moduleListing from './modules/listing'
 import richTextModule from './modules/richText'
 import twoColumnModule from './modules/twoColumn'
-import hero from './modules/heroOld'
 import moduleDefaultFields from './modules/_defaultFields'
 import moduleVideoEmbed from './modules/videoEmbed'
 import moduleSpacer from './modules/spacer'
+import moduleMarquee from './modules/marquee'
 
 export default createSchema({
   name: 'default',
@@ -69,32 +63,27 @@ export default createSchema({
     link,
     meta,
     richTextExtended,
-    richTextSimple,
-    placeDetails,
     colorTheme,
     videoEmbed,
     activation,
     modulePadding,
     aspectRatio,
-    headings,
     textAlignment,
+    button,
+    buttonProperties,
+    card,
 
     // modules
     moduleDefaultFields,
     imageModule,
     heroModule,
-    heroSliderModule,
-    furtherReadingModule,
     richTextModule,
     twoColumnModule,
     moduleVideoEmbed,
-    imageTwoColumns,
     imageWithAlt,
     images,
-    imagesWithText,
-    hero,
-    heroSlider,
-    furtherReading,
-    moduleSpacer
+    moduleSpacer,
+    moduleMarquee,
+    moduleListing
   ]
 })

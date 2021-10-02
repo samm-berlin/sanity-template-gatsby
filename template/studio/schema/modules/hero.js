@@ -2,16 +2,33 @@ export default {
   name: 'moduleHero',
   title: 'Hero',
   type: 'object',
+  fieldsets: [
+    {name: 'options'}
+  ],
   fields: [
+    {
+      title: 'Module Options',
+      type: 'moduleDefaultFields',
+      name: 'options',
+      fieldset: 'options'
+    },
     {
       name: 'heroImage',
       title: 'Hero Image',
-      type: 'image'
+      type: 'image',
+      options: {
+        hotspot: true
+      }
     },
     {
       name: 'heroTitle',
-      title: 'Hero Title',
-      type: 'text'
+      title: 'Hero Text',
+      type: 'richTextExtended'
+    },
+    {
+      name: 'heroCta',
+      title: 'Call to Action',
+      type: 'button'
     }
   ],
 
