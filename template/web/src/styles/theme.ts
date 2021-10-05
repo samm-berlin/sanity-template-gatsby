@@ -29,6 +29,7 @@ export default {
   radii: [0, 1, 2, 4, 6, 8, 16],
   containerWidth: "1440px",
   minComponentWidth: "300px",
+  breakpoints: ['786px', '1440px'],
   // scale: 12 / 16,
   // fontSize: {
   //   desktop: 12,
