@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components'
 import Box from '@/atoms/Box'
 import { graphql } from 'gatsby'
 import { SanityModuleDefaultFields } from 'web/types/graphql-types'
-import pageTheme, {lightTheme, darkTheme, brandTheme} from '@/styles/theme'
+import pageTheme, { lightTheme, darkTheme, brandTheme } from '@/styles/theme'
 
 type Props = {
   children: ReactChild | ReactChild[] | JSX.Element,
@@ -15,17 +15,20 @@ const ModuleContainer: FC<Props> = ({ children, options }) => {
   return (
     <ThemeProvider theme={
       options?.theme?.theme === 'none'
-      ? {...pageTheme, colors: {...pageTheme.colors, brand: options?.theme?.list?.value}}
-      : ( options?.theme?.theme === 'light'
-        ? {...pageTheme, colors: {...lightTheme.colors, brand: options?.theme?.list?.value}}
-        : (options?.theme?.theme === 'dark'
-          ? {...pageTheme, colors: {...darkTheme.colors, brand: options?.theme?.list?.value}}
-          : {...pageTheme, colors: {
-            ...brandTheme.colors,
-            background: options?.theme?.list?.value
-          }}))
-      }>
-      <Box
+        ? { ...pageTheme, colors: { ...pageTheme.colors, brand: options?.theme?.list?.value } }
+        : (options?.theme?.theme === 'light'
+          ? { ...pageTheme, colors: { ...lightTheme.colors, brand: options?.theme?.list?.value } }
+          : (options?.theme?.theme === 'dark'
+            ? { ...pageTheme, colors: { ...darkTheme.colors, brand: options?.theme?.list?.value } }
+            : {
+              ...pageTheme, colors: {
+                ...brandTheme.colors,
+                background: options?.theme?.list?.value
+              }
+            }))
+    }>
+      <Box bg={"background"}>
+        <Box
           px={options?.padding?.x}
           py={options?.padding?.y}
           mx="auto"
@@ -34,8 +37,9 @@ const ModuleContainer: FC<Props> = ({ children, options }) => {
           bg={"background"}
           color={"text"}
           height="100%"
-      >
-        {children}
+        >
+          {children}
+        </Box>
       </Box>
     </ThemeProvider>
   )
