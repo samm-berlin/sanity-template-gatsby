@@ -1,10 +1,10 @@
 import React, { FC } from 'react'
 // import { GatsbyImage } from "gatsby-plugin-image"
-import SanityImage from "gatsby-plugin-sanity-image"
 import { graphql } from 'gatsby'
 import { SanityModuleImage } from 'web/types/graphql-types'
 import Box from '@/atoms/Box'
 import Text from '@/atoms/Text'
+import SanityImage from '@/atoms/SanityImage'
 
 const ImageModule: FC<SanityModuleImage> = ({ image, ...props }) =>
   image?.asset ? (
@@ -16,12 +16,7 @@ const ImageModule: FC<SanityModuleImage> = ({ image, ...props }) =>
         time but more traffic on runtime on our SanityCDN - more expensive
         however hotspot will be supported out of the box.
       */}
-      <SanityImage {...image} width={4096}
-        style={{
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-        }} />
+      <SanityImage image={image} />
       {image.subtitle && (
         <Box pt={1}>
           <Text variant="body">{image.subtitle}</Text>
