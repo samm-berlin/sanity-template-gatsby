@@ -36,6 +36,9 @@ const modulesMap = {
   moduleFurtherReading: (props: SanityModuleFurtherReading) => (
     <FurtherReading {...props} />
   ),
+  moduleHero: (props: SanityModuleHero) => (
+    <HeroModule
+  )
   fragment: <div />
 }
 

@@ -5,5 +5,5 @@ export default {
   validation: Rule =>
     Rule.regex(/^[^\s@]+@[^\s@]+\.[^\s@]+$/).error(
       'Is not a valid email address'
-    ),
-};
+    )
+}

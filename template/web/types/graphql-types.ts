@@ -8053,19 +8053,50 @@ export type ModuleOptionsFragment = { activation?: Maybe<Pick<SanityActivation, 
     & { list?: Maybe<Pick<SanityColorlist, 'value' | 'title'>> }
   )> };
 
+export type ModuleHeroDataFragment = (
+  Pick<SanityModuleHero, '_type'>
+  & { heroTitle?: Maybe<RichTextDataFragment>, heroImage?: Maybe<ImageWithPreviewFragment> }
+);
+
+export type ImageFragment = { crop?: Maybe<Pick<SanityImageCrop, '_key' | '_type' | 'top' | 'bottom' | 'left' | 'right'>>, hotspot?: Maybe<Pick<SanityImageHotspot, '_key' | '_type' | 'x' | 'y' | 'height' | 'width'>>, asset?: Maybe<(
+    Pick<SanityImageAsset, '_id' | 'altText'>
+    & { metadata?: Maybe<(
+      Pick<SanityImageMetadata, 'lqip'>
+      & { dimensions?: Maybe<Pick<SanityImageDimensions, 'aspectRatio' | 'width' | 'height'>> }
+    )> }
+  )> };
+
+export type ImageWithPreviewFragment = (
+  { asset?: Maybe<{ metadata?: Maybe<{ preview: SanityImageMetadata['lqip'] }> }> }
+  & ImageFragment
+);
+
 export type ModuleImageDataFragment = { image?: Maybe<SammSanityImageWithPreviewFragment> };
 
-export type SammSanityImageFragment = { hotspot?: Maybe<Pick<SanityImageHotspot, 'height' | 'width' | 'x' | 'y'>>, crop?: Maybe<Pick<SanityImageCrop, 'bottom' | 'left' | 'right' | 'top'>>, asset?: Maybe<Pick<SanityImageAsset, '_id' | 'altText'>> };
+export type SammSanityImageFragment = (
+  Pick<SanityImageWithAlt, 'alt'>
+  & { crop?: Maybe<Pick<SanityImageCrop, '_key' | '_type' | 'top' | 'bottom' | 'left' | 'right'>>, hotspot?: Maybe<Pick<SanityImageHotspot, '_key' | '_type' | 'x' | 'y' | 'height' | 'width'>>, asset?: Maybe<(
+    Pick<SanityImageAsset, '_id'>
+    & { metadata?: Maybe<(
+      Pick<SanityImageMetadata, 'lqip'>
+      & { dimensions?: Maybe<Pick<SanityImageDimensions, 'aspectRatio' | 'width' | 'height'>> }
+    )> }
+  )> }
+);
 
 export type SammSanityImageWithPreviewFragment = (
   { asset?: Maybe<{ metadata?: Maybe<{ preview: SanityImageMetadata['lqip'] }> }> }
   & SammSanityImageFragment
 );
 
-export type ModuleRichTextDataFragment = { text?: Maybe<(
-    Pick<SanityRichTextExtended, 'alignment'>
-    & { textRaw: SanityRichTextExtended['_rawText'] }
-  )> };
+export type ModuleMarqueeDataFragment = { marqueetext: SanityModuleMarquee['text'], marqueestyle: SanityModuleMarquee['variant'] };
+
+export type RichTextDataFragment = (
+  Pick<SanityRichTextExtended, 'alignment'>
+  & { textRaw: SanityRichTextExtended['_rawText'] }
+);
+
+export type ModuleRichTextDataFragment = { text?: Maybe<RichTextDataFragment> };
 
 export type ModuleSpacerDataFragment = Pick<SanityModuleSpacer, 'height'>;
 
@@ -8074,14 +8105,11 @@ export type ModuleVideoEmbedDataFragment = (
   & { video?: Maybe<Pick<SanityVideoEmbed, 'url'>>, aspectRatio?: Maybe<Pick<SanityAspectRatio, 'x' | 'y'>>, posterFrame?: Maybe<{ asset?: Maybe<Pick<SanityImageAsset, 'url'>> }> }
 );
 
-export type ImageFragment = { hotspot?: Maybe<Pick<SanityImageHotspot, 'height' | 'width' | 'x' | 'y'>>, crop?: Maybe<Pick<SanityImageCrop, 'bottom' | 'left' | 'right' | 'top'>>, asset?: Maybe<Pick<SanityImageAsset, '_id' | 'altText'>> };
-
-export type ImageWithPreviewFragment = (
-  { asset?: Maybe<{ metadata?: Maybe<{ preview: SanityImageMetadata['lqip'] }> }> }
-  & ImageFragment
+export type ContentModules_SanityModuleHero_Fragment = (
+  Pick<SanityModuleHero, '_key' | '_type'>
+  & { options?: Maybe<ModuleOptionsFragment> }
+  & ModuleHeroDataFragment
 );
-
-export type ContentModules_SanityModuleHero_Fragment = {};
 
 export type ContentModules_SanityModuleImage_Fragment = (
   Pick<SanityModuleImage, '_key' | '_type'>
@@ -8091,7 +8119,11 @@ export type ContentModules_SanityModuleImage_Fragment = (
 
 export type ContentModules_SanityModuleListing_Fragment = {};
 
-export type ContentModules_SanityModuleMarquee_Fragment = {};
+export type ContentModules_SanityModuleMarquee_Fragment = (
+  Pick<SanityModuleMarquee, '_key' | '_type'>
+  & { options?: Maybe<ModuleOptionsFragment> }
+  & ModuleMarqueeDataFragment
+);
 
 export type ContentModules_SanityModuleRichText_Fragment = (
   Pick<SanityModuleRichText, '_key' | '_type'>

@@ -15,7 +15,7 @@ export default {
     {
       name: 'heroImage',
       title: 'Hero Image',
-      type: 'image',
+      type: 'imageField',
       options: {
         hotspot: true
       }
@@ -34,7 +34,6 @@ export default {
 
   preview: {
     select: {
-      title: 'heroTitle',
       media: 'heroImage'
     },
     prepare ({...selection}) {

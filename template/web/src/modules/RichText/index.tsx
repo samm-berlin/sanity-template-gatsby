@@ -6,8 +6,7 @@ import BlockContent from '@sanity/block-content-to-react'
 import { Link } from '@/atoms/Link'
 import Text from '@/atoms/Text'
 import Box from '@/atoms/Box'
-import Button from '@/atoms/SanityButton'
-import SanityButton from '@/atoms/SanityButton'
+import { Button, SanityButton } from '@/atoms/Button'
 
 const Block = (props: any): JSX.Element | null => {
   if (props.children) {
@@ -52,18 +51,21 @@ const serializers = {
   }
 }
 
-const RichTextModule: FC<any> = ({ text }) => 
-<Box style={{textAlign: text.alignment}}>
-  <BlockContent blocks={text.textRaw} serializers={serializers} />
-</Box>
+const RichTextModule: FC<any> = ({ text }) =>
+  <Box style={{ textAlign: text.alignment }}>
+    <BlockContent blocks={text.textRaw} serializers={serializers} />
+  </Box>
 
 export default RichTextModule
 
 export const query = graphql`
+
+  fragment RichTextData on SanityRichTextExtended {
+    alignment
+    textRaw: _rawText(resolveReferences: { maxDepth: 6 })
+  }
+
   fragment moduleRichTextData on SanityModuleRichText {
-    text {
-      alignment
-      textRaw: _rawText(resolveReferences: { maxDepth: 6 })
-    }
+    text { ...RichTextData }
   }
 `

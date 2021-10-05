@@ -21,12 +21,11 @@ export const Link = React.forwardRef(
     props: Omit<GatsbyLinkProps<unknown>, 'ref'>,
     ref: React.Ref<HTMLAnchorElement>
   ) => {
-    const { to, activeClassName, partiallyActive, ...other } = props
-    const internal = /^\/(?!\/)/.test(to)
+    const { to, activeClassName, partiallyActive, type, internal, ...other } = props
 
     // Use Gatsby Link for internal links, and <a> for others
-    if (internal) {
-      const file = /\.[0-9a-z]+$/i.test(to)
+    if (type === 'internal') {
+      const file = /\.[0-9a-z]+$/i.test(to);
 
       if (file) {
         return <ALink href={to} innerRef={ref} {...other} />

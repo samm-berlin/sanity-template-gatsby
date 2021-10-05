@@ -6,6 +6,8 @@ import siteSettingsMeta from './singletons/siteSettingsMeta'
 import siteSettingsNavigation from './singletons/siteSettingsNavigation'
 // import siteSettingsModules from './singletons/siteSettingsModules'
 
+import imageField from './fields/image'
+
 import page from './documents/page'
 import post from './documents/posts'
 import postCategory from './documents/posts/postCategory'
@@ -17,15 +19,13 @@ import imageWithArtDirection from './objects/imageWithArtDirection'
 import link from './objects/link'
 import meta from './objects/meta'
 import richTextExtended from './objects/richTextExtended'
-import imageWithAlt from './objects/imageWithAlt'
-import images from './objects/images'
 import colorTheme from './objects/colorTheme'
 import videoEmbed from './objects/videoEmbed'
 import activation from './objects/activation'
 import modulePadding from './objects/modulePadding'
 import aspectRatio from './objects/aspectRatio'
 import textAlignment from './objects/textAlignment'
-import button, { buttonProperties } from './objects/button'
+import button, {buttonProperties} from './objects/button'
 import card from './objects/card'
 
 import imageModule from './modules/image'
@@ -57,6 +57,9 @@ export default createSchema({
     product,
     productCategory,
 
+    // fields
+    imageField,
+
     // objects
     contentModules,
     imageWithArtDirection,
@@ -80,8 +83,6 @@ export default createSchema({
     richTextModule,
     twoColumnModule,
     moduleVideoEmbed,
-    imageWithAlt,
-    images,
     moduleSpacer,
     moduleMarquee,
     moduleListing

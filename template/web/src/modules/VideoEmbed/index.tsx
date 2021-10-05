@@ -34,7 +34,7 @@ const VideoEmbedModule: FC<VideoEmbedModuleProps> = ({
 
   return (
     <>
-      <Text as="h2" variant="head" mb={1}>{title}</Text>
+      {title && <Text as="h2" variant="head" mb={1}>{title}</Text>}
       <Box pt={`${aspectRatio.y / aspectRatio.x * 100}%`} position="relative">
         {video?.url && <ReactPlayer
           url={video.url}
@@ -79,32 +79,31 @@ export const query = graphql`
       }
     }
   }
-
-  fragment Image on SanityImage {
-    hotspot {
-      height
-      width
-      x
-      y
-    }
-    crop {
-      bottom
-      left
-      right
-      top
-    }
-    asset {
-      _id
-      altText
-    }
-  }
-  
-  fragment ImageWithPreview on SanityImage {
-    ...Image
-    asset {
-      metadata {
-        preview: lqip
-      }
-    }
-  }
 `
+
+// fragment Image on SanityImage {
+//   hotspot {
+//     height
+//     width
+//     x
+//     y
+//   }
+//   crop {
+//     bottom
+//     left
+//     right
+//     top
+//   }
+//   asset {
+//     _id
+//     altText
+//   }
+// }
+
+// fragment ImageWithPreview on SanityImage {
+//   ...Image
+//   asset {
+//     metadata {
+//       preview: lqip
+//     }
+//   }

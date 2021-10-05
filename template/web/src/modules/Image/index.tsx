@@ -33,40 +33,57 @@ const ImageModule: FC<SanityModuleImage> = ({ image, ...props }) =>
 export default ImageModule
 
 export const query = graphql`
-  fragment moduleImageData on SanityModuleImage {
-    image {
-      ...SammSanityImageWithPreview
-    }
+fragment moduleImageData on SanityModuleImage {
+  image {
+    ...SammSanityImageWithPreview
   }
+}
 
-  fragment SammSanityImage on SanityImageWithAlt {
-    hotspot {
-      height
-      width
-      x
-      y
-    }
-    crop {
-      bottom
-      left
-      right
-      top
-    }
-    asset {
-      _id
-      altText
-    }
+fragment SammSanityImage on SanityImageWithAlt {
+  alt
+  crop {
+    _key
+    _type
+    top
+    bottom
+    left
+    right
   }
-
-  fragment SammSanityImageWithPreview on SanityImageWithAlt {
-    ...SammSanityImage
-    asset {
-      metadata {
-        preview: lqip
+  hotspot {
+    _key
+    _type
+    x
+    y
+    height
+    width
+  }
+  asset {
+    _id
+    metadata {
+      lqip
+      dimensions {
+        aspectRatio
+        width
+        height
       }
     }
   }
+}
+
+fragment SammSanityImageWithPreview on SanityImageWithAlt {
+  ...SammSanityImage
+  asset {
+    metadata {
+      preview: lqip
+    }
+  }
+}
 `
+
+
+// ...SanityImageWithPreview
+
+
 
 // export const query = graphql`
 //   fragment moduleImageData on SanityModuleImage {

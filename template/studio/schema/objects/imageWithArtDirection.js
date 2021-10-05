@@ -6,15 +6,23 @@ export default {
     {
       name: 'imageMobile',
       title: 'Image (mobile)',
-      type: 'imageWithAlt',
-      validation: Rule => Rule.required(),
+      type: 'imageField'
     },
     {
       name: 'imageDesktop',
       title: 'Image (desktop)',
-      type: 'imageWithAlt',
+      type: 'imageField',
       description:
-        'Leave this field blank to use the same image for desktop and mobile.',
+        'Leave this field blank to use the same image for desktop and mobile.'
     },
-  ],
-};
+    {
+      name: 'alt',
+      title: 'Alternative text (for screen readers & SEO)',
+      type: 'string',
+      options: {
+        isHighlighted: true,
+        validation: Rule => Rule.required()
+      }
+    }
+  ]
+}

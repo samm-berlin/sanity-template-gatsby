@@ -15,7 +15,15 @@ export default {
     {
       name: 'image',
       title: 'Image',
-      type: 'imageWithAlt'
+      type: 'imageField'
+    },
+    {
+      name: 'subtitle',
+      title: 'Subtitle',
+      type: 'string',
+      options: {
+        isHighlighted: true
+      }
     }
   ],
 

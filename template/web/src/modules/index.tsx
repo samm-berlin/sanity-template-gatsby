@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import {
   SanityContentModules,
   SanityModuleImage,
+  SanityModuleMarquee,
   SanityModuleRichText,
   SanityModuleSpacer,
   SanityModuleTwoColumn,
@@ -15,8 +16,8 @@ import VideoEmbedModule, { VideoEmbedModuleProps } from '@/modules/VideoEmbed'
 import ModuleContainer from '../containers/ModuleContainer'
 import SpacerModule from './Spacer'
 import TwoColModule from './TwoColumns'
-
-// missing: spacer and twocolumn
+import MarqueeModule from './Marquee'
+import HeroModule from './Hero'
 
 const modulesMap = {
   moduleRichText: (props: SanityModuleRichText) => <RichText {...props} />,
@@ -24,6 +25,8 @@ const modulesMap = {
   moduleVideoEmbed: (props: VideoEmbedModuleProps) => <VideoEmbedModule {...props} />,
   moduleSpacer: (props: SanityModuleSpacer) => <SpacerModule {...props} />,
   moduleTwoColumn: (props: SanityModuleTwoColumn) => <TwoColModule {...props} />,
+  moduleMarquee: (props: SanityModuleMarquee) => <MarqueeModule {...props} />,
+  moduleHero: (props: SanityModuleHero) => <HeroModule {...props} />,
   fragment: <div />
 }
 
@@ -66,6 +69,19 @@ export const query = graphql`
       _key
       _type
       ...moduleSpacerData
+      options { ...ModuleOptions }
+    }
+    ... on SanityModuleMarquee {
+      _key
+      _type
+      ...moduleMarqueeData
+      options { ...ModuleOptions }
+    }
+
+    ... on SanityModuleHero {
+      _key
+      _type
+      ...moduleHeroData
       options { ...ModuleOptions }
     }
   }

@@ -46,7 +46,7 @@ export default {
     },
     {
       name: 'posterFrame',
-      type: 'image',
+      type: 'imageField',
       title: 'Poster frame'
     },
     {
