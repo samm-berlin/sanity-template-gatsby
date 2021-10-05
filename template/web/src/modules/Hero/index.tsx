@@ -4,11 +4,25 @@ import { SanityModuleHero } from 'web/types/graphql-types'
 import Box from '@/atoms/Box'
 import RichTextModule from '@/modules/RichText'
 import SanityImage from '@/atoms/SanityImage'
+import theme from '@/styles/theme'
 
 const HeroModule: FC<SanityModuleHero> = ({heroTitle, heroImage}) =>
-    <Box>
+    <Box height="85vh" position="relative">
         <SanityImage image={heroImage} />
-        {heroTitle && <RichTextModule text={heroTitle} />}
+        <Box
+            p={4}
+            width="100%"
+            maxWidth={theme.containerWidth}
+            mx="auto"
+            position="absolute"
+            bottom={0}
+            left="50%"
+            style={{
+                transform: "translateX(-50%)"
+            }}
+        >
+            {heroTitle && <RichTextModule text={heroTitle} />}
+        </Box>
     </Box>
 
 export default HeroModule
