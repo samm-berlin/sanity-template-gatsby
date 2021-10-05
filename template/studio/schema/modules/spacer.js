@@ -17,5 +17,17 @@ export default {
       description: 'in % of screen height',
       type: 'number'
     }
-  ]
+  ],
+
+  preview: {
+    select: {
+      title: 'height'
+    },
+    prepare ({title}) {
+      return {
+        title: 'Spacer',
+        subtitle: title
+      }
+    }
+  }
 }
