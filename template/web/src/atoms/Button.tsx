@@ -69,7 +69,7 @@ export const SanityButton: FC<ButtonProps> = props =>
         borderRadius={4}
         internal={props.link?.internal}
         type={props.link?.type}
-        p={1}
+        p={2}
         m={1}
     >
         {props?.properties?.label}
@@ -78,7 +78,7 @@ export const SanityButton: FC<ButtonProps> = props =>
 export const Button: FC<ButtonProps> = props =>
     <DivButton
         borderRadius={4}
-        p={1}
+        p={2}
         m={1}
         {...props}
     />

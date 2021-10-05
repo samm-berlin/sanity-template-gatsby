@@ -42,12 +42,14 @@ export default styled('div')<TextProps>(
         fontFamily: theme.fonts.sans,
         fontSize: 5,
         fontWeight: 900,
-        textTransform: 'uppercase'
+        textTransform: 'uppercase',
+        my: 2
       },
       subhead: {
         fontFamily: theme.fonts.serif,
         fontSize: 4,
         fontWeight: 400,
+        my: 1
       },
       body: {
         fontFamily: theme.fonts.sans,
@@ -57,14 +59,14 @@ export default styled('div')<TextProps>(
     }
   }),
   `
-
+  line-height: 1.25;
   hyphens: ${(props: TextProps) => (props.hyphens ? 'auto' : 'none')};
   white-space: ${(props: TextProps) => props.whiteSpace};
 
   ${(props: TextProps) =>
     props.mono &&
     `
-  `}
+  `} 
 
   ${(props: TextProps) =>
     props.uppercase &&

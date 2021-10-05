@@ -1,7 +1,5 @@
 import React, { FC } from 'react'
 import { graphql } from 'gatsby'
-import Marquee from 'react-ticker'
-import Text from '@/atoms/Text'
 import { SanityModuleHero } from 'web/types/graphql-types'
 import Box from '@/atoms/Box'
 import RichTextModule from '@/modules/RichText'

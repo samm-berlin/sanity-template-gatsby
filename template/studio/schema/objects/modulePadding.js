@@ -11,7 +11,7 @@ export default {
       name: 'x',
       type: 'number', // should I rather return a number or a string ?
       options: {
-        list: [{value: 0, title: 'none'}, {value: 2, title: 'small'}, {value: 3, title: 'medium'}, {value: 4, title: 'large'}]
+        list: [{value: -1, title: 'none'}, {value: 2, title: 'small'}, {value: 3, title: 'medium'}, {value: 4, title: 'large'}]
       }
     },
     {
@@ -19,7 +19,7 @@ export default {
       name: 'y',
       type: 'number', // should I rather return a number or a string ?
       options: {
-        list: [{value: 0, title: 'none'}, {value: 2, title: 'small'}, {value: 3, title: 'medium'}, {value: 4, title: 'large'}]
+        list: [{value: -1, title: 'none'}, {value: 2, title: 'small'}, {value: 3, title: 'medium'}, {value: 4, title: 'large'}]
       }
     },
     {

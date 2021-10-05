@@ -9,9 +9,22 @@ import Box from '@/atoms/Box'
 import { Button, SanityButton } from '@/atoms/Button'
 
 const Block = (props: any): JSX.Element | null => {
+  const { style } = props.node;
+  const variants = {
+    h1: 'head',
+    h2: 'head',
+    h3: 'subhead',
+    h4: 'subhead',
+    caption: 'caption',
+    p: 'normal',
+    span: 'normal'
+  };
   if (props.children) {
     return (
-      <Text as="p">
+      <Text
+        as={style === "normal" ? "p" : style}
+        variant={variants[style]}
+      >
         {props.children}
       </Text>
     )
@@ -20,10 +33,10 @@ const Block = (props: any): JSX.Element | null => {
 
 const serializers = {
   types: {
-    h1: (props: any) => <Text as="h1" {...props} />,
-    h2: (props: any) => <Text as="h2" {...props} />,
-    h3: (props: any) => <Text as="h3" {...props} />,
-    h4: (props: any) => <Text as="h3" {...props} />,
+    h1: (props: any) => <Text as="h1" variant="head" {...props} />,
+    h2: (props: any) => <Text as="h2" variant="head" {...props} />,
+    h3: (props: any) => <Text as="h3" variant="subhead" {...props} />,
+    h4: (props: any) => <Text as="h3" variant="subhead" {...props} />,
     span: (props: any) => <Text {...props} />,
     listItem: (props: any) => <Text as="li" {...props} />,
     block: Block,

@@ -24,7 +24,7 @@ export default {
       bg: 'blue',
     }
   },
-  space: [8, 16, 32, 64, 128],
+  space: [0, 8, 16, 32, 64, 128],
   fontSizes: [12, 14, 16, 20, 24, 32],
   radii: [0, 1, 2, 4, 6, 8, 16],
   containerWidth: "1440px",
