@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 import { compose, typography, space, color, TypographyProps, SpaceProps, ColorProps, variant } from 'styled-system'
 import theme from '@/styles/theme';
+import textVariants from '@/styles/textVariants';
 
 export type TextComponent = 
   'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span' | 'p' | 'li';
 
 export type TextVariant =
-  'head' | 'subhead' | 'normal' | 'body' | 'caption';
+  'head' | 'subhead' | 'normal' | 'body' | 'caption' | 'captionSmall';
 
 export interface TextProps extends TypographyProps, SpaceProps, ColorProps {
   component?: TextComponent;
@@ -27,36 +28,7 @@ export default styled('div')<TextProps>(
     color
   ),
   variant({
-    variants: {
-      normal: {
-        fontFamily: theme.fonts.sans,
-        fontSize: 3,
-        fontWeight: 300,
-      },
-      caption: {
-        fontFamily: theme.fonts.serif,
-        fontSize: 4,
-        fontStyle: 'italic',
-      },
-      head: {
-        fontFamily: theme.fonts.sans,
-        fontSize: 5,
-        fontWeight: 900,
-        textTransform: 'uppercase',
-        my: 2
-      },
-      subhead: {
-        fontFamily: theme.fonts.serif,
-        fontSize: 4,
-        fontWeight: 400,
-        my: 1
-      },
-      body: {
-        fontFamily: theme.fonts.sans,
-        fontSize: 3,
-        fontWeight: 300,
-      }
-    }
+    variants: textVariants
   }),
   `
   line-height: 1.25;

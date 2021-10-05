@@ -8109,7 +8109,10 @@ export type ModuleHeroDataFragment = (
   & { heroTitle?: Maybe<RichTextDataFragment>, heroImage?: Maybe<ImageWithPreviewFragment> }
 );
 
-export type ModuleImageDataFragment = { image?: Maybe<ImageWithPreviewFragment> };
+export type ModuleImageDataFragment = (
+  Pick<SanityModuleImage, 'subtitle'>
+  & { image?: Maybe<ImageWithPreviewFragment> }
+);
 
 export type ModuleMarqueeDataFragment = { marqueetext: SanityModuleMarquee['text'], marqueestyle: SanityModuleMarquee['variant'] };
 

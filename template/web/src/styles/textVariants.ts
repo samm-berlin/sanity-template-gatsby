@@ -11,16 +11,23 @@ export default {
         fontSize: 4,
         fontStyle: 'italic',
     },
+    captionSmall: {
+        fontFamily: theme.fonts.serif,
+        fontSize: 1,
+        fontStyle: 'italic',
+    },
     head: {
         fontFamily: theme.fonts.sans,
         fontSize: 5,
         fontWeight: 900,
-        textTransform: 'uppercase'
+        textTransform: 'uppercase',
+        my: 2
     },
     subhead: {
         fontFamily: theme.fonts.serif,
         fontSize: 4,
         fontWeight: 400,
+        my: 1
     },
     body: {
         fontFamily: theme.fonts.sans,
