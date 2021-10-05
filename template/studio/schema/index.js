@@ -27,6 +27,7 @@ import aspectRatio from './objects/aspectRatio'
 import textAlignment from './objects/textAlignment'
 import button, {buttonProperties} from './objects/button'
 import card from './objects/card'
+import menuLink from './objects/menuLink'
 
 import imageModule from './modules/image'
 import heroModule from './modules/hero'
@@ -75,6 +76,7 @@ export default createSchema({
     button,
     buttonProperties,
     card,
+    menuLink,
 
     // modules
     moduleDefaultFields,
