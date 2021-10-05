@@ -292,14 +292,14 @@ export type SitePage = Node & {
   internalComponentName: Scalars['String'];
   componentChunkName: Scalars['String'];
   matchPath?: Maybe<Scalars['String']>;
-  isCreatedByStatefulCreatePages?: Maybe<Scalars['Boolean']>;
-  pluginCreator?: Maybe<SitePlugin>;
-  pluginCreatorId?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
   parent?: Maybe<Node>;
   children: Array<Node>;
   internal: Internal;
+  isCreatedByStatefulCreatePages?: Maybe<Scalars['Boolean']>;
   context?: Maybe<SitePageContext>;
+  pluginCreator?: Maybe<SitePlugin>;
+  pluginCreatorId?: Maybe<Scalars['String']>;
 };
 
 export type SitePageContext = {
@@ -870,39 +870,39 @@ export type SanityImage_RawCropArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
 
-export type SanityImageWithAlt = {
+export type SanityImageField = {
   _key?: Maybe<Scalars['String']>;
   _type?: Maybe<Scalars['String']>;
   asset?: Maybe<SanityImageAsset>;
   hotspot?: Maybe<SanityImageHotspot>;
   crop?: Maybe<SanityImageCrop>;
   alt?: Maybe<Scalars['String']>;
-  subtitle?: Maybe<Scalars['String']>;
   _rawAsset?: Maybe<Scalars['JSON']>;
   _rawHotspot?: Maybe<Scalars['JSON']>;
   _rawCrop?: Maybe<Scalars['JSON']>;
 };
 
 
-export type SanityImageWithAlt_RawAssetArgs = {
+export type SanityImageField_RawAssetArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
 
 
-export type SanityImageWithAlt_RawHotspotArgs = {
+export type SanityImageField_RawHotspotArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
 
 
-export type SanityImageWithAlt_RawCropArgs = {
+export type SanityImageField_RawCropArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityImageWithArtDirection = {
   _key?: Maybe<Scalars['String']>;
   _type?: Maybe<Scalars['String']>;
-  imageMobile?: Maybe<SanityImageWithAlt>;
-  imageDesktop?: Maybe<SanityImageWithAlt>;
+  imageMobile?: Maybe<SanityImageField>;
+  imageDesktop?: Maybe<SanityImageField>;
+  alt?: Maybe<Scalars['String']>;
   _rawImageMobile?: Maybe<Scalars['JSON']>;
   _rawImageDesktop?: Maybe<Scalars['JSON']>;
 };
@@ -968,6 +968,19 @@ export type SanityMediaTag_RawNameArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
 
+export type SanityMenuLink = {
+  _key?: Maybe<Scalars['String']>;
+  _type?: Maybe<Scalars['String']>;
+  label?: Maybe<Scalars['String']>;
+  link?: Maybe<SanityLink>;
+  _rawLink?: Maybe<Scalars['JSON']>;
+};
+
+
+export type SanityMenuLink_RawLinkArgs = {
+  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+};
+
 export type SanityMeta = {
   _key?: Maybe<Scalars['String']>;
   _type?: Maybe<Scalars['String']>;
@@ -1013,7 +1026,7 @@ export type SanityModuleHero = {
   _key?: Maybe<Scalars['String']>;
   _type?: Maybe<Scalars['String']>;
   options?: Maybe<SanityModuleDefaultFields>;
-  heroImage?: Maybe<SanityImage>;
+  heroImage?: Maybe<SanityImageField>;
   heroTitle?: Maybe<SanityRichTextExtended>;
   heroCta?: Maybe<SanityButton>;
   _rawOptions?: Maybe<Scalars['JSON']>;
@@ -1048,7 +1061,8 @@ export type SanityModuleImage = {
   _key?: Maybe<Scalars['String']>;
   _type?: Maybe<Scalars['String']>;
   options?: Maybe<SanityModuleDefaultFields>;
-  image?: Maybe<SanityImageWithAlt>;
+  image?: Maybe<SanityImageField>;
+  subtitle?: Maybe<Scalars['String']>;
   _rawOptions?: Maybe<Scalars['JSON']>;
   _rawImage?: Maybe<Scalars['JSON']>;
 };
@@ -1162,7 +1176,7 @@ export type SanityModuleVideoEmbed = {
   options?: Maybe<SanityModuleDefaultFields>;
   title?: Maybe<Scalars['String']>;
   video?: Maybe<SanityVideoEmbed>;
-  posterFrame?: Maybe<SanityImage>;
+  posterFrame?: Maybe<SanityImageField>;
   aspectRatio?: Maybe<SanityAspectRatio>;
   muted?: Maybe<Scalars['Boolean']>;
   controls?: Maybe<Scalars['Boolean']>;
@@ -1845,10 +1859,10 @@ export type SanitySiteSettingsNavigation = SanityDocument & Node & {
   _rev?: Maybe<Scalars['String']>;
   _key?: Maybe<Scalars['String']>;
   frontpage?: Maybe<SanityPage>;
-  desktopMain?: Maybe<Array<Maybe<SanityLink>>>;
-  desktopSecondary?: Maybe<Array<Maybe<SanityLink>>>;
-  mobileMain?: Maybe<Array<Maybe<SanityLink>>>;
-  mobileSecondary?: Maybe<Array<Maybe<SanityLink>>>;
+  desktopMain?: Maybe<Array<Maybe<SanityMenuLink>>>;
+  desktopSecondary?: Maybe<Array<Maybe<SanityMenuLink>>>;
+  mobileMain?: Maybe<Array<Maybe<SanityMenuLink>>>;
+  mobileSecondary?: Maybe<Array<Maybe<SanityMenuLink>>>;
   cta?: Maybe<SanityButton>;
   _rawFrontpage?: Maybe<Scalars['JSON']>;
   _rawDesktopMain?: Maybe<Scalars['JSON']>;
@@ -2137,14 +2151,14 @@ export type QuerySitePageArgs = {
   internalComponentName?: Maybe<StringQueryOperatorInput>;
   componentChunkName?: Maybe<StringQueryOperatorInput>;
   matchPath?: Maybe<StringQueryOperatorInput>;
-  isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>;
-  pluginCreator?: Maybe<SitePluginFilterInput>;
-  pluginCreatorId?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
+  isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>;
   context?: Maybe<SitePageContextFilterInput>;
+  pluginCreator?: Maybe<SitePluginFilterInput>;
+  pluginCreatorId?: Maybe<StringQueryOperatorInput>;
 };
 
 
@@ -2522,10 +2536,10 @@ export type QuerySanitySiteSettingsNavigationArgs = {
   _rev?: Maybe<StringQueryOperatorInput>;
   _key?: Maybe<StringQueryOperatorInput>;
   frontpage?: Maybe<SanityPageFilterInput>;
-  desktopMain?: Maybe<SanityLinkFilterListInput>;
-  desktopSecondary?: Maybe<SanityLinkFilterListInput>;
-  mobileMain?: Maybe<SanityLinkFilterListInput>;
-  mobileSecondary?: Maybe<SanityLinkFilterListInput>;
+  desktopMain?: Maybe<SanityMenuLinkFilterListInput>;
+  desktopSecondary?: Maybe<SanityMenuLinkFilterListInput>;
+  mobileMain?: Maybe<SanityMenuLinkFilterListInput>;
+  mobileSecondary?: Maybe<SanityMenuLinkFilterListInput>;
   cta?: Maybe<SanityButtonFilterInput>;
   _rawFrontpage?: Maybe<JsonQueryOperatorInput>;
   _rawDesktopMain?: Maybe<JsonQueryOperatorInput>;
@@ -3762,6 +3776,10 @@ export type SiteFunctionSortInput = {
   order?: Maybe<Array<Maybe<SortOrderEnum>>>;
 };
 
+export type SitePageContextFilterInput = {
+  id?: Maybe<StringQueryOperatorInput>;
+};
+
 export type SitePluginFilterInput = {
   resolve?: Maybe<StringQueryOperatorInput>;
   name?: Maybe<StringQueryOperatorInput>;
@@ -3847,10 +3865,6 @@ export type SitePluginPackageJsonPeerDependenciesFilterInput = {
   version?: Maybe<StringQueryOperatorInput>;
 };
 
-export type SitePageContextFilterInput = {
-  id?: Maybe<StringQueryOperatorInput>;
-};
-
 export type SitePageConnection = {
   totalCount: Scalars['Int'];
   edges: Array<SitePageEdge>;
@@ -3902,7 +3916,94 @@ export type SitePageFieldsEnum =
   | 'internalComponentName'
   | 'componentChunkName'
   | 'matchPath'
+  | 'id'
+  | 'parent___id'
+  | 'parent___parent___id'
+  | 'parent___parent___parent___id'
+  | 'parent___parent___parent___children'
+  | 'parent___parent___children'
+  | 'parent___parent___children___id'
+  | 'parent___parent___children___children'
+  | 'parent___parent___internal___content'
+  | 'parent___parent___internal___contentDigest'
+  | 'parent___parent___internal___description'
+  | 'parent___parent___internal___fieldOwners'
+  | 'parent___parent___internal___ignoreType'
+  | 'parent___parent___internal___mediaType'
+  | 'parent___parent___internal___owner'
+  | 'parent___parent___internal___type'
+  | 'parent___children'
+  | 'parent___children___id'
+  | 'parent___children___parent___id'
+  | 'parent___children___parent___children'
+  | 'parent___children___children'
+  | 'parent___children___children___id'
+  | 'parent___children___children___children'
+  | 'parent___children___internal___content'
+  | 'parent___children___internal___contentDigest'
+  | 'parent___children___internal___description'
+  | 'parent___children___internal___fieldOwners'
+  | 'parent___children___internal___ignoreType'
+  | 'parent___children___internal___mediaType'
+  | 'parent___children___internal___owner'
+  | 'parent___children___internal___type'
+  | 'parent___internal___content'
+  | 'parent___internal___contentDigest'
+  | 'parent___internal___description'
+  | 'parent___internal___fieldOwners'
+  | 'parent___internal___ignoreType'
+  | 'parent___internal___mediaType'
+  | 'parent___internal___owner'
+  | 'parent___internal___type'
+  | 'children'
+  | 'children___id'
+  | 'children___parent___id'
+  | 'children___parent___parent___id'
+  | 'children___parent___parent___children'
+  | 'children___parent___children'
+  | 'children___parent___children___id'
+  | 'children___parent___children___children'
+  | 'children___parent___internal___content'
+  | 'children___parent___internal___contentDigest'
+  | 'children___parent___internal___description'
+  | 'children___parent___internal___fieldOwners'
+  | 'children___parent___internal___ignoreType'
+  | 'children___parent___internal___mediaType'
+  | 'children___parent___internal___owner'
+  | 'children___parent___internal___type'
+  | 'children___children'
+  | 'children___children___id'
+  | 'children___children___parent___id'
+  | 'children___children___parent___children'
+  | 'children___children___children'
+  | 'children___children___children___id'
+  | 'children___children___children___children'
+  | 'children___children___internal___content'
+  | 'children___children___internal___contentDigest'
+  | 'children___children___internal___description'
+  | 'children___children___internal___fieldOwners'
+  | 'children___children___internal___ignoreType'
+  | 'children___children___internal___mediaType'
+  | 'children___children___internal___owner'
+  | 'children___children___internal___type'
+  | 'children___internal___content'
+  | 'children___internal___contentDigest'
+  | 'children___internal___description'
+  | 'children___internal___fieldOwners'
+  | 'children___internal___ignoreType'
+  | 'children___internal___mediaType'
+  | 'children___internal___owner'
+  | 'children___internal___type'
+  | 'internal___content'
+  | 'internal___contentDigest'
+  | 'internal___description'
+  | 'internal___fieldOwners'
+  | 'internal___ignoreType'
+  | 'internal___mediaType'
+  | 'internal___owner'
+  | 'internal___type'
   | 'isCreatedByStatefulCreatePages'
+  | 'context___id'
   | 'pluginCreator___resolve'
   | 'pluginCreator___name'
   | 'pluginCreator___version'
@@ -3990,94 +4091,7 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___internal___mediaType'
   | 'pluginCreator___internal___owner'
   | 'pluginCreator___internal___type'
-  | 'pluginCreatorId'
-  | 'id'
-  | 'parent___id'
-  | 'parent___parent___id'
-  | 'parent___parent___parent___id'
-  | 'parent___parent___parent___children'
-  | 'parent___parent___children'
-  | 'parent___parent___children___id'
-  | 'parent___parent___children___children'
-  | 'parent___parent___internal___content'
-  | 'parent___parent___internal___contentDigest'
-  | 'parent___parent___internal___description'
-  | 'parent___parent___internal___fieldOwners'
-  | 'parent___parent___internal___ignoreType'
-  | 'parent___parent___internal___mediaType'
-  | 'parent___parent___internal___owner'
-  | 'parent___parent___internal___type'
-  | 'parent___children'
-  | 'parent___children___id'
-  | 'parent___children___parent___id'
-  | 'parent___children___parent___children'
-  | 'parent___children___children'
-  | 'parent___children___children___id'
-  | 'parent___children___children___children'
-  | 'parent___children___internal___content'
-  | 'parent___children___internal___contentDigest'
-  | 'parent___children___internal___description'
-  | 'parent___children___internal___fieldOwners'
-  | 'parent___children___internal___ignoreType'
-  | 'parent___children___internal___mediaType'
-  | 'parent___children___internal___owner'
-  | 'parent___children___internal___type'
-  | 'parent___internal___content'
-  | 'parent___internal___contentDigest'
-  | 'parent___internal___description'
-  | 'parent___internal___fieldOwners'
-  | 'parent___internal___ignoreType'
-  | 'parent___internal___mediaType'
-  | 'parent___internal___owner'
-  | 'parent___internal___type'
-  | 'children'
-  | 'children___id'
-  | 'children___parent___id'
-  | 'children___parent___parent___id'
-  | 'children___parent___parent___children'
-  | 'children___parent___children'
-  | 'children___parent___children___id'
-  | 'children___parent___children___children'
-  | 'children___parent___internal___content'
-  | 'children___parent___internal___contentDigest'
-  | 'children___parent___internal___description'
-  | 'children___parent___internal___fieldOwners'
-  | 'children___parent___internal___ignoreType'
-  | 'children___parent___internal___mediaType'
-  | 'children___parent___internal___owner'
-  | 'children___parent___internal___type'
-  | 'children___children'
-  | 'children___children___id'
-  | 'children___children___parent___id'
-  | 'children___children___parent___children'
-  | 'children___children___children'
-  | 'children___children___children___id'
-  | 'children___children___children___children'
-  | 'children___children___internal___content'
-  | 'children___children___internal___contentDigest'
-  | 'children___children___internal___description'
-  | 'children___children___internal___fieldOwners'
-  | 'children___children___internal___ignoreType'
-  | 'children___children___internal___mediaType'
-  | 'children___children___internal___owner'
-  | 'children___children___internal___type'
-  | 'children___internal___content'
-  | 'children___internal___contentDigest'
-  | 'children___internal___description'
-  | 'children___internal___fieldOwners'
-  | 'children___internal___ignoreType'
-  | 'children___internal___mediaType'
-  | 'children___internal___owner'
-  | 'children___internal___type'
-  | 'internal___content'
-  | 'internal___contentDigest'
-  | 'internal___description'
-  | 'internal___fieldOwners'
-  | 'internal___ignoreType'
-  | 'internal___mediaType'
-  | 'internal___owner'
-  | 'internal___type'
-  | 'context___id';
+  | 'pluginCreatorId';
 
 export type SitePageGroupConnection = {
   totalCount: Scalars['Int'];
@@ -4126,14 +4140,14 @@ export type SitePageFilterInput = {
   internalComponentName?: Maybe<StringQueryOperatorInput>;
   componentChunkName?: Maybe<StringQueryOperatorInput>;
   matchPath?: Maybe<StringQueryOperatorInput>;
-  isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>;
-  pluginCreator?: Maybe<SitePluginFilterInput>;
-  pluginCreatorId?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
+  isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>;
   context?: Maybe<SitePageContextFilterInput>;
+  pluginCreator?: Maybe<SitePluginFilterInput>;
+  pluginCreatorId?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePageSortInput = {
@@ -7495,8 +7509,16 @@ export type SanitySiteSettingsMetaSortInput = {
   order?: Maybe<Array<Maybe<SortOrderEnum>>>;
 };
 
-export type SanityLinkFilterListInput = {
-  elemMatch?: Maybe<SanityLinkFilterInput>;
+export type SanityMenuLinkFilterListInput = {
+  elemMatch?: Maybe<SanityMenuLinkFilterInput>;
+};
+
+export type SanityMenuLinkFilterInput = {
+  _key?: Maybe<StringQueryOperatorInput>;
+  _type?: Maybe<StringQueryOperatorInput>;
+  label?: Maybe<StringQueryOperatorInput>;
+  link?: Maybe<SanityLinkFilterInput>;
+  _rawLink?: Maybe<JsonQueryOperatorInput>;
 };
 
 export type SanityLinkFilterInput = {
@@ -7644,31 +7666,47 @@ export type SanitySiteSettingsNavigationFieldsEnum =
   | 'desktopMain'
   | 'desktopMain____key'
   | 'desktopMain____type'
-  | 'desktopMain___type'
-  | 'desktopMain___url'
-  | 'desktopMain___targetBlank'
-  | 'desktopMain____rawInternal'
+  | 'desktopMain___label'
+  | 'desktopMain___link____key'
+  | 'desktopMain___link____type'
+  | 'desktopMain___link___type'
+  | 'desktopMain___link___url'
+  | 'desktopMain___link___targetBlank'
+  | 'desktopMain___link____rawInternal'
+  | 'desktopMain____rawLink'
   | 'desktopSecondary'
   | 'desktopSecondary____key'
   | 'desktopSecondary____type'
-  | 'desktopSecondary___type'
-  | 'desktopSecondary___url'
-  | 'desktopSecondary___targetBlank'
-  | 'desktopSecondary____rawInternal'
+  | 'desktopSecondary___label'
+  | 'desktopSecondary___link____key'
+  | 'desktopSecondary___link____type'
+  | 'desktopSecondary___link___type'
+  | 'desktopSecondary___link___url'
+  | 'desktopSecondary___link___targetBlank'
+  | 'desktopSecondary___link____rawInternal'
+  | 'desktopSecondary____rawLink'
   | 'mobileMain'
   | 'mobileMain____key'
   | 'mobileMain____type'
-  | 'mobileMain___type'
-  | 'mobileMain___url'
-  | 'mobileMain___targetBlank'
-  | 'mobileMain____rawInternal'
+  | 'mobileMain___label'
+  | 'mobileMain___link____key'
+  | 'mobileMain___link____type'
+  | 'mobileMain___link___type'
+  | 'mobileMain___link___url'
+  | 'mobileMain___link___targetBlank'
+  | 'mobileMain___link____rawInternal'
+  | 'mobileMain____rawLink'
   | 'mobileSecondary'
   | 'mobileSecondary____key'
   | 'mobileSecondary____type'
-  | 'mobileSecondary___type'
-  | 'mobileSecondary___url'
-  | 'mobileSecondary___targetBlank'
-  | 'mobileSecondary____rawInternal'
+  | 'mobileSecondary___label'
+  | 'mobileSecondary___link____key'
+  | 'mobileSecondary___link____type'
+  | 'mobileSecondary___link___type'
+  | 'mobileSecondary___link___url'
+  | 'mobileSecondary___link___targetBlank'
+  | 'mobileSecondary___link____rawInternal'
+  | 'mobileSecondary____rawLink'
   | 'cta____key'
   | 'cta____type'
   | 'cta___properties____key'
@@ -7825,10 +7863,10 @@ export type SanitySiteSettingsNavigationFilterInput = {
   _rev?: Maybe<StringQueryOperatorInput>;
   _key?: Maybe<StringQueryOperatorInput>;
   frontpage?: Maybe<SanityPageFilterInput>;
-  desktopMain?: Maybe<SanityLinkFilterListInput>;
-  desktopSecondary?: Maybe<SanityLinkFilterListInput>;
-  mobileMain?: Maybe<SanityLinkFilterListInput>;
-  mobileSecondary?: Maybe<SanityLinkFilterListInput>;
+  desktopMain?: Maybe<SanityMenuLinkFilterListInput>;
+  desktopSecondary?: Maybe<SanityMenuLinkFilterListInput>;
+  mobileMain?: Maybe<SanityMenuLinkFilterListInput>;
+  mobileSecondary?: Maybe<SanityMenuLinkFilterListInput>;
   cta?: Maybe<SanityButtonFilterInput>;
   _rawFrontpage?: Maybe<JsonQueryOperatorInput>;
   _rawDesktopMain?: Maybe<JsonQueryOperatorInput>;
@@ -8071,23 +8109,7 @@ export type ModuleHeroDataFragment = (
   & { heroTitle?: Maybe<RichTextDataFragment>, heroImage?: Maybe<ImageWithPreviewFragment> }
 );
 
-export type ModuleImageDataFragment = { image?: Maybe<SammSanityImageWithPreviewFragment> };
-
-export type SammSanityImageFragment = (
-  Pick<SanityImageWithAlt, 'alt'>
-  & { crop?: Maybe<Pick<SanityImageCrop, '_key' | '_type' | 'top' | 'bottom' | 'left' | 'right'>>, hotspot?: Maybe<Pick<SanityImageHotspot, '_key' | '_type' | 'x' | 'y' | 'height' | 'width'>>, asset?: Maybe<(
-    Pick<SanityImageAsset, '_id'>
-    & { metadata?: Maybe<(
-      Pick<SanityImageMetadata, 'lqip'>
-      & { dimensions?: Maybe<Pick<SanityImageDimensions, 'aspectRatio' | 'width' | 'height'>> }
-    )> }
-  )> }
-);
-
-export type SammSanityImageWithPreviewFragment = (
-  { asset?: Maybe<{ metadata?: Maybe<{ preview: SanityImageMetadata['lqip'] }> }> }
-  & SammSanityImageFragment
-);
+export type ModuleImageDataFragment = { image?: Maybe<ImageWithPreviewFragment> };
 
 export type ModuleMarqueeDataFragment = { marqueetext: SanityModuleMarquee['text'], marqueestyle: SanityModuleMarquee['variant'] };
 

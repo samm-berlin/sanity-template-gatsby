@@ -42,7 +42,7 @@ const SanityImage: FC<Props> = ({image}) =>
 export default SanityImage;
 
 export const query = graphql`
-  fragment Image on SanityImage {
+  fragment Image on SanityImageField {
     crop {
       _key
       _type
@@ -73,7 +73,7 @@ export const query = graphql`
     }
   }
   
-  fragment ImageWithPreview on SanityImage {
+  fragment ImageWithPreview on SanityImageField {
     ...Image
     asset {
       metadata {

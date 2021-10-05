@@ -1,6 +1,5 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
-import { graphql } from 'gatsby'
 import {
   compose,
   space, layout, position, border, shadow,
@@ -28,7 +27,7 @@ const IMG = styled(GatsbyImage)<ImageProps>(
   )
 )
 
-const SanityImage: FC<ImageProps> = (props) =>
+const Image: FC<ImageProps> = (props) =>
   <IMG {...props} />
 
-export default SanityImage;
+export default Image;
