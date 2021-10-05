@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path')
 
-const { setEnvVars, createType } = require('./src/utils/build')
+const { setEnvVars, createType, getSettings } = require('./src/utils/build')
 const { getUri } = require('./src/utils/routing')
 // const { isFuture } = require("date-fns");
 /**
@@ -63,11 +63,27 @@ exports.createPages = async apiProps => {
     'MAILCHIMP_SUBSCRIBE_URL'
   ])
 
+  // get site settings
+  const siteSettings = await getSettings(
+    {
+      type: 'siteSettingsNavigation',
+      query: `
+        frontpage {
+          id
+        }
+      `,
+    },
+    apiProps
+  );
+
+  const frontpageId = siteSettings.frontpage.id;
+
   // pages
   const pages = createType(
     {
       type: 'page',
-      path: ({ slug }) => getUri(slug.current, 'page'),
+      path: ({ id, slug }) =>
+        id === frontpageId ? '/' : getUri(slug.current, 'page'),
       component: path.resolve(__dirname, 'src/templates/Page.tsx')
     },
     apiProps
