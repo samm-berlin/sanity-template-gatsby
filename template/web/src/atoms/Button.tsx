@@ -12,6 +12,7 @@ export interface ButtonProps extends
     ColorProps,
     BorderProps {
     variant: string;
+    onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
     // variant: 'primary' | 'secondary' | 'outline';
 };
 

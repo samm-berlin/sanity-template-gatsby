@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link as GatsbyLink, GatsbyLinkProps } from 'gatsby'
+import React, { useEffect } from 'react'
+import { Link as GatsbyLink, GatsbyLinkProps, graphql } from 'gatsby'
 
 interface ALinkProps extends Omit<GatsbyLinkProps<any>, 'to'> {
   href: string
@@ -21,7 +21,12 @@ export const Link = React.forwardRef(
     props: Omit<GatsbyLinkProps<unknown>, 'ref'>,
     ref: React.Ref<HTMLAnchorElement>
   ) => {
-    const { to, activeClassName, partiallyActive, type, internal, ...other } = props
+    const { to, url, activeClassName, partiallyActive, type, internal, ...other } = props
+
+    useEffect(() => {
+      console.log('internal:', internal)
+      console.log('to', to)
+    }, [])
 
     // Use Gatsby Link for internal links, and <a> for others
     if (type === 'internal') {
@@ -32,7 +37,7 @@ export const Link = React.forwardRef(
       }
       return (
         <GatsbyLink
-          to={to}
+          to={to ? to : internal.slug.current}
           activeClassName={activeClassName}
           partiallyActive={partiallyActive}
           innerRef={ref}
@@ -40,6 +45,33 @@ export const Link = React.forwardRef(
         />
       )
     }
-    return <ALink href={to} innerRef={ref} {...other} />
+    return <ALink href={url} innerRef={ref} {...other} />
   }
 )
+
+export const query = graphql`
+  fragment Link on SanityLink {
+      url
+      type
+      internal {
+        ... on SanityPage {
+          _type
+          slug {
+            current
+          }
+        }
+        ... on SanityPost {
+          _type
+          slug {
+            current
+          }
+        }
+        ... on SanityProduct {
+          _type
+          slug {
+            current
+          }
+        }
+      }
+    }
+`
