@@ -22,7 +22,7 @@ const Block = (props: any): JSX.Element | null => {
   if (props.children) {
     return (
       <Text
-        as={style === "normal" ? "p" : style}
+        as={style === "normal" ? "p" : (style === "caption" ? "span" : style)}
         variant={variants[style]}
       >
         {props.children}
