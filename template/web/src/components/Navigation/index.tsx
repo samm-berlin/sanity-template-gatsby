@@ -1,8 +1,9 @@
 import React, {FC, useState} from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql } from 'gatsby'
 import { SanityMenuLink } from 'web/types/graphql-types'
 import Box from '@/atoms/Box'
 import Link from '@/atoms/Link'
+import NavigationDrawer from '@/components/Navigation/NavigationDrawer'
 import { IoMenu, IoClose } from 'react-icons/io5'
 import Text from '@/atoms/Text'
 
@@ -36,26 +37,7 @@ const Navigation: FC<Props> = (props) => {
           <IoClose size="2em" onClick={() => { setDrawerOpened(!drawerOpened) }}/>
           : <IoMenu size="2em" onClick={() => { setDrawerOpened(!drawerOpened) }} /> }
       </Box>
-      <Box
-        bg="#fff"
-        display={['flex', 'none']}
-        flexDirection="column"
-        height="calc(100vh - 70px)"
-        justifyContent="space-between"
-        overflow="hidden"
-        position="fixed"
-        right="0"
-        top="70px"
-        transition="width 1s"
-        width={drawerOpened ? '100%' : '0'}
-        zIndex={100}>
-        <Box m={2} display="flex" flexDirection="column" alignItems="center" justifyContent="flex-start">
-          {mobileMain && mobileMain.map(({ label, link }) => <Link color="text" {...link}>{label}</Link>)}
-        </Box>
-        <Box m={2} display="flex" flexDirection="row" justifyContent="flex-end" alignItems="center">
-          {mobileSecondary.map(({ label, link }) => (<Box ml={2}><Link color="text" {...link}>{label}</Link></Box>))}
-        </Box>
-      </Box>
+      <NavigationDrawer drawerOpened={drawerOpened} mobileMain={mobileMain} mobileSecondary={mobileSecondary} />
     </Box>
   )
 }

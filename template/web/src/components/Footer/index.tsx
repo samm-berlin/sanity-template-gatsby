@@ -1,6 +1,8 @@
-import Box from '@/atoms/Box'
-import { graphql, useStaticQuery } from 'gatsby'
 import React, { FC } from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
+import { SanityMenuLink } from 'web/types/graphql-types'
+import Box from '@/atoms/Box'
+import Link from '@/atoms/Link'
 
 const Footer: FC = () => {
 
@@ -8,15 +10,22 @@ const Footer: FC = () => {
     query {
       data: sanitySiteSettingsNavigation {
         desktopSecondary {
-          ...MenuLink
+          label
+          link {
+            ...Link
+          }
         }
       }
     }
   `)
 
+  const desktopSecondary: SanityMenuLink[] = data.desktopSecondary
+
   return (
-    <Box display={['none', 'flex']} >
-      <h1>Footer</h1>
+    <Box height="4rem" display={['none', 'flex']} flexDirection="row" justifyContent="flex-end">
+      <Box mx={4} display="flex" flexDirection="row" justifyContent="flex-end" alignItems="center">
+        {desktopSecondary.map(({ label, link }) => (<Box ml={2}><Link {...link}>{label}</Link></Box>))}
+      </Box>
     </Box>
   )
 }

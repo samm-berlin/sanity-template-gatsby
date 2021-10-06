@@ -3,10 +3,10 @@
 import React, { FC } from 'react'
 import { graphql } from 'gatsby'
 import BlockContent from '@sanity/block-content-to-react'
-import { Link } from '@/atoms/Link'
+import Link from '@/atoms/Link'
 import Text from '@/atoms/Text'
 import Box from '@/atoms/Box'
-import { Button, SanityButton } from '@/atoms/Button'
+import { SanityButton } from '@/atoms/Button'
 
 const Block = (props: any): JSX.Element | null => {
   const { style } = props.node;
