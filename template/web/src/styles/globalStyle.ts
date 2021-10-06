@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 import theme from './theme'
 
-
 const GlobalStyle = createGlobalStyle`
 
   * {
@@ -12,6 +11,14 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     font-family: ${theme.fonts.sans};
+    font-size: 6px;
+    ${({ theme: { mediaQueries: { small } } }) => small} {
+      font-size: 6px;
+    }
+  }
+
+  body {
+    font-size: ${theme.fontSizes[3]}
   }
 
   b, strong {

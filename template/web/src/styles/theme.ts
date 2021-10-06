@@ -3,6 +3,9 @@ export const brandColors = {
   blue: '#007ce0'
 }
 
+
+export const breakpoints = ['786px', '1440px']
+
 export default {
   colors: {
     brand: Object.values(brandColors)[0],
@@ -24,12 +27,16 @@ export default {
       bg: 'blue',
     }
   },
-  space: [0, 8, 16, 32, 64, 128],
-  fontSizes: [12, 14, 16, 20, 24, 32],
+  space: [0, '1rem', '2rem', '3rem', '4rem', '5rem'],
+  fontSizes: ['1.5rem', '1.75rem', '2rem', '3rem', '5rem', '6rem'],
   radii: [0, 1, 2, 4, 6, 8, 16],
   containerWidth: "1440px",
   minComponentWidth: "300px",
-  breakpoints: ['786px', '1440px'],
+  breakpoints: breakpoints,
+  mediaQueries: {
+    small: `@media screen and (min-width: ${breakpoints[0]})`,
+    large: `@media screen and (min-width: ${breakpoints[1]})`,
+  }
   // scale: 12 / 16,
   // fontSize: {
   //   desktop: 12,

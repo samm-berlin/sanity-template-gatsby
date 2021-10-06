@@ -43,7 +43,7 @@ const Header: FC = (props: Props) => {
       justifyContent="space-between"
       alignItems="center"
       bg="rgba(220, 220, 220, 0.3)"
-      height="4rem"
+      height="12rem"
       width="100%"
       position="fixed"
       zIndex={1}

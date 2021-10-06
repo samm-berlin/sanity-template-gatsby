@@ -8086,10 +8086,48 @@ export type ImageWithPreviewFragment = (
   & ImageFragment
 );
 
+export type LinkFragment = (
+  Pick<SanityLink, 'url' | 'type'>
+  & { internal?: Maybe<(
+    Pick<SanityPage, '_type'>
+    & { slug?: Maybe<Pick<SanitySlug, 'current'>> }
+  ) | (
+    Pick<SanityPost, '_type'>
+    & { slug?: Maybe<Pick<SanitySlug, 'current'>> }
+  ) | (
+    Pick<SanityProduct, '_type'>
+    & { slug?: Maybe<Pick<SanitySlug, 'current'>> }
+  )> }
+);
+
 export type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type Unnamed_1_Query = { data: { edges: Array<{ node: { meta?: Maybe<(
+export type Unnamed_1_Query = { data?: Maybe<{ desktopSecondary?: Maybe<Array<Maybe<MenuLinkFragment>>> }> };
+
+export type Unnamed_2_QueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type Unnamed_2_Query = { data?: Maybe<{ desktopMain?: Maybe<Array<Maybe<(
+      Pick<SanityMenuLink, 'label'>
+      & { link?: Maybe<LinkFragment> }
+    )>>>, mobileMain?: Maybe<Array<Maybe<(
+      Pick<SanityMenuLink, 'label'>
+      & { link?: Maybe<LinkFragment> }
+    )>>>, mobileSecondary?: Maybe<Array<Maybe<(
+      Pick<SanityMenuLink, 'label'>
+      & { link?: Maybe<LinkFragment> }
+    )>>> }> };
+
+export type MenuLinkFragment = (
+  Pick<SanityMenuLink, 'label'>
+  & { link?: Maybe<LinkFragment> }
+);
+
+export type Unnamed_3_QueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type Unnamed_3_Query = { data: { edges: Array<{ node: { meta?: Maybe<(
           Pick<SanityMeta, 'robotsIndex' | 'metaTitle' | 'metaDescription'>
           & { ogImage?: Maybe<{ asset?: Maybe<Pick<SanityImageAsset, 'url'>> }> }
         )> } }> } };
@@ -8234,32 +8272,32 @@ export type ContentModulesDataFragment = { modules?: Maybe<Array<Maybe<ContentMo
     & ContentModules_SanityModuleTwoColumn_Fragment
   ) | ContentModules_SanityModuleVideoEmbed_Fragment>>> };
 
-export type Unnamed_2_QueryVariables = Exact<{
-  id: Scalars['String'];
-}>;
-
-
-export type Unnamed_2_Query = { page?: Maybe<(
-    Pick<SanityPage, 'title'>
-    & { meta?: Maybe<MetaDataFragment>, contentModules?: Maybe<ContentModulesDataFragment> }
-  )> };
-
-export type Unnamed_3_QueryVariables = Exact<{
-  id: Scalars['String'];
-}>;
-
-
-export type Unnamed_3_Query = { page?: Maybe<(
-    Pick<SanityPage, 'title'>
-    & { meta?: Maybe<MetaDataFragment>, contentModules?: Maybe<ContentModulesDataFragment> }
-  )> };
-
 export type Unnamed_4_QueryVariables = Exact<{
   id: Scalars['String'];
 }>;
 
 
 export type Unnamed_4_Query = { page?: Maybe<(
+    Pick<SanityPage, 'title'>
+    & { meta?: Maybe<MetaDataFragment>, contentModules?: Maybe<ContentModulesDataFragment> }
+  )> };
+
+export type Unnamed_5_QueryVariables = Exact<{
+  id: Scalars['String'];
+}>;
+
+
+export type Unnamed_5_Query = { page?: Maybe<(
+    Pick<SanityPage, 'title'>
+    & { meta?: Maybe<MetaDataFragment>, contentModules?: Maybe<ContentModulesDataFragment> }
+  )> };
+
+export type Unnamed_6_QueryVariables = Exact<{
+  id: Scalars['String'];
+}>;
+
+
+export type Unnamed_6_Query = { page?: Maybe<(
     Pick<SanityPage, 'title'>
     & { meta?: Maybe<MetaDataFragment>, contentModules?: Maybe<ContentModulesDataFragment> }
   )> };

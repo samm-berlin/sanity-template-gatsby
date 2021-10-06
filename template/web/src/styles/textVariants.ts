@@ -13,7 +13,7 @@ export default {
     },
     captionSmall: {
         fontFamily: theme.fonts.serif,
-        fontSize: 1,
+        fontSize: 2,
         fontStyle: 'italic',
     },
     head: {

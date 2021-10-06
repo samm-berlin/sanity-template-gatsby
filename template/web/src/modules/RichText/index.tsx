@@ -17,7 +17,8 @@ const Block = (props: any): JSX.Element | null => {
     h4: 'subhead',
     caption: 'caption',
     p: 'normal',
-    span: 'normal'
+    span: 'normal',
+    normal: 'normal'
   };
   if (props.children) {
     return (
@@ -37,7 +38,7 @@ const serializers = {
     h2: (props: any) => <Text as="h2" variant="head" {...props} />,
     h3: (props: any) => <Text as="h3" variant="subhead" {...props} />,
     h4: (props: any) => <Text as="h3" variant="subhead" {...props} />,
-    span: (props: any) => <Text {...props} />,
+    span: (props: any) => <Text variant="body" {...props} />,
     listItem: (props: any) => <Text as="li" {...props} />,
     block: Block,
     button: (props: any) => <SanityButton {...props.node} />
