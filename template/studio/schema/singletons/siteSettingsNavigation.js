@@ -8,7 +8,7 @@ export default {
       name: 'frontpage',
       title: 'Frontpage',
       type: 'reference',
-      to: [{ type: 'page' }]
+      to: [{type: 'page'}]
     },
     {
       name: 'desktopMain',

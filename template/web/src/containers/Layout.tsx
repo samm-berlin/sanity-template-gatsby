@@ -4,7 +4,7 @@ import theme from '@/styles/theme'
 import Box from '@/atoms/Box'
 import Head from './Head'
 import Footer from '@/components/Footer'
-import Header from '@/components/Header/Header'
+import Header from '@/components/Header'
 import GlobalStyle from '@/styles/globalStyle'
 
 type Props = {

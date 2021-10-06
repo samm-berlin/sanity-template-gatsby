@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { compose, color, border, variant, typography, space, SpaceProps, TypographyProps, ColorProps, BorderProps } from 'styled-system'
 import { SanityButton as SanityButtonProps } from 'web/types/graphql-types';
 import Box from './Box';
-import { Link } from './Link';
+import Link from './Link';
 
 export interface ButtonProps extends
     SanityButtonProps,
