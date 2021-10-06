@@ -17,7 +17,7 @@ const Layout: FC<Props> = props => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Box color="black" bg="paper">
+      <Box color="black" bg="background">
         <Head />
         <Header />
         {children}
