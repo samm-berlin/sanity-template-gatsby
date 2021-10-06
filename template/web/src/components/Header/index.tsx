@@ -37,7 +37,7 @@ const Header: FC = (props: Props) => {
 
   return (
     <Box
-      px={4}
+      px={[2, 4]}
       display="flex"
       flexDirection="row"
       justifyContent="space-between"
