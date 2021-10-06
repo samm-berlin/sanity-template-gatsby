@@ -1,5 +1,5 @@
 export const brandColors = {
-  green: '#00ff00',
+  green: '#00ffe0',
   blue: '#007ce0'
 }
 

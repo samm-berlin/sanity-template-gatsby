@@ -2,34 +2,59 @@ import Box from '@/atoms/Box'
 import Link from '@/atoms/Link'
 import React from 'react'
 import { SanityMenuLink } from 'web/types/graphql-types'
+import { IoClose } from 'react-icons/io5'
+import Text from '@/atoms/Text'
 
 interface Props {
   mobileMain: SanityMenuLink[]
   mobileSecondary: SanityMenuLink[]
   drawerOpened: boolean
+  closeDrawer: () => void
 }
 
 const NavigationDrawer = (props: Props) => {
-  const { mobileMain, mobileSecondary, drawerOpened } = props;
+  const { mobileMain, mobileSecondary, drawerOpened, closeDrawer } = props;
   return (
     <Box
-      bg="rgba(220, 220, 220, 1)"
       display={['flex', 'none']}
-      flexDirection="column"
-      height="calc(100vh - 4rem)"
-      justifyContent="space-between"
+      height="100vh"
       overflow="hidden"
       position="fixed"
       right="0"
-      top="4rem"
-      transition="width 1s"
+      top="0"
+      transition="width .6s"
       width={drawerOpened ? '100%' : '0'}
-      zIndex={100}>
-      <Box m={2} display="flex" flexDirection="column" alignItems="center" justifyContent="flex-start">
-        {mobileMain && mobileMain.map(({ label, link }) => <Link {...link}>{label}</Link>)}
-      </Box>
-      <Box m={2} display="flex" flexDirection="row" justifyContent="flex-end" alignItems="center">
-        {mobileSecondary.map(({ label, link }) => (<Box ml={2}><Link {...link}>{label}</Link></Box>))}
+      zIndex={100}
+      bg="black"
+    >
+      <Box
+        p={2}
+        display="flex"
+        height="100%"
+        width="100%"
+        flexDirection="column"
+        justifyContent="space-between"
+        alignItems="flex-end"
+      >
+        <IoClose size="2em" color="white" onClick={() => closeDrawer()} />
+        <Box m={2} display="flex" flexDirection="column" alignItems="center" justifyContent="flex-start">
+          {mobileMain && mobileMain.map(({ label, link }) =>
+            <Link {...link} >
+              <Text color="white" py={2}>
+                {label}
+              </Text>
+            </Link>
+          )}
+        </Box>
+        <Box m={2} display="flex" flexDirection="row" justifyContent="flex-end" alignItems="center">
+          {mobileSecondary.map(({ label, link }) =>
+            <Link {...link}>
+              <Text color="white" pl={2}>
+                {label}
+              </Text>
+            </Link>
+          )}
+        </Box>
       </Box>
     </Box>
   )

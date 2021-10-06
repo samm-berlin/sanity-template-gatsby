@@ -8073,19 +8073,6 @@ export type ContentModuleSortInput = {
   order?: Maybe<Array<Maybe<SortOrderEnum>>>;
 };
 
-export type ImageFragment = { crop?: Maybe<Pick<SanityImageCrop, '_key' | '_type' | 'top' | 'bottom' | 'left' | 'right'>>, hotspot?: Maybe<Pick<SanityImageHotspot, '_key' | '_type' | 'x' | 'y' | 'height' | 'width'>>, asset?: Maybe<(
-    Pick<SanityImageAsset, '_id' | 'altText'>
-    & { metadata?: Maybe<(
-      Pick<SanityImageMetadata, 'lqip'>
-      & { dimensions?: Maybe<Pick<SanityImageDimensions, 'aspectRatio' | 'width' | 'height'>> }
-    )> }
-  )> };
-
-export type ImageWithPreviewFragment = (
-  { asset?: Maybe<{ metadata?: Maybe<{ preview: SanityImageMetadata['lqip'] }> }> }
-  & ImageFragment
-);
-
 export type LinkFragment = (
   Pick<SanityLink, 'url' | 'type'>
   & { internal?: Maybe<(
@@ -8100,10 +8087,26 @@ export type LinkFragment = (
   )> }
 );
 
+export type ImageFragment = { crop?: Maybe<Pick<SanityImageCrop, '_key' | '_type' | 'top' | 'bottom' | 'left' | 'right'>>, hotspot?: Maybe<Pick<SanityImageHotspot, '_key' | '_type' | 'x' | 'y' | 'height' | 'width'>>, asset?: Maybe<(
+    Pick<SanityImageAsset, '_id' | 'altText'>
+    & { metadata?: Maybe<(
+      Pick<SanityImageMetadata, 'lqip'>
+      & { dimensions?: Maybe<Pick<SanityImageDimensions, 'aspectRatio' | 'width' | 'height'>> }
+    )> }
+  )> };
+
+export type ImageWithPreviewFragment = (
+  { asset?: Maybe<{ metadata?: Maybe<{ preview: SanityImageMetadata['lqip'] }> }> }
+  & ImageFragment
+);
+
 export type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type Unnamed_1_Query = { data?: Maybe<{ desktopSecondary?: Maybe<Array<Maybe<MenuLinkFragment>>> }> };
+export type Unnamed_1_Query = { data?: Maybe<{ desktopSecondary?: Maybe<Array<Maybe<(
+      Pick<SanityMenuLink, 'label'>
+      & { link?: Maybe<LinkFragment> }
+    )>>> }> };
 
 export type Unnamed_2_QueryVariables = Exact<{ [key: string]: never; }>;
 
