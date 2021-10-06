@@ -4,6 +4,7 @@ import { SanityMenuLink } from 'web/types/graphql-types'
 import Box from '@/atoms/Box'
 import Link from '@/atoms/Link'
 import { IoMenu, IoClose } from 'react-icons/io5'
+import Text from '@/atoms/Text'
 
 
 interface Props {
@@ -18,9 +19,17 @@ const Navigation: FC<Props> = (props) => {
   const [drawerOpened, setDrawerOpened] = useState(false)
 
   return (
-    <Box display="flex">
-      <Box display={['none', 'flex']} >
-        {desktopMain.map(({ label, link }) => (<Box px={1}> <Link {...link}>{label}</Link> </Box>))}
+    <Box display="flex" width="33%">
+      <Box display={['none', 'flex']} width="100%" justifyContent="space-between">
+        {desktopMain.map(({ label, link }) => (
+          <Box px={1}>
+            <Link {...link}>
+              <Text color="white">
+                {label}
+              </Text>
+            </Link>
+          </Box>
+        ))}
       </Box>
       <Box display={['flex', 'none']}>
         {drawerOpened ?
@@ -41,10 +50,10 @@ const Navigation: FC<Props> = (props) => {
         width={drawerOpened ? '100%' : '0'}
         zIndex={100}>
         <Box m={2} display="flex" flexDirection="column" alignItems="center" justifyContent="flex-start">
-          {mobileMain && mobileMain.map(({ label, link }) => <Link {...link}>{label}</Link>)}
+          {mobileMain && mobileMain.map(({ label, link }) => <Link color="text" {...link}>{label}</Link>)}
         </Box>
         <Box m={2} display="flex" flexDirection="row" justifyContent="flex-end" alignItems="center">
-          {mobileSecondary.map(({ label, link }) => (<Box ml={2}><Link {...link}>{label}</Link></Box>))}
+          {mobileSecondary.map(({ label, link }) => (<Box ml={2}><Link color="text" {...link}>{label}</Link></Box>))}
         </Box>
       </Box>
     </Box>

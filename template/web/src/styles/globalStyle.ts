@@ -21,6 +21,13 @@ const GlobalStyle = createGlobalStyle`
     font-size: ${theme.fontSizes[3]}
   }
 
+  a {
+    text-decoration: none;
+    &:hover {
+      font-style: italic;
+    }
+  }
+
   b, strong {
     font-weight: 900;
   }

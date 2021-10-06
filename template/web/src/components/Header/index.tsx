@@ -42,7 +42,7 @@ const Header: FC = (props: Props) => {
       flexDirection="row"
       justifyContent="space-between"
       alignItems="center"
-      bg="rgba(220, 220, 220, 0.3)"
+      bg="rgba(200, 200, 200, 0.5)"
       height="12rem"
       width="100%"
       position="fixed"
@@ -51,7 +51,7 @@ const Header: FC = (props: Props) => {
         backdropFilter: "blur(10px)"
       }}
     >
-      <Text as="h1" variant="head">
+      <Text as="h1" variant="head" color="white">
         SAMM
       </Text>
       <Navigation desktopMain={data.desktopMain} mobileMain={data.mobileMain} mobileSecondary={data.mobileSecondary} />

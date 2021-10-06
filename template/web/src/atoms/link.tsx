@@ -46,7 +46,7 @@ const Link = React.forwardRef(
   }
 )
 
-export default Link
+export default Link;
 
 export const query = graphql`
   fragment Link on SanityLink {
