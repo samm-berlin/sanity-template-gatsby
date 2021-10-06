@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react'
-import { Link as GatsbyLink, GatsbyLinkProps, graphql } from 'gatsby'
+import React from 'react';
+import { Link as GatsbyLink, GatsbyLinkProps, graphql } from 'gatsby';
+import { getUri } from '@/utils/routing';
 
 interface ALinkProps extends Omit<GatsbyLinkProps<any>, 'to'> {
   href: string
@@ -23,11 +24,6 @@ export const Link = React.forwardRef(
   ) => {
     const { to, url, activeClassName, partiallyActive, type, internal, ...other } = props
 
-    useEffect(() => {
-      console.log('internal:', internal)
-      console.log('to', to)
-    }, [])
-
     // Use Gatsby Link for internal links, and <a> for others
     if (type === 'internal') {
       const file = /\.[0-9a-z]+$/i.test(to);
@@ -35,9 +31,10 @@ export const Link = React.forwardRef(
       if (file) {
         return <ALink href={to} innerRef={ref} {...other} />
       }
+      const uri = getUri(internal.slug.current, internal.type);
       return (
         <GatsbyLink
-          to={to ? to : internal.slug.current}
+          to={uri}
           activeClassName={activeClassName}
           partiallyActive={partiallyActive}
           innerRef={ref}
