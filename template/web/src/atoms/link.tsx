@@ -17,7 +17,7 @@ const ALink: React.FC<ALinkProps> = ({
   </a>
 )
 
-export const Link = React.forwardRef(
+const Link = React.forwardRef(
   (
     props: Omit<GatsbyLinkProps<unknown>, 'ref'>,
     ref: React.Ref<HTMLAnchorElement>
@@ -45,6 +45,8 @@ export const Link = React.forwardRef(
     return <ALink href={url} innerRef={ref} {...other} />
   }
 )
+
+export default Link
 
 export const query = graphql`
   fragment Link on SanityLink {

@@ -2,17 +2,18 @@ import React, {FC, useState} from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import { SanityMenuLink } from 'web/types/graphql-types'
 import Box from '@/atoms/Box'
-import Text from '@/atoms/Text'
-import { Link } from '@/atoms/Link'
-import { Button } from '@/atoms/Button'
+import Link from '@/atoms/Link'
+import { IoMenu, IoClose } from 'react-icons/io5'
+
 
 interface Props {
   desktopMain: SanityMenuLink[]
   mobileMain: SanityMenuLink[]
+  mobileSecondary: SanityMenuLink[]
 }
 
-export const Navigation: FC<Props> = (props) => {
-  const { desktopMain, mobileMain } = props;
+const Navigation: FC<Props> = (props) => {
+  const { desktopMain, mobileMain, mobileSecondary } = props;
 
   const [drawerOpened, setDrawerOpened] = useState(false)
 
@@ -22,20 +23,28 @@ export const Navigation: FC<Props> = (props) => {
         {desktopMain.map(({ label, link }) => (<Box px={1}> <Link {...link}>{label}</Link> </Box>))}
       </Box>
       <Box display={['flex', 'none']}>
-        <Button variant="primary" onClick={() => {setDrawerOpened(!drawerOpened)}}>BurgerIcon</Button>
+        {drawerOpened ?
+          <IoClose size="2em" onClick={() => { setDrawerOpened(!drawerOpened) }}/>
+          : <IoMenu size="2em" onClick={() => { setDrawerOpened(!drawerOpened) }} /> }
       </Box>
       <Box
+        bg="#fff"
         display={['flex', 'none']}
-        width={drawerOpened ? '200px' : '0'}
-        transition="width 1s"
+        flexDirection="column"
         height="calc(100vh - 70px)"
+        justifyContent="space-between"
+        overflow="hidden"
         position="fixed"
-        top="70px"
         right="0"
-        zIndex={100}
-        bg="#fff">
-        <Box m={2} display="flex" flexDirection="column" alignItems="center" justifyContent="flex-start" width="100%">
-          {mobileMain.map(({ label, link }) => <Link {...link}>{label}</Link>)}
+        top="70px"
+        transition="width 1s"
+        width={drawerOpened ? '100%' : '0'}
+        zIndex={100}>
+        <Box m={2} display="flex" flexDirection="column" alignItems="center" justifyContent="flex-start">
+          {mobileMain && mobileMain.map(({ label, link }) => <Link {...link}>{label}</Link>)}
+        </Box>
+        <Box m={2} display="flex" flexDirection="row" justifyContent="flex-end" alignItems="center">
+          {mobileSecondary.map(({ label, link }) => (<Box ml={2}><Link {...link}>{label}</Link></Box>))}
         </Box>
       </Box>
     </Box>
@@ -50,3 +59,4 @@ export const query = graphql`
     }
   }
 `
+export default Navigation

@@ -3,7 +3,7 @@ read: https://medium.com/@david.gilbertson/icons-as-react-components-de3e33cb879
 use: https://jakearchibald.github.io/svgomg/
 */
 
-import React, { FC, P } from 'react'
+import React, { FC } from 'react'
 import styled from 'styled-components'
 
 const Svg = styled.svg`

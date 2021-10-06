@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Box from '@/atoms/Box'
 import Text from '@/atoms/Text'
-import { Navigation } from '@/components/Navigation'
+import Navigation from '@/components/Navigation'
 
 interface Props {
 
@@ -14,10 +14,22 @@ const Header: FC = (props: Props) => {
     query {
       data: sanitySiteSettingsNavigation {
         desktopMain {
-          ...MenuLink
+          label
+          link {
+            ...Link
+          }
         }
         mobileMain {
-          ...MenuLink
+          label
+          link {
+            ...Link
+          }
+        }
+        mobileSecondary {
+          label
+          link {
+            ...Link
+          }
         }
       }
     }
@@ -42,9 +54,9 @@ const Header: FC = (props: Props) => {
       <Text as="h1" variant="head">
         SAMM
       </Text>
-      <Navigation desktopMain={data.desktopMain} mobileMain={data.mobileMain} />
+      <Navigation desktopMain={data.desktopMain} mobileMain={data.mobileMain} mobileSecondary={data.mobileSecondary} />
     </Box>
-  );
+  )
 }
 
 export default Header
