@@ -25,17 +25,22 @@ const Header: FC = (props: Props) => {
 
   return (
     <Box
-      px="3"
+      px={4}
       display="flex"
       flexDirection="row"
       justifyContent="space-between"
       alignItems="center"
-      bg="paper"
-      height="70px"
+      bg="rgba(220, 220, 220, 0.3)"
+      height="4rem"
+      width="100%"
       position="fixed"
+      zIndex={1}
+      style={{
+        backdropFilter: "blur(10px)"
+      }}
     >
-      <Text as="h1" variant="caption">
-        Header Title
+      <Text as="h1" variant="head">
+        SAMM
       </Text>
       <Navigation desktopMain={data.desktopMain} mobileMain={data.mobileMain} />
     </Box>
