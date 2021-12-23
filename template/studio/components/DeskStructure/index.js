@@ -12,6 +12,7 @@ const hiddenDocs = [
   'postCategory',
   'productCategory',
   // 'tag',
+  'siteSettingsCookies',
   'siteSettingsMeta',
   'siteSettingsNavigation',
   'siteSettingsInformation',

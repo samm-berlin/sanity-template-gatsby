@@ -6,6 +6,7 @@ import {
   AiOutlineSetting as SettingsIcon
 } from 'react-icons/ai'
 import {BsLayoutWtf as ModulesIcon} from 'react-icons/bs'
+import {GiCookie} from 'react-icons/gi'
 
 export default S.listItem()
   .title('Settings')
@@ -43,6 +44,16 @@ export default S.listItem()
               .schemaType('siteSettingsMeta')
               .documentId('siteSettingsMeta')
               .title('Meta Settings')
+          ),
+
+        S.listItem()
+          .title('Cookies')
+          .icon(GiCookie)
+          .child(
+            S.document()
+              .schemaType('siteSettingsCookies')
+              .documentId('siteSettingsCookies')
+              .title('Cookie Settings')
           )
 
         // contentmoduleSettings are deactivated for now

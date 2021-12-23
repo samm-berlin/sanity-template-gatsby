@@ -4,6 +4,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import siteSettingsInformation from './singletons/siteSettingsInformation'
 import siteSettingsMeta from './singletons/siteSettingsMeta'
 import siteSettingsNavigation from './singletons/siteSettingsNavigation'
+import siteSettingsCookies from './singletons/siteSettingsCookies'
 // import siteSettingsModules from './singletons/siteSettingsModules'
 
 import imageField from './fields/image'
@@ -28,6 +29,8 @@ import textAlignment from './objects/textAlignment'
 import button, {buttonProperties} from './objects/button'
 import card from './objects/card'
 import menuLink from './objects/menuLink'
+import cookie from './objects/cookie'
+import cookieCategory from './objects/cookieCategory'
 
 import imageModule from './modules/image'
 import heroModule from './modules/hero'
@@ -50,6 +53,7 @@ export default createSchema({
     siteSettingsNavigation,
     /* contentmoduleSettings are deactivated for now */
     // siteSettingsModules,
+    siteSettingsCookies,
 
     // documents
     page,
@@ -77,6 +81,8 @@ export default createSchema({
     buttonProperties,
     card,
     menuLink,
+    cookie,
+    cookieCategory,
 
     // modules
     moduleDefaultFields,
