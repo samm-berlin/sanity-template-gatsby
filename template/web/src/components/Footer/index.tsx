@@ -6,7 +6,6 @@ import Link from '@/atoms/Link'
 import Text from '@/atoms/Text'
 
 const Footer: FC = () => {
-
   const { data } = useStaticQuery(graphql`
     query {
       data: sanitySiteSettingsNavigation {
@@ -23,15 +22,21 @@ const Footer: FC = () => {
   const desktopSecondary: SanityMenuLink[] = data.desktopSecondary
 
   return (
-    <Box bg="black" height="12rem" display={['none', 'flex']} flexDirection="row" justifyContent="flex-end">
+    <Box
+      bg="black"
+      height="12rem"
+      display={['none', 'flex']}
+      flexDirection="row"
+      justifyContent="flex-end"
+    >
       <Box mx={4} display="flex" flexDirection="row" justifyContent="flex-end" alignItems="center">
-        {desktopSecondary.map(({ label, link }) =>
+        {desktopSecondary.map(({ label, link }) => (
           <Link {...link}>
             <Text color="white" pl={2}>
               {label}
             </Text>
           </Link>
-        )}
+        ))}
       </Box>
     </Box>
   )

@@ -20,10 +20,10 @@ const ImageModule: FC<SanityModuleImage> = ({ image, subtitle }) =>
 export default ImageModule
 
 export const query = graphql`
-fragment moduleImageData on SanityModuleImage {
-  image {
-    ...ImageWithPreview
+  fragment moduleImageData on SanityModuleImage {
+    image {
+      ...ImageWithPreview
+    }
+    subtitle
   }
-  subtitle
-}
 `

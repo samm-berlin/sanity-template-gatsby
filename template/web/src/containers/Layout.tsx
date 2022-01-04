@@ -11,7 +11,7 @@ type Props = {
   children: ReactChild | ReactChild[] | JSX.Element
 }
 
-const Layout: FC<Props> = props => {
+const Layout: FC<Props> = (props) => {
   const { children } = props
 
   return (

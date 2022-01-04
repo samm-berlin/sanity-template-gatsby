@@ -7,7 +7,7 @@ export const Anchor = styled.a`
   color: inherit;
 `
 export const StyledTypography = styled(Typography)`
-  max-width: ${props => props.maxWidth / 12 * 100 * 2}% ;
+  max-width: ${(props) => (props.maxWidth / 12) * 100 * 2}%;
   text-decoration: underline;
 `
 
@@ -16,7 +16,7 @@ export const Image = styled.div`
   padding-bottom: 120%;
   overflow: hidden;
   background-repeat: no-repeat;
-  background-size: cover; 
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;

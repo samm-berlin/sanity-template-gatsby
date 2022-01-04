@@ -4,12 +4,9 @@ import Box from '@/atoms/Box'
 import Text from '@/atoms/Text'
 import Navigation from '@/components/Navigation'
 
-interface Props {
-
-}
+interface Props {}
 
 const Header: FC = (props: Props) => {
-
   const { data } = useStaticQuery(graphql`
     query {
       data: sanitySiteSettingsNavigation {
@@ -48,13 +45,17 @@ const Header: FC = (props: Props) => {
       position="fixed"
       zIndex={1}
       style={{
-        backdropFilter: "blur(10px)"
+        backdropFilter: 'blur(10px)'
       }}
     >
       <Text as="h1" variant="head" color="white">
         SAMM
       </Text>
-      <Navigation desktopMain={data.desktopMain} mobileMain={data.mobileMain} mobileSecondary={data.mobileSecondary} />
+      <Navigation
+        desktopMain={data.desktopMain}
+        mobileMain={data.mobileMain}
+        mobileSecondary={data.mobileSecondary}
+      />
     </Box>
   )
 }

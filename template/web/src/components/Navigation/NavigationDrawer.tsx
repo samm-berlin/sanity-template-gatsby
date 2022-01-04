@@ -13,7 +13,7 @@ interface Props {
 }
 
 const NavigationDrawer = (props: Props) => {
-  const { mobileMain, mobileSecondary, drawerOpened, closeDrawer } = props;
+  const { mobileMain, mobileSecondary, drawerOpened, closeDrawer } = props
   return (
     <Box
       display={['flex', 'none']}
@@ -37,23 +37,30 @@ const NavigationDrawer = (props: Props) => {
         alignItems="flex-end"
       >
         <IoClose size="2em" color="white" onClick={() => closeDrawer()} />
-        <Box m={2} display="flex" flexDirection="column" alignItems="center" justifyContent="flex-start">
-          {mobileMain && mobileMain.map(({ label, link }) =>
-            <Link {...link} >
-              <Text color="white" py={2}>
-                {label}
-              </Text>
-            </Link>
-          )}
+        <Box
+          m={2}
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="flex-start"
+        >
+          {mobileMain &&
+            mobileMain.map(({ label, link }) => (
+              <Link {...link}>
+                <Text color="white" py={2}>
+                  {label}
+                </Text>
+              </Link>
+            ))}
         </Box>
         <Box m={2} display="flex" flexDirection="row" justifyContent="flex-end" alignItems="center">
-          {mobileSecondary.map(({ label, link }) =>
+          {mobileSecondary.map(({ label, link }) => (
             <Link {...link}>
               <Text color="white" pl={2}>
                 {label}
               </Text>
             </Link>
-          )}
+          ))}
         </Box>
       </Box>
     </Box>

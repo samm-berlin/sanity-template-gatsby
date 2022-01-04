@@ -2,14 +2,7 @@ import React, { FC } from 'react'
 import { SanityPost } from 'web/graphql-types'
 import Grid from '@/atoms/Grid'
 import withWidth from '@material-ui/core/withWidth'
-import {
-  PostAnchor,
-  PostTitle,
-  PostDescription,
-  PostImage,
-  ColWrapper,
-  ColContent
-} from './Styles'
+import { PostAnchor, PostTitle, PostDescription, PostImage, ColWrapper, ColContent } from './Styles'
 
 type BlogPostProps = {
   post: SanityPost
@@ -38,16 +31,12 @@ const BlogPost: FC<BlogPostProps> = ({ post, idx, width }) => {
       <Grid container xs={12} md={12}>
         <Grid xs={12} sm={6} md={6}>
           <ColWrapper>
-            <ColContent>
-              {isEvenRow && !isMobile ? contentCol : imgCol}
-            </ColContent>
+            <ColContent>{isEvenRow && !isMobile ? contentCol : imgCol}</ColContent>
           </ColWrapper>
         </Grid>
         <Grid xs={12} sm={6} md={6}>
           <ColWrapper>
-            <ColContent>
-              {isEvenRow && !isMobile ? imgCol : contentCol}
-            </ColContent>
+            <ColContent>{isEvenRow && !isMobile ? imgCol : contentCol}</ColContent>
           </ColWrapper>
         </Grid>
       </Grid>

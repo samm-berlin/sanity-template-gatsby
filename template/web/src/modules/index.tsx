@@ -7,7 +7,7 @@ import {
   SanityModuleMarquee,
   SanityModuleRichText,
   SanityModuleSpacer,
-  SanityModuleTwoColumn,
+  SanityModuleTwoColumn
 } from 'web/types/graphql-types'
 import Box from '@/atoms/Box'
 import ImageModule from '@/modules/Image'
@@ -32,11 +32,13 @@ const modulesMap = {
 
 const ModuleLoop: FC<SanityContentModules> = ({ modules, ...props }) => (
   <Box height="100%" {...props}>
-    {modules?.map(module => {
+    {modules?.map((module) => {
       if (module?._type && !module?.options?.activation?.hidden) {
-        return <ModuleContainer options={module.options}>
-          {modulesMap[module?._type]({ key: module?._key, ...module })}
-        </ModuleContainer>
+        return (
+          <ModuleContainer options={module.options}>
+            {modulesMap[module?._type]({ key: module?._key, ...module })}
+          </ModuleContainer>
+        )
       } else return <div />
     })}
   </Box>
@@ -45,44 +47,55 @@ const ModuleLoop: FC<SanityContentModules> = ({ modules, ...props }) => (
 export default ModuleLoop
 
 export const query = graphql`
-  fragment ContentModules on SanityModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleRichTextOrModuleSpacerOrModuleTwoColumnOrModuleVideoEmbed
-  {
+  fragment ContentModules on SanityModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleRichTextOrModuleSpacerOrModuleTwoColumnOrModuleVideoEmbed {
     ... on SanityModuleRichText {
       _key
       _type
       ...moduleRichTextData
-      options { ...ModuleOptions }
+      options {
+        ...ModuleOptions
+      }
     }
     ... on SanityModuleImage {
       _key
-      _type  
+      _type
       ...moduleImageData
-      options { ...ModuleOptions }
+      options {
+        ...ModuleOptions
+      }
     }
     ... on SanityModuleVideoEmbed {
       _key
       _type
       ...moduleVideoEmbedData
-      options { ...ModuleOptions }
+      options {
+        ...ModuleOptions
+      }
     }
     ... on SanityModuleSpacer {
       _key
       _type
       ...moduleSpacerData
-      options { ...ModuleOptions }
+      options {
+        ...ModuleOptions
+      }
     }
     ... on SanityModuleMarquee {
       _key
       _type
       ...moduleMarqueeData
-      options { ...ModuleOptions }
+      options {
+        ...ModuleOptions
+      }
     }
 
     ... on SanityModuleHero {
       _key
       _type
       ...moduleHeroData
-      options { ...ModuleOptions }
+      options {
+        ...ModuleOptions
+      }
     }
   }
 
@@ -111,7 +124,7 @@ export const query = graphql`
                           _key
                           _type
                           firstColumn {
-                            modules { 
+                            modules {
                               ...ContentModules
                             }
                           }
@@ -120,7 +133,9 @@ export const query = graphql`
                               ...ContentModules
                             }
                           }
-                          options { ...ModuleOptions }
+                          options {
+                            ...ModuleOptions
+                          }
                         }
                       }
                     }
@@ -131,7 +146,7 @@ export const query = graphql`
                           _key
                           _type
                           firstColumn {
-                            modules { 
+                            modules {
                               ...ContentModules
                             }
                           }
@@ -140,11 +155,15 @@ export const query = graphql`
                               ...ContentModules
                             }
                           }
-                          options { ...ModuleOptions }
+                          options {
+                            ...ModuleOptions
+                          }
                         }
                       }
                     }
-                    options { ...ModuleOptions }
+                    options {
+                      ...ModuleOptions
+                    }
                   }
                 }
               }
@@ -161,7 +180,7 @@ export const query = graphql`
                           _key
                           _type
                           firstColumn {
-                            modules { 
+                            modules {
                               ...ContentModules
                             }
                           }
@@ -170,7 +189,9 @@ export const query = graphql`
                               ...ContentModules
                             }
                           }
-                          options { ...ModuleOptions }
+                          options {
+                            ...ModuleOptions
+                          }
                         }
                       }
                     }
@@ -181,7 +202,7 @@ export const query = graphql`
                           _key
                           _type
                           firstColumn {
-                            modules { 
+                            modules {
                               ...ContentModules
                             }
                           }
@@ -190,15 +211,21 @@ export const query = graphql`
                               ...ContentModules
                             }
                           }
-                          options { ...ModuleOptions }
+                          options {
+                            ...ModuleOptions
+                          }
                         }
                       }
                     }
-                    options { ...ModuleOptions }
+                    options {
+                      ...ModuleOptions
+                    }
                   }
                 }
               }
-              options { ...ModuleOptions }
+              options {
+                ...ModuleOptions
+              }
             }
           }
         }
@@ -221,7 +248,7 @@ export const query = graphql`
                           _key
                           _type
                           firstColumn {
-                            modules { 
+                            modules {
                               ...ContentModules
                             }
                           }
@@ -230,7 +257,9 @@ export const query = graphql`
                               ...ContentModules
                             }
                           }
-                          options { ...ModuleOptions }
+                          options {
+                            ...ModuleOptions
+                          }
                         }
                       }
                     }
@@ -241,7 +270,7 @@ export const query = graphql`
                           _key
                           _type
                           firstColumn {
-                            modules { 
+                            modules {
                               ...ContentModules
                             }
                           }
@@ -250,11 +279,15 @@ export const query = graphql`
                               ...ContentModules
                             }
                           }
-                          options { ...ModuleOptions }
+                          options {
+                            ...ModuleOptions
+                          }
                         }
                       }
                     }
-                    options { ...ModuleOptions }
+                    options {
+                      ...ModuleOptions
+                    }
                   }
                 }
               }
@@ -271,7 +304,7 @@ export const query = graphql`
                           _key
                           _type
                           firstColumn {
-                            modules { 
+                            modules {
                               ...ContentModules
                             }
                           }
@@ -280,7 +313,9 @@ export const query = graphql`
                               ...ContentModules
                             }
                           }
-                          options { ...ModuleOptions }
+                          options {
+                            ...ModuleOptions
+                          }
                         }
                       }
                     }
@@ -291,7 +326,7 @@ export const query = graphql`
                           _key
                           _type
                           firstColumn {
-                            modules { 
+                            modules {
                               ...ContentModules
                             }
                           }
@@ -300,19 +335,27 @@ export const query = graphql`
                               ...ContentModules
                             }
                           }
-                          options { ...ModuleOptions }
+                          options {
+                            ...ModuleOptions
+                          }
                         }
                       }
                     }
-                    options { ...ModuleOptions }
+                    options {
+                      ...ModuleOptions
+                    }
                   }
                 }
               }
-              options { ...ModuleOptions }
+              options {
+                ...ModuleOptions
+              }
             }
           }
         }
-        options { ...ModuleOptions }
+        options {
+          ...ModuleOptions
+        }
       }
     }
   }

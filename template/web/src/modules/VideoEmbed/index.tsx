@@ -3,22 +3,25 @@ import { graphql } from 'gatsby'
 import Box from '@/atoms/Box'
 import Text from '@/atoms/Text'
 import ReactPlayer from 'react-player'
-import { SanityImage as SanityImageType, SanityModuleDefaultFields, SanityVideoEmbed } from 'web/types/graphql-types'
+import {
+  SanityImage as SanityImageType,
+  SanityModuleDefaultFields,
+  SanityVideoEmbed
+} from 'web/types/graphql-types'
 
 export interface VideoEmbedModuleProps {
-  _key?: string;
-  _type?: string;
-  options?: SanityModuleDefaultFields;
-  title?: string;
-  video?: SanityVideoEmbed;
-  posterFrame?: SanityImageType;
-  muted?: boolean;
-  controls?: boolean;
-  loop?: boolean;
-  autoplay?: boolean;
-  aspectRatio: {x: number, y: number};
-};
-
+  _key?: string
+  _type?: string
+  options?: SanityModuleDefaultFields
+  title?: string
+  video?: SanityVideoEmbed
+  posterFrame?: SanityImageType
+  muted?: boolean
+  controls?: boolean
+  loop?: boolean
+  autoplay?: boolean
+  aspectRatio: { x: number; y: number }
+}
 
 const VideoEmbedModule: FC<VideoEmbedModuleProps> = ({
   video,
@@ -34,24 +37,30 @@ const VideoEmbedModule: FC<VideoEmbedModuleProps> = ({
 
   return (
     <>
-      {title && <Text as="h2" variant="head" mb={1}>{title}</Text>}
-      <Box pt={`${aspectRatio.y / aspectRatio.x * 100}%`} position="relative">
-        {video?.url && <ReactPlayer
-          url={video.url}
-          controls={controls}
-          loop={loop}
-          muted={muted || autoplay}
-          playsinline={true}
-          playing={playing}
-          light={autoplay ? false : (posterFrame?.asset?.url ? posterFrame?.asset?.url : false)}
-          width="100%"
-          height="100%"
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0
-          }}
-        />}
+      {title && (
+        <Text as="h2" variant="head" mb={1}>
+          {title}
+        </Text>
+      )}
+      <Box pt={`${(aspectRatio.y / aspectRatio.x) * 100}%`} position="relative">
+        {video?.url && (
+          <ReactPlayer
+            url={video.url}
+            controls={controls}
+            loop={loop}
+            muted={muted || autoplay}
+            playsinline={true}
+            playing={playing}
+            light={autoplay ? false : posterFrame?.asset?.url ? posterFrame?.asset?.url : false}
+            width="100%"
+            height="100%"
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0
+            }}
+          />
+        )}
       </Box>
     </>
   )

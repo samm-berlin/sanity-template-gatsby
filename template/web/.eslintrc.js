@@ -26,9 +26,12 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:import/errors',
+    'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
+    'prettier'
   ],
+  ignorePatterns: ['**/types/', '**/utils/*.js', '**/modulesBackup/'],
   settings: {
     react: {
       pragma: 'React',

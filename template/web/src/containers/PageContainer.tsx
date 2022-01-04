@@ -5,10 +5,7 @@ import ModulesLoop from '@/modules'
 interface PageProps {
   page: SanityPage
 }
-const PageContainer: FC<PageProps> = ({
-  page: { title, meta, contentModules },
-  ...props
-}) => {
+const PageContainer: FC<PageProps> = ({ page: { title, meta, contentModules }, ...props }) => {
   return <ModulesLoop modules={contentModules?.modules} />
 }
 

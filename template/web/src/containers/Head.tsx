@@ -53,10 +53,7 @@ const Head = (props: HeadProps): JSX.Element => {
   let indexSafe = 'noindex,nofollow'
 
   if (process.env.STAGE === 'production') {
-    indexSafe =
-      defaultMeta?.robotsIndex && meta?.robotsIndex
-        ? 'index,follow'
-        : 'noindex,follow'
+    indexSafe = defaultMeta?.robotsIndex && meta?.robotsIndex ? 'index,follow' : 'noindex,follow'
   }
 
   const ogImage = meta?.ogImage || defaultMeta?.ogImage
@@ -73,10 +70,7 @@ const Head = (props: HeadProps): JSX.Element => {
 
       <meta name="robots" content={indexSafe} />
 
-      <meta
-        name="description"
-        content={meta?.metaDescription || defaultMeta?.metaDescription}
-      />
+      <meta name="description" content={meta?.metaDescription || defaultMeta?.metaDescription} />
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"

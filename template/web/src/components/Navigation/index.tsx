@@ -1,4 +1,4 @@
-import React, {FC, useState} from 'react'
+import React, { FC, useState } from 'react'
 import { graphql } from 'gatsby'
 import { SanityMenuLink } from 'web/types/graphql-types'
 import Box from '@/atoms/Box'
@@ -7,7 +7,6 @@ import NavigationDrawer from '@/components/Navigation/NavigationDrawer'
 import { IoMenu } from 'react-icons/io5'
 import Text from '@/atoms/Text'
 
-
 interface Props {
   desktopMain: SanityMenuLink[]
   mobileMain: SanityMenuLink[]
@@ -15,7 +14,7 @@ interface Props {
 }
 
 const Navigation: FC<Props> = (props) => {
-  const { desktopMain, mobileMain, mobileSecondary } = props;
+  const { desktopMain, mobileMain, mobileSecondary } = props
 
   const [drawerOpened, setDrawerOpened] = useState(false)
 
@@ -25,15 +24,19 @@ const Navigation: FC<Props> = (props) => {
         {desktopMain.map(({ label, link }) => (
           <Box px={1}>
             <Link {...link}>
-              <Text color="white">
-                {label}
-              </Text>
+              <Text color="white">{label}</Text>
             </Link>
           </Box>
         ))}
       </Box>
       <Box display={['flex', 'none']}>
-        <IoMenu size="2em" color="white" onClick={() => { setDrawerOpened(!drawerOpened) }} />
+        <IoMenu
+          size="2em"
+          color="white"
+          onClick={() => {
+            setDrawerOpened(!drawerOpened)
+          }}
+        />
       </Box>
       <NavigationDrawer
         drawerOpened={drawerOpened}

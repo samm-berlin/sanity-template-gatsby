@@ -9,7 +9,7 @@ import Box from '@/atoms/Box'
 import { SanityButton } from '@/atoms/Button'
 
 const Block = (props: any): JSX.Element | null => {
-  const { style } = props.node;
+  const { style } = props.node
   const variants = {
     h1: 'head',
     h2: 'head',
@@ -19,11 +19,11 @@ const Block = (props: any): JSX.Element | null => {
     p: 'normal',
     span: 'normal',
     normal: 'normal'
-  };
+  }
   if (props.children) {
     return (
       <Text
-        as={style === "normal" ? "p" : (style === "caption" ? "span" : style)}
+        as={style === 'normal' ? 'p' : style === 'caption' ? 'span' : style}
         variant={variants[style]}
       >
         {props.children}
@@ -47,39 +47,35 @@ const serializers = {
   marks: {
     link: (props: any) => {
       return (
-        <Link
-          target={props.mark.targetBlank ? '_blank' : ''}
-          to={props.mark.url}
-        >
+        <Link target={props.mark.targetBlank ? '_blank' : ''} to={props.mark.url}>
           <Text as="span" color="brand" {...props} />
         </Link>
       )
     },
 
-    colorSanity: (props: any) => <Text
-      as={props._type}
-      color={props.mark.hex}
-      opacity={props.mark.alpha}
-      {...props}
-    />
+    colorSanity: (props: any) => (
+      <Text as={props._type} color={props.mark.hex} opacity={props.mark.alpha} {...props} />
+    )
   }
 }
 
-const RichTextModule: FC<any> = ({ text }) =>
+const RichTextModule: FC<any> = ({ text }) => (
   <Box style={{ textAlign: text.alignment }}>
     <BlockContent blocks={text.textRaw} serializers={serializers} />
   </Box>
+)
 
 export default RichTextModule
 
 export const query = graphql`
-
   fragment RichTextData on SanityRichTextExtended {
     alignment
     textRaw: _rawText(resolveReferences: { maxDepth: 6 })
   }
 
   fragment moduleRichTextData on SanityModuleRichText {
-    text { ...RichTextData }
+    text {
+      ...RichTextData
+    }
   }
 `

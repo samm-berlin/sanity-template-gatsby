@@ -1,10 +1,10 @@
-import React, { FC, useEffect, useState } from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import Box from "@/atoms/Box"
-import Text from "@/atoms/Text"
-import { Button } from "@/atoms/Button"
-import { useCookies } from "react-cookie"
-import styled from "styled-components"
+import React, { FC, useEffect, useState } from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
+import Box from '@/atoms/Box'
+import Text from '@/atoms/Text'
+import { Button } from '@/atoms/Button'
+import { useCookies } from 'react-cookie'
+import styled from 'styled-components'
 // import CheckBox from "@/atoms/CheckBox"
 
 /*
@@ -21,14 +21,13 @@ const cookieCategories = [
 */
 
 const StyledBox = styled(Box)`
-  ${p => p.cookieProperty ? 'display: none;' : 'display: block;'}
+  ${(p) => (p.cookieProperty ? 'display: none;' : 'display: block;')}
 `
 
 const CookieConsent: FC = () => {
-
   const { data } = useStaticQuery(graphql`
     query {
-      data:  sanitySiteSettingsCookies {
+      data: sanitySiteSettingsCookies {
         id
         title
         description
@@ -43,23 +42,26 @@ const CookieConsent: FC = () => {
     }
   `)
 
-  const [cookies, setCookie, removeCookie] = useCookies(['cookieProperty', ...data.cookies.map(c => c.name)])
+  const [cookies, setCookie, removeCookie] = useCookies([
+    'cookieProperty',
+    ...data.cookies.map((c) => c.name)
+  ])
   // const [checkedCookies, setCheckedCookies] = useState<string[]>([])
 
-  const [cookieProperty, setCookieProperty ] = useState('unset')
+  const [cookieProperty, setCookieProperty] = useState('unset')
 
   useEffect(() => {
     setCookieProperty(cookies.cookieProperty)
   }, [cookies])
 
   const acceptEssential = () => {
-    setCookie("cookieProperty", 'essential', { expires: getExpirationDate() })
+    setCookie('cookieProperty', 'essential', { expires: getExpirationDate() })
   }
 
   // const acceptSelected = () => {}
 
   const acceptAll = () => {
-    setCookie("cookieProperty", 'all', { expires: getExpirationDate() })
+    setCookie('cookieProperty', 'all', { expires: getExpirationDate() })
     data.cookies?.map((cookie) => {
       setCookie(cookie.name, true, { expires: getExpirationDate() })
     })

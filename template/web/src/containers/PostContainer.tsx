@@ -7,13 +7,8 @@ interface PostProps {
   post: SanityPost
 }
 
-const PostContainer: FC<PostProps> = ({
-  post: { title, meta, contentModules }
-}) => {
-
-  return (
-    <ModuleLoop modules={contentModules?.modules} />
-  )
+const PostContainer: FC<PostProps> = ({ post: { title, meta, contentModules } }) => {
+  return <ModuleLoop modules={contentModules?.modules} />
 }
 
 export default PostContainer

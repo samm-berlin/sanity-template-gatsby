@@ -1,32 +1,35 @@
 import styled from 'styled-components'
-import { compose, typography, space, color, TypographyProps, SpaceProps, ColorProps, variant } from 'styled-system'
-import theme from '@/styles/theme';
-import textVariants from '@/styles/textVariants';
+import {
+  compose,
+  typography,
+  space,
+  color,
+  TypographyProps,
+  SpaceProps,
+  ColorProps,
+  variant
+} from 'styled-system'
+import theme from '@/styles/theme'
+import textVariants from '@/styles/textVariants'
 
-export type TextComponent = 
-  'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span' | 'p' | 'li';
+export type TextComponent = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span' | 'p' | 'li'
 
-export type TextVariant =
-  'head' | 'subhead' | 'normal' | 'body' | 'caption' | 'captionSmall';
+export type TextVariant = 'head' | 'subhead' | 'normal' | 'body' | 'caption' | 'captionSmall'
 
 export interface TextProps extends TypographyProps, SpaceProps, ColorProps {
-  component?: TextComponent;
-  _type?: TextComponent;
-  variant?: TextVariant;
-  hyphens?: string;
-  whiteSpace?: string;
-  uppercase?: boolean;
-  mono?: boolean;
-  bold?: boolean;
-  opacity?: string | number;
+  component?: TextComponent
+  _type?: TextComponent
+  variant?: TextVariant
+  hyphens?: string
+  whiteSpace?: string
+  uppercase?: boolean
+  mono?: boolean
+  bold?: boolean
+  opacity?: string | number
 }
 
 export default styled('div')<TextProps>(
-  compose(
-    space,
-    typography,
-    color
-  ),
+  compose(space, typography, color),
   variant({
     variants: textVariants
   }),
@@ -57,4 +60,5 @@ export default styled('div')<TextProps>(
     `
     color: ${props.opacity};
   `}
-`)
+`
+)

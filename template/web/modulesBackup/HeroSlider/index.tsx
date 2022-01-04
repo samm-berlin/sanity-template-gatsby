@@ -25,12 +25,7 @@ const StyledCarousel = styled(Carousel)`
   }
 `
 
-const HeroSlider: FC<SanityModuleHeroSlider> = ({
-  titleOne,
-  titleTwo,
-  images,
-  ...props
-}) => {
+const HeroSlider: FC<SanityModuleHeroSlider> = ({ titleOne, titleTwo, images, ...props }) => {
   const [carouselIndex, setCarouselIndex] = useState(0)
 
   if (images)
@@ -63,7 +58,7 @@ const HeroSlider: FC<SanityModuleHeroSlider> = ({
             setCarouselIndex(index)
           }}
         >
-          {images?.map(image => (
+          {images?.map((image) => (
             <div key={image?._key}>
               <img src={image?.asset?.url}></img>
             </div>

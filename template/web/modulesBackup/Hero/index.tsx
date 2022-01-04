@@ -6,11 +6,7 @@ import { Box, Typography } from '@material-ui/core'
 
 // use Typography component for this title (subtitle2 / blog title )
 
-const ImageModule: FC<SanityModuleHero> = ({
-  heroImage,
-  heroTitle,
-  ...props
-}) =>
+const ImageModule: FC<SanityModuleHero> = ({ heroImage, heroTitle, ...props }) =>
   heroImage?.asset?.url ? (
     <Hero style={{ backgroundImage: `url(${heroImage?.asset?.url || ''})` }}>
       <HeroTitleContainer>

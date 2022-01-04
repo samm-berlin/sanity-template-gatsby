@@ -4,9 +4,7 @@ import { SanityModuleSpacer } from 'web/types/graphql-types'
 import Box from '@/atoms/Box'
 import ModuleLoop from '..'
 
-const SpacerModule: FC<SanityModuleSpacer> = ({ height }) =>
-  <Box height={`${height}vh`}>
-  </Box>
+const SpacerModule: FC<SanityModuleSpacer> = ({ height }) => <Box height={`${height}vh`}></Box>
 
 export default SpacerModule
 

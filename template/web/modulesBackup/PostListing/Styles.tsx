@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import theme from "../../styles/MUItheme";
+import styled from 'styled-components'
+import theme from '../../styles/MUItheme'
 
 export const PostAnchor = styled.a`
   display: block;
@@ -12,7 +12,7 @@ export const PostAnchor = styled.a`
       color: ${theme.palette.background.paper};
     }
   }
-`;
+`
 
 export const PostTitle = styled.h6`
   color: white;
@@ -23,7 +23,7 @@ export const PostTitle = styled.h6`
   @media screen and (max-width: 600px) {
     width: 100%;
   }
-`;
+`
 
 export const PostDescription = styled.p`
   color: white;
@@ -35,7 +35,7 @@ export const PostDescription = styled.p`
   @media screen and (max-width: 600px) {
     width: 100%;
   }
-`;
+`
 
 export const ColWrapper = styled.div`
   height: 0;
@@ -43,7 +43,7 @@ export const ColWrapper = styled.div`
   padding-top: 68.75%;
   min-height: 6rem;
   position: relative;
-`;
+`
 export const ColContent = styled.div`
   position: absolute;
   top: 0;
@@ -55,7 +55,7 @@ export const ColContent = styled.div`
   align-items: center;
   flex-direction: column;
   text-align: center;
-`;
+`
 
 export const PostImage = styled.div`
   display: block;
@@ -66,4 +66,4 @@ export const PostImage = styled.div`
   bottom: 0;
   background-repeat: no-repeat;
   background-size: cover;
-`;
+`

@@ -12,7 +12,11 @@ const GlobalStyle = createGlobalStyle`
   html {
     font-family: ${theme.fonts.sans};
     font-size: 6px;
-    ${({ theme: { mediaQueries: { small } } }) => small} {
+    ${({
+      theme: {
+        mediaQueries: { small }
+      }
+    }) => small} {
       font-size: 6px;
     }
   }

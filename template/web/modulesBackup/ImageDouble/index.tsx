@@ -5,10 +5,7 @@ import { Container, Box, Grid } from '@material-ui/core'
 import { SanityModuleImageTwoColumns } from 'web/graphql-types'
 import { ImageContainer, Image } from './ImageTwoColumnsStyle'
 
-const ImageTwoColumnsModule: FC<SanityModuleImageTwoColumns> = ({
-  doubleImageArray,
-  ...props
-}) => (
+const ImageTwoColumnsModule: FC<SanityModuleImageTwoColumns> = ({ doubleImageArray, ...props }) => (
   <Box px={6} my={3} mx="auto" maxWidth="1440px">
     <Grid alignItems="center" container direction="row" spacing={0}>
       {doubleImageArray.map((img: any) => {

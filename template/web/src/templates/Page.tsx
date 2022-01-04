@@ -19,7 +19,7 @@ const Page: FC<PageProps> = ({ data: { page }, ...props }) => (
 export default Page
 
 export const query = graphql`
-  query($id: String!) {
+  query ($id: String!) {
     page: sanityPage(id: { eq: $id }) {
       title
       meta {
