@@ -1,44 +1,43 @@
-import { Link } from 'gatsby';
+import { Link } from 'gatsby'
 
 /**
  * Always return array
  */
-export const forceArray = possibleArray =>
-  Array.isArray(possibleArray) ? possibleArray : [possibleArray];
+export const forceArray = (possibleArray) =>
+  Array.isArray(possibleArray) ? possibleArray : [possibleArray]
 
 /**
  * GraphQL Edges->Node Helper
  */
- export const mapEdgesToNodes = data => {
-  if (!data.edges) return [];
+export const mapEdgesToNodes = (data) => {
+  if (!data.edges) return []
 
-  return data.edges.map(edge => edge.node);
-};
+  return data.edges.map((edge) => edge.node)
+}
 
 /**
  * Stores Sorting Helper
  */
- export const sortNodesByAlphabeticalOrder = nodes => {
+export const sortNodesByAlphabeticalOrder = (nodes) => {
   return nodes.sort((a, b) => {
-    if ( a.title < b.title ){
-      return -1;
+    if (a.title < b.title) {
+      return -1
     }
-    if ( a.title > b.title ){
-      return 1;
+    if (a.title > b.title) {
+      return 1
     }
-    return 0;  
-  });
-};
-
+    return 0
+  })
+}
 
 /**
  * GraphQL Helper for data that has a single edge (e.g. site settings)
  */
-export const mapToSingleObject = data => {
-  const nodes = mapEdgesToNodes(data);
+export const mapToSingleObject = (data) => {
+  const nodes = mapEdgesToNodes(data)
 
-  return nodes[0] || {};
-};
+  return nodes[0] || {}
+}
 
 /**
  * Takes Portable Text from Sanity and turns it into plain text
@@ -47,14 +46,14 @@ export const mapToSingleObject = data => {
  */
 export const portableToPlainText = (blocks = [], withLinebreaks = false) =>
   blocks
-    .map(block => {
+    .map((block) => {
       if (block._type !== 'block' || !block.children) {
-        return '';
+        return ''
       }
 
-      return block.children.map(child => child.text).join('');
+      return block.children.map((child) => child.text).join('')
     })
-    .join(withLinebreaks ? '\n\n' : ' ');
+    .join(withLinebreaks ? '\n\n' : ' ')
 
 /**
  * Debounce
@@ -64,57 +63,50 @@ export const portableToPlainText = (blocks = [], withLinebreaks = false) =>
  * leading edge, instead of the trailing.
  */
 export const debounce = (func, wait = 200, immediate = false) => {
-  let timeout;
+  let timeout
 
   return () => {
-    const context = this;
+    const context = this
     // eslint-disable-next-line no-undef
-    const args = arguments;
+    const args = arguments
 
     const later = () => {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
-    };
+      timeout = null
+      if (!immediate) func.apply(context, args)
+    }
 
-    const callNow = immediate && !timeout;
+    const callNow = immediate && !timeout
 
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
+    clearTimeout(timeout)
+    timeout = setTimeout(later, wait)
 
-    if (callNow) func.apply(context, args);
-  };
-};
+    if (callNow) func.apply(context, args)
+  }
+}
 
 /**
  * Verify email addresses
  * https://tylermcginnis.com/validate-email-address-javascript/
  */
-export const validateEmail = email => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+export const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
 
 /**
  * createLinkOrAnchorProps
  * Add appropriate props based on whether the incoming data is for a Link or <a>
  */
-export const createLinkOrAnchorProps = ({
-  to,
-  link,
-  url,
-  href,
-  targetBlank = false,
-  ...props
-}) => {
+export const createLinkOrAnchorProps = ({ to, link, url, href, targetBlank = false, ...props }) => {
   const linkProps = {
     target: targetBlank ? '_blank' : undefined,
     rel: href ? 'noopener noreferrer' : undefined,
-    ...props,
-  };
+    ...props
+  }
 
   if (url || href) {
     return {
       ...linkProps,
       as: 'a',
-      href: href || url,
-    };
+      href: href || url
+    }
   }
 
   if (to || link?.path) {
@@ -122,19 +114,19 @@ export const createLinkOrAnchorProps = ({
       return {
         ...linkProps,
         as: 'a',
-        href: to || link.path,
-      };
+        href: to || link.path
+      }
     }
 
     return {
       ...linkProps,
       as: Link,
-      to: to || link.path,
-    };
+      to: to || link.path
+    }
   }
 
   return {
     as: 'button',
-    ...linkProps,
-  };
-};
+    ...linkProps
+  }
+}

@@ -1,4 +1,4 @@
-const capitalize = s => {
+const capitalize = (s) => {
   if (typeof s !== 'string') return ''
   return s.charAt(0).toUpperCase() + s.slice(1)
 }
@@ -7,8 +7,8 @@ const capitalize = s => {
  * Helper to set environment variables available at runtime
  * (prefixed by GATSBY_)
  */
-const setEnvVars = vars => {
-  vars.forEach(envVar => {
+const setEnvVars = (vars) => {
+  vars.forEach((envVar) => {
     process.env[`GATSBY_${envVar}`] = process.env[envVar]
   })
 }
@@ -19,7 +19,7 @@ module.exports.setEnvVars = setEnvVars
  * Helper to retrieve settings of specific sanity type
  */
 const getSettings = ({ type, query }, { graphql }) =>
-  new Promise(resolve => {
+  new Promise((resolve) => {
     const typeQuery = `allSanity${capitalize(type)}`
 
     graphql(`
@@ -33,9 +33,7 @@ const getSettings = ({ type, query }, { graphql }) =>
         }
       }
     `).then(({ data }) => {
-      const settings = data.settings.edges[0]
-        ? data.settings.edges[0].node || {}
-        : {}
+      const settings = data.settings.edges[0] ? data.settings.edges[0].node || {} : {}
 
       resolve(settings)
     })
@@ -49,17 +47,10 @@ module.exports.getSettings = getSettings
  * that get the node as args
  */
 const createType = (
-  {
-    type,
-    path,
-    matchPath = null,
-    component,
-    contextQuery = '',
-    contextReducer = null
-  },
+  { type, path, matchPath = null, component, contextQuery = '', contextReducer = null },
   { graphql, actions: { createPage }, reporter }
 ) =>
-  new Promise(resolve => {
+  new Promise((resolve) => {
     const typeQuery = `allSanity${capitalize(type)}`
 
     graphql(`
@@ -102,8 +93,7 @@ const createType = (
                 ? matchPath
                 : matchPath(node)
               : undefined,
-            component:
-              typeof component === 'string' ? component : component(node),
+            component: typeof component === 'string' ? component : component(node),
             context: contextProps
           })
         }

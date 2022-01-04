@@ -1,7 +1,7 @@
 module.exports = {
-  parser: "babel-eslint",
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    sourceType: "module",
+    sourceType: 'module',
     ecmaVersion: 2020,
     ecmaFeatures: {
       jsx: true
@@ -12,18 +12,27 @@ module.exports = {
     browser: true
   },
   rules: {
-    "react/prop-types": "off"
+    'react/prop-types': 'off',
+    quotes: [2, 'single', { avoidEscape: false }],
+    'prettier/prettier': [
+      'warn',
+      {
+        singleQuote: true,
+        semi: false,
+        trailingComma: 'none'
+      }
+    ]
   },
   extends: [
-    "eslint:recommended",
-    "plugin:import/errors",
-    "plugin:react/recommended",
-    "plugin:prettier/recommended"
+    'eslint:recommended',
+    'plugin:import/errors',
+    'plugin:react/recommended',
+    'plugin:prettier/recommended'
   ],
   settings: {
     react: {
-      pragma: "React",
-      version: "detect"
+      pragma: 'React',
+      version: 'detect'
     },
     'import/resolver': {
       alias: {
@@ -32,4 +41,4 @@ module.exports = {
       }
     }
   }
-};
+}

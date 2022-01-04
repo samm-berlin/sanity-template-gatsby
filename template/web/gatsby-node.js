@@ -12,27 +12,27 @@ const { getUri } = require('./src/utils/routing')
 
 exports.createSchemaCustomization = ({ actions, schema }) => {
   const { createTypes } = actions
-  
+
   createTypes([
     schema.buildObjectType({
-      name: "SanityPost",
-      interfaces: ["Node"],
+      name: 'SanityPost',
+      interfaces: ['Node'],
       fields: {
         isPublished: {
-          type: "Boolean!",
-          resolve: source => new Date(source.publishedAt) <= new Date()
+          type: 'Boolean!',
+          resolve: (source) => new Date(source.publishedAt) <= new Date()
         }
       }
     })
-  ]);
-  
+  ])
+
   const typeDefs = `
     type ContentModule implements Node {
       joinedAt: Date
     }
   `
   createTypes(typeDefs)
-};
+}
 
 /**
  * Webpack Config
@@ -48,11 +48,10 @@ exports.onCreateWebpackConfig = ({ actions }) => {
   })
 }
 
-
 /**
  * Main Build Process
  */
-exports.createPages = async apiProps => {
+exports.createPages = async (apiProps) => {
   // setup env variables
   setEnvVars([
     'STAGE',
@@ -71,19 +70,18 @@ exports.createPages = async apiProps => {
         frontpage {
           id
         }
-      `,
+      `
     },
     apiProps
-  );
+  )
 
-  const frontpageId = siteSettings.frontpage.id;
+  const frontpageId = siteSettings.frontpage.id
 
   // pages
   const pages = createType(
     {
       type: 'page',
-      path: ({ id, slug }) =>
-        id === frontpageId ? '/' : getUri(slug.current, 'page'),
+      path: ({ id, slug }) => (id === frontpageId ? '/' : getUri(slug.current, 'page')),
       component: path.resolve(__dirname, 'src/templates/Page.tsx')
     },
     apiProps
@@ -109,6 +107,6 @@ exports.createPages = async apiProps => {
     apiProps
   )
 
-  const allContent = await Promise.all([pages/* , stores, posts */])
+  const allContent = await Promise.all([pages /* , stores, posts */])
   return allContent
 }

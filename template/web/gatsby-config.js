@@ -1,14 +1,13 @@
 // Load variables from `.env` as soon as possible
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV || "development"}`
-});
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV || 'development'}`
+})
 
-const path = require("path");
-const clientConfig = require("./client-config");
+const clientConfig = require('./client-config')
 
-const isProd = process.env.NODE_ENV === "production";
+const isProd = process.env.NODE_ENV === 'production'
 
-const SITE_URL = 'localhost:8000';
+const SITE_URL = 'localhost:8000'
 // const SITE_URL = '<#< deployments.web.url >#>';
 
 module.exports = {
@@ -17,24 +16,24 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: "gatsby-plugin-sanity-image",
+      resolve: 'gatsby-plugin-sanity-image',
       options: {
         projectId: process.env.GATSBY_SANITY_PROJECT_ID,
         dataset: process.env.GATSBY_SANITY_DATASET,
-        includeFragments: false,
+        includeFragments: false
         // fragmentName: 'Image',
         // fragmentTypeName: 'SanityImage'
-      },
+      }
     },
 
-    "gatsby-plugin-typescript",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-react-svg",
-    "gatsby-plugin-styled-components",
+    'gatsby-plugin-typescript',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-react-svg',
+    'gatsby-plugin-styled-components',
     {
-      resolve: `gatsby-plugin-graphql-codegen`,
+      resolve: 'gatsby-plugin-graphql-codegen',
       options: {
-        fileName: `types/graphql-types.ts`,
+        fileName: 'types/graphql-types.ts',
         codegen: true,
         codegenDelay: 250
       }
@@ -47,10 +46,10 @@ module.exports = {
     // }
     // },
     'gatsby-plugin-image',
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
-      resolve: "gatsby-source-sanity",
+      resolve: 'gatsby-source-sanity',
       options: {
         ...clientConfig.sanity,
         token: process.env.SANITY_READ_TOKEN,
@@ -58,7 +57,7 @@ module.exports = {
         overlayDrafts: !isProd
       }
     },
-    "gatsby-plugin-sitemap",
-    "gatsby-plugin-netlify"
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-netlify'
   ]
-};
+}
