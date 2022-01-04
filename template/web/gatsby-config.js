@@ -26,25 +26,27 @@ module.exports = {
         // fragmentTypeName: 'SanityImage'
       },
     },
-    'gatsby-plugin-typescript',
+
+    "gatsby-plugin-typescript",
     "gatsby-plugin-react-helmet",
-    'gatsby-plugin-react-svg',
-    'gatsby-plugin-styled-components',
+    "gatsby-plugin-react-svg",
+    "gatsby-plugin-styled-components",
     {
       resolve: `gatsby-plugin-graphql-codegen`,
       options: {
         fileName: `types/graphql-types.ts`,
         codegen: true,
-        codegenDelay: 250,
+        codegenDelay: 250
       }
     },
     // {
     //   resolve: `gatsby-source-filesystem`,
-      // options: {
-      //   name: `images`,
-      //   path: path.join(__dirname, `src`, `images`)
-      // }
+    // options: {
+    //   name: `images`,
+    //   path: path.join(__dirname, `src`, `images`)
+    // }
     // },
+    'gatsby-plugin-image',
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -56,7 +58,7 @@ module.exports = {
         overlayDrafts: !isProd
       }
     },
-    'gatsby-plugin-sitemap',
-    'gatsby-plugin-netlify'
+    "gatsby-plugin-sitemap",
+    "gatsby-plugin-netlify"
   ]
 };

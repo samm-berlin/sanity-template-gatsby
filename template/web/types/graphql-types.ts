@@ -1,4 +1,5 @@
 export type Maybe<T> = T | null;
+export type InputMaybe<T> = Maybe<T>;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
 export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> };
 export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> };
@@ -19,15 +20,6 @@ export type Scalars = {
   /** The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf). */
   JSON: any;
 };
-
-
-
-
-
-
-
-
-
 
 export type File = Node & {
   sourceInstanceName: Scalars['String'];
@@ -75,58 +67,58 @@ export type File = Node & {
 
 
 export type FileModifiedTimeArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type FileAccessTimeArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type FileChangeTimeArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type FileBirthTimeArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type FileAtimeArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type FileMtimeArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type FileCtimeArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 /** Node Interface */
@@ -147,7 +139,6 @@ export type Internal = {
   owner: Scalars['String'];
   type: Scalars['String'];
 };
-
 
 export type Directory = Node & {
   sourceInstanceName: Scalars['String'];
@@ -191,58 +182,58 @@ export type Directory = Node & {
 
 
 export type DirectoryModifiedTimeArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type DirectoryAccessTimeArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type DirectoryChangeTimeArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type DirectoryBirthTimeArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type DirectoryAtimeArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type DirectoryMtimeArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type DirectoryCtimeArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 export type Site = Node & {
@@ -252,6 +243,7 @@ export type Site = Node & {
   host?: Maybe<Scalars['String']>;
   polyfill?: Maybe<Scalars['Boolean']>;
   pathPrefix?: Maybe<Scalars['String']>;
+  jsxRuntime?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
   parent?: Maybe<Node>;
   children: Array<Node>;
@@ -260,10 +252,10 @@ export type Site = Node & {
 
 
 export type SiteBuildTimeArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 export type SiteSiteMetadata = {
@@ -292,18 +284,12 @@ export type SitePage = Node & {
   internalComponentName: Scalars['String'];
   componentChunkName: Scalars['String'];
   matchPath?: Maybe<Scalars['String']>;
+  pageContext?: Maybe<Scalars['JSON']>;
+  pluginCreator?: Maybe<SitePlugin>;
   id: Scalars['ID'];
   parent?: Maybe<Node>;
   children: Array<Node>;
   internal: Internal;
-  isCreatedByStatefulCreatePages?: Maybe<Scalars['Boolean']>;
-  context?: Maybe<SitePageContext>;
-  pluginCreator?: Maybe<SitePlugin>;
-  pluginCreatorId?: Maybe<Scalars['String']>;
-};
-
-export type SitePageContext = {
-  id?: Maybe<Scalars['String']>;
 };
 
 export type SitePlugin = Node & {
@@ -314,69 +300,12 @@ export type SitePlugin = Node & {
   browserAPIs?: Maybe<Array<Maybe<Scalars['String']>>>;
   ssrAPIs?: Maybe<Array<Maybe<Scalars['String']>>>;
   pluginFilepath?: Maybe<Scalars['String']>;
-  pluginOptions?: Maybe<SitePluginPluginOptions>;
-  packageJson?: Maybe<SitePluginPackageJson>;
+  pluginOptions?: Maybe<Scalars['JSON']>;
+  packageJson?: Maybe<Scalars['JSON']>;
   id: Scalars['ID'];
   parent?: Maybe<Node>;
   children: Array<Node>;
   internal: Internal;
-};
-
-export type SitePluginPluginOptions = {
-  projectId?: Maybe<Scalars['String']>;
-  dataset?: Maybe<Scalars['String']>;
-  includeFragments?: Maybe<Scalars['Boolean']>;
-  isTSX?: Maybe<Scalars['Boolean']>;
-  jsxPragma?: Maybe<Scalars['String']>;
-  allExtensions?: Maybe<Scalars['Boolean']>;
-  displayName?: Maybe<Scalars['Boolean']>;
-  minify?: Maybe<Scalars['Boolean']>;
-  namespace?: Maybe<Scalars['String']>;
-  transpileTemplateLiterals?: Maybe<Scalars['Boolean']>;
-  pure?: Maybe<Scalars['Boolean']>;
-  disableVendorPrefixes?: Maybe<Scalars['Boolean']>;
-  codegen?: Maybe<Scalars['Boolean']>;
-  codegenDelay?: Maybe<Scalars['Int']>;
-  base64Width?: Maybe<Scalars['Int']>;
-  stripMetadata?: Maybe<Scalars['Boolean']>;
-  defaultQuality?: Maybe<Scalars['Int']>;
-  failOnError?: Maybe<Scalars['Boolean']>;
-  watchMode?: Maybe<Scalars['Boolean']>;
-  overlayDrafts?: Maybe<Scalars['Boolean']>;
-  output?: Maybe<Scalars['String']>;
-  createLinkInHead?: Maybe<Scalars['Boolean']>;
-  entryLimit?: Maybe<Scalars['Int']>;
-  query?: Maybe<Scalars['String']>;
-  path?: Maybe<Scalars['String']>;
-  pathCheck?: Maybe<Scalars['Boolean']>;
-};
-
-export type SitePluginPackageJson = {
-  name?: Maybe<Scalars['String']>;
-  description?: Maybe<Scalars['String']>;
-  version?: Maybe<Scalars['String']>;
-  main?: Maybe<Scalars['String']>;
-  author?: Maybe<Scalars['String']>;
-  license?: Maybe<Scalars['String']>;
-  dependencies?: Maybe<Array<Maybe<SitePluginPackageJsonDependencies>>>;
-  devDependencies?: Maybe<Array<Maybe<SitePluginPackageJsonDevDependencies>>>;
-  peerDependencies?: Maybe<Array<Maybe<SitePluginPackageJsonPeerDependencies>>>;
-  keywords?: Maybe<Array<Maybe<Scalars['String']>>>;
-};
-
-export type SitePluginPackageJsonDependencies = {
-  name?: Maybe<Scalars['String']>;
-  version?: Maybe<Scalars['String']>;
-};
-
-export type SitePluginPackageJsonDevDependencies = {
-  name?: Maybe<Scalars['String']>;
-  version?: Maybe<Scalars['String']>;
-};
-
-export type SitePluginPackageJsonPeerDependencies = {
-  name?: Maybe<Scalars['String']>;
-  version?: Maybe<Scalars['String']>;
 };
 
 export type SiteBuildMetadata = Node & {
@@ -389,11 +318,30 @@ export type SiteBuildMetadata = Node & {
 
 
 export type SiteBuildMetadataBuildTimeArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
+
+export type GatsbyImageFormat =
+  | 'NO_CHANGE'
+  | 'AUTO'
+  | 'JPG'
+  | 'PNG'
+  | 'WEBP'
+  | 'AVIF';
+
+export type GatsbyImageLayout =
+  | 'FIXED'
+  | 'FULL_WIDTH'
+  | 'CONSTRAINED';
+
+export type GatsbyImagePlaceholder =
+  | 'DOMINANT_COLOR'
+  | 'TRACED_SVG'
+  | 'BLURRED'
+  | 'NONE';
 
 export type ImageFormat =
   | 'NO_CHANGE'
@@ -431,7 +379,7 @@ export type ImageCropFocus =
 export type DuotoneGradient = {
   highlight: Scalars['String'];
   shadow: Scalars['String'];
-  opacity?: Maybe<Scalars['Int']>;
+  opacity?: InputMaybe<Scalars['Int']>;
 };
 
 export type PotraceTurnPolicy =
@@ -443,15 +391,15 @@ export type PotraceTurnPolicy =
   | 'TURNPOLICY_MAJORITY';
 
 export type Potrace = {
-  turnPolicy?: Maybe<PotraceTurnPolicy>;
-  turdSize?: Maybe<Scalars['Float']>;
-  alphaMax?: Maybe<Scalars['Float']>;
-  optCurve?: Maybe<Scalars['Boolean']>;
-  optTolerance?: Maybe<Scalars['Float']>;
-  threshold?: Maybe<Scalars['Int']>;
-  blackOnWhite?: Maybe<Scalars['Boolean']>;
-  color?: Maybe<Scalars['String']>;
-  background?: Maybe<Scalars['String']>;
+  turnPolicy?: InputMaybe<PotraceTurnPolicy>;
+  turdSize?: InputMaybe<Scalars['Float']>;
+  alphaMax?: InputMaybe<Scalars['Float']>;
+  optCurve?: InputMaybe<Scalars['Boolean']>;
+  optTolerance?: InputMaybe<Scalars['Float']>;
+  threshold?: InputMaybe<Scalars['Int']>;
+  blackOnWhite?: InputMaybe<Scalars['Boolean']>;
+  color?: InputMaybe<Scalars['String']>;
+  background?: InputMaybe<Scalars['String']>;
 };
 
 export type ImageSharp = Node & {
@@ -468,95 +416,95 @@ export type ImageSharp = Node & {
 
 
 export type ImageSharpFixedArgs = {
-  width?: Maybe<Scalars['Int']>;
-  height?: Maybe<Scalars['Int']>;
-  base64Width?: Maybe<Scalars['Int']>;
-  jpegProgressive?: Maybe<Scalars['Boolean']>;
-  pngCompressionSpeed?: Maybe<Scalars['Int']>;
-  grayscale?: Maybe<Scalars['Boolean']>;
-  duotone?: Maybe<DuotoneGradient>;
-  traceSVG?: Maybe<Potrace>;
-  quality?: Maybe<Scalars['Int']>;
-  jpegQuality?: Maybe<Scalars['Int']>;
-  pngQuality?: Maybe<Scalars['Int']>;
-  webpQuality?: Maybe<Scalars['Int']>;
-  toFormat?: Maybe<ImageFormat>;
-  toFormatBase64?: Maybe<ImageFormat>;
-  cropFocus?: Maybe<ImageCropFocus>;
-  fit?: Maybe<ImageFit>;
-  background?: Maybe<Scalars['String']>;
-  rotate?: Maybe<Scalars['Int']>;
-  trim?: Maybe<Scalars['Float']>;
+  width?: InputMaybe<Scalars['Int']>;
+  height?: InputMaybe<Scalars['Int']>;
+  base64Width?: InputMaybe<Scalars['Int']>;
+  jpegProgressive?: InputMaybe<Scalars['Boolean']>;
+  pngCompressionSpeed?: InputMaybe<Scalars['Int']>;
+  grayscale?: InputMaybe<Scalars['Boolean']>;
+  duotone?: InputMaybe<DuotoneGradient>;
+  traceSVG?: InputMaybe<Potrace>;
+  quality?: InputMaybe<Scalars['Int']>;
+  jpegQuality?: InputMaybe<Scalars['Int']>;
+  pngQuality?: InputMaybe<Scalars['Int']>;
+  webpQuality?: InputMaybe<Scalars['Int']>;
+  toFormat?: InputMaybe<ImageFormat>;
+  toFormatBase64?: InputMaybe<ImageFormat>;
+  cropFocus?: InputMaybe<ImageCropFocus>;
+  fit?: InputMaybe<ImageFit>;
+  background?: InputMaybe<Scalars['String']>;
+  rotate?: InputMaybe<Scalars['Int']>;
+  trim?: InputMaybe<Scalars['Float']>;
 };
 
 
 export type ImageSharpFluidArgs = {
-  maxWidth?: Maybe<Scalars['Int']>;
-  maxHeight?: Maybe<Scalars['Int']>;
-  base64Width?: Maybe<Scalars['Int']>;
-  grayscale?: Maybe<Scalars['Boolean']>;
-  jpegProgressive?: Maybe<Scalars['Boolean']>;
-  pngCompressionSpeed?: Maybe<Scalars['Int']>;
-  duotone?: Maybe<DuotoneGradient>;
-  traceSVG?: Maybe<Potrace>;
-  quality?: Maybe<Scalars['Int']>;
-  jpegQuality?: Maybe<Scalars['Int']>;
-  pngQuality?: Maybe<Scalars['Int']>;
-  webpQuality?: Maybe<Scalars['Int']>;
-  toFormat?: Maybe<ImageFormat>;
-  toFormatBase64?: Maybe<ImageFormat>;
-  cropFocus?: Maybe<ImageCropFocus>;
-  fit?: Maybe<ImageFit>;
-  background?: Maybe<Scalars['String']>;
-  rotate?: Maybe<Scalars['Int']>;
-  trim?: Maybe<Scalars['Float']>;
-  sizes?: Maybe<Scalars['String']>;
-  srcSetBreakpoints?: Maybe<Array<Maybe<Scalars['Int']>>>;
+  maxWidth?: InputMaybe<Scalars['Int']>;
+  maxHeight?: InputMaybe<Scalars['Int']>;
+  base64Width?: InputMaybe<Scalars['Int']>;
+  grayscale?: InputMaybe<Scalars['Boolean']>;
+  jpegProgressive?: InputMaybe<Scalars['Boolean']>;
+  pngCompressionSpeed?: InputMaybe<Scalars['Int']>;
+  duotone?: InputMaybe<DuotoneGradient>;
+  traceSVG?: InputMaybe<Potrace>;
+  quality?: InputMaybe<Scalars['Int']>;
+  jpegQuality?: InputMaybe<Scalars['Int']>;
+  pngQuality?: InputMaybe<Scalars['Int']>;
+  webpQuality?: InputMaybe<Scalars['Int']>;
+  toFormat?: InputMaybe<ImageFormat>;
+  toFormatBase64?: InputMaybe<ImageFormat>;
+  cropFocus?: InputMaybe<ImageCropFocus>;
+  fit?: InputMaybe<ImageFit>;
+  background?: InputMaybe<Scalars['String']>;
+  rotate?: InputMaybe<Scalars['Int']>;
+  trim?: InputMaybe<Scalars['Float']>;
+  sizes?: InputMaybe<Scalars['String']>;
+  srcSetBreakpoints?: InputMaybe<Array<InputMaybe<Scalars['Int']>>>;
 };
 
 
 export type ImageSharpGatsbyImageDataArgs = {
-  layout?: Maybe<ImageLayout>;
-  width?: Maybe<Scalars['Int']>;
-  height?: Maybe<Scalars['Int']>;
-  aspectRatio?: Maybe<Scalars['Float']>;
-  placeholder?: Maybe<ImagePlaceholder>;
-  blurredOptions?: Maybe<BlurredOptions>;
-  tracedSVGOptions?: Maybe<Potrace>;
-  formats?: Maybe<Array<Maybe<ImageFormat>>>;
-  outputPixelDensities?: Maybe<Array<Maybe<Scalars['Float']>>>;
-  breakpoints?: Maybe<Array<Maybe<Scalars['Int']>>>;
-  sizes?: Maybe<Scalars['String']>;
-  quality?: Maybe<Scalars['Int']>;
-  jpgOptions?: Maybe<JpgOptions>;
-  pngOptions?: Maybe<PngOptions>;
-  webpOptions?: Maybe<WebPOptions>;
-  avifOptions?: Maybe<AvifOptions>;
-  transformOptions?: Maybe<TransformOptions>;
-  backgroundColor?: Maybe<Scalars['String']>;
+  layout?: InputMaybe<ImageLayout>;
+  width?: InputMaybe<Scalars['Int']>;
+  height?: InputMaybe<Scalars['Int']>;
+  aspectRatio?: InputMaybe<Scalars['Float']>;
+  placeholder?: InputMaybe<ImagePlaceholder>;
+  blurredOptions?: InputMaybe<BlurredOptions>;
+  tracedSVGOptions?: InputMaybe<Potrace>;
+  formats?: InputMaybe<Array<InputMaybe<ImageFormat>>>;
+  outputPixelDensities?: InputMaybe<Array<InputMaybe<Scalars['Float']>>>;
+  breakpoints?: InputMaybe<Array<InputMaybe<Scalars['Int']>>>;
+  sizes?: InputMaybe<Scalars['String']>;
+  quality?: InputMaybe<Scalars['Int']>;
+  jpgOptions?: InputMaybe<JpgOptions>;
+  pngOptions?: InputMaybe<PngOptions>;
+  webpOptions?: InputMaybe<WebPOptions>;
+  avifOptions?: InputMaybe<AvifOptions>;
+  transformOptions?: InputMaybe<TransformOptions>;
+  backgroundColor?: InputMaybe<Scalars['String']>;
 };
 
 
 export type ImageSharpResizeArgs = {
-  width?: Maybe<Scalars['Int']>;
-  height?: Maybe<Scalars['Int']>;
-  quality?: Maybe<Scalars['Int']>;
-  jpegQuality?: Maybe<Scalars['Int']>;
-  pngQuality?: Maybe<Scalars['Int']>;
-  webpQuality?: Maybe<Scalars['Int']>;
-  jpegProgressive?: Maybe<Scalars['Boolean']>;
-  pngCompressionLevel?: Maybe<Scalars['Int']>;
-  pngCompressionSpeed?: Maybe<Scalars['Int']>;
-  grayscale?: Maybe<Scalars['Boolean']>;
-  duotone?: Maybe<DuotoneGradient>;
-  base64?: Maybe<Scalars['Boolean']>;
-  traceSVG?: Maybe<Potrace>;
-  toFormat?: Maybe<ImageFormat>;
-  cropFocus?: Maybe<ImageCropFocus>;
-  fit?: Maybe<ImageFit>;
-  background?: Maybe<Scalars['String']>;
-  rotate?: Maybe<Scalars['Int']>;
-  trim?: Maybe<Scalars['Float']>;
+  width?: InputMaybe<Scalars['Int']>;
+  height?: InputMaybe<Scalars['Int']>;
+  quality?: InputMaybe<Scalars['Int']>;
+  jpegQuality?: InputMaybe<Scalars['Int']>;
+  pngQuality?: InputMaybe<Scalars['Int']>;
+  webpQuality?: InputMaybe<Scalars['Int']>;
+  jpegProgressive?: InputMaybe<Scalars['Boolean']>;
+  pngCompressionLevel?: InputMaybe<Scalars['Int']>;
+  pngCompressionSpeed?: InputMaybe<Scalars['Int']>;
+  grayscale?: InputMaybe<Scalars['Boolean']>;
+  duotone?: InputMaybe<DuotoneGradient>;
+  base64?: InputMaybe<Scalars['Boolean']>;
+  traceSVG?: InputMaybe<Potrace>;
+  toFormat?: InputMaybe<ImageFormat>;
+  cropFocus?: InputMaybe<ImageCropFocus>;
+  fit?: InputMaybe<ImageFit>;
+  background?: InputMaybe<Scalars['String']>;
+  rotate?: InputMaybe<Scalars['Int']>;
+  trim?: InputMaybe<Scalars['Float']>;
 };
 
 export type ImageSharpFixed = {
@@ -587,7 +535,6 @@ export type ImageSharpFluid = {
   presentationHeight: Scalars['Int'];
 };
 
-
 export type ImagePlaceholder =
   | 'DOMINANT_COLOR'
   | 'TRACED_SVG'
@@ -596,38 +543,38 @@ export type ImagePlaceholder =
 
 export type BlurredOptions = {
   /** Width of the generated low-res preview. Default is 20px */
-  width?: Maybe<Scalars['Int']>;
+  width?: InputMaybe<Scalars['Int']>;
   /** Force the output format for the low-res preview. Default is to use the same format as the input. You should rarely need to change this */
-  toFormat?: Maybe<ImageFormat>;
+  toFormat?: InputMaybe<ImageFormat>;
 };
 
 export type JpgOptions = {
-  quality?: Maybe<Scalars['Int']>;
-  progressive?: Maybe<Scalars['Boolean']>;
+  quality?: InputMaybe<Scalars['Int']>;
+  progressive?: InputMaybe<Scalars['Boolean']>;
 };
 
 export type PngOptions = {
-  quality?: Maybe<Scalars['Int']>;
-  compressionSpeed?: Maybe<Scalars['Int']>;
+  quality?: InputMaybe<Scalars['Int']>;
+  compressionSpeed?: InputMaybe<Scalars['Int']>;
 };
 
 export type WebPOptions = {
-  quality?: Maybe<Scalars['Int']>;
+  quality?: InputMaybe<Scalars['Int']>;
 };
 
 export type AvifOptions = {
-  quality?: Maybe<Scalars['Int']>;
-  lossless?: Maybe<Scalars['Boolean']>;
-  speed?: Maybe<Scalars['Int']>;
+  quality?: InputMaybe<Scalars['Int']>;
+  lossless?: InputMaybe<Scalars['Boolean']>;
+  speed?: InputMaybe<Scalars['Int']>;
 };
 
 export type TransformOptions = {
-  grayscale?: Maybe<Scalars['Boolean']>;
-  duotone?: Maybe<DuotoneGradient>;
-  rotate?: Maybe<Scalars['Int']>;
-  trim?: Maybe<Scalars['Float']>;
-  cropFocus?: Maybe<ImageCropFocus>;
-  fit?: Maybe<ImageFit>;
+  grayscale?: InputMaybe<Scalars['Boolean']>;
+  duotone?: InputMaybe<DuotoneGradient>;
+  rotate?: InputMaybe<Scalars['Int']>;
+  trim?: InputMaybe<Scalars['Float']>;
+  cropFocus?: InputMaybe<ImageCropFocus>;
+  fit?: InputMaybe<ImageFit>;
 };
 
 export type ImageSharpOriginal = {
@@ -669,7 +616,7 @@ export type SanityBlock = {
 
 
 export type SanityBlock_RawChildrenArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityBlockOrButton = SanityBlock | SanityButton;
@@ -685,12 +632,12 @@ export type SanityButton = {
 
 
 export type SanityButton_RawPropertiesArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityButton_RawLinkArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityButtonProperties = {
@@ -713,17 +660,17 @@ export type SanityCard = {
 
 
 export type SanityCard_RawImageArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityCard_RawTextArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityCard_RawLinkArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityCardOrPageOrPostOrProduct = SanityCard | SanityPage | SanityPost | SanityProduct;
@@ -752,17 +699,17 @@ export type SanityColor = {
 
 
 export type SanityColor_RawHslArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityColor_RawHsvArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityColor_RawRgbArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityColorlist = {
@@ -782,7 +729,7 @@ export type SanityColorTheme = {
 
 
 export type SanityColorTheme_RawListArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityContentModules = {
@@ -794,7 +741,15 @@ export type SanityContentModules = {
 
 
 export type SanityContentModules_RawModulesArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
+};
+
+export type SanityCookie = {
+  _key?: Maybe<Scalars['String']>;
+  _type?: Maybe<Scalars['String']>;
+  name?: Maybe<Scalars['String']>;
+  label?: Maybe<Scalars['String']>;
+  category?: Maybe<Scalars['String']>;
 };
 
 /** A Sanity document */
@@ -815,7 +770,7 @@ export type SanityFile = {
 
 
 export type SanityFile_RawAssetArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityGeopoint = {
@@ -857,17 +812,17 @@ export type SanityImage = {
 
 
 export type SanityImage_RawAssetArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityImage_RawHotspotArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityImage_RawCropArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityImageField = {
@@ -884,17 +839,17 @@ export type SanityImageField = {
 
 
 export type SanityImageField_RawAssetArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityImageField_RawHotspotArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityImageField_RawCropArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityImageWithArtDirection = {
@@ -909,12 +864,12 @@ export type SanityImageWithArtDirection = {
 
 
 export type SanityImageWithArtDirection_RawImageMobileArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityImageWithArtDirection_RawImageDesktopArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityLink = {
@@ -929,7 +884,7 @@ export type SanityLink = {
 
 
 export type SanityLink_RawInternalArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityMediaTag = SanityDocument & Node & {
@@ -949,23 +904,23 @@ export type SanityMediaTag = SanityDocument & Node & {
 
 
 export type SanityMediaTag_CreatedAtArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type SanityMediaTag_UpdatedAtArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type SanityMediaTag_RawNameArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityMenuLink = {
@@ -978,7 +933,7 @@ export type SanityMenuLink = {
 
 
 export type SanityMenuLink_RawLinkArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityMeta = {
@@ -993,7 +948,7 @@ export type SanityMeta = {
 
 
 export type SanityMeta_RawOgImageArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityModuleDefaultFields = {
@@ -1009,17 +964,17 @@ export type SanityModuleDefaultFields = {
 
 
 export type SanityModuleDefaultFields_RawActivationArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityModuleDefaultFields_RawPaddingArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityModuleDefaultFields_RawThemeArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityModuleHero = {
@@ -1037,22 +992,22 @@ export type SanityModuleHero = {
 
 
 export type SanityModuleHero_RawOptionsArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityModuleHero_RawHeroImageArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityModuleHero_RawHeroTitleArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityModuleHero_RawHeroCtaArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleRichTextOrModuleSpacerOrModuleTwoColumnOrModuleVideoEmbed = SanityModuleHero | SanityModuleImage | SanityModuleListing | SanityModuleMarquee | SanityModuleRichText | SanityModuleSpacer | SanityModuleTwoColumn | SanityModuleVideoEmbed;
@@ -1069,12 +1024,12 @@ export type SanityModuleImage = {
 
 
 export type SanityModuleImage_RawOptionsArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityModuleImage_RawImageArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityModuleListing = {
@@ -1087,7 +1042,7 @@ export type SanityModuleListing = {
 
 
 export type SanityModuleListing_RawItemsArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityModuleMarquee = {
@@ -1101,7 +1056,7 @@ export type SanityModuleMarquee = {
 
 
 export type SanityModuleMarquee_RawOptionsArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityModulePadding = {
@@ -1123,12 +1078,12 @@ export type SanityModuleRichText = {
 
 
 export type SanityModuleRichText_RawOptionsArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityModuleRichText_RawTextArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityModuleSpacer = {
@@ -1141,7 +1096,7 @@ export type SanityModuleSpacer = {
 
 
 export type SanityModuleSpacer_RawOptionsArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityModuleTwoColumn = {
@@ -1157,17 +1112,17 @@ export type SanityModuleTwoColumn = {
 
 
 export type SanityModuleTwoColumn_RawOptionsArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityModuleTwoColumn_RawFirstColumnArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityModuleTwoColumn_RawSecondColumnArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityModuleVideoEmbed = {
@@ -1190,22 +1145,22 @@ export type SanityModuleVideoEmbed = {
 
 
 export type SanityModuleVideoEmbed_RawOptionsArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityModuleVideoEmbed_RawVideoArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityModuleVideoEmbed_RawPosterFrameArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityModuleVideoEmbed_RawAspectRatioArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityMuxVideo = {
@@ -1217,7 +1172,7 @@ export type SanityMuxVideo = {
 
 
 export type SanityMuxVideo_RawAssetArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityMuxVideoAsset = {
@@ -1252,33 +1207,33 @@ export type SanityPage = SanityDocument & Node & {
 
 
 export type SanityPage_CreatedAtArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type SanityPage_UpdatedAtArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type SanityPage_RawSlugArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityPage_RawMetaArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityPage_RawContentModulesArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityPageOrPostOrProduct = SanityPage | SanityPost | SanityProduct;
@@ -1309,38 +1264,38 @@ export type SanityPost = SanityDocument & Node & {
 
 
 export type SanityPost_CreatedAtArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type SanityPost_UpdatedAtArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type SanityPost_RawSlugArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityPost_RawCategoryArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityPost_RawMetaArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityPost_RawContentModulesArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityPostCategory = SanityDocument & Node & {
@@ -1361,23 +1316,23 @@ export type SanityPostCategory = SanityDocument & Node & {
 
 
 export type SanityPostCategory_CreatedAtArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type SanityPostCategory_UpdatedAtArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type SanityPostCategory_RawSlugArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityProduct = SanityDocument & Node & {
@@ -1406,38 +1361,38 @@ export type SanityProduct = SanityDocument & Node & {
 
 
 export type SanityProduct_CreatedAtArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type SanityProduct_UpdatedAtArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type SanityProduct_RawSlugArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityProduct_RawCategoryArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityProduct_RawMetaArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityProduct_RawContentModulesArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityProductCategory = SanityDocument & Node & {
@@ -1458,23 +1413,23 @@ export type SanityProductCategory = SanityDocument & Node & {
 
 
 export type SanityProductCategory_CreatedAtArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type SanityProductCategory_UpdatedAtArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type SanityProductCategory_RawSlugArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityRgbaColor = {
@@ -1496,7 +1451,7 @@ export type SanityRichTextExtended = {
 
 
 export type SanityRichTextExtended_RawTextArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityAssetSourceData = {
@@ -1536,23 +1491,23 @@ export type SanityFileAsset = SanityDocument & Node & {
 
 
 export type SanityFileAsset_CreatedAtArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type SanityFileAsset_UpdatedAtArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type SanityFileAsset_RawSourceArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityImageAsset = SanityDocument & Node & {
@@ -1572,6 +1527,7 @@ export type SanityImageAsset = SanityDocument & Node & {
   mimeType?: Maybe<Scalars['String']>;
   size?: Maybe<Scalars['Float']>;
   assetId?: Maybe<Scalars['String']>;
+  uploadId?: Maybe<Scalars['String']>;
   path?: Maybe<Scalars['String']>;
   url?: Maybe<Scalars['String']>;
   metadata?: Maybe<SanityImageMetadata>;
@@ -1587,62 +1543,49 @@ export type SanityImageAsset = SanityDocument & Node & {
 
 
 export type SanityImageAsset_CreatedAtArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type SanityImageAsset_UpdatedAtArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type SanityImageAsset_RawMetadataArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityImageAsset_RawSourceArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityImageAssetGatsbyImageDataArgs = {
-  layout?: Maybe<GatsbyImageLayout>;
-  width?: Maybe<Scalars['Int']>;
-  height?: Maybe<Scalars['Int']>;
-  aspectRatio?: Maybe<Scalars['Float']>;
-  placeholder?: Maybe<SanityGatsbyImagePlaceholder>;
-  formats?: Maybe<Array<Maybe<GatsbyImageFormat>>>;
-  outputPixelDensities?: Maybe<Array<Maybe<Scalars['Float']>>>;
-  breakpoints?: Maybe<Array<Maybe<Scalars['Int']>>>;
-  sizes?: Maybe<Scalars['String']>;
-  backgroundColor?: Maybe<Scalars['String']>;
-  fit?: Maybe<SanityImageFit>;
+  layout?: InputMaybe<GatsbyImageLayout>;
+  width?: InputMaybe<Scalars['Int']>;
+  height?: InputMaybe<Scalars['Int']>;
+  aspectRatio?: InputMaybe<Scalars['Float']>;
+  placeholder?: InputMaybe<SanityGatsbyImagePlaceholder>;
+  formats?: InputMaybe<Array<InputMaybe<GatsbyImageFormat>>>;
+  outputPixelDensities?: InputMaybe<Array<InputMaybe<Scalars['Float']>>>;
+  breakpoints?: InputMaybe<Array<InputMaybe<Scalars['Int']>>>;
+  sizes?: InputMaybe<Scalars['String']>;
+  backgroundColor?: InputMaybe<Scalars['String']>;
+  fit?: InputMaybe<SanityImageFit>;
 };
-
-export type GatsbyImageLayout =
-  | 'FIXED'
-  | 'FULL_WIDTH'
-  | 'CONSTRAINED';
 
 export type SanityGatsbyImagePlaceholder =
   | 'DOMINANT_COLOR'
   | 'BLURRED'
   | 'NONE';
-
-export type GatsbyImageFormat =
-  | 'NO_CHANGE'
-  | 'AUTO'
-  | 'JPG'
-  | 'PNG'
-  | 'WEBP'
-  | 'AVIF';
 
 export type SanityImageFit =
   | 'CLIP'
@@ -1686,6 +1629,7 @@ export type SanityImageMetadata = {
   dimensions?: Maybe<SanityImageDimensions>;
   palette?: Maybe<SanityImagePalette>;
   lqip?: Maybe<Scalars['String']>;
+  blurHash?: Maybe<Scalars['String']>;
   hasAlpha?: Maybe<Scalars['Boolean']>;
   isOpaque?: Maybe<Scalars['Boolean']>;
   _rawLocation?: Maybe<Scalars['JSON']>;
@@ -1695,17 +1639,17 @@ export type SanityImageMetadata = {
 
 
 export type SanityImageMetadata_RawLocationArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityImageMetadata_RawDimensionsArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityImageMetadata_RawPaletteArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityImagePalette = {
@@ -1729,37 +1673,37 @@ export type SanityImagePalette = {
 
 
 export type SanityImagePalette_RawDarkMutedArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityImagePalette_RawLightVibrantArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityImagePalette_RawDarkVibrantArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityImagePalette_RawVibrantArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityImagePalette_RawDominantArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityImagePalette_RawLightMutedArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanityImagePalette_RawMutedArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanityImagePaletteSwatch = {
@@ -1769,6 +1713,44 @@ export type SanityImagePaletteSwatch = {
   foreground?: Maybe<Scalars['String']>;
   population?: Maybe<Scalars['Float']>;
   title?: Maybe<Scalars['String']>;
+};
+
+export type SanitySiteSettingsCookies = SanityDocument & Node & {
+  _id?: Maybe<Scalars['String']>;
+  _type?: Maybe<Scalars['String']>;
+  _createdAt?: Maybe<Scalars['Date']>;
+  _updatedAt?: Maybe<Scalars['Date']>;
+  _rev?: Maybe<Scalars['String']>;
+  _key?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
+  description?: Maybe<Scalars['String']>;
+  cookies?: Maybe<Array<Maybe<SanityCookie>>>;
+  _rawCookies?: Maybe<Scalars['JSON']>;
+  id: Scalars['ID'];
+  parent?: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
+};
+
+
+export type SanitySiteSettingsCookies_CreatedAtArgs = {
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
+};
+
+
+export type SanitySiteSettingsCookies_UpdatedAtArgs = {
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
+};
+
+
+export type SanitySiteSettingsCookies_RawCookiesArgs = {
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanitySiteSettingsInformation = SanityDocument & Node & {
@@ -1791,28 +1773,28 @@ export type SanitySiteSettingsInformation = SanityDocument & Node & {
 
 
 export type SanitySiteSettingsInformation_CreatedAtArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type SanitySiteSettingsInformation_UpdatedAtArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type SanitySiteSettingsInformation_RawGlobalInfoArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanitySiteSettingsInformation_RawPrivacyPolicyPageArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanitySiteSettingsMeta = SanityDocument & Node & {
@@ -1832,23 +1814,23 @@ export type SanitySiteSettingsMeta = SanityDocument & Node & {
 
 
 export type SanitySiteSettingsMeta_CreatedAtArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type SanitySiteSettingsMeta_UpdatedAtArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type SanitySiteSettingsMeta_RawMetaArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanitySiteSettingsNavigation = SanityDocument & Node & {
@@ -1878,48 +1860,48 @@ export type SanitySiteSettingsNavigation = SanityDocument & Node & {
 
 
 export type SanitySiteSettingsNavigation_CreatedAtArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type SanitySiteSettingsNavigation_UpdatedAtArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
 export type SanitySiteSettingsNavigation_RawFrontpageArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanitySiteSettingsNavigation_RawDesktopMainArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanitySiteSettingsNavigation_RawDesktopSecondaryArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanitySiteSettingsNavigation_RawMobileMainArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanitySiteSettingsNavigation_RawMobileSecondaryArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 
 export type SanitySiteSettingsNavigation_RawCtaArgs = {
-  resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
+  resolveReferences?: InputMaybe<SanityResolveReferencesConfiguration>;
 };
 
 export type SanitySlug = {
@@ -1993,6 +1975,8 @@ export type Query = {
   allSanityFileAsset: SanityFileAssetConnection;
   sanityImageAsset?: Maybe<SanityImageAsset>;
   allSanityImageAsset: SanityImageAssetConnection;
+  sanitySiteSettingsCookies?: Maybe<SanitySiteSettingsCookies>;
+  allSanitySiteSettingsCookies: SanitySiteSettingsCookiesConnection;
   sanitySiteSettingsInformation?: Maybe<SanitySiteSettingsInformation>;
   allSanitySiteSettingsInformation: SanitySiteSettingsInformationConnection;
   sanitySiteSettingsMeta?: Maybe<SanitySiteSettingsMeta>;
@@ -2005,716 +1989,742 @@ export type Query = {
 
 
 export type QueryFileArgs = {
-  sourceInstanceName?: Maybe<StringQueryOperatorInput>;
-  absolutePath?: Maybe<StringQueryOperatorInput>;
-  relativePath?: Maybe<StringQueryOperatorInput>;
-  extension?: Maybe<StringQueryOperatorInput>;
-  size?: Maybe<IntQueryOperatorInput>;
-  prettySize?: Maybe<StringQueryOperatorInput>;
-  modifiedTime?: Maybe<DateQueryOperatorInput>;
-  accessTime?: Maybe<DateQueryOperatorInput>;
-  changeTime?: Maybe<DateQueryOperatorInput>;
-  birthTime?: Maybe<DateQueryOperatorInput>;
-  root?: Maybe<StringQueryOperatorInput>;
-  dir?: Maybe<StringQueryOperatorInput>;
-  base?: Maybe<StringQueryOperatorInput>;
-  ext?: Maybe<StringQueryOperatorInput>;
-  name?: Maybe<StringQueryOperatorInput>;
-  relativeDirectory?: Maybe<StringQueryOperatorInput>;
-  dev?: Maybe<IntQueryOperatorInput>;
-  mode?: Maybe<IntQueryOperatorInput>;
-  nlink?: Maybe<IntQueryOperatorInput>;
-  uid?: Maybe<IntQueryOperatorInput>;
-  gid?: Maybe<IntQueryOperatorInput>;
-  rdev?: Maybe<IntQueryOperatorInput>;
-  ino?: Maybe<FloatQueryOperatorInput>;
-  atimeMs?: Maybe<FloatQueryOperatorInput>;
-  mtimeMs?: Maybe<FloatQueryOperatorInput>;
-  ctimeMs?: Maybe<FloatQueryOperatorInput>;
-  atime?: Maybe<DateQueryOperatorInput>;
-  mtime?: Maybe<DateQueryOperatorInput>;
-  ctime?: Maybe<DateQueryOperatorInput>;
-  birthtime?: Maybe<DateQueryOperatorInput>;
-  birthtimeMs?: Maybe<FloatQueryOperatorInput>;
-  childrenImageSharp?: Maybe<ImageSharpFilterListInput>;
-  childImageSharp?: Maybe<ImageSharpFilterInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  sourceInstanceName?: InputMaybe<StringQueryOperatorInput>;
+  absolutePath?: InputMaybe<StringQueryOperatorInput>;
+  relativePath?: InputMaybe<StringQueryOperatorInput>;
+  extension?: InputMaybe<StringQueryOperatorInput>;
+  size?: InputMaybe<IntQueryOperatorInput>;
+  prettySize?: InputMaybe<StringQueryOperatorInput>;
+  modifiedTime?: InputMaybe<DateQueryOperatorInput>;
+  accessTime?: InputMaybe<DateQueryOperatorInput>;
+  changeTime?: InputMaybe<DateQueryOperatorInput>;
+  birthTime?: InputMaybe<DateQueryOperatorInput>;
+  root?: InputMaybe<StringQueryOperatorInput>;
+  dir?: InputMaybe<StringQueryOperatorInput>;
+  base?: InputMaybe<StringQueryOperatorInput>;
+  ext?: InputMaybe<StringQueryOperatorInput>;
+  name?: InputMaybe<StringQueryOperatorInput>;
+  relativeDirectory?: InputMaybe<StringQueryOperatorInput>;
+  dev?: InputMaybe<IntQueryOperatorInput>;
+  mode?: InputMaybe<IntQueryOperatorInput>;
+  nlink?: InputMaybe<IntQueryOperatorInput>;
+  uid?: InputMaybe<IntQueryOperatorInput>;
+  gid?: InputMaybe<IntQueryOperatorInput>;
+  rdev?: InputMaybe<IntQueryOperatorInput>;
+  ino?: InputMaybe<FloatQueryOperatorInput>;
+  atimeMs?: InputMaybe<FloatQueryOperatorInput>;
+  mtimeMs?: InputMaybe<FloatQueryOperatorInput>;
+  ctimeMs?: InputMaybe<FloatQueryOperatorInput>;
+  atime?: InputMaybe<DateQueryOperatorInput>;
+  mtime?: InputMaybe<DateQueryOperatorInput>;
+  ctime?: InputMaybe<DateQueryOperatorInput>;
+  birthtime?: InputMaybe<DateQueryOperatorInput>;
+  birthtimeMs?: InputMaybe<FloatQueryOperatorInput>;
+  childrenImageSharp?: InputMaybe<ImageSharpFilterListInput>;
+  childImageSharp?: InputMaybe<ImageSharpFilterInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 
 export type QueryAllFileArgs = {
-  filter?: Maybe<FileFilterInput>;
-  sort?: Maybe<FileSortInput>;
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  filter?: InputMaybe<FileFilterInput>;
+  sort?: InputMaybe<FileSortInput>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
 };
 
 
 export type QueryDirectoryArgs = {
-  sourceInstanceName?: Maybe<StringQueryOperatorInput>;
-  absolutePath?: Maybe<StringQueryOperatorInput>;
-  relativePath?: Maybe<StringQueryOperatorInput>;
-  extension?: Maybe<StringQueryOperatorInput>;
-  size?: Maybe<IntQueryOperatorInput>;
-  prettySize?: Maybe<StringQueryOperatorInput>;
-  modifiedTime?: Maybe<DateQueryOperatorInput>;
-  accessTime?: Maybe<DateQueryOperatorInput>;
-  changeTime?: Maybe<DateQueryOperatorInput>;
-  birthTime?: Maybe<DateQueryOperatorInput>;
-  root?: Maybe<StringQueryOperatorInput>;
-  dir?: Maybe<StringQueryOperatorInput>;
-  base?: Maybe<StringQueryOperatorInput>;
-  ext?: Maybe<StringQueryOperatorInput>;
-  name?: Maybe<StringQueryOperatorInput>;
-  relativeDirectory?: Maybe<StringQueryOperatorInput>;
-  dev?: Maybe<IntQueryOperatorInput>;
-  mode?: Maybe<IntQueryOperatorInput>;
-  nlink?: Maybe<IntQueryOperatorInput>;
-  uid?: Maybe<IntQueryOperatorInput>;
-  gid?: Maybe<IntQueryOperatorInput>;
-  rdev?: Maybe<IntQueryOperatorInput>;
-  ino?: Maybe<FloatQueryOperatorInput>;
-  atimeMs?: Maybe<FloatQueryOperatorInput>;
-  mtimeMs?: Maybe<FloatQueryOperatorInput>;
-  ctimeMs?: Maybe<FloatQueryOperatorInput>;
-  atime?: Maybe<DateQueryOperatorInput>;
-  mtime?: Maybe<DateQueryOperatorInput>;
-  ctime?: Maybe<DateQueryOperatorInput>;
-  birthtime?: Maybe<DateQueryOperatorInput>;
-  birthtimeMs?: Maybe<FloatQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  sourceInstanceName?: InputMaybe<StringQueryOperatorInput>;
+  absolutePath?: InputMaybe<StringQueryOperatorInput>;
+  relativePath?: InputMaybe<StringQueryOperatorInput>;
+  extension?: InputMaybe<StringQueryOperatorInput>;
+  size?: InputMaybe<IntQueryOperatorInput>;
+  prettySize?: InputMaybe<StringQueryOperatorInput>;
+  modifiedTime?: InputMaybe<DateQueryOperatorInput>;
+  accessTime?: InputMaybe<DateQueryOperatorInput>;
+  changeTime?: InputMaybe<DateQueryOperatorInput>;
+  birthTime?: InputMaybe<DateQueryOperatorInput>;
+  root?: InputMaybe<StringQueryOperatorInput>;
+  dir?: InputMaybe<StringQueryOperatorInput>;
+  base?: InputMaybe<StringQueryOperatorInput>;
+  ext?: InputMaybe<StringQueryOperatorInput>;
+  name?: InputMaybe<StringQueryOperatorInput>;
+  relativeDirectory?: InputMaybe<StringQueryOperatorInput>;
+  dev?: InputMaybe<IntQueryOperatorInput>;
+  mode?: InputMaybe<IntQueryOperatorInput>;
+  nlink?: InputMaybe<IntQueryOperatorInput>;
+  uid?: InputMaybe<IntQueryOperatorInput>;
+  gid?: InputMaybe<IntQueryOperatorInput>;
+  rdev?: InputMaybe<IntQueryOperatorInput>;
+  ino?: InputMaybe<FloatQueryOperatorInput>;
+  atimeMs?: InputMaybe<FloatQueryOperatorInput>;
+  mtimeMs?: InputMaybe<FloatQueryOperatorInput>;
+  ctimeMs?: InputMaybe<FloatQueryOperatorInput>;
+  atime?: InputMaybe<DateQueryOperatorInput>;
+  mtime?: InputMaybe<DateQueryOperatorInput>;
+  ctime?: InputMaybe<DateQueryOperatorInput>;
+  birthtime?: InputMaybe<DateQueryOperatorInput>;
+  birthtimeMs?: InputMaybe<FloatQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 
 export type QueryAllDirectoryArgs = {
-  filter?: Maybe<DirectoryFilterInput>;
-  sort?: Maybe<DirectorySortInput>;
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  filter?: InputMaybe<DirectoryFilterInput>;
+  sort?: InputMaybe<DirectorySortInput>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
 };
 
 
 export type QuerySiteArgs = {
-  buildTime?: Maybe<DateQueryOperatorInput>;
-  siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
-  port?: Maybe<IntQueryOperatorInput>;
-  host?: Maybe<StringQueryOperatorInput>;
-  polyfill?: Maybe<BooleanQueryOperatorInput>;
-  pathPrefix?: Maybe<StringQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  buildTime?: InputMaybe<DateQueryOperatorInput>;
+  siteMetadata?: InputMaybe<SiteSiteMetadataFilterInput>;
+  port?: InputMaybe<IntQueryOperatorInput>;
+  host?: InputMaybe<StringQueryOperatorInput>;
+  polyfill?: InputMaybe<BooleanQueryOperatorInput>;
+  pathPrefix?: InputMaybe<StringQueryOperatorInput>;
+  jsxRuntime?: InputMaybe<StringQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 
 export type QueryAllSiteArgs = {
-  filter?: Maybe<SiteFilterInput>;
-  sort?: Maybe<SiteSortInput>;
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  filter?: InputMaybe<SiteFilterInput>;
+  sort?: InputMaybe<SiteSortInput>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
 };
 
 
 export type QuerySiteFunctionArgs = {
-  functionRoute?: Maybe<StringQueryOperatorInput>;
-  pluginName?: Maybe<StringQueryOperatorInput>;
-  originalAbsoluteFilePath?: Maybe<StringQueryOperatorInput>;
-  originalRelativeFilePath?: Maybe<StringQueryOperatorInput>;
-  relativeCompiledFilePath?: Maybe<StringQueryOperatorInput>;
-  absoluteCompiledFilePath?: Maybe<StringQueryOperatorInput>;
-  matchPath?: Maybe<StringQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  functionRoute?: InputMaybe<StringQueryOperatorInput>;
+  pluginName?: InputMaybe<StringQueryOperatorInput>;
+  originalAbsoluteFilePath?: InputMaybe<StringQueryOperatorInput>;
+  originalRelativeFilePath?: InputMaybe<StringQueryOperatorInput>;
+  relativeCompiledFilePath?: InputMaybe<StringQueryOperatorInput>;
+  absoluteCompiledFilePath?: InputMaybe<StringQueryOperatorInput>;
+  matchPath?: InputMaybe<StringQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 
 export type QueryAllSiteFunctionArgs = {
-  filter?: Maybe<SiteFunctionFilterInput>;
-  sort?: Maybe<SiteFunctionSortInput>;
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  filter?: InputMaybe<SiteFunctionFilterInput>;
+  sort?: InputMaybe<SiteFunctionSortInput>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
 };
 
 
 export type QuerySitePageArgs = {
-  path?: Maybe<StringQueryOperatorInput>;
-  component?: Maybe<StringQueryOperatorInput>;
-  internalComponentName?: Maybe<StringQueryOperatorInput>;
-  componentChunkName?: Maybe<StringQueryOperatorInput>;
-  matchPath?: Maybe<StringQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
-  isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>;
-  context?: Maybe<SitePageContextFilterInput>;
-  pluginCreator?: Maybe<SitePluginFilterInput>;
-  pluginCreatorId?: Maybe<StringQueryOperatorInput>;
+  path?: InputMaybe<StringQueryOperatorInput>;
+  component?: InputMaybe<StringQueryOperatorInput>;
+  internalComponentName?: InputMaybe<StringQueryOperatorInput>;
+  componentChunkName?: InputMaybe<StringQueryOperatorInput>;
+  matchPath?: InputMaybe<StringQueryOperatorInput>;
+  pageContext?: InputMaybe<JsonQueryOperatorInput>;
+  pluginCreator?: InputMaybe<SitePluginFilterInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 
 export type QueryAllSitePageArgs = {
-  filter?: Maybe<SitePageFilterInput>;
-  sort?: Maybe<SitePageSortInput>;
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  filter?: InputMaybe<SitePageFilterInput>;
+  sort?: InputMaybe<SitePageSortInput>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
 };
 
 
 export type QuerySitePluginArgs = {
-  resolve?: Maybe<StringQueryOperatorInput>;
-  name?: Maybe<StringQueryOperatorInput>;
-  version?: Maybe<StringQueryOperatorInput>;
-  nodeAPIs?: Maybe<StringQueryOperatorInput>;
-  browserAPIs?: Maybe<StringQueryOperatorInput>;
-  ssrAPIs?: Maybe<StringQueryOperatorInput>;
-  pluginFilepath?: Maybe<StringQueryOperatorInput>;
-  pluginOptions?: Maybe<SitePluginPluginOptionsFilterInput>;
-  packageJson?: Maybe<SitePluginPackageJsonFilterInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  resolve?: InputMaybe<StringQueryOperatorInput>;
+  name?: InputMaybe<StringQueryOperatorInput>;
+  version?: InputMaybe<StringQueryOperatorInput>;
+  nodeAPIs?: InputMaybe<StringQueryOperatorInput>;
+  browserAPIs?: InputMaybe<StringQueryOperatorInput>;
+  ssrAPIs?: InputMaybe<StringQueryOperatorInput>;
+  pluginFilepath?: InputMaybe<StringQueryOperatorInput>;
+  pluginOptions?: InputMaybe<JsonQueryOperatorInput>;
+  packageJson?: InputMaybe<JsonQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 
 export type QueryAllSitePluginArgs = {
-  filter?: Maybe<SitePluginFilterInput>;
-  sort?: Maybe<SitePluginSortInput>;
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  filter?: InputMaybe<SitePluginFilterInput>;
+  sort?: InputMaybe<SitePluginSortInput>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
 };
 
 
 export type QuerySiteBuildMetadataArgs = {
-  buildTime?: Maybe<DateQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  buildTime?: InputMaybe<DateQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 
 export type QueryAllSiteBuildMetadataArgs = {
-  filter?: Maybe<SiteBuildMetadataFilterInput>;
-  sort?: Maybe<SiteBuildMetadataSortInput>;
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  filter?: InputMaybe<SiteBuildMetadataFilterInput>;
+  sort?: InputMaybe<SiteBuildMetadataSortInput>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
 };
 
 
 export type QueryImageSharpArgs = {
-  fixed?: Maybe<ImageSharpFixedFilterInput>;
-  fluid?: Maybe<ImageSharpFluidFilterInput>;
-  gatsbyImageData?: Maybe<JsonQueryOperatorInput>;
-  original?: Maybe<ImageSharpOriginalFilterInput>;
-  resize?: Maybe<ImageSharpResizeFilterInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  fixed?: InputMaybe<ImageSharpFixedFilterInput>;
+  fluid?: InputMaybe<ImageSharpFluidFilterInput>;
+  gatsbyImageData?: InputMaybe<JsonQueryOperatorInput>;
+  original?: InputMaybe<ImageSharpOriginalFilterInput>;
+  resize?: InputMaybe<ImageSharpResizeFilterInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 
 export type QueryAllImageSharpArgs = {
-  filter?: Maybe<ImageSharpFilterInput>;
-  sort?: Maybe<ImageSharpSortInput>;
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  filter?: InputMaybe<ImageSharpFilterInput>;
+  sort?: InputMaybe<ImageSharpSortInput>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
 };
 
 
 export type QuerySanityMediaTagArgs = {
-  _id?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  _createdAt?: Maybe<DateQueryOperatorInput>;
-  _updatedAt?: Maybe<DateQueryOperatorInput>;
-  _rev?: Maybe<StringQueryOperatorInput>;
-  _key?: Maybe<StringQueryOperatorInput>;
-  name?: Maybe<SanitySlugFilterInput>;
-  _rawName?: Maybe<JsonQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  _id?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  _createdAt?: InputMaybe<DateQueryOperatorInput>;
+  _updatedAt?: InputMaybe<DateQueryOperatorInput>;
+  _rev?: InputMaybe<StringQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  name?: InputMaybe<SanitySlugFilterInput>;
+  _rawName?: InputMaybe<JsonQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 
 export type QueryAllSanityMediaTagArgs = {
-  filter?: Maybe<SanityMediaTagFilterInput>;
-  sort?: Maybe<SanityMediaTagSortInput>;
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  filter?: InputMaybe<SanityMediaTagFilterInput>;
+  sort?: InputMaybe<SanityMediaTagSortInput>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
 };
 
 
 export type QuerySanityPageArgs = {
-  _id?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  _createdAt?: Maybe<DateQueryOperatorInput>;
-  _updatedAt?: Maybe<DateQueryOperatorInput>;
-  _rev?: Maybe<StringQueryOperatorInput>;
-  _key?: Maybe<StringQueryOperatorInput>;
-  title?: Maybe<StringQueryOperatorInput>;
-  slug?: Maybe<SanitySlugFilterInput>;
-  meta?: Maybe<SanityMetaFilterInput>;
-  contentModules?: Maybe<SanityContentModulesFilterInput>;
-  _rawSlug?: Maybe<JsonQueryOperatorInput>;
-  _rawMeta?: Maybe<JsonQueryOperatorInput>;
-  _rawContentModules?: Maybe<JsonQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  _id?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  _createdAt?: InputMaybe<DateQueryOperatorInput>;
+  _updatedAt?: InputMaybe<DateQueryOperatorInput>;
+  _rev?: InputMaybe<StringQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  title?: InputMaybe<StringQueryOperatorInput>;
+  slug?: InputMaybe<SanitySlugFilterInput>;
+  meta?: InputMaybe<SanityMetaFilterInput>;
+  contentModules?: InputMaybe<SanityContentModulesFilterInput>;
+  _rawSlug?: InputMaybe<JsonQueryOperatorInput>;
+  _rawMeta?: InputMaybe<JsonQueryOperatorInput>;
+  _rawContentModules?: InputMaybe<JsonQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 
 export type QueryAllSanityPageArgs = {
-  filter?: Maybe<SanityPageFilterInput>;
-  sort?: Maybe<SanityPageSortInput>;
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  filter?: InputMaybe<SanityPageFilterInput>;
+  sort?: InputMaybe<SanityPageSortInput>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
 };
 
 
 export type QuerySanityPostArgs = {
-  _id?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  _createdAt?: Maybe<DateQueryOperatorInput>;
-  _updatedAt?: Maybe<DateQueryOperatorInput>;
-  _rev?: Maybe<StringQueryOperatorInput>;
-  _key?: Maybe<StringQueryOperatorInput>;
-  title?: Maybe<StringQueryOperatorInput>;
-  slug?: Maybe<SanitySlugFilterInput>;
-  category?: Maybe<SanityPostCategoryFilterInput>;
-  meta?: Maybe<SanityMetaFilterInput>;
-  contentModules?: Maybe<SanityContentModulesFilterInput>;
-  order?: Maybe<FloatQueryOperatorInput>;
-  _rawSlug?: Maybe<JsonQueryOperatorInput>;
-  _rawCategory?: Maybe<JsonQueryOperatorInput>;
-  _rawMeta?: Maybe<JsonQueryOperatorInput>;
-  _rawContentModules?: Maybe<JsonQueryOperatorInput>;
-  isPublished?: Maybe<BooleanQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  _id?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  _createdAt?: InputMaybe<DateQueryOperatorInput>;
+  _updatedAt?: InputMaybe<DateQueryOperatorInput>;
+  _rev?: InputMaybe<StringQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  title?: InputMaybe<StringQueryOperatorInput>;
+  slug?: InputMaybe<SanitySlugFilterInput>;
+  category?: InputMaybe<SanityPostCategoryFilterInput>;
+  meta?: InputMaybe<SanityMetaFilterInput>;
+  contentModules?: InputMaybe<SanityContentModulesFilterInput>;
+  order?: InputMaybe<FloatQueryOperatorInput>;
+  _rawSlug?: InputMaybe<JsonQueryOperatorInput>;
+  _rawCategory?: InputMaybe<JsonQueryOperatorInput>;
+  _rawMeta?: InputMaybe<JsonQueryOperatorInput>;
+  _rawContentModules?: InputMaybe<JsonQueryOperatorInput>;
+  isPublished?: InputMaybe<BooleanQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 
 export type QueryAllSanityPostArgs = {
-  filter?: Maybe<SanityPostFilterInput>;
-  sort?: Maybe<SanityPostSortInput>;
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  filter?: InputMaybe<SanityPostFilterInput>;
+  sort?: InputMaybe<SanityPostSortInput>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
 };
 
 
 export type QuerySanityPostCategoryArgs = {
-  _id?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  _createdAt?: Maybe<DateQueryOperatorInput>;
-  _updatedAt?: Maybe<DateQueryOperatorInput>;
-  _rev?: Maybe<StringQueryOperatorInput>;
-  _key?: Maybe<StringQueryOperatorInput>;
-  title?: Maybe<StringQueryOperatorInput>;
-  slug?: Maybe<SanitySlugFilterInput>;
-  _rawSlug?: Maybe<JsonQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  _id?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  _createdAt?: InputMaybe<DateQueryOperatorInput>;
+  _updatedAt?: InputMaybe<DateQueryOperatorInput>;
+  _rev?: InputMaybe<StringQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  title?: InputMaybe<StringQueryOperatorInput>;
+  slug?: InputMaybe<SanitySlugFilterInput>;
+  _rawSlug?: InputMaybe<JsonQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 
 export type QueryAllSanityPostCategoryArgs = {
-  filter?: Maybe<SanityPostCategoryFilterInput>;
-  sort?: Maybe<SanityPostCategorySortInput>;
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  filter?: InputMaybe<SanityPostCategoryFilterInput>;
+  sort?: InputMaybe<SanityPostCategorySortInput>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
 };
 
 
 export type QuerySanityProductArgs = {
-  _id?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  _createdAt?: Maybe<DateQueryOperatorInput>;
-  _updatedAt?: Maybe<DateQueryOperatorInput>;
-  _rev?: Maybe<StringQueryOperatorInput>;
-  _key?: Maybe<StringQueryOperatorInput>;
-  title?: Maybe<StringQueryOperatorInput>;
-  slug?: Maybe<SanitySlugFilterInput>;
-  category?: Maybe<SanityProductCategoryFilterInput>;
-  meta?: Maybe<SanityMetaFilterInput>;
-  shopifyProduct?: Maybe<StringQueryOperatorInput>;
-  contentModules?: Maybe<SanityContentModulesFilterInput>;
-  order?: Maybe<FloatQueryOperatorInput>;
-  _rawSlug?: Maybe<JsonQueryOperatorInput>;
-  _rawCategory?: Maybe<JsonQueryOperatorInput>;
-  _rawMeta?: Maybe<JsonQueryOperatorInput>;
-  _rawContentModules?: Maybe<JsonQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  _id?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  _createdAt?: InputMaybe<DateQueryOperatorInput>;
+  _updatedAt?: InputMaybe<DateQueryOperatorInput>;
+  _rev?: InputMaybe<StringQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  title?: InputMaybe<StringQueryOperatorInput>;
+  slug?: InputMaybe<SanitySlugFilterInput>;
+  category?: InputMaybe<SanityProductCategoryFilterInput>;
+  meta?: InputMaybe<SanityMetaFilterInput>;
+  shopifyProduct?: InputMaybe<StringQueryOperatorInput>;
+  contentModules?: InputMaybe<SanityContentModulesFilterInput>;
+  order?: InputMaybe<FloatQueryOperatorInput>;
+  _rawSlug?: InputMaybe<JsonQueryOperatorInput>;
+  _rawCategory?: InputMaybe<JsonQueryOperatorInput>;
+  _rawMeta?: InputMaybe<JsonQueryOperatorInput>;
+  _rawContentModules?: InputMaybe<JsonQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 
 export type QueryAllSanityProductArgs = {
-  filter?: Maybe<SanityProductFilterInput>;
-  sort?: Maybe<SanityProductSortInput>;
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  filter?: InputMaybe<SanityProductFilterInput>;
+  sort?: InputMaybe<SanityProductSortInput>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
 };
 
 
 export type QuerySanityProductCategoryArgs = {
-  _id?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  _createdAt?: Maybe<DateQueryOperatorInput>;
-  _updatedAt?: Maybe<DateQueryOperatorInput>;
-  _rev?: Maybe<StringQueryOperatorInput>;
-  _key?: Maybe<StringQueryOperatorInput>;
-  title?: Maybe<StringQueryOperatorInput>;
-  slug?: Maybe<SanitySlugFilterInput>;
-  _rawSlug?: Maybe<JsonQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  _id?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  _createdAt?: InputMaybe<DateQueryOperatorInput>;
+  _updatedAt?: InputMaybe<DateQueryOperatorInput>;
+  _rev?: InputMaybe<StringQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  title?: InputMaybe<StringQueryOperatorInput>;
+  slug?: InputMaybe<SanitySlugFilterInput>;
+  _rawSlug?: InputMaybe<JsonQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 
 export type QueryAllSanityProductCategoryArgs = {
-  filter?: Maybe<SanityProductCategoryFilterInput>;
-  sort?: Maybe<SanityProductCategorySortInput>;
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  filter?: InputMaybe<SanityProductCategoryFilterInput>;
+  sort?: InputMaybe<SanityProductCategorySortInput>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
 };
 
 
 export type QuerySanityFileAssetArgs = {
-  _id?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  _createdAt?: Maybe<DateQueryOperatorInput>;
-  _updatedAt?: Maybe<DateQueryOperatorInput>;
-  _rev?: Maybe<StringQueryOperatorInput>;
-  _key?: Maybe<StringQueryOperatorInput>;
-  originalFilename?: Maybe<StringQueryOperatorInput>;
-  label?: Maybe<StringQueryOperatorInput>;
-  title?: Maybe<StringQueryOperatorInput>;
-  description?: Maybe<StringQueryOperatorInput>;
-  altText?: Maybe<StringQueryOperatorInput>;
-  sha1hash?: Maybe<StringQueryOperatorInput>;
-  extension?: Maybe<StringQueryOperatorInput>;
-  mimeType?: Maybe<StringQueryOperatorInput>;
-  size?: Maybe<FloatQueryOperatorInput>;
-  assetId?: Maybe<StringQueryOperatorInput>;
-  path?: Maybe<StringQueryOperatorInput>;
-  url?: Maybe<StringQueryOperatorInput>;
-  source?: Maybe<SanityAssetSourceDataFilterInput>;
-  _rawSource?: Maybe<JsonQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  _id?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  _createdAt?: InputMaybe<DateQueryOperatorInput>;
+  _updatedAt?: InputMaybe<DateQueryOperatorInput>;
+  _rev?: InputMaybe<StringQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  originalFilename?: InputMaybe<StringQueryOperatorInput>;
+  label?: InputMaybe<StringQueryOperatorInput>;
+  title?: InputMaybe<StringQueryOperatorInput>;
+  description?: InputMaybe<StringQueryOperatorInput>;
+  altText?: InputMaybe<StringQueryOperatorInput>;
+  sha1hash?: InputMaybe<StringQueryOperatorInput>;
+  extension?: InputMaybe<StringQueryOperatorInput>;
+  mimeType?: InputMaybe<StringQueryOperatorInput>;
+  size?: InputMaybe<FloatQueryOperatorInput>;
+  assetId?: InputMaybe<StringQueryOperatorInput>;
+  path?: InputMaybe<StringQueryOperatorInput>;
+  url?: InputMaybe<StringQueryOperatorInput>;
+  source?: InputMaybe<SanityAssetSourceDataFilterInput>;
+  _rawSource?: InputMaybe<JsonQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 
 export type QueryAllSanityFileAssetArgs = {
-  filter?: Maybe<SanityFileAssetFilterInput>;
-  sort?: Maybe<SanityFileAssetSortInput>;
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  filter?: InputMaybe<SanityFileAssetFilterInput>;
+  sort?: InputMaybe<SanityFileAssetSortInput>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
 };
 
 
 export type QuerySanityImageAssetArgs = {
-  _id?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  _createdAt?: Maybe<DateQueryOperatorInput>;
-  _updatedAt?: Maybe<DateQueryOperatorInput>;
-  _rev?: Maybe<StringQueryOperatorInput>;
-  _key?: Maybe<StringQueryOperatorInput>;
-  originalFilename?: Maybe<StringQueryOperatorInput>;
-  label?: Maybe<StringQueryOperatorInput>;
-  title?: Maybe<StringQueryOperatorInput>;
-  description?: Maybe<StringQueryOperatorInput>;
-  altText?: Maybe<StringQueryOperatorInput>;
-  sha1hash?: Maybe<StringQueryOperatorInput>;
-  extension?: Maybe<StringQueryOperatorInput>;
-  mimeType?: Maybe<StringQueryOperatorInput>;
-  size?: Maybe<FloatQueryOperatorInput>;
-  assetId?: Maybe<StringQueryOperatorInput>;
-  path?: Maybe<StringQueryOperatorInput>;
-  url?: Maybe<StringQueryOperatorInput>;
-  metadata?: Maybe<SanityImageMetadataFilterInput>;
-  source?: Maybe<SanityAssetSourceDataFilterInput>;
-  _rawMetadata?: Maybe<JsonQueryOperatorInput>;
-  _rawSource?: Maybe<JsonQueryOperatorInput>;
-  gatsbyImageData?: Maybe<JsonQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  _id?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  _createdAt?: InputMaybe<DateQueryOperatorInput>;
+  _updatedAt?: InputMaybe<DateQueryOperatorInput>;
+  _rev?: InputMaybe<StringQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  originalFilename?: InputMaybe<StringQueryOperatorInput>;
+  label?: InputMaybe<StringQueryOperatorInput>;
+  title?: InputMaybe<StringQueryOperatorInput>;
+  description?: InputMaybe<StringQueryOperatorInput>;
+  altText?: InputMaybe<StringQueryOperatorInput>;
+  sha1hash?: InputMaybe<StringQueryOperatorInput>;
+  extension?: InputMaybe<StringQueryOperatorInput>;
+  mimeType?: InputMaybe<StringQueryOperatorInput>;
+  size?: InputMaybe<FloatQueryOperatorInput>;
+  assetId?: InputMaybe<StringQueryOperatorInput>;
+  uploadId?: InputMaybe<StringQueryOperatorInput>;
+  path?: InputMaybe<StringQueryOperatorInput>;
+  url?: InputMaybe<StringQueryOperatorInput>;
+  metadata?: InputMaybe<SanityImageMetadataFilterInput>;
+  source?: InputMaybe<SanityAssetSourceDataFilterInput>;
+  _rawMetadata?: InputMaybe<JsonQueryOperatorInput>;
+  _rawSource?: InputMaybe<JsonQueryOperatorInput>;
+  gatsbyImageData?: InputMaybe<JsonQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 
 export type QueryAllSanityImageAssetArgs = {
-  filter?: Maybe<SanityImageAssetFilterInput>;
-  sort?: Maybe<SanityImageAssetSortInput>;
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  filter?: InputMaybe<SanityImageAssetFilterInput>;
+  sort?: InputMaybe<SanityImageAssetSortInput>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type QuerySanitySiteSettingsCookiesArgs = {
+  _id?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  _createdAt?: InputMaybe<DateQueryOperatorInput>;
+  _updatedAt?: InputMaybe<DateQueryOperatorInput>;
+  _rev?: InputMaybe<StringQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  title?: InputMaybe<StringQueryOperatorInput>;
+  description?: InputMaybe<StringQueryOperatorInput>;
+  cookies?: InputMaybe<SanityCookieFilterListInput>;
+  _rawCookies?: InputMaybe<JsonQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
+};
+
+
+export type QueryAllSanitySiteSettingsCookiesArgs = {
+  filter?: InputMaybe<SanitySiteSettingsCookiesFilterInput>;
+  sort?: InputMaybe<SanitySiteSettingsCookiesSortInput>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
 };
 
 
 export type QuerySanitySiteSettingsInformationArgs = {
-  _id?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  _createdAt?: Maybe<DateQueryOperatorInput>;
-  _updatedAt?: Maybe<DateQueryOperatorInput>;
-  _rev?: Maybe<StringQueryOperatorInput>;
-  _key?: Maybe<StringQueryOperatorInput>;
-  globalInfo?: Maybe<SanityRichTextExtendedFilterInput>;
-  companyAddress?: Maybe<StringQueryOperatorInput>;
-  privacyPolicyPage?: Maybe<SanityPageFilterInput>;
-  _rawGlobalInfo?: Maybe<JsonQueryOperatorInput>;
-  _rawPrivacyPolicyPage?: Maybe<JsonQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  _id?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  _createdAt?: InputMaybe<DateQueryOperatorInput>;
+  _updatedAt?: InputMaybe<DateQueryOperatorInput>;
+  _rev?: InputMaybe<StringQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  globalInfo?: InputMaybe<SanityRichTextExtendedFilterInput>;
+  companyAddress?: InputMaybe<StringQueryOperatorInput>;
+  privacyPolicyPage?: InputMaybe<SanityPageFilterInput>;
+  _rawGlobalInfo?: InputMaybe<JsonQueryOperatorInput>;
+  _rawPrivacyPolicyPage?: InputMaybe<JsonQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 
 export type QueryAllSanitySiteSettingsInformationArgs = {
-  filter?: Maybe<SanitySiteSettingsInformationFilterInput>;
-  sort?: Maybe<SanitySiteSettingsInformationSortInput>;
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  filter?: InputMaybe<SanitySiteSettingsInformationFilterInput>;
+  sort?: InputMaybe<SanitySiteSettingsInformationSortInput>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
 };
 
 
 export type QuerySanitySiteSettingsMetaArgs = {
-  _id?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  _createdAt?: Maybe<DateQueryOperatorInput>;
-  _updatedAt?: Maybe<DateQueryOperatorInput>;
-  _rev?: Maybe<StringQueryOperatorInput>;
-  _key?: Maybe<StringQueryOperatorInput>;
-  meta?: Maybe<SanityMetaFilterInput>;
-  _rawMeta?: Maybe<JsonQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  _id?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  _createdAt?: InputMaybe<DateQueryOperatorInput>;
+  _updatedAt?: InputMaybe<DateQueryOperatorInput>;
+  _rev?: InputMaybe<StringQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  meta?: InputMaybe<SanityMetaFilterInput>;
+  _rawMeta?: InputMaybe<JsonQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 
 export type QueryAllSanitySiteSettingsMetaArgs = {
-  filter?: Maybe<SanitySiteSettingsMetaFilterInput>;
-  sort?: Maybe<SanitySiteSettingsMetaSortInput>;
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  filter?: InputMaybe<SanitySiteSettingsMetaFilterInput>;
+  sort?: InputMaybe<SanitySiteSettingsMetaSortInput>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
 };
 
 
 export type QuerySanitySiteSettingsNavigationArgs = {
-  _id?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  _createdAt?: Maybe<DateQueryOperatorInput>;
-  _updatedAt?: Maybe<DateQueryOperatorInput>;
-  _rev?: Maybe<StringQueryOperatorInput>;
-  _key?: Maybe<StringQueryOperatorInput>;
-  frontpage?: Maybe<SanityPageFilterInput>;
-  desktopMain?: Maybe<SanityMenuLinkFilterListInput>;
-  desktopSecondary?: Maybe<SanityMenuLinkFilterListInput>;
-  mobileMain?: Maybe<SanityMenuLinkFilterListInput>;
-  mobileSecondary?: Maybe<SanityMenuLinkFilterListInput>;
-  cta?: Maybe<SanityButtonFilterInput>;
-  _rawFrontpage?: Maybe<JsonQueryOperatorInput>;
-  _rawDesktopMain?: Maybe<JsonQueryOperatorInput>;
-  _rawDesktopSecondary?: Maybe<JsonQueryOperatorInput>;
-  _rawMobileMain?: Maybe<JsonQueryOperatorInput>;
-  _rawMobileSecondary?: Maybe<JsonQueryOperatorInput>;
-  _rawCta?: Maybe<JsonQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  _id?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  _createdAt?: InputMaybe<DateQueryOperatorInput>;
+  _updatedAt?: InputMaybe<DateQueryOperatorInput>;
+  _rev?: InputMaybe<StringQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  frontpage?: InputMaybe<SanityPageFilterInput>;
+  desktopMain?: InputMaybe<SanityMenuLinkFilterListInput>;
+  desktopSecondary?: InputMaybe<SanityMenuLinkFilterListInput>;
+  mobileMain?: InputMaybe<SanityMenuLinkFilterListInput>;
+  mobileSecondary?: InputMaybe<SanityMenuLinkFilterListInput>;
+  cta?: InputMaybe<SanityButtonFilterInput>;
+  _rawFrontpage?: InputMaybe<JsonQueryOperatorInput>;
+  _rawDesktopMain?: InputMaybe<JsonQueryOperatorInput>;
+  _rawDesktopSecondary?: InputMaybe<JsonQueryOperatorInput>;
+  _rawMobileMain?: InputMaybe<JsonQueryOperatorInput>;
+  _rawMobileSecondary?: InputMaybe<JsonQueryOperatorInput>;
+  _rawCta?: InputMaybe<JsonQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 
 export type QueryAllSanitySiteSettingsNavigationArgs = {
-  filter?: Maybe<SanitySiteSettingsNavigationFilterInput>;
-  sort?: Maybe<SanitySiteSettingsNavigationSortInput>;
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  filter?: InputMaybe<SanitySiteSettingsNavigationFilterInput>;
+  sort?: InputMaybe<SanitySiteSettingsNavigationSortInput>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
 };
 
 
 export type QueryContentModuleArgs = {
-  joinedAt?: Maybe<DateQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  joinedAt?: InputMaybe<DateQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 
 export type QueryAllContentModuleArgs = {
-  filter?: Maybe<ContentModuleFilterInput>;
-  sort?: Maybe<ContentModuleSortInput>;
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  filter?: InputMaybe<ContentModuleFilterInput>;
+  sort?: InputMaybe<ContentModuleSortInput>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
 };
 
 export type StringQueryOperatorInput = {
-  eq?: Maybe<Scalars['String']>;
-  ne?: Maybe<Scalars['String']>;
-  in?: Maybe<Array<Maybe<Scalars['String']>>>;
-  nin?: Maybe<Array<Maybe<Scalars['String']>>>;
-  regex?: Maybe<Scalars['String']>;
-  glob?: Maybe<Scalars['String']>;
+  eq?: InputMaybe<Scalars['String']>;
+  ne?: InputMaybe<Scalars['String']>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  nin?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  regex?: InputMaybe<Scalars['String']>;
+  glob?: InputMaybe<Scalars['String']>;
 };
 
 export type IntQueryOperatorInput = {
-  eq?: Maybe<Scalars['Int']>;
-  ne?: Maybe<Scalars['Int']>;
-  gt?: Maybe<Scalars['Int']>;
-  gte?: Maybe<Scalars['Int']>;
-  lt?: Maybe<Scalars['Int']>;
-  lte?: Maybe<Scalars['Int']>;
-  in?: Maybe<Array<Maybe<Scalars['Int']>>>;
-  nin?: Maybe<Array<Maybe<Scalars['Int']>>>;
+  eq?: InputMaybe<Scalars['Int']>;
+  ne?: InputMaybe<Scalars['Int']>;
+  gt?: InputMaybe<Scalars['Int']>;
+  gte?: InputMaybe<Scalars['Int']>;
+  lt?: InputMaybe<Scalars['Int']>;
+  lte?: InputMaybe<Scalars['Int']>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['Int']>>>;
+  nin?: InputMaybe<Array<InputMaybe<Scalars['Int']>>>;
 };
 
 export type DateQueryOperatorInput = {
-  eq?: Maybe<Scalars['Date']>;
-  ne?: Maybe<Scalars['Date']>;
-  gt?: Maybe<Scalars['Date']>;
-  gte?: Maybe<Scalars['Date']>;
-  lt?: Maybe<Scalars['Date']>;
-  lte?: Maybe<Scalars['Date']>;
-  in?: Maybe<Array<Maybe<Scalars['Date']>>>;
-  nin?: Maybe<Array<Maybe<Scalars['Date']>>>;
+  eq?: InputMaybe<Scalars['Date']>;
+  ne?: InputMaybe<Scalars['Date']>;
+  gt?: InputMaybe<Scalars['Date']>;
+  gte?: InputMaybe<Scalars['Date']>;
+  lt?: InputMaybe<Scalars['Date']>;
+  lte?: InputMaybe<Scalars['Date']>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['Date']>>>;
+  nin?: InputMaybe<Array<InputMaybe<Scalars['Date']>>>;
 };
 
 export type FloatQueryOperatorInput = {
-  eq?: Maybe<Scalars['Float']>;
-  ne?: Maybe<Scalars['Float']>;
-  gt?: Maybe<Scalars['Float']>;
-  gte?: Maybe<Scalars['Float']>;
-  lt?: Maybe<Scalars['Float']>;
-  lte?: Maybe<Scalars['Float']>;
-  in?: Maybe<Array<Maybe<Scalars['Float']>>>;
-  nin?: Maybe<Array<Maybe<Scalars['Float']>>>;
+  eq?: InputMaybe<Scalars['Float']>;
+  ne?: InputMaybe<Scalars['Float']>;
+  gt?: InputMaybe<Scalars['Float']>;
+  gte?: InputMaybe<Scalars['Float']>;
+  lt?: InputMaybe<Scalars['Float']>;
+  lte?: InputMaybe<Scalars['Float']>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['Float']>>>;
+  nin?: InputMaybe<Array<InputMaybe<Scalars['Float']>>>;
 };
 
 export type ImageSharpFilterListInput = {
-  elemMatch?: Maybe<ImageSharpFilterInput>;
+  elemMatch?: InputMaybe<ImageSharpFilterInput>;
 };
 
 export type ImageSharpFilterInput = {
-  fixed?: Maybe<ImageSharpFixedFilterInput>;
-  fluid?: Maybe<ImageSharpFluidFilterInput>;
-  gatsbyImageData?: Maybe<JsonQueryOperatorInput>;
-  original?: Maybe<ImageSharpOriginalFilterInput>;
-  resize?: Maybe<ImageSharpResizeFilterInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  fixed?: InputMaybe<ImageSharpFixedFilterInput>;
+  fluid?: InputMaybe<ImageSharpFluidFilterInput>;
+  gatsbyImageData?: InputMaybe<JsonQueryOperatorInput>;
+  original?: InputMaybe<ImageSharpOriginalFilterInput>;
+  resize?: InputMaybe<ImageSharpResizeFilterInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 export type ImageSharpFixedFilterInput = {
-  base64?: Maybe<StringQueryOperatorInput>;
-  tracedSVG?: Maybe<StringQueryOperatorInput>;
-  aspectRatio?: Maybe<FloatQueryOperatorInput>;
-  width?: Maybe<FloatQueryOperatorInput>;
-  height?: Maybe<FloatQueryOperatorInput>;
-  src?: Maybe<StringQueryOperatorInput>;
-  srcSet?: Maybe<StringQueryOperatorInput>;
-  srcWebp?: Maybe<StringQueryOperatorInput>;
-  srcSetWebp?: Maybe<StringQueryOperatorInput>;
-  originalName?: Maybe<StringQueryOperatorInput>;
+  base64?: InputMaybe<StringQueryOperatorInput>;
+  tracedSVG?: InputMaybe<StringQueryOperatorInput>;
+  aspectRatio?: InputMaybe<FloatQueryOperatorInput>;
+  width?: InputMaybe<FloatQueryOperatorInput>;
+  height?: InputMaybe<FloatQueryOperatorInput>;
+  src?: InputMaybe<StringQueryOperatorInput>;
+  srcSet?: InputMaybe<StringQueryOperatorInput>;
+  srcWebp?: InputMaybe<StringQueryOperatorInput>;
+  srcSetWebp?: InputMaybe<StringQueryOperatorInput>;
+  originalName?: InputMaybe<StringQueryOperatorInput>;
 };
 
 export type ImageSharpFluidFilterInput = {
-  base64?: Maybe<StringQueryOperatorInput>;
-  tracedSVG?: Maybe<StringQueryOperatorInput>;
-  aspectRatio?: Maybe<FloatQueryOperatorInput>;
-  src?: Maybe<StringQueryOperatorInput>;
-  srcSet?: Maybe<StringQueryOperatorInput>;
-  srcWebp?: Maybe<StringQueryOperatorInput>;
-  srcSetWebp?: Maybe<StringQueryOperatorInput>;
-  sizes?: Maybe<StringQueryOperatorInput>;
-  originalImg?: Maybe<StringQueryOperatorInput>;
-  originalName?: Maybe<StringQueryOperatorInput>;
-  presentationWidth?: Maybe<IntQueryOperatorInput>;
-  presentationHeight?: Maybe<IntQueryOperatorInput>;
+  base64?: InputMaybe<StringQueryOperatorInput>;
+  tracedSVG?: InputMaybe<StringQueryOperatorInput>;
+  aspectRatio?: InputMaybe<FloatQueryOperatorInput>;
+  src?: InputMaybe<StringQueryOperatorInput>;
+  srcSet?: InputMaybe<StringQueryOperatorInput>;
+  srcWebp?: InputMaybe<StringQueryOperatorInput>;
+  srcSetWebp?: InputMaybe<StringQueryOperatorInput>;
+  sizes?: InputMaybe<StringQueryOperatorInput>;
+  originalImg?: InputMaybe<StringQueryOperatorInput>;
+  originalName?: InputMaybe<StringQueryOperatorInput>;
+  presentationWidth?: InputMaybe<IntQueryOperatorInput>;
+  presentationHeight?: InputMaybe<IntQueryOperatorInput>;
 };
 
 export type JsonQueryOperatorInput = {
-  eq?: Maybe<Scalars['JSON']>;
-  ne?: Maybe<Scalars['JSON']>;
-  in?: Maybe<Array<Maybe<Scalars['JSON']>>>;
-  nin?: Maybe<Array<Maybe<Scalars['JSON']>>>;
-  regex?: Maybe<Scalars['JSON']>;
-  glob?: Maybe<Scalars['JSON']>;
+  eq?: InputMaybe<Scalars['JSON']>;
+  ne?: InputMaybe<Scalars['JSON']>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['JSON']>>>;
+  nin?: InputMaybe<Array<InputMaybe<Scalars['JSON']>>>;
+  regex?: InputMaybe<Scalars['JSON']>;
+  glob?: InputMaybe<Scalars['JSON']>;
 };
 
 export type ImageSharpOriginalFilterInput = {
-  width?: Maybe<FloatQueryOperatorInput>;
-  height?: Maybe<FloatQueryOperatorInput>;
-  src?: Maybe<StringQueryOperatorInput>;
+  width?: InputMaybe<FloatQueryOperatorInput>;
+  height?: InputMaybe<FloatQueryOperatorInput>;
+  src?: InputMaybe<StringQueryOperatorInput>;
 };
 
 export type ImageSharpResizeFilterInput = {
-  src?: Maybe<StringQueryOperatorInput>;
-  tracedSVG?: Maybe<StringQueryOperatorInput>;
-  width?: Maybe<IntQueryOperatorInput>;
-  height?: Maybe<IntQueryOperatorInput>;
-  aspectRatio?: Maybe<FloatQueryOperatorInput>;
-  originalName?: Maybe<StringQueryOperatorInput>;
+  src?: InputMaybe<StringQueryOperatorInput>;
+  tracedSVG?: InputMaybe<StringQueryOperatorInput>;
+  width?: InputMaybe<IntQueryOperatorInput>;
+  height?: InputMaybe<IntQueryOperatorInput>;
+  aspectRatio?: InputMaybe<FloatQueryOperatorInput>;
+  originalName?: InputMaybe<StringQueryOperatorInput>;
 };
 
 export type NodeFilterInput = {
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 export type NodeFilterListInput = {
-  elemMatch?: Maybe<NodeFilterInput>;
+  elemMatch?: InputMaybe<NodeFilterInput>;
 };
 
 export type InternalFilterInput = {
-  content?: Maybe<StringQueryOperatorInput>;
-  contentDigest?: Maybe<StringQueryOperatorInput>;
-  description?: Maybe<StringQueryOperatorInput>;
-  fieldOwners?: Maybe<StringQueryOperatorInput>;
-  ignoreType?: Maybe<BooleanQueryOperatorInput>;
-  mediaType?: Maybe<StringQueryOperatorInput>;
-  owner?: Maybe<StringQueryOperatorInput>;
-  type?: Maybe<StringQueryOperatorInput>;
+  content?: InputMaybe<StringQueryOperatorInput>;
+  contentDigest?: InputMaybe<StringQueryOperatorInput>;
+  description?: InputMaybe<StringQueryOperatorInput>;
+  fieldOwners?: InputMaybe<StringQueryOperatorInput>;
+  ignoreType?: InputMaybe<BooleanQueryOperatorInput>;
+  mediaType?: InputMaybe<StringQueryOperatorInput>;
+  owner?: InputMaybe<StringQueryOperatorInput>;
+  type?: InputMaybe<StringQueryOperatorInput>;
 };
 
 export type BooleanQueryOperatorInput = {
-  eq?: Maybe<Scalars['Boolean']>;
-  ne?: Maybe<Scalars['Boolean']>;
-  in?: Maybe<Array<Maybe<Scalars['Boolean']>>>;
-  nin?: Maybe<Array<Maybe<Scalars['Boolean']>>>;
+  eq?: InputMaybe<Scalars['Boolean']>;
+  ne?: InputMaybe<Scalars['Boolean']>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['Boolean']>>>;
+  nin?: InputMaybe<Array<InputMaybe<Scalars['Boolean']>>>;
 };
 
 export type FileConnection = {
@@ -2751,8 +2761,8 @@ export type FileConnectionSumArgs = {
 
 
 export type FileConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: FileFieldsEnum;
 };
 
@@ -3068,54 +3078,54 @@ export type FileGroupConnectionSumArgs = {
 
 
 export type FileGroupConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: FileFieldsEnum;
 };
 
 export type FileFilterInput = {
-  sourceInstanceName?: Maybe<StringQueryOperatorInput>;
-  absolutePath?: Maybe<StringQueryOperatorInput>;
-  relativePath?: Maybe<StringQueryOperatorInput>;
-  extension?: Maybe<StringQueryOperatorInput>;
-  size?: Maybe<IntQueryOperatorInput>;
-  prettySize?: Maybe<StringQueryOperatorInput>;
-  modifiedTime?: Maybe<DateQueryOperatorInput>;
-  accessTime?: Maybe<DateQueryOperatorInput>;
-  changeTime?: Maybe<DateQueryOperatorInput>;
-  birthTime?: Maybe<DateQueryOperatorInput>;
-  root?: Maybe<StringQueryOperatorInput>;
-  dir?: Maybe<StringQueryOperatorInput>;
-  base?: Maybe<StringQueryOperatorInput>;
-  ext?: Maybe<StringQueryOperatorInput>;
-  name?: Maybe<StringQueryOperatorInput>;
-  relativeDirectory?: Maybe<StringQueryOperatorInput>;
-  dev?: Maybe<IntQueryOperatorInput>;
-  mode?: Maybe<IntQueryOperatorInput>;
-  nlink?: Maybe<IntQueryOperatorInput>;
-  uid?: Maybe<IntQueryOperatorInput>;
-  gid?: Maybe<IntQueryOperatorInput>;
-  rdev?: Maybe<IntQueryOperatorInput>;
-  ino?: Maybe<FloatQueryOperatorInput>;
-  atimeMs?: Maybe<FloatQueryOperatorInput>;
-  mtimeMs?: Maybe<FloatQueryOperatorInput>;
-  ctimeMs?: Maybe<FloatQueryOperatorInput>;
-  atime?: Maybe<DateQueryOperatorInput>;
-  mtime?: Maybe<DateQueryOperatorInput>;
-  ctime?: Maybe<DateQueryOperatorInput>;
-  birthtime?: Maybe<DateQueryOperatorInput>;
-  birthtimeMs?: Maybe<FloatQueryOperatorInput>;
-  childrenImageSharp?: Maybe<ImageSharpFilterListInput>;
-  childImageSharp?: Maybe<ImageSharpFilterInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  sourceInstanceName?: InputMaybe<StringQueryOperatorInput>;
+  absolutePath?: InputMaybe<StringQueryOperatorInput>;
+  relativePath?: InputMaybe<StringQueryOperatorInput>;
+  extension?: InputMaybe<StringQueryOperatorInput>;
+  size?: InputMaybe<IntQueryOperatorInput>;
+  prettySize?: InputMaybe<StringQueryOperatorInput>;
+  modifiedTime?: InputMaybe<DateQueryOperatorInput>;
+  accessTime?: InputMaybe<DateQueryOperatorInput>;
+  changeTime?: InputMaybe<DateQueryOperatorInput>;
+  birthTime?: InputMaybe<DateQueryOperatorInput>;
+  root?: InputMaybe<StringQueryOperatorInput>;
+  dir?: InputMaybe<StringQueryOperatorInput>;
+  base?: InputMaybe<StringQueryOperatorInput>;
+  ext?: InputMaybe<StringQueryOperatorInput>;
+  name?: InputMaybe<StringQueryOperatorInput>;
+  relativeDirectory?: InputMaybe<StringQueryOperatorInput>;
+  dev?: InputMaybe<IntQueryOperatorInput>;
+  mode?: InputMaybe<IntQueryOperatorInput>;
+  nlink?: InputMaybe<IntQueryOperatorInput>;
+  uid?: InputMaybe<IntQueryOperatorInput>;
+  gid?: InputMaybe<IntQueryOperatorInput>;
+  rdev?: InputMaybe<IntQueryOperatorInput>;
+  ino?: InputMaybe<FloatQueryOperatorInput>;
+  atimeMs?: InputMaybe<FloatQueryOperatorInput>;
+  mtimeMs?: InputMaybe<FloatQueryOperatorInput>;
+  ctimeMs?: InputMaybe<FloatQueryOperatorInput>;
+  atime?: InputMaybe<DateQueryOperatorInput>;
+  mtime?: InputMaybe<DateQueryOperatorInput>;
+  ctime?: InputMaybe<DateQueryOperatorInput>;
+  birthtime?: InputMaybe<DateQueryOperatorInput>;
+  birthtimeMs?: InputMaybe<FloatQueryOperatorInput>;
+  childrenImageSharp?: InputMaybe<ImageSharpFilterListInput>;
+  childImageSharp?: InputMaybe<ImageSharpFilterInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 export type FileSortInput = {
-  fields?: Maybe<Array<Maybe<FileFieldsEnum>>>;
-  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+  fields?: InputMaybe<Array<InputMaybe<FileFieldsEnum>>>;
+  order?: InputMaybe<Array<InputMaybe<SortOrderEnum>>>;
 };
 
 export type SortOrderEnum =
@@ -3156,8 +3166,8 @@ export type DirectoryConnectionSumArgs = {
 
 
 export type DirectoryConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: DirectoryFieldsEnum;
 };
 
@@ -3322,58 +3332,58 @@ export type DirectoryGroupConnectionSumArgs = {
 
 
 export type DirectoryGroupConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: DirectoryFieldsEnum;
 };
 
 export type DirectoryFilterInput = {
-  sourceInstanceName?: Maybe<StringQueryOperatorInput>;
-  absolutePath?: Maybe<StringQueryOperatorInput>;
-  relativePath?: Maybe<StringQueryOperatorInput>;
-  extension?: Maybe<StringQueryOperatorInput>;
-  size?: Maybe<IntQueryOperatorInput>;
-  prettySize?: Maybe<StringQueryOperatorInput>;
-  modifiedTime?: Maybe<DateQueryOperatorInput>;
-  accessTime?: Maybe<DateQueryOperatorInput>;
-  changeTime?: Maybe<DateQueryOperatorInput>;
-  birthTime?: Maybe<DateQueryOperatorInput>;
-  root?: Maybe<StringQueryOperatorInput>;
-  dir?: Maybe<StringQueryOperatorInput>;
-  base?: Maybe<StringQueryOperatorInput>;
-  ext?: Maybe<StringQueryOperatorInput>;
-  name?: Maybe<StringQueryOperatorInput>;
-  relativeDirectory?: Maybe<StringQueryOperatorInput>;
-  dev?: Maybe<IntQueryOperatorInput>;
-  mode?: Maybe<IntQueryOperatorInput>;
-  nlink?: Maybe<IntQueryOperatorInput>;
-  uid?: Maybe<IntQueryOperatorInput>;
-  gid?: Maybe<IntQueryOperatorInput>;
-  rdev?: Maybe<IntQueryOperatorInput>;
-  ino?: Maybe<FloatQueryOperatorInput>;
-  atimeMs?: Maybe<FloatQueryOperatorInput>;
-  mtimeMs?: Maybe<FloatQueryOperatorInput>;
-  ctimeMs?: Maybe<FloatQueryOperatorInput>;
-  atime?: Maybe<DateQueryOperatorInput>;
-  mtime?: Maybe<DateQueryOperatorInput>;
-  ctime?: Maybe<DateQueryOperatorInput>;
-  birthtime?: Maybe<DateQueryOperatorInput>;
-  birthtimeMs?: Maybe<FloatQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  sourceInstanceName?: InputMaybe<StringQueryOperatorInput>;
+  absolutePath?: InputMaybe<StringQueryOperatorInput>;
+  relativePath?: InputMaybe<StringQueryOperatorInput>;
+  extension?: InputMaybe<StringQueryOperatorInput>;
+  size?: InputMaybe<IntQueryOperatorInput>;
+  prettySize?: InputMaybe<StringQueryOperatorInput>;
+  modifiedTime?: InputMaybe<DateQueryOperatorInput>;
+  accessTime?: InputMaybe<DateQueryOperatorInput>;
+  changeTime?: InputMaybe<DateQueryOperatorInput>;
+  birthTime?: InputMaybe<DateQueryOperatorInput>;
+  root?: InputMaybe<StringQueryOperatorInput>;
+  dir?: InputMaybe<StringQueryOperatorInput>;
+  base?: InputMaybe<StringQueryOperatorInput>;
+  ext?: InputMaybe<StringQueryOperatorInput>;
+  name?: InputMaybe<StringQueryOperatorInput>;
+  relativeDirectory?: InputMaybe<StringQueryOperatorInput>;
+  dev?: InputMaybe<IntQueryOperatorInput>;
+  mode?: InputMaybe<IntQueryOperatorInput>;
+  nlink?: InputMaybe<IntQueryOperatorInput>;
+  uid?: InputMaybe<IntQueryOperatorInput>;
+  gid?: InputMaybe<IntQueryOperatorInput>;
+  rdev?: InputMaybe<IntQueryOperatorInput>;
+  ino?: InputMaybe<FloatQueryOperatorInput>;
+  atimeMs?: InputMaybe<FloatQueryOperatorInput>;
+  mtimeMs?: InputMaybe<FloatQueryOperatorInput>;
+  ctimeMs?: InputMaybe<FloatQueryOperatorInput>;
+  atime?: InputMaybe<DateQueryOperatorInput>;
+  mtime?: InputMaybe<DateQueryOperatorInput>;
+  ctime?: InputMaybe<DateQueryOperatorInput>;
+  birthtime?: InputMaybe<DateQueryOperatorInput>;
+  birthtimeMs?: InputMaybe<FloatQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 export type DirectorySortInput = {
-  fields?: Maybe<Array<Maybe<DirectoryFieldsEnum>>>;
-  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+  fields?: InputMaybe<Array<InputMaybe<DirectoryFieldsEnum>>>;
+  order?: InputMaybe<Array<InputMaybe<SortOrderEnum>>>;
 };
 
 export type SiteSiteMetadataFilterInput = {
-  title?: Maybe<StringQueryOperatorInput>;
-  description?: Maybe<StringQueryOperatorInput>;
-  siteUrl?: Maybe<StringQueryOperatorInput>;
+  title?: InputMaybe<StringQueryOperatorInput>;
+  description?: InputMaybe<StringQueryOperatorInput>;
+  siteUrl?: InputMaybe<StringQueryOperatorInput>;
 };
 
 export type SiteConnection = {
@@ -3410,8 +3420,8 @@ export type SiteConnectionSumArgs = {
 
 
 export type SiteConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: SiteFieldsEnum;
 };
 
@@ -3430,6 +3440,7 @@ export type SiteFieldsEnum =
   | 'host'
   | 'polyfill'
   | 'pathPrefix'
+  | 'jsxRuntime'
   | 'id'
   | 'parent___id'
   | 'parent___parent___id'
@@ -3553,27 +3564,28 @@ export type SiteGroupConnectionSumArgs = {
 
 
 export type SiteGroupConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: SiteFieldsEnum;
 };
 
 export type SiteFilterInput = {
-  buildTime?: Maybe<DateQueryOperatorInput>;
-  siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
-  port?: Maybe<IntQueryOperatorInput>;
-  host?: Maybe<StringQueryOperatorInput>;
-  polyfill?: Maybe<BooleanQueryOperatorInput>;
-  pathPrefix?: Maybe<StringQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  buildTime?: InputMaybe<DateQueryOperatorInput>;
+  siteMetadata?: InputMaybe<SiteSiteMetadataFilterInput>;
+  port?: InputMaybe<IntQueryOperatorInput>;
+  host?: InputMaybe<StringQueryOperatorInput>;
+  polyfill?: InputMaybe<BooleanQueryOperatorInput>;
+  pathPrefix?: InputMaybe<StringQueryOperatorInput>;
+  jsxRuntime?: InputMaybe<StringQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 export type SiteSortInput = {
-  fields?: Maybe<Array<Maybe<SiteFieldsEnum>>>;
-  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+  fields?: InputMaybe<Array<InputMaybe<SiteFieldsEnum>>>;
+  order?: InputMaybe<Array<InputMaybe<SortOrderEnum>>>;
 };
 
 export type SiteFunctionConnection = {
@@ -3610,8 +3622,8 @@ export type SiteFunctionConnectionSumArgs = {
 
 
 export type SiteFunctionConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: SiteFunctionFieldsEnum;
 };
 
@@ -3752,117 +3764,44 @@ export type SiteFunctionGroupConnectionSumArgs = {
 
 
 export type SiteFunctionGroupConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: SiteFunctionFieldsEnum;
 };
 
 export type SiteFunctionFilterInput = {
-  functionRoute?: Maybe<StringQueryOperatorInput>;
-  pluginName?: Maybe<StringQueryOperatorInput>;
-  originalAbsoluteFilePath?: Maybe<StringQueryOperatorInput>;
-  originalRelativeFilePath?: Maybe<StringQueryOperatorInput>;
-  relativeCompiledFilePath?: Maybe<StringQueryOperatorInput>;
-  absoluteCompiledFilePath?: Maybe<StringQueryOperatorInput>;
-  matchPath?: Maybe<StringQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  functionRoute?: InputMaybe<StringQueryOperatorInput>;
+  pluginName?: InputMaybe<StringQueryOperatorInput>;
+  originalAbsoluteFilePath?: InputMaybe<StringQueryOperatorInput>;
+  originalRelativeFilePath?: InputMaybe<StringQueryOperatorInput>;
+  relativeCompiledFilePath?: InputMaybe<StringQueryOperatorInput>;
+  absoluteCompiledFilePath?: InputMaybe<StringQueryOperatorInput>;
+  matchPath?: InputMaybe<StringQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 export type SiteFunctionSortInput = {
-  fields?: Maybe<Array<Maybe<SiteFunctionFieldsEnum>>>;
-  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
-};
-
-export type SitePageContextFilterInput = {
-  id?: Maybe<StringQueryOperatorInput>;
+  fields?: InputMaybe<Array<InputMaybe<SiteFunctionFieldsEnum>>>;
+  order?: InputMaybe<Array<InputMaybe<SortOrderEnum>>>;
 };
 
 export type SitePluginFilterInput = {
-  resolve?: Maybe<StringQueryOperatorInput>;
-  name?: Maybe<StringQueryOperatorInput>;
-  version?: Maybe<StringQueryOperatorInput>;
-  nodeAPIs?: Maybe<StringQueryOperatorInput>;
-  browserAPIs?: Maybe<StringQueryOperatorInput>;
-  ssrAPIs?: Maybe<StringQueryOperatorInput>;
-  pluginFilepath?: Maybe<StringQueryOperatorInput>;
-  pluginOptions?: Maybe<SitePluginPluginOptionsFilterInput>;
-  packageJson?: Maybe<SitePluginPackageJsonFilterInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
-};
-
-export type SitePluginPluginOptionsFilterInput = {
-  projectId?: Maybe<StringQueryOperatorInput>;
-  dataset?: Maybe<StringQueryOperatorInput>;
-  includeFragments?: Maybe<BooleanQueryOperatorInput>;
-  isTSX?: Maybe<BooleanQueryOperatorInput>;
-  jsxPragma?: Maybe<StringQueryOperatorInput>;
-  allExtensions?: Maybe<BooleanQueryOperatorInput>;
-  displayName?: Maybe<BooleanQueryOperatorInput>;
-  minify?: Maybe<BooleanQueryOperatorInput>;
-  namespace?: Maybe<StringQueryOperatorInput>;
-  transpileTemplateLiterals?: Maybe<BooleanQueryOperatorInput>;
-  pure?: Maybe<BooleanQueryOperatorInput>;
-  disableVendorPrefixes?: Maybe<BooleanQueryOperatorInput>;
-  codegen?: Maybe<BooleanQueryOperatorInput>;
-  codegenDelay?: Maybe<IntQueryOperatorInput>;
-  base64Width?: Maybe<IntQueryOperatorInput>;
-  stripMetadata?: Maybe<BooleanQueryOperatorInput>;
-  defaultQuality?: Maybe<IntQueryOperatorInput>;
-  failOnError?: Maybe<BooleanQueryOperatorInput>;
-  watchMode?: Maybe<BooleanQueryOperatorInput>;
-  overlayDrafts?: Maybe<BooleanQueryOperatorInput>;
-  output?: Maybe<StringQueryOperatorInput>;
-  createLinkInHead?: Maybe<BooleanQueryOperatorInput>;
-  entryLimit?: Maybe<IntQueryOperatorInput>;
-  query?: Maybe<StringQueryOperatorInput>;
-  path?: Maybe<StringQueryOperatorInput>;
-  pathCheck?: Maybe<BooleanQueryOperatorInput>;
-};
-
-export type SitePluginPackageJsonFilterInput = {
-  name?: Maybe<StringQueryOperatorInput>;
-  description?: Maybe<StringQueryOperatorInput>;
-  version?: Maybe<StringQueryOperatorInput>;
-  main?: Maybe<StringQueryOperatorInput>;
-  author?: Maybe<StringQueryOperatorInput>;
-  license?: Maybe<StringQueryOperatorInput>;
-  dependencies?: Maybe<SitePluginPackageJsonDependenciesFilterListInput>;
-  devDependencies?: Maybe<SitePluginPackageJsonDevDependenciesFilterListInput>;
-  peerDependencies?: Maybe<SitePluginPackageJsonPeerDependenciesFilterListInput>;
-  keywords?: Maybe<StringQueryOperatorInput>;
-};
-
-export type SitePluginPackageJsonDependenciesFilterListInput = {
-  elemMatch?: Maybe<SitePluginPackageJsonDependenciesFilterInput>;
-};
-
-export type SitePluginPackageJsonDependenciesFilterInput = {
-  name?: Maybe<StringQueryOperatorInput>;
-  version?: Maybe<StringQueryOperatorInput>;
-};
-
-export type SitePluginPackageJsonDevDependenciesFilterListInput = {
-  elemMatch?: Maybe<SitePluginPackageJsonDevDependenciesFilterInput>;
-};
-
-export type SitePluginPackageJsonDevDependenciesFilterInput = {
-  name?: Maybe<StringQueryOperatorInput>;
-  version?: Maybe<StringQueryOperatorInput>;
-};
-
-export type SitePluginPackageJsonPeerDependenciesFilterListInput = {
-  elemMatch?: Maybe<SitePluginPackageJsonPeerDependenciesFilterInput>;
-};
-
-export type SitePluginPackageJsonPeerDependenciesFilterInput = {
-  name?: Maybe<StringQueryOperatorInput>;
-  version?: Maybe<StringQueryOperatorInput>;
+  resolve?: InputMaybe<StringQueryOperatorInput>;
+  name?: InputMaybe<StringQueryOperatorInput>;
+  version?: InputMaybe<StringQueryOperatorInput>;
+  nodeAPIs?: InputMaybe<StringQueryOperatorInput>;
+  browserAPIs?: InputMaybe<StringQueryOperatorInput>;
+  ssrAPIs?: InputMaybe<StringQueryOperatorInput>;
+  pluginFilepath?: InputMaybe<StringQueryOperatorInput>;
+  pluginOptions?: InputMaybe<JsonQueryOperatorInput>;
+  packageJson?: InputMaybe<JsonQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 export type SitePageConnection = {
@@ -3899,8 +3838,8 @@ export type SitePageConnectionSumArgs = {
 
 
 export type SitePageConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: SitePageFieldsEnum;
 };
 
@@ -3916,6 +3855,54 @@ export type SitePageFieldsEnum =
   | 'internalComponentName'
   | 'componentChunkName'
   | 'matchPath'
+  | 'pageContext'
+  | 'pluginCreator___resolve'
+  | 'pluginCreator___name'
+  | 'pluginCreator___version'
+  | 'pluginCreator___nodeAPIs'
+  | 'pluginCreator___browserAPIs'
+  | 'pluginCreator___ssrAPIs'
+  | 'pluginCreator___pluginFilepath'
+  | 'pluginCreator___pluginOptions'
+  | 'pluginCreator___packageJson'
+  | 'pluginCreator___id'
+  | 'pluginCreator___parent___id'
+  | 'pluginCreator___parent___parent___id'
+  | 'pluginCreator___parent___parent___children'
+  | 'pluginCreator___parent___children'
+  | 'pluginCreator___parent___children___id'
+  | 'pluginCreator___parent___children___children'
+  | 'pluginCreator___parent___internal___content'
+  | 'pluginCreator___parent___internal___contentDigest'
+  | 'pluginCreator___parent___internal___description'
+  | 'pluginCreator___parent___internal___fieldOwners'
+  | 'pluginCreator___parent___internal___ignoreType'
+  | 'pluginCreator___parent___internal___mediaType'
+  | 'pluginCreator___parent___internal___owner'
+  | 'pluginCreator___parent___internal___type'
+  | 'pluginCreator___children'
+  | 'pluginCreator___children___id'
+  | 'pluginCreator___children___parent___id'
+  | 'pluginCreator___children___parent___children'
+  | 'pluginCreator___children___children'
+  | 'pluginCreator___children___children___id'
+  | 'pluginCreator___children___children___children'
+  | 'pluginCreator___children___internal___content'
+  | 'pluginCreator___children___internal___contentDigest'
+  | 'pluginCreator___children___internal___description'
+  | 'pluginCreator___children___internal___fieldOwners'
+  | 'pluginCreator___children___internal___ignoreType'
+  | 'pluginCreator___children___internal___mediaType'
+  | 'pluginCreator___children___internal___owner'
+  | 'pluginCreator___children___internal___type'
+  | 'pluginCreator___internal___content'
+  | 'pluginCreator___internal___contentDigest'
+  | 'pluginCreator___internal___description'
+  | 'pluginCreator___internal___fieldOwners'
+  | 'pluginCreator___internal___ignoreType'
+  | 'pluginCreator___internal___mediaType'
+  | 'pluginCreator___internal___owner'
+  | 'pluginCreator___internal___type'
   | 'id'
   | 'parent___id'
   | 'parent___parent___id'
@@ -4001,97 +3988,7 @@ export type SitePageFieldsEnum =
   | 'internal___ignoreType'
   | 'internal___mediaType'
   | 'internal___owner'
-  | 'internal___type'
-  | 'isCreatedByStatefulCreatePages'
-  | 'context___id'
-  | 'pluginCreator___resolve'
-  | 'pluginCreator___name'
-  | 'pluginCreator___version'
-  | 'pluginCreator___nodeAPIs'
-  | 'pluginCreator___browserAPIs'
-  | 'pluginCreator___ssrAPIs'
-  | 'pluginCreator___pluginFilepath'
-  | 'pluginCreator___pluginOptions___projectId'
-  | 'pluginCreator___pluginOptions___dataset'
-  | 'pluginCreator___pluginOptions___includeFragments'
-  | 'pluginCreator___pluginOptions___isTSX'
-  | 'pluginCreator___pluginOptions___jsxPragma'
-  | 'pluginCreator___pluginOptions___allExtensions'
-  | 'pluginCreator___pluginOptions___displayName'
-  | 'pluginCreator___pluginOptions___minify'
-  | 'pluginCreator___pluginOptions___namespace'
-  | 'pluginCreator___pluginOptions___transpileTemplateLiterals'
-  | 'pluginCreator___pluginOptions___pure'
-  | 'pluginCreator___pluginOptions___disableVendorPrefixes'
-  | 'pluginCreator___pluginOptions___codegen'
-  | 'pluginCreator___pluginOptions___codegenDelay'
-  | 'pluginCreator___pluginOptions___base64Width'
-  | 'pluginCreator___pluginOptions___stripMetadata'
-  | 'pluginCreator___pluginOptions___defaultQuality'
-  | 'pluginCreator___pluginOptions___failOnError'
-  | 'pluginCreator___pluginOptions___watchMode'
-  | 'pluginCreator___pluginOptions___overlayDrafts'
-  | 'pluginCreator___pluginOptions___output'
-  | 'pluginCreator___pluginOptions___createLinkInHead'
-  | 'pluginCreator___pluginOptions___entryLimit'
-  | 'pluginCreator___pluginOptions___query'
-  | 'pluginCreator___pluginOptions___path'
-  | 'pluginCreator___pluginOptions___pathCheck'
-  | 'pluginCreator___packageJson___name'
-  | 'pluginCreator___packageJson___description'
-  | 'pluginCreator___packageJson___version'
-  | 'pluginCreator___packageJson___main'
-  | 'pluginCreator___packageJson___author'
-  | 'pluginCreator___packageJson___license'
-  | 'pluginCreator___packageJson___dependencies'
-  | 'pluginCreator___packageJson___dependencies___name'
-  | 'pluginCreator___packageJson___dependencies___version'
-  | 'pluginCreator___packageJson___devDependencies'
-  | 'pluginCreator___packageJson___devDependencies___name'
-  | 'pluginCreator___packageJson___devDependencies___version'
-  | 'pluginCreator___packageJson___peerDependencies'
-  | 'pluginCreator___packageJson___peerDependencies___name'
-  | 'pluginCreator___packageJson___peerDependencies___version'
-  | 'pluginCreator___packageJson___keywords'
-  | 'pluginCreator___id'
-  | 'pluginCreator___parent___id'
-  | 'pluginCreator___parent___parent___id'
-  | 'pluginCreator___parent___parent___children'
-  | 'pluginCreator___parent___children'
-  | 'pluginCreator___parent___children___id'
-  | 'pluginCreator___parent___children___children'
-  | 'pluginCreator___parent___internal___content'
-  | 'pluginCreator___parent___internal___contentDigest'
-  | 'pluginCreator___parent___internal___description'
-  | 'pluginCreator___parent___internal___fieldOwners'
-  | 'pluginCreator___parent___internal___ignoreType'
-  | 'pluginCreator___parent___internal___mediaType'
-  | 'pluginCreator___parent___internal___owner'
-  | 'pluginCreator___parent___internal___type'
-  | 'pluginCreator___children'
-  | 'pluginCreator___children___id'
-  | 'pluginCreator___children___parent___id'
-  | 'pluginCreator___children___parent___children'
-  | 'pluginCreator___children___children'
-  | 'pluginCreator___children___children___id'
-  | 'pluginCreator___children___children___children'
-  | 'pluginCreator___children___internal___content'
-  | 'pluginCreator___children___internal___contentDigest'
-  | 'pluginCreator___children___internal___description'
-  | 'pluginCreator___children___internal___fieldOwners'
-  | 'pluginCreator___children___internal___ignoreType'
-  | 'pluginCreator___children___internal___mediaType'
-  | 'pluginCreator___children___internal___owner'
-  | 'pluginCreator___children___internal___type'
-  | 'pluginCreator___internal___content'
-  | 'pluginCreator___internal___contentDigest'
-  | 'pluginCreator___internal___description'
-  | 'pluginCreator___internal___fieldOwners'
-  | 'pluginCreator___internal___ignoreType'
-  | 'pluginCreator___internal___mediaType'
-  | 'pluginCreator___internal___owner'
-  | 'pluginCreator___internal___type'
-  | 'pluginCreatorId';
+  | 'internal___type';
 
 export type SitePageGroupConnection = {
   totalCount: Scalars['Int'];
@@ -4129,30 +4026,28 @@ export type SitePageGroupConnectionSumArgs = {
 
 
 export type SitePageGroupConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: SitePageFieldsEnum;
 };
 
 export type SitePageFilterInput = {
-  path?: Maybe<StringQueryOperatorInput>;
-  component?: Maybe<StringQueryOperatorInput>;
-  internalComponentName?: Maybe<StringQueryOperatorInput>;
-  componentChunkName?: Maybe<StringQueryOperatorInput>;
-  matchPath?: Maybe<StringQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
-  isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>;
-  context?: Maybe<SitePageContextFilterInput>;
-  pluginCreator?: Maybe<SitePluginFilterInput>;
-  pluginCreatorId?: Maybe<StringQueryOperatorInput>;
+  path?: InputMaybe<StringQueryOperatorInput>;
+  component?: InputMaybe<StringQueryOperatorInput>;
+  internalComponentName?: InputMaybe<StringQueryOperatorInput>;
+  componentChunkName?: InputMaybe<StringQueryOperatorInput>;
+  matchPath?: InputMaybe<StringQueryOperatorInput>;
+  pageContext?: InputMaybe<JsonQueryOperatorInput>;
+  pluginCreator?: InputMaybe<SitePluginFilterInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 export type SitePageSortInput = {
-  fields?: Maybe<Array<Maybe<SitePageFieldsEnum>>>;
-  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+  fields?: InputMaybe<Array<InputMaybe<SitePageFieldsEnum>>>;
+  order?: InputMaybe<Array<InputMaybe<SortOrderEnum>>>;
 };
 
 export type SitePluginConnection = {
@@ -4189,8 +4084,8 @@ export type SitePluginConnectionSumArgs = {
 
 
 export type SitePluginConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: SitePluginFieldsEnum;
 };
 
@@ -4208,48 +4103,8 @@ export type SitePluginFieldsEnum =
   | 'browserAPIs'
   | 'ssrAPIs'
   | 'pluginFilepath'
-  | 'pluginOptions___projectId'
-  | 'pluginOptions___dataset'
-  | 'pluginOptions___includeFragments'
-  | 'pluginOptions___isTSX'
-  | 'pluginOptions___jsxPragma'
-  | 'pluginOptions___allExtensions'
-  | 'pluginOptions___displayName'
-  | 'pluginOptions___minify'
-  | 'pluginOptions___namespace'
-  | 'pluginOptions___transpileTemplateLiterals'
-  | 'pluginOptions___pure'
-  | 'pluginOptions___disableVendorPrefixes'
-  | 'pluginOptions___codegen'
-  | 'pluginOptions___codegenDelay'
-  | 'pluginOptions___base64Width'
-  | 'pluginOptions___stripMetadata'
-  | 'pluginOptions___defaultQuality'
-  | 'pluginOptions___failOnError'
-  | 'pluginOptions___watchMode'
-  | 'pluginOptions___overlayDrafts'
-  | 'pluginOptions___output'
-  | 'pluginOptions___createLinkInHead'
-  | 'pluginOptions___entryLimit'
-  | 'pluginOptions___query'
-  | 'pluginOptions___path'
-  | 'pluginOptions___pathCheck'
-  | 'packageJson___name'
-  | 'packageJson___description'
-  | 'packageJson___version'
-  | 'packageJson___main'
-  | 'packageJson___author'
-  | 'packageJson___license'
-  | 'packageJson___dependencies'
-  | 'packageJson___dependencies___name'
-  | 'packageJson___dependencies___version'
-  | 'packageJson___devDependencies'
-  | 'packageJson___devDependencies___name'
-  | 'packageJson___devDependencies___version'
-  | 'packageJson___peerDependencies'
-  | 'packageJson___peerDependencies___name'
-  | 'packageJson___peerDependencies___version'
-  | 'packageJson___keywords'
+  | 'pluginOptions'
+  | 'packageJson'
   | 'id'
   | 'parent___id'
   | 'parent___parent___id'
@@ -4373,14 +4228,14 @@ export type SitePluginGroupConnectionSumArgs = {
 
 
 export type SitePluginGroupConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: SitePluginFieldsEnum;
 };
 
 export type SitePluginSortInput = {
-  fields?: Maybe<Array<Maybe<SitePluginFieldsEnum>>>;
-  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+  fields?: InputMaybe<Array<InputMaybe<SitePluginFieldsEnum>>>;
+  order?: InputMaybe<Array<InputMaybe<SortOrderEnum>>>;
 };
 
 export type SiteBuildMetadataConnection = {
@@ -4417,8 +4272,8 @@ export type SiteBuildMetadataConnectionSumArgs = {
 
 
 export type SiteBuildMetadataConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: SiteBuildMetadataFieldsEnum;
 };
 
@@ -4553,22 +4408,22 @@ export type SiteBuildMetadataGroupConnectionSumArgs = {
 
 
 export type SiteBuildMetadataGroupConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: SiteBuildMetadataFieldsEnum;
 };
 
 export type SiteBuildMetadataFilterInput = {
-  buildTime?: Maybe<DateQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  buildTime?: InputMaybe<DateQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 export type SiteBuildMetadataSortInput = {
-  fields?: Maybe<Array<Maybe<SiteBuildMetadataFieldsEnum>>>;
-  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+  fields?: InputMaybe<Array<InputMaybe<SiteBuildMetadataFieldsEnum>>>;
+  order?: InputMaybe<Array<InputMaybe<SortOrderEnum>>>;
 };
 
 export type ImageSharpConnection = {
@@ -4605,8 +4460,8 @@ export type ImageSharpConnectionSumArgs = {
 
 
 export type ImageSharpConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: ImageSharpFieldsEnum;
 };
 
@@ -4772,20 +4627,20 @@ export type ImageSharpGroupConnectionSumArgs = {
 
 
 export type ImageSharpGroupConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: ImageSharpFieldsEnum;
 };
 
 export type ImageSharpSortInput = {
-  fields?: Maybe<Array<Maybe<ImageSharpFieldsEnum>>>;
-  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+  fields?: InputMaybe<Array<InputMaybe<ImageSharpFieldsEnum>>>;
+  order?: InputMaybe<Array<InputMaybe<SortOrderEnum>>>;
 };
 
 export type SanitySlugFilterInput = {
-  _key?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  current?: Maybe<StringQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  current?: InputMaybe<StringQueryOperatorInput>;
 };
 
 export type SanityMediaTagConnection = {
@@ -4822,8 +4677,8 @@ export type SanityMediaTagConnectionSumArgs = {
 
 
 export type SanityMediaTagConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: SanityMediaTagFieldsEnum;
 };
 
@@ -4967,170 +4822,172 @@ export type SanityMediaTagGroupConnectionSumArgs = {
 
 
 export type SanityMediaTagGroupConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: SanityMediaTagFieldsEnum;
 };
 
 export type SanityMediaTagFilterInput = {
-  _id?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  _createdAt?: Maybe<DateQueryOperatorInput>;
-  _updatedAt?: Maybe<DateQueryOperatorInput>;
-  _rev?: Maybe<StringQueryOperatorInput>;
-  _key?: Maybe<StringQueryOperatorInput>;
-  name?: Maybe<SanitySlugFilterInput>;
-  _rawName?: Maybe<JsonQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  _id?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  _createdAt?: InputMaybe<DateQueryOperatorInput>;
+  _updatedAt?: InputMaybe<DateQueryOperatorInput>;
+  _rev?: InputMaybe<StringQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  name?: InputMaybe<SanitySlugFilterInput>;
+  _rawName?: InputMaybe<JsonQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 export type SanityMediaTagSortInput = {
-  fields?: Maybe<Array<Maybe<SanityMediaTagFieldsEnum>>>;
-  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+  fields?: InputMaybe<Array<InputMaybe<SanityMediaTagFieldsEnum>>>;
+  order?: InputMaybe<Array<InputMaybe<SortOrderEnum>>>;
 };
 
 export type SanityMetaFilterInput = {
-  _key?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  metaTitle?: Maybe<StringQueryOperatorInput>;
-  metaDescription?: Maybe<StringQueryOperatorInput>;
-  ogImage?: Maybe<SanityImageFilterInput>;
-  robotsIndex?: Maybe<BooleanQueryOperatorInput>;
-  _rawOgImage?: Maybe<JsonQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  metaTitle?: InputMaybe<StringQueryOperatorInput>;
+  metaDescription?: InputMaybe<StringQueryOperatorInput>;
+  ogImage?: InputMaybe<SanityImageFilterInput>;
+  robotsIndex?: InputMaybe<BooleanQueryOperatorInput>;
+  _rawOgImage?: InputMaybe<JsonQueryOperatorInput>;
 };
 
 export type SanityImageFilterInput = {
-  _key?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  asset?: Maybe<SanityImageAssetFilterInput>;
-  hotspot?: Maybe<SanityImageHotspotFilterInput>;
-  crop?: Maybe<SanityImageCropFilterInput>;
-  _rawAsset?: Maybe<JsonQueryOperatorInput>;
-  _rawHotspot?: Maybe<JsonQueryOperatorInput>;
-  _rawCrop?: Maybe<JsonQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  asset?: InputMaybe<SanityImageAssetFilterInput>;
+  hotspot?: InputMaybe<SanityImageHotspotFilterInput>;
+  crop?: InputMaybe<SanityImageCropFilterInput>;
+  _rawAsset?: InputMaybe<JsonQueryOperatorInput>;
+  _rawHotspot?: InputMaybe<JsonQueryOperatorInput>;
+  _rawCrop?: InputMaybe<JsonQueryOperatorInput>;
 };
 
 export type SanityImageAssetFilterInput = {
-  _id?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  _createdAt?: Maybe<DateQueryOperatorInput>;
-  _updatedAt?: Maybe<DateQueryOperatorInput>;
-  _rev?: Maybe<StringQueryOperatorInput>;
-  _key?: Maybe<StringQueryOperatorInput>;
-  originalFilename?: Maybe<StringQueryOperatorInput>;
-  label?: Maybe<StringQueryOperatorInput>;
-  title?: Maybe<StringQueryOperatorInput>;
-  description?: Maybe<StringQueryOperatorInput>;
-  altText?: Maybe<StringQueryOperatorInput>;
-  sha1hash?: Maybe<StringQueryOperatorInput>;
-  extension?: Maybe<StringQueryOperatorInput>;
-  mimeType?: Maybe<StringQueryOperatorInput>;
-  size?: Maybe<FloatQueryOperatorInput>;
-  assetId?: Maybe<StringQueryOperatorInput>;
-  path?: Maybe<StringQueryOperatorInput>;
-  url?: Maybe<StringQueryOperatorInput>;
-  metadata?: Maybe<SanityImageMetadataFilterInput>;
-  source?: Maybe<SanityAssetSourceDataFilterInput>;
-  _rawMetadata?: Maybe<JsonQueryOperatorInput>;
-  _rawSource?: Maybe<JsonQueryOperatorInput>;
-  gatsbyImageData?: Maybe<JsonQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  _id?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  _createdAt?: InputMaybe<DateQueryOperatorInput>;
+  _updatedAt?: InputMaybe<DateQueryOperatorInput>;
+  _rev?: InputMaybe<StringQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  originalFilename?: InputMaybe<StringQueryOperatorInput>;
+  label?: InputMaybe<StringQueryOperatorInput>;
+  title?: InputMaybe<StringQueryOperatorInput>;
+  description?: InputMaybe<StringQueryOperatorInput>;
+  altText?: InputMaybe<StringQueryOperatorInput>;
+  sha1hash?: InputMaybe<StringQueryOperatorInput>;
+  extension?: InputMaybe<StringQueryOperatorInput>;
+  mimeType?: InputMaybe<StringQueryOperatorInput>;
+  size?: InputMaybe<FloatQueryOperatorInput>;
+  assetId?: InputMaybe<StringQueryOperatorInput>;
+  uploadId?: InputMaybe<StringQueryOperatorInput>;
+  path?: InputMaybe<StringQueryOperatorInput>;
+  url?: InputMaybe<StringQueryOperatorInput>;
+  metadata?: InputMaybe<SanityImageMetadataFilterInput>;
+  source?: InputMaybe<SanityAssetSourceDataFilterInput>;
+  _rawMetadata?: InputMaybe<JsonQueryOperatorInput>;
+  _rawSource?: InputMaybe<JsonQueryOperatorInput>;
+  gatsbyImageData?: InputMaybe<JsonQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 export type SanityImageMetadataFilterInput = {
-  _key?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  location?: Maybe<SanityGeopointFilterInput>;
-  dimensions?: Maybe<SanityImageDimensionsFilterInput>;
-  palette?: Maybe<SanityImagePaletteFilterInput>;
-  lqip?: Maybe<StringQueryOperatorInput>;
-  hasAlpha?: Maybe<BooleanQueryOperatorInput>;
-  isOpaque?: Maybe<BooleanQueryOperatorInput>;
-  _rawLocation?: Maybe<JsonQueryOperatorInput>;
-  _rawDimensions?: Maybe<JsonQueryOperatorInput>;
-  _rawPalette?: Maybe<JsonQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  location?: InputMaybe<SanityGeopointFilterInput>;
+  dimensions?: InputMaybe<SanityImageDimensionsFilterInput>;
+  palette?: InputMaybe<SanityImagePaletteFilterInput>;
+  lqip?: InputMaybe<StringQueryOperatorInput>;
+  blurHash?: InputMaybe<StringQueryOperatorInput>;
+  hasAlpha?: InputMaybe<BooleanQueryOperatorInput>;
+  isOpaque?: InputMaybe<BooleanQueryOperatorInput>;
+  _rawLocation?: InputMaybe<JsonQueryOperatorInput>;
+  _rawDimensions?: InputMaybe<JsonQueryOperatorInput>;
+  _rawPalette?: InputMaybe<JsonQueryOperatorInput>;
 };
 
 export type SanityGeopointFilterInput = {
-  _key?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  lat?: Maybe<FloatQueryOperatorInput>;
-  lng?: Maybe<FloatQueryOperatorInput>;
-  alt?: Maybe<FloatQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  lat?: InputMaybe<FloatQueryOperatorInput>;
+  lng?: InputMaybe<FloatQueryOperatorInput>;
+  alt?: InputMaybe<FloatQueryOperatorInput>;
 };
 
 export type SanityImageDimensionsFilterInput = {
-  _key?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  height?: Maybe<FloatQueryOperatorInput>;
-  width?: Maybe<FloatQueryOperatorInput>;
-  aspectRatio?: Maybe<FloatQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  height?: InputMaybe<FloatQueryOperatorInput>;
+  width?: InputMaybe<FloatQueryOperatorInput>;
+  aspectRatio?: InputMaybe<FloatQueryOperatorInput>;
 };
 
 export type SanityImagePaletteFilterInput = {
-  _key?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  darkMuted?: Maybe<SanityImagePaletteSwatchFilterInput>;
-  lightVibrant?: Maybe<SanityImagePaletteSwatchFilterInput>;
-  darkVibrant?: Maybe<SanityImagePaletteSwatchFilterInput>;
-  vibrant?: Maybe<SanityImagePaletteSwatchFilterInput>;
-  dominant?: Maybe<SanityImagePaletteSwatchFilterInput>;
-  lightMuted?: Maybe<SanityImagePaletteSwatchFilterInput>;
-  muted?: Maybe<SanityImagePaletteSwatchFilterInput>;
-  _rawDarkMuted?: Maybe<JsonQueryOperatorInput>;
-  _rawLightVibrant?: Maybe<JsonQueryOperatorInput>;
-  _rawDarkVibrant?: Maybe<JsonQueryOperatorInput>;
-  _rawVibrant?: Maybe<JsonQueryOperatorInput>;
-  _rawDominant?: Maybe<JsonQueryOperatorInput>;
-  _rawLightMuted?: Maybe<JsonQueryOperatorInput>;
-  _rawMuted?: Maybe<JsonQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  darkMuted?: InputMaybe<SanityImagePaletteSwatchFilterInput>;
+  lightVibrant?: InputMaybe<SanityImagePaletteSwatchFilterInput>;
+  darkVibrant?: InputMaybe<SanityImagePaletteSwatchFilterInput>;
+  vibrant?: InputMaybe<SanityImagePaletteSwatchFilterInput>;
+  dominant?: InputMaybe<SanityImagePaletteSwatchFilterInput>;
+  lightMuted?: InputMaybe<SanityImagePaletteSwatchFilterInput>;
+  muted?: InputMaybe<SanityImagePaletteSwatchFilterInput>;
+  _rawDarkMuted?: InputMaybe<JsonQueryOperatorInput>;
+  _rawLightVibrant?: InputMaybe<JsonQueryOperatorInput>;
+  _rawDarkVibrant?: InputMaybe<JsonQueryOperatorInput>;
+  _rawVibrant?: InputMaybe<JsonQueryOperatorInput>;
+  _rawDominant?: InputMaybe<JsonQueryOperatorInput>;
+  _rawLightMuted?: InputMaybe<JsonQueryOperatorInput>;
+  _rawMuted?: InputMaybe<JsonQueryOperatorInput>;
 };
 
 export type SanityImagePaletteSwatchFilterInput = {
-  _key?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  background?: Maybe<StringQueryOperatorInput>;
-  foreground?: Maybe<StringQueryOperatorInput>;
-  population?: Maybe<FloatQueryOperatorInput>;
-  title?: Maybe<StringQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  background?: InputMaybe<StringQueryOperatorInput>;
+  foreground?: InputMaybe<StringQueryOperatorInput>;
+  population?: InputMaybe<FloatQueryOperatorInput>;
+  title?: InputMaybe<StringQueryOperatorInput>;
 };
 
 export type SanityAssetSourceDataFilterInput = {
-  _key?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  name?: Maybe<StringQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  url?: Maybe<StringQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  name?: InputMaybe<StringQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  url?: InputMaybe<StringQueryOperatorInput>;
 };
 
 export type SanityImageHotspotFilterInput = {
-  _key?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  x?: Maybe<FloatQueryOperatorInput>;
-  y?: Maybe<FloatQueryOperatorInput>;
-  height?: Maybe<FloatQueryOperatorInput>;
-  width?: Maybe<FloatQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  x?: InputMaybe<FloatQueryOperatorInput>;
+  y?: InputMaybe<FloatQueryOperatorInput>;
+  height?: InputMaybe<FloatQueryOperatorInput>;
+  width?: InputMaybe<FloatQueryOperatorInput>;
 };
 
 export type SanityImageCropFilterInput = {
-  _key?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  top?: Maybe<FloatQueryOperatorInput>;
-  bottom?: Maybe<FloatQueryOperatorInput>;
-  left?: Maybe<FloatQueryOperatorInput>;
-  right?: Maybe<FloatQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  top?: InputMaybe<FloatQueryOperatorInput>;
+  bottom?: InputMaybe<FloatQueryOperatorInput>;
+  left?: InputMaybe<FloatQueryOperatorInput>;
+  right?: InputMaybe<FloatQueryOperatorInput>;
 };
 
 export type SanityContentModulesFilterInput = {
-  _key?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  _rawModules?: Maybe<JsonQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  _rawModules?: InputMaybe<JsonQueryOperatorInput>;
 };
 
 export type SanityPageConnection = {
@@ -5167,8 +5024,8 @@ export type SanityPageConnectionSumArgs = {
 
 
 export type SanityPageConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: SanityPageFieldsEnum;
 };
 
@@ -5211,6 +5068,7 @@ export type SanityPageFieldsEnum =
   | 'meta___ogImage___asset___mimeType'
   | 'meta___ogImage___asset___size'
   | 'meta___ogImage___asset___assetId'
+  | 'meta___ogImage___asset___uploadId'
   | 'meta___ogImage___asset___path'
   | 'meta___ogImage___asset___url'
   | 'meta___ogImage___asset____rawMetadata'
@@ -5364,50 +5222,50 @@ export type SanityPageGroupConnectionSumArgs = {
 
 
 export type SanityPageGroupConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: SanityPageFieldsEnum;
 };
 
 export type SanityPageFilterInput = {
-  _id?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  _createdAt?: Maybe<DateQueryOperatorInput>;
-  _updatedAt?: Maybe<DateQueryOperatorInput>;
-  _rev?: Maybe<StringQueryOperatorInput>;
-  _key?: Maybe<StringQueryOperatorInput>;
-  title?: Maybe<StringQueryOperatorInput>;
-  slug?: Maybe<SanitySlugFilterInput>;
-  meta?: Maybe<SanityMetaFilterInput>;
-  contentModules?: Maybe<SanityContentModulesFilterInput>;
-  _rawSlug?: Maybe<JsonQueryOperatorInput>;
-  _rawMeta?: Maybe<JsonQueryOperatorInput>;
-  _rawContentModules?: Maybe<JsonQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  _id?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  _createdAt?: InputMaybe<DateQueryOperatorInput>;
+  _updatedAt?: InputMaybe<DateQueryOperatorInput>;
+  _rev?: InputMaybe<StringQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  title?: InputMaybe<StringQueryOperatorInput>;
+  slug?: InputMaybe<SanitySlugFilterInput>;
+  meta?: InputMaybe<SanityMetaFilterInput>;
+  contentModules?: InputMaybe<SanityContentModulesFilterInput>;
+  _rawSlug?: InputMaybe<JsonQueryOperatorInput>;
+  _rawMeta?: InputMaybe<JsonQueryOperatorInput>;
+  _rawContentModules?: InputMaybe<JsonQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 export type SanityPageSortInput = {
-  fields?: Maybe<Array<Maybe<SanityPageFieldsEnum>>>;
-  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+  fields?: InputMaybe<Array<InputMaybe<SanityPageFieldsEnum>>>;
+  order?: InputMaybe<Array<InputMaybe<SortOrderEnum>>>;
 };
 
 export type SanityPostCategoryFilterInput = {
-  _id?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  _createdAt?: Maybe<DateQueryOperatorInput>;
-  _updatedAt?: Maybe<DateQueryOperatorInput>;
-  _rev?: Maybe<StringQueryOperatorInput>;
-  _key?: Maybe<StringQueryOperatorInput>;
-  title?: Maybe<StringQueryOperatorInput>;
-  slug?: Maybe<SanitySlugFilterInput>;
-  _rawSlug?: Maybe<JsonQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  _id?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  _createdAt?: InputMaybe<DateQueryOperatorInput>;
+  _updatedAt?: InputMaybe<DateQueryOperatorInput>;
+  _rev?: InputMaybe<StringQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  title?: InputMaybe<StringQueryOperatorInput>;
+  slug?: InputMaybe<SanitySlugFilterInput>;
+  _rawSlug?: InputMaybe<JsonQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 export type SanityPostConnection = {
@@ -5444,8 +5302,8 @@ export type SanityPostConnectionSumArgs = {
 
 
 export type SanityPostConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: SanityPostFieldsEnum;
 };
 
@@ -5537,6 +5395,7 @@ export type SanityPostFieldsEnum =
   | 'meta___ogImage___asset___mimeType'
   | 'meta___ogImage___asset___size'
   | 'meta___ogImage___asset___assetId'
+  | 'meta___ogImage___asset___uploadId'
   | 'meta___ogImage___asset___path'
   | 'meta___ogImage___asset___url'
   | 'meta___ogImage___asset____rawMetadata'
@@ -5693,38 +5552,38 @@ export type SanityPostGroupConnectionSumArgs = {
 
 
 export type SanityPostGroupConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: SanityPostFieldsEnum;
 };
 
 export type SanityPostFilterInput = {
-  _id?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  _createdAt?: Maybe<DateQueryOperatorInput>;
-  _updatedAt?: Maybe<DateQueryOperatorInput>;
-  _rev?: Maybe<StringQueryOperatorInput>;
-  _key?: Maybe<StringQueryOperatorInput>;
-  title?: Maybe<StringQueryOperatorInput>;
-  slug?: Maybe<SanitySlugFilterInput>;
-  category?: Maybe<SanityPostCategoryFilterInput>;
-  meta?: Maybe<SanityMetaFilterInput>;
-  contentModules?: Maybe<SanityContentModulesFilterInput>;
-  order?: Maybe<FloatQueryOperatorInput>;
-  _rawSlug?: Maybe<JsonQueryOperatorInput>;
-  _rawCategory?: Maybe<JsonQueryOperatorInput>;
-  _rawMeta?: Maybe<JsonQueryOperatorInput>;
-  _rawContentModules?: Maybe<JsonQueryOperatorInput>;
-  isPublished?: Maybe<BooleanQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  _id?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  _createdAt?: InputMaybe<DateQueryOperatorInput>;
+  _updatedAt?: InputMaybe<DateQueryOperatorInput>;
+  _rev?: InputMaybe<StringQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  title?: InputMaybe<StringQueryOperatorInput>;
+  slug?: InputMaybe<SanitySlugFilterInput>;
+  category?: InputMaybe<SanityPostCategoryFilterInput>;
+  meta?: InputMaybe<SanityMetaFilterInput>;
+  contentModules?: InputMaybe<SanityContentModulesFilterInput>;
+  order?: InputMaybe<FloatQueryOperatorInput>;
+  _rawSlug?: InputMaybe<JsonQueryOperatorInput>;
+  _rawCategory?: InputMaybe<JsonQueryOperatorInput>;
+  _rawMeta?: InputMaybe<JsonQueryOperatorInput>;
+  _rawContentModules?: InputMaybe<JsonQueryOperatorInput>;
+  isPublished?: InputMaybe<BooleanQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 export type SanityPostSortInput = {
-  fields?: Maybe<Array<Maybe<SanityPostFieldsEnum>>>;
-  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+  fields?: InputMaybe<Array<InputMaybe<SanityPostFieldsEnum>>>;
+  order?: InputMaybe<Array<InputMaybe<SortOrderEnum>>>;
 };
 
 export type SanityPostCategoryConnection = {
@@ -5761,8 +5620,8 @@ export type SanityPostCategoryConnectionSumArgs = {
 
 
 export type SanityPostCategoryConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: SanityPostCategoryFieldsEnum;
 };
 
@@ -5907,30 +5766,30 @@ export type SanityPostCategoryGroupConnectionSumArgs = {
 
 
 export type SanityPostCategoryGroupConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: SanityPostCategoryFieldsEnum;
 };
 
 export type SanityPostCategorySortInput = {
-  fields?: Maybe<Array<Maybe<SanityPostCategoryFieldsEnum>>>;
-  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+  fields?: InputMaybe<Array<InputMaybe<SanityPostCategoryFieldsEnum>>>;
+  order?: InputMaybe<Array<InputMaybe<SortOrderEnum>>>;
 };
 
 export type SanityProductCategoryFilterInput = {
-  _id?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  _createdAt?: Maybe<DateQueryOperatorInput>;
-  _updatedAt?: Maybe<DateQueryOperatorInput>;
-  _rev?: Maybe<StringQueryOperatorInput>;
-  _key?: Maybe<StringQueryOperatorInput>;
-  title?: Maybe<StringQueryOperatorInput>;
-  slug?: Maybe<SanitySlugFilterInput>;
-  _rawSlug?: Maybe<JsonQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  _id?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  _createdAt?: InputMaybe<DateQueryOperatorInput>;
+  _updatedAt?: InputMaybe<DateQueryOperatorInput>;
+  _rev?: InputMaybe<StringQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  title?: InputMaybe<StringQueryOperatorInput>;
+  slug?: InputMaybe<SanitySlugFilterInput>;
+  _rawSlug?: InputMaybe<JsonQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 export type SanityProductConnection = {
@@ -5967,8 +5826,8 @@ export type SanityProductConnectionSumArgs = {
 
 
 export type SanityProductConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: SanityProductFieldsEnum;
 };
 
@@ -6060,6 +5919,7 @@ export type SanityProductFieldsEnum =
   | 'meta___ogImage___asset___mimeType'
   | 'meta___ogImage___asset___size'
   | 'meta___ogImage___asset___assetId'
+  | 'meta___ogImage___asset___uploadId'
   | 'meta___ogImage___asset___path'
   | 'meta___ogImage___asset___url'
   | 'meta___ogImage___asset____rawMetadata'
@@ -6216,38 +6076,38 @@ export type SanityProductGroupConnectionSumArgs = {
 
 
 export type SanityProductGroupConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: SanityProductFieldsEnum;
 };
 
 export type SanityProductFilterInput = {
-  _id?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  _createdAt?: Maybe<DateQueryOperatorInput>;
-  _updatedAt?: Maybe<DateQueryOperatorInput>;
-  _rev?: Maybe<StringQueryOperatorInput>;
-  _key?: Maybe<StringQueryOperatorInput>;
-  title?: Maybe<StringQueryOperatorInput>;
-  slug?: Maybe<SanitySlugFilterInput>;
-  category?: Maybe<SanityProductCategoryFilterInput>;
-  meta?: Maybe<SanityMetaFilterInput>;
-  shopifyProduct?: Maybe<StringQueryOperatorInput>;
-  contentModules?: Maybe<SanityContentModulesFilterInput>;
-  order?: Maybe<FloatQueryOperatorInput>;
-  _rawSlug?: Maybe<JsonQueryOperatorInput>;
-  _rawCategory?: Maybe<JsonQueryOperatorInput>;
-  _rawMeta?: Maybe<JsonQueryOperatorInput>;
-  _rawContentModules?: Maybe<JsonQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  _id?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  _createdAt?: InputMaybe<DateQueryOperatorInput>;
+  _updatedAt?: InputMaybe<DateQueryOperatorInput>;
+  _rev?: InputMaybe<StringQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  title?: InputMaybe<StringQueryOperatorInput>;
+  slug?: InputMaybe<SanitySlugFilterInput>;
+  category?: InputMaybe<SanityProductCategoryFilterInput>;
+  meta?: InputMaybe<SanityMetaFilterInput>;
+  shopifyProduct?: InputMaybe<StringQueryOperatorInput>;
+  contentModules?: InputMaybe<SanityContentModulesFilterInput>;
+  order?: InputMaybe<FloatQueryOperatorInput>;
+  _rawSlug?: InputMaybe<JsonQueryOperatorInput>;
+  _rawCategory?: InputMaybe<JsonQueryOperatorInput>;
+  _rawMeta?: InputMaybe<JsonQueryOperatorInput>;
+  _rawContentModules?: InputMaybe<JsonQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 export type SanityProductSortInput = {
-  fields?: Maybe<Array<Maybe<SanityProductFieldsEnum>>>;
-  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+  fields?: InputMaybe<Array<InputMaybe<SanityProductFieldsEnum>>>;
+  order?: InputMaybe<Array<InputMaybe<SortOrderEnum>>>;
 };
 
 export type SanityProductCategoryConnection = {
@@ -6284,8 +6144,8 @@ export type SanityProductCategoryConnectionSumArgs = {
 
 
 export type SanityProductCategoryConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: SanityProductCategoryFieldsEnum;
 };
 
@@ -6430,14 +6290,14 @@ export type SanityProductCategoryGroupConnectionSumArgs = {
 
 
 export type SanityProductCategoryGroupConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: SanityProductCategoryFieldsEnum;
 };
 
 export type SanityProductCategorySortInput = {
-  fields?: Maybe<Array<Maybe<SanityProductCategoryFieldsEnum>>>;
-  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+  fields?: InputMaybe<Array<InputMaybe<SanityProductCategoryFieldsEnum>>>;
+  order?: InputMaybe<Array<InputMaybe<SortOrderEnum>>>;
 };
 
 export type SanityFileAssetConnection = {
@@ -6474,8 +6334,8 @@ export type SanityFileAssetConnectionSumArgs = {
 
 
 export type SanityFileAssetConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: SanityFileAssetFieldsEnum;
 };
 
@@ -6633,41 +6493,41 @@ export type SanityFileAssetGroupConnectionSumArgs = {
 
 
 export type SanityFileAssetGroupConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: SanityFileAssetFieldsEnum;
 };
 
 export type SanityFileAssetFilterInput = {
-  _id?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  _createdAt?: Maybe<DateQueryOperatorInput>;
-  _updatedAt?: Maybe<DateQueryOperatorInput>;
-  _rev?: Maybe<StringQueryOperatorInput>;
-  _key?: Maybe<StringQueryOperatorInput>;
-  originalFilename?: Maybe<StringQueryOperatorInput>;
-  label?: Maybe<StringQueryOperatorInput>;
-  title?: Maybe<StringQueryOperatorInput>;
-  description?: Maybe<StringQueryOperatorInput>;
-  altText?: Maybe<StringQueryOperatorInput>;
-  sha1hash?: Maybe<StringQueryOperatorInput>;
-  extension?: Maybe<StringQueryOperatorInput>;
-  mimeType?: Maybe<StringQueryOperatorInput>;
-  size?: Maybe<FloatQueryOperatorInput>;
-  assetId?: Maybe<StringQueryOperatorInput>;
-  path?: Maybe<StringQueryOperatorInput>;
-  url?: Maybe<StringQueryOperatorInput>;
-  source?: Maybe<SanityAssetSourceDataFilterInput>;
-  _rawSource?: Maybe<JsonQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  _id?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  _createdAt?: InputMaybe<DateQueryOperatorInput>;
+  _updatedAt?: InputMaybe<DateQueryOperatorInput>;
+  _rev?: InputMaybe<StringQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  originalFilename?: InputMaybe<StringQueryOperatorInput>;
+  label?: InputMaybe<StringQueryOperatorInput>;
+  title?: InputMaybe<StringQueryOperatorInput>;
+  description?: InputMaybe<StringQueryOperatorInput>;
+  altText?: InputMaybe<StringQueryOperatorInput>;
+  sha1hash?: InputMaybe<StringQueryOperatorInput>;
+  extension?: InputMaybe<StringQueryOperatorInput>;
+  mimeType?: InputMaybe<StringQueryOperatorInput>;
+  size?: InputMaybe<FloatQueryOperatorInput>;
+  assetId?: InputMaybe<StringQueryOperatorInput>;
+  path?: InputMaybe<StringQueryOperatorInput>;
+  url?: InputMaybe<StringQueryOperatorInput>;
+  source?: InputMaybe<SanityAssetSourceDataFilterInput>;
+  _rawSource?: InputMaybe<JsonQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 export type SanityFileAssetSortInput = {
-  fields?: Maybe<Array<Maybe<SanityFileAssetFieldsEnum>>>;
-  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+  fields?: InputMaybe<Array<InputMaybe<SanityFileAssetFieldsEnum>>>;
+  order?: InputMaybe<Array<InputMaybe<SortOrderEnum>>>;
 };
 
 export type SanityImageAssetConnection = {
@@ -6704,8 +6564,8 @@ export type SanityImageAssetConnectionSumArgs = {
 
 
 export type SanityImageAssetConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: SanityImageAssetFieldsEnum;
 };
 
@@ -6732,6 +6592,7 @@ export type SanityImageAssetFieldsEnum =
   | 'mimeType'
   | 'size'
   | 'assetId'
+  | 'uploadId'
   | 'path'
   | 'url'
   | 'metadata____key'
@@ -6798,6 +6659,7 @@ export type SanityImageAssetFieldsEnum =
   | 'metadata___palette____rawLightMuted'
   | 'metadata___palette____rawMuted'
   | 'metadata___lqip'
+  | 'metadata___blurHash'
   | 'metadata___hasAlpha'
   | 'metadata___isOpaque'
   | 'metadata____rawLocation'
@@ -6934,46 +6796,269 @@ export type SanityImageAssetGroupConnectionSumArgs = {
 
 
 export type SanityImageAssetGroupConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: SanityImageAssetFieldsEnum;
 };
 
 export type SanityImageAssetSortInput = {
-  fields?: Maybe<Array<Maybe<SanityImageAssetFieldsEnum>>>;
-  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+  fields?: InputMaybe<Array<InputMaybe<SanityImageAssetFieldsEnum>>>;
+  order?: InputMaybe<Array<InputMaybe<SortOrderEnum>>>;
+};
+
+export type SanityCookieFilterListInput = {
+  elemMatch?: InputMaybe<SanityCookieFilterInput>;
+};
+
+export type SanityCookieFilterInput = {
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  name?: InputMaybe<StringQueryOperatorInput>;
+  label?: InputMaybe<StringQueryOperatorInput>;
+  category?: InputMaybe<StringQueryOperatorInput>;
+};
+
+export type SanitySiteSettingsCookiesConnection = {
+  totalCount: Scalars['Int'];
+  edges: Array<SanitySiteSettingsCookiesEdge>;
+  nodes: Array<SanitySiteSettingsCookies>;
+  pageInfo: PageInfo;
+  distinct: Array<Scalars['String']>;
+  max?: Maybe<Scalars['Float']>;
+  min?: Maybe<Scalars['Float']>;
+  sum?: Maybe<Scalars['Float']>;
+  group: Array<SanitySiteSettingsCookiesGroupConnection>;
+};
+
+
+export type SanitySiteSettingsCookiesConnectionDistinctArgs = {
+  field: SanitySiteSettingsCookiesFieldsEnum;
+};
+
+
+export type SanitySiteSettingsCookiesConnectionMaxArgs = {
+  field: SanitySiteSettingsCookiesFieldsEnum;
+};
+
+
+export type SanitySiteSettingsCookiesConnectionMinArgs = {
+  field: SanitySiteSettingsCookiesFieldsEnum;
+};
+
+
+export type SanitySiteSettingsCookiesConnectionSumArgs = {
+  field: SanitySiteSettingsCookiesFieldsEnum;
+};
+
+
+export type SanitySiteSettingsCookiesConnectionGroupArgs = {
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
+  field: SanitySiteSettingsCookiesFieldsEnum;
+};
+
+export type SanitySiteSettingsCookiesEdge = {
+  next?: Maybe<SanitySiteSettingsCookies>;
+  node: SanitySiteSettingsCookies;
+  previous?: Maybe<SanitySiteSettingsCookies>;
+};
+
+export type SanitySiteSettingsCookiesFieldsEnum =
+  | '_id'
+  | '_type'
+  | '_createdAt'
+  | '_updatedAt'
+  | '_rev'
+  | '_key'
+  | 'title'
+  | 'description'
+  | 'cookies'
+  | 'cookies____key'
+  | 'cookies____type'
+  | 'cookies___name'
+  | 'cookies___label'
+  | 'cookies___category'
+  | '_rawCookies'
+  | 'id'
+  | 'parent___id'
+  | 'parent___parent___id'
+  | 'parent___parent___parent___id'
+  | 'parent___parent___parent___children'
+  | 'parent___parent___children'
+  | 'parent___parent___children___id'
+  | 'parent___parent___children___children'
+  | 'parent___parent___internal___content'
+  | 'parent___parent___internal___contentDigest'
+  | 'parent___parent___internal___description'
+  | 'parent___parent___internal___fieldOwners'
+  | 'parent___parent___internal___ignoreType'
+  | 'parent___parent___internal___mediaType'
+  | 'parent___parent___internal___owner'
+  | 'parent___parent___internal___type'
+  | 'parent___children'
+  | 'parent___children___id'
+  | 'parent___children___parent___id'
+  | 'parent___children___parent___children'
+  | 'parent___children___children'
+  | 'parent___children___children___id'
+  | 'parent___children___children___children'
+  | 'parent___children___internal___content'
+  | 'parent___children___internal___contentDigest'
+  | 'parent___children___internal___description'
+  | 'parent___children___internal___fieldOwners'
+  | 'parent___children___internal___ignoreType'
+  | 'parent___children___internal___mediaType'
+  | 'parent___children___internal___owner'
+  | 'parent___children___internal___type'
+  | 'parent___internal___content'
+  | 'parent___internal___contentDigest'
+  | 'parent___internal___description'
+  | 'parent___internal___fieldOwners'
+  | 'parent___internal___ignoreType'
+  | 'parent___internal___mediaType'
+  | 'parent___internal___owner'
+  | 'parent___internal___type'
+  | 'children'
+  | 'children___id'
+  | 'children___parent___id'
+  | 'children___parent___parent___id'
+  | 'children___parent___parent___children'
+  | 'children___parent___children'
+  | 'children___parent___children___id'
+  | 'children___parent___children___children'
+  | 'children___parent___internal___content'
+  | 'children___parent___internal___contentDigest'
+  | 'children___parent___internal___description'
+  | 'children___parent___internal___fieldOwners'
+  | 'children___parent___internal___ignoreType'
+  | 'children___parent___internal___mediaType'
+  | 'children___parent___internal___owner'
+  | 'children___parent___internal___type'
+  | 'children___children'
+  | 'children___children___id'
+  | 'children___children___parent___id'
+  | 'children___children___parent___children'
+  | 'children___children___children'
+  | 'children___children___children___id'
+  | 'children___children___children___children'
+  | 'children___children___internal___content'
+  | 'children___children___internal___contentDigest'
+  | 'children___children___internal___description'
+  | 'children___children___internal___fieldOwners'
+  | 'children___children___internal___ignoreType'
+  | 'children___children___internal___mediaType'
+  | 'children___children___internal___owner'
+  | 'children___children___internal___type'
+  | 'children___internal___content'
+  | 'children___internal___contentDigest'
+  | 'children___internal___description'
+  | 'children___internal___fieldOwners'
+  | 'children___internal___ignoreType'
+  | 'children___internal___mediaType'
+  | 'children___internal___owner'
+  | 'children___internal___type'
+  | 'internal___content'
+  | 'internal___contentDigest'
+  | 'internal___description'
+  | 'internal___fieldOwners'
+  | 'internal___ignoreType'
+  | 'internal___mediaType'
+  | 'internal___owner'
+  | 'internal___type';
+
+export type SanitySiteSettingsCookiesGroupConnection = {
+  totalCount: Scalars['Int'];
+  edges: Array<SanitySiteSettingsCookiesEdge>;
+  nodes: Array<SanitySiteSettingsCookies>;
+  pageInfo: PageInfo;
+  distinct: Array<Scalars['String']>;
+  max?: Maybe<Scalars['Float']>;
+  min?: Maybe<Scalars['Float']>;
+  sum?: Maybe<Scalars['Float']>;
+  group: Array<SanitySiteSettingsCookiesGroupConnection>;
+  field: Scalars['String'];
+  fieldValue?: Maybe<Scalars['String']>;
+};
+
+
+export type SanitySiteSettingsCookiesGroupConnectionDistinctArgs = {
+  field: SanitySiteSettingsCookiesFieldsEnum;
+};
+
+
+export type SanitySiteSettingsCookiesGroupConnectionMaxArgs = {
+  field: SanitySiteSettingsCookiesFieldsEnum;
+};
+
+
+export type SanitySiteSettingsCookiesGroupConnectionMinArgs = {
+  field: SanitySiteSettingsCookiesFieldsEnum;
+};
+
+
+export type SanitySiteSettingsCookiesGroupConnectionSumArgs = {
+  field: SanitySiteSettingsCookiesFieldsEnum;
+};
+
+
+export type SanitySiteSettingsCookiesGroupConnectionGroupArgs = {
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
+  field: SanitySiteSettingsCookiesFieldsEnum;
+};
+
+export type SanitySiteSettingsCookiesFilterInput = {
+  _id?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  _createdAt?: InputMaybe<DateQueryOperatorInput>;
+  _updatedAt?: InputMaybe<DateQueryOperatorInput>;
+  _rev?: InputMaybe<StringQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  title?: InputMaybe<StringQueryOperatorInput>;
+  description?: InputMaybe<StringQueryOperatorInput>;
+  cookies?: InputMaybe<SanityCookieFilterListInput>;
+  _rawCookies?: InputMaybe<JsonQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
+};
+
+export type SanitySiteSettingsCookiesSortInput = {
+  fields?: InputMaybe<Array<InputMaybe<SanitySiteSettingsCookiesFieldsEnum>>>;
+  order?: InputMaybe<Array<InputMaybe<SortOrderEnum>>>;
 };
 
 export type SanityRichTextExtendedFilterInput = {
-  _key?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  alignment?: Maybe<StringQueryOperatorInput>;
-  text?: Maybe<SanityBlockFilterListInput>;
-  _rawText?: Maybe<JsonQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  alignment?: InputMaybe<StringQueryOperatorInput>;
+  text?: InputMaybe<SanityBlockFilterListInput>;
+  _rawText?: InputMaybe<JsonQueryOperatorInput>;
 };
 
 export type SanityBlockFilterListInput = {
-  elemMatch?: Maybe<SanityBlockFilterInput>;
+  elemMatch?: InputMaybe<SanityBlockFilterInput>;
 };
 
 export type SanityBlockFilterInput = {
-  _key?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  children?: Maybe<SanitySpanFilterListInput>;
-  style?: Maybe<StringQueryOperatorInput>;
-  list?: Maybe<StringQueryOperatorInput>;
-  _rawChildren?: Maybe<JsonQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  children?: InputMaybe<SanitySpanFilterListInput>;
+  style?: InputMaybe<StringQueryOperatorInput>;
+  list?: InputMaybe<StringQueryOperatorInput>;
+  _rawChildren?: InputMaybe<JsonQueryOperatorInput>;
 };
 
 export type SanitySpanFilterListInput = {
-  elemMatch?: Maybe<SanitySpanFilterInput>;
+  elemMatch?: InputMaybe<SanitySpanFilterInput>;
 };
 
 export type SanitySpanFilterInput = {
-  _key?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  marks?: Maybe<StringQueryOperatorInput>;
-  text?: Maybe<StringQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  marks?: InputMaybe<StringQueryOperatorInput>;
+  text?: InputMaybe<StringQueryOperatorInput>;
 };
 
 export type SanitySiteSettingsInformationConnection = {
@@ -7010,8 +7095,8 @@ export type SanitySiteSettingsInformationConnectionSumArgs = {
 
 
 export type SanitySiteSettingsInformationConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: SanitySiteSettingsInformationFieldsEnum;
 };
 
@@ -7234,32 +7319,32 @@ export type SanitySiteSettingsInformationGroupConnectionSumArgs = {
 
 
 export type SanitySiteSettingsInformationGroupConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: SanitySiteSettingsInformationFieldsEnum;
 };
 
 export type SanitySiteSettingsInformationFilterInput = {
-  _id?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  _createdAt?: Maybe<DateQueryOperatorInput>;
-  _updatedAt?: Maybe<DateQueryOperatorInput>;
-  _rev?: Maybe<StringQueryOperatorInput>;
-  _key?: Maybe<StringQueryOperatorInput>;
-  globalInfo?: Maybe<SanityRichTextExtendedFilterInput>;
-  companyAddress?: Maybe<StringQueryOperatorInput>;
-  privacyPolicyPage?: Maybe<SanityPageFilterInput>;
-  _rawGlobalInfo?: Maybe<JsonQueryOperatorInput>;
-  _rawPrivacyPolicyPage?: Maybe<JsonQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  _id?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  _createdAt?: InputMaybe<DateQueryOperatorInput>;
+  _updatedAt?: InputMaybe<DateQueryOperatorInput>;
+  _rev?: InputMaybe<StringQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  globalInfo?: InputMaybe<SanityRichTextExtendedFilterInput>;
+  companyAddress?: InputMaybe<StringQueryOperatorInput>;
+  privacyPolicyPage?: InputMaybe<SanityPageFilterInput>;
+  _rawGlobalInfo?: InputMaybe<JsonQueryOperatorInput>;
+  _rawPrivacyPolicyPage?: InputMaybe<JsonQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 export type SanitySiteSettingsInformationSortInput = {
-  fields?: Maybe<Array<Maybe<SanitySiteSettingsInformationFieldsEnum>>>;
-  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+  fields?: InputMaybe<Array<InputMaybe<SanitySiteSettingsInformationFieldsEnum>>>;
+  order?: InputMaybe<Array<InputMaybe<SortOrderEnum>>>;
 };
 
 export type SanitySiteSettingsMetaConnection = {
@@ -7296,8 +7381,8 @@ export type SanitySiteSettingsMetaConnectionSumArgs = {
 
 
 export type SanitySiteSettingsMetaConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: SanitySiteSettingsMetaFieldsEnum;
 };
 
@@ -7336,6 +7421,7 @@ export type SanitySiteSettingsMetaFieldsEnum =
   | 'meta___ogImage___asset___mimeType'
   | 'meta___ogImage___asset___size'
   | 'meta___ogImage___asset___assetId'
+  | 'meta___ogImage___asset___uploadId'
   | 'meta___ogImage___asset___path'
   | 'meta___ogImage___asset___url'
   | 'meta___ogImage___asset____rawMetadata'
@@ -7484,66 +7570,66 @@ export type SanitySiteSettingsMetaGroupConnectionSumArgs = {
 
 
 export type SanitySiteSettingsMetaGroupConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: SanitySiteSettingsMetaFieldsEnum;
 };
 
 export type SanitySiteSettingsMetaFilterInput = {
-  _id?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  _createdAt?: Maybe<DateQueryOperatorInput>;
-  _updatedAt?: Maybe<DateQueryOperatorInput>;
-  _rev?: Maybe<StringQueryOperatorInput>;
-  _key?: Maybe<StringQueryOperatorInput>;
-  meta?: Maybe<SanityMetaFilterInput>;
-  _rawMeta?: Maybe<JsonQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  _id?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  _createdAt?: InputMaybe<DateQueryOperatorInput>;
+  _updatedAt?: InputMaybe<DateQueryOperatorInput>;
+  _rev?: InputMaybe<StringQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  meta?: InputMaybe<SanityMetaFilterInput>;
+  _rawMeta?: InputMaybe<JsonQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 export type SanitySiteSettingsMetaSortInput = {
-  fields?: Maybe<Array<Maybe<SanitySiteSettingsMetaFieldsEnum>>>;
-  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+  fields?: InputMaybe<Array<InputMaybe<SanitySiteSettingsMetaFieldsEnum>>>;
+  order?: InputMaybe<Array<InputMaybe<SortOrderEnum>>>;
 };
 
 export type SanityMenuLinkFilterListInput = {
-  elemMatch?: Maybe<SanityMenuLinkFilterInput>;
+  elemMatch?: InputMaybe<SanityMenuLinkFilterInput>;
 };
 
 export type SanityMenuLinkFilterInput = {
-  _key?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  label?: Maybe<StringQueryOperatorInput>;
-  link?: Maybe<SanityLinkFilterInput>;
-  _rawLink?: Maybe<JsonQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  label?: InputMaybe<StringQueryOperatorInput>;
+  link?: InputMaybe<SanityLinkFilterInput>;
+  _rawLink?: InputMaybe<JsonQueryOperatorInput>;
 };
 
 export type SanityLinkFilterInput = {
-  _key?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  type?: Maybe<StringQueryOperatorInput>;
-  url?: Maybe<StringQueryOperatorInput>;
-  targetBlank?: Maybe<BooleanQueryOperatorInput>;
-  _rawInternal?: Maybe<JsonQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  type?: InputMaybe<StringQueryOperatorInput>;
+  url?: InputMaybe<StringQueryOperatorInput>;
+  targetBlank?: InputMaybe<BooleanQueryOperatorInput>;
+  _rawInternal?: InputMaybe<JsonQueryOperatorInput>;
 };
 
 export type SanityButtonFilterInput = {
-  _key?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  properties?: Maybe<SanityButtonPropertiesFilterInput>;
-  link?: Maybe<SanityLinkFilterInput>;
-  _rawProperties?: Maybe<JsonQueryOperatorInput>;
-  _rawLink?: Maybe<JsonQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  properties?: InputMaybe<SanityButtonPropertiesFilterInput>;
+  link?: InputMaybe<SanityLinkFilterInput>;
+  _rawProperties?: InputMaybe<JsonQueryOperatorInput>;
+  _rawLink?: InputMaybe<JsonQueryOperatorInput>;
 };
 
 export type SanityButtonPropertiesFilterInput = {
-  _key?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  label?: Maybe<StringQueryOperatorInput>;
-  style?: Maybe<StringQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  label?: InputMaybe<StringQueryOperatorInput>;
+  style?: InputMaybe<StringQueryOperatorInput>;
 };
 
 export type SanitySiteSettingsNavigationConnection = {
@@ -7580,8 +7666,8 @@ export type SanitySiteSettingsNavigationConnectionSumArgs = {
 
 
 export type SanitySiteSettingsNavigationConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: SanitySiteSettingsNavigationFieldsEnum;
 };
 
@@ -7850,39 +7936,39 @@ export type SanitySiteSettingsNavigationGroupConnectionSumArgs = {
 
 
 export type SanitySiteSettingsNavigationGroupConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: SanitySiteSettingsNavigationFieldsEnum;
 };
 
 export type SanitySiteSettingsNavigationFilterInput = {
-  _id?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  _createdAt?: Maybe<DateQueryOperatorInput>;
-  _updatedAt?: Maybe<DateQueryOperatorInput>;
-  _rev?: Maybe<StringQueryOperatorInput>;
-  _key?: Maybe<StringQueryOperatorInput>;
-  frontpage?: Maybe<SanityPageFilterInput>;
-  desktopMain?: Maybe<SanityMenuLinkFilterListInput>;
-  desktopSecondary?: Maybe<SanityMenuLinkFilterListInput>;
-  mobileMain?: Maybe<SanityMenuLinkFilterListInput>;
-  mobileSecondary?: Maybe<SanityMenuLinkFilterListInput>;
-  cta?: Maybe<SanityButtonFilterInput>;
-  _rawFrontpage?: Maybe<JsonQueryOperatorInput>;
-  _rawDesktopMain?: Maybe<JsonQueryOperatorInput>;
-  _rawDesktopSecondary?: Maybe<JsonQueryOperatorInput>;
-  _rawMobileMain?: Maybe<JsonQueryOperatorInput>;
-  _rawMobileSecondary?: Maybe<JsonQueryOperatorInput>;
-  _rawCta?: Maybe<JsonQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  _id?: InputMaybe<StringQueryOperatorInput>;
+  _type?: InputMaybe<StringQueryOperatorInput>;
+  _createdAt?: InputMaybe<DateQueryOperatorInput>;
+  _updatedAt?: InputMaybe<DateQueryOperatorInput>;
+  _rev?: InputMaybe<StringQueryOperatorInput>;
+  _key?: InputMaybe<StringQueryOperatorInput>;
+  frontpage?: InputMaybe<SanityPageFilterInput>;
+  desktopMain?: InputMaybe<SanityMenuLinkFilterListInput>;
+  desktopSecondary?: InputMaybe<SanityMenuLinkFilterListInput>;
+  mobileMain?: InputMaybe<SanityMenuLinkFilterListInput>;
+  mobileSecondary?: InputMaybe<SanityMenuLinkFilterListInput>;
+  cta?: InputMaybe<SanityButtonFilterInput>;
+  _rawFrontpage?: InputMaybe<JsonQueryOperatorInput>;
+  _rawDesktopMain?: InputMaybe<JsonQueryOperatorInput>;
+  _rawDesktopSecondary?: InputMaybe<JsonQueryOperatorInput>;
+  _rawMobileMain?: InputMaybe<JsonQueryOperatorInput>;
+  _rawMobileSecondary?: InputMaybe<JsonQueryOperatorInput>;
+  _rawCta?: InputMaybe<JsonQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 export type SanitySiteSettingsNavigationSortInput = {
-  fields?: Maybe<Array<Maybe<SanitySiteSettingsNavigationFieldsEnum>>>;
-  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+  fields?: InputMaybe<Array<InputMaybe<SanitySiteSettingsNavigationFieldsEnum>>>;
+  order?: InputMaybe<Array<InputMaybe<SortOrderEnum>>>;
 };
 
 export type ContentModuleConnection = {
@@ -7919,8 +8005,8 @@ export type ContentModuleConnectionSumArgs = {
 
 
 export type ContentModuleConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: ContentModuleFieldsEnum;
 };
 
@@ -8055,252 +8141,133 @@ export type ContentModuleGroupConnectionSumArgs = {
 
 
 export type ContentModuleGroupConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  limit?: InputMaybe<Scalars['Int']>;
   field: ContentModuleFieldsEnum;
 };
 
 export type ContentModuleFilterInput = {
-  joinedAt?: Maybe<DateQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  joinedAt?: InputMaybe<DateQueryOperatorInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 export type ContentModuleSortInput = {
-  fields?: Maybe<Array<Maybe<ContentModuleFieldsEnum>>>;
-  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+  fields?: InputMaybe<Array<InputMaybe<ContentModuleFieldsEnum>>>;
+  order?: InputMaybe<Array<InputMaybe<SortOrderEnum>>>;
 };
 
-export type LinkFragment = (
-  Pick<SanityLink, 'url' | 'type'>
-  & { internal?: Maybe<(
-    Pick<SanityPage, '_type'>
-    & { slug?: Maybe<Pick<SanitySlug, 'current'>> }
-  ) | (
-    Pick<SanityPost, '_type'>
-    & { slug?: Maybe<Pick<SanitySlug, 'current'>> }
-  ) | (
-    Pick<SanityProduct, '_type'>
-    & { slug?: Maybe<Pick<SanitySlug, 'current'>> }
-  )> }
-);
+export type LinkFragment = { url?: string | null | undefined, type?: string | null | undefined, internal?: { _type?: string | null | undefined, slug?: { current?: string | null | undefined } | null | undefined } | { _type?: string | null | undefined, slug?: { current?: string | null | undefined } | null | undefined } | { _type?: string | null | undefined, slug?: { current?: string | null | undefined } | null | undefined } | null | undefined };
 
-export type ImageFragment = { crop?: Maybe<Pick<SanityImageCrop, '_key' | '_type' | 'top' | 'bottom' | 'left' | 'right'>>, hotspot?: Maybe<Pick<SanityImageHotspot, '_key' | '_type' | 'x' | 'y' | 'height' | 'width'>>, asset?: Maybe<(
-    Pick<SanityImageAsset, '_id' | 'altText'>
-    & { metadata?: Maybe<(
-      Pick<SanityImageMetadata, 'lqip'>
-      & { dimensions?: Maybe<Pick<SanityImageDimensions, 'aspectRatio' | 'width' | 'height'>> }
-    )> }
-  )> };
+export type ImageFragment = { crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined, asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined };
 
-export type ImageWithPreviewFragment = (
-  { asset?: Maybe<{ metadata?: Maybe<{ preview: SanityImageMetadata['lqip'] }> }> }
-  & ImageFragment
-);
+export type ImageWithPreviewFragment = { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined };
 
 export type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type Unnamed_1_Query = { data?: Maybe<{ desktopSecondary?: Maybe<Array<Maybe<(
-      Pick<SanityMenuLink, 'label'>
-      & { link?: Maybe<LinkFragment> }
-    )>>> }> };
+export type Unnamed_1_Query = { data?: { id: string, title?: string | null | undefined, description?: string | null | undefined, cookies?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, name?: string | null | undefined, label?: string | null | undefined, category?: string | null | undefined } | null | undefined> | null | undefined } | null | undefined };
 
 export type Unnamed_2_QueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type Unnamed_2_Query = { data?: Maybe<{ desktopMain?: Maybe<Array<Maybe<(
-      Pick<SanityMenuLink, 'label'>
-      & { link?: Maybe<LinkFragment> }
-    )>>>, mobileMain?: Maybe<Array<Maybe<(
-      Pick<SanityMenuLink, 'label'>
-      & { link?: Maybe<LinkFragment> }
-    )>>>, mobileSecondary?: Maybe<Array<Maybe<(
-      Pick<SanityMenuLink, 'label'>
-      & { link?: Maybe<LinkFragment> }
-    )>>> }> };
-
-export type MenuLinkFragment = (
-  Pick<SanityMenuLink, 'label'>
-  & { link?: Maybe<LinkFragment> }
-);
+export type Unnamed_2_Query = { data?: { desktopSecondary?: Array<{ label?: string | null | undefined, link?: { url?: string | null | undefined, type?: string | null | undefined, internal?: { _type?: string | null | undefined, slug?: { current?: string | null | undefined } | null | undefined } | { _type?: string | null | undefined, slug?: { current?: string | null | undefined } | null | undefined } | { _type?: string | null | undefined, slug?: { current?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | null | undefined> | null | undefined } | null | undefined };
 
 export type Unnamed_3_QueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type Unnamed_3_Query = { data: { edges: Array<{ node: { meta?: Maybe<(
-          Pick<SanityMeta, 'robotsIndex' | 'metaTitle' | 'metaDescription'>
-          & { ogImage?: Maybe<{ asset?: Maybe<Pick<SanityImageAsset, 'url'>> }> }
-        )> } }> } };
+export type Unnamed_3_Query = { data?: { desktopMain?: Array<{ label?: string | null | undefined, link?: { url?: string | null | undefined, type?: string | null | undefined, internal?: { _type?: string | null | undefined, slug?: { current?: string | null | undefined } | null | undefined } | { _type?: string | null | undefined, slug?: { current?: string | null | undefined } | null | undefined } | { _type?: string | null | undefined, slug?: { current?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | null | undefined> | null | undefined, mobileMain?: Array<{ label?: string | null | undefined, link?: { url?: string | null | undefined, type?: string | null | undefined, internal?: { _type?: string | null | undefined, slug?: { current?: string | null | undefined } | null | undefined } | { _type?: string | null | undefined, slug?: { current?: string | null | undefined } | null | undefined } | { _type?: string | null | undefined, slug?: { current?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | null | undefined> | null | undefined, mobileSecondary?: Array<{ label?: string | null | undefined, link?: { url?: string | null | undefined, type?: string | null | undefined, internal?: { _type?: string | null | undefined, slug?: { current?: string | null | undefined } | null | undefined } | { _type?: string | null | undefined, slug?: { current?: string | null | undefined } | null | undefined } | { _type?: string | null | undefined, slug?: { current?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | null | undefined> | null | undefined } | null | undefined };
 
-export type MetaDataFragment = (
-  Pick<SanityMeta, 'robotsIndex' | 'metaTitle' | 'metaDescription'>
-  & { ogImage?: Maybe<{ asset?: Maybe<Pick<SanityImageAsset, 'url'>> }> }
-);
+export type MenuLinkFragment = { label?: string | null | undefined, link?: { url?: string | null | undefined, type?: string | null | undefined, internal?: { _type?: string | null | undefined, slug?: { current?: string | null | undefined } | null | undefined } | { _type?: string | null | undefined, slug?: { current?: string | null | undefined } | null | undefined } | { _type?: string | null | undefined, slug?: { current?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined };
 
-export type ModuleOptionsFragment = { activation?: Maybe<Pick<SanityActivation, 'hidden'>>, padding?: Maybe<Pick<SanityModulePadding, 'container' | 'x' | 'y'>>, theme?: Maybe<(
-    Pick<SanityColorTheme, 'theme'>
-    & { list?: Maybe<Pick<SanityColorlist, 'value' | 'title'>> }
-  )> };
+export type Unnamed_4_QueryVariables = Exact<{ [key: string]: never; }>;
 
-export type ModuleHeroDataFragment = (
-  Pick<SanityModuleHero, '_type'>
-  & { heroTitle?: Maybe<RichTextDataFragment>, heroImage?: Maybe<ImageWithPreviewFragment> }
-);
 
-export type ModuleImageDataFragment = (
-  Pick<SanityModuleImage, 'subtitle'>
-  & { image?: Maybe<ImageWithPreviewFragment> }
-);
+export type Unnamed_4_Query = { data: { edges: Array<{ node: { meta?: { robotsIndex?: boolean | null | undefined, metaTitle?: string | null | undefined, metaDescription?: string | null | undefined, ogImage?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } }> } };
 
-export type ModuleMarqueeDataFragment = { marqueetext: SanityModuleMarquee['text'], marqueestyle: SanityModuleMarquee['variant'] };
+export type MetaDataFragment = { robotsIndex?: boolean | null | undefined, metaTitle?: string | null | undefined, metaDescription?: string | null | undefined, ogImage?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined };
 
-export type RichTextDataFragment = (
-  Pick<SanityRichTextExtended, 'alignment'>
-  & { textRaw: SanityRichTextExtended['_rawText'] }
-);
+export type ModuleOptionsFragment = { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined };
 
-export type ModuleRichTextDataFragment = { text?: Maybe<RichTextDataFragment> };
+export type ModuleHeroDataFragment = { _type?: string | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined };
 
-export type ModuleSpacerDataFragment = Pick<SanityModuleSpacer, 'height'>;
+export type ModuleImageDataFragment = { subtitle?: string | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined };
 
-export type ModuleVideoEmbedDataFragment = (
-  Pick<SanityModuleVideoEmbed, 'autoplay' | 'controls' | 'loop' | 'muted' | 'title'>
-  & { video?: Maybe<Pick<SanityVideoEmbed, 'url'>>, aspectRatio?: Maybe<Pick<SanityAspectRatio, 'x' | 'y'>>, posterFrame?: Maybe<{ asset?: Maybe<Pick<SanityImageAsset, 'url'>> }> }
-);
+export type ModuleMarqueeDataFragment = { marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined };
 
-export type ContentModules_SanityModuleHero_Fragment = (
-  Pick<SanityModuleHero, '_key' | '_type'>
-  & { options?: Maybe<ModuleOptionsFragment> }
-  & ModuleHeroDataFragment
-);
+export type RichTextDataFragment = { alignment?: string | null | undefined, textRaw?: any | null | undefined };
 
-export type ContentModules_SanityModuleImage_Fragment = (
-  Pick<SanityModuleImage, '_key' | '_type'>
-  & { options?: Maybe<ModuleOptionsFragment> }
-  & ModuleImageDataFragment
-);
+export type ModuleRichTextDataFragment = { text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined };
+
+export type ModuleSpacerDataFragment = { height?: number | null | undefined };
+
+export type ModuleVideoEmbedDataFragment = { autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined };
+
+export type ContentModules_SanityModuleHero_Fragment = { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined };
+
+export type ContentModules_SanityModuleImage_Fragment = { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined };
 
 export type ContentModules_SanityModuleListing_Fragment = {};
 
-export type ContentModules_SanityModuleMarquee_Fragment = (
-  Pick<SanityModuleMarquee, '_key' | '_type'>
-  & { options?: Maybe<ModuleOptionsFragment> }
-  & ModuleMarqueeDataFragment
-);
+export type ContentModules_SanityModuleMarquee_Fragment = { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined };
 
-export type ContentModules_SanityModuleRichText_Fragment = (
-  Pick<SanityModuleRichText, '_key' | '_type'>
-  & { options?: Maybe<ModuleOptionsFragment> }
-  & ModuleRichTextDataFragment
-);
+export type ContentModules_SanityModuleRichText_Fragment = { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined };
 
-export type ContentModules_SanityModuleSpacer_Fragment = (
-  Pick<SanityModuleSpacer, '_key' | '_type'>
-  & { options?: Maybe<ModuleOptionsFragment> }
-  & ModuleSpacerDataFragment
-);
+export type ContentModules_SanityModuleSpacer_Fragment = { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined };
 
 export type ContentModules_SanityModuleTwoColumn_Fragment = {};
 
-export type ContentModules_SanityModuleVideoEmbed_Fragment = (
-  Pick<SanityModuleVideoEmbed, '_key' | '_type'>
-  & { options?: Maybe<ModuleOptionsFragment> }
-  & ModuleVideoEmbedDataFragment
-);
+export type ContentModules_SanityModuleVideoEmbed_Fragment = { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined };
 
 export type ContentModulesFragment = ContentModules_SanityModuleHero_Fragment | ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleListing_Fragment | ContentModules_SanityModuleMarquee_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment;
 
-export type ContentModulesDataFragment = { modules?: Maybe<Array<Maybe<ContentModules_SanityModuleHero_Fragment | ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleListing_Fragment | ContentModules_SanityModuleMarquee_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | (
-    Pick<SanityModuleTwoColumn, '_key' | '_type'>
-    & { firstColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleHero_Fragment | ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleListing_Fragment | ContentModules_SanityModuleMarquee_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | (
-        Pick<SanityModuleTwoColumn, '_key' | '_type'>
-        & { firstColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleHero_Fragment | ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleListing_Fragment | ContentModules_SanityModuleMarquee_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | (
-            Pick<SanityModuleTwoColumn, '_key' | '_type'>
-            & { firstColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleHero_Fragment | ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleListing_Fragment | ContentModules_SanityModuleMarquee_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | (
-                Pick<SanityModuleTwoColumn, '_key' | '_type'>
-                & { firstColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleHero_Fragment | ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleListing_Fragment | ContentModules_SanityModuleMarquee_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, secondColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleHero_Fragment | ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleListing_Fragment | ContentModules_SanityModuleMarquee_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, options?: Maybe<ModuleOptionsFragment> }
-                & ContentModules_SanityModuleTwoColumn_Fragment
-              ) | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, secondColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleHero_Fragment | ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleListing_Fragment | ContentModules_SanityModuleMarquee_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | (
-                Pick<SanityModuleTwoColumn, '_key' | '_type'>
-                & { firstColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleHero_Fragment | ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleListing_Fragment | ContentModules_SanityModuleMarquee_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, secondColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleHero_Fragment | ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleListing_Fragment | ContentModules_SanityModuleMarquee_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, options?: Maybe<ModuleOptionsFragment> }
-                & ContentModules_SanityModuleTwoColumn_Fragment
-              ) | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, options?: Maybe<ModuleOptionsFragment> }
-            & ContentModules_SanityModuleTwoColumn_Fragment
-          ) | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, secondColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleHero_Fragment | ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleListing_Fragment | ContentModules_SanityModuleMarquee_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | (
-            Pick<SanityModuleTwoColumn, '_key' | '_type'>
-            & { firstColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleHero_Fragment | ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleListing_Fragment | ContentModules_SanityModuleMarquee_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | (
-                Pick<SanityModuleTwoColumn, '_key' | '_type'>
-                & { firstColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleHero_Fragment | ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleListing_Fragment | ContentModules_SanityModuleMarquee_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, secondColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleHero_Fragment | ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleListing_Fragment | ContentModules_SanityModuleMarquee_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, options?: Maybe<ModuleOptionsFragment> }
-                & ContentModules_SanityModuleTwoColumn_Fragment
-              ) | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, secondColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleHero_Fragment | ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleListing_Fragment | ContentModules_SanityModuleMarquee_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | (
-                Pick<SanityModuleTwoColumn, '_key' | '_type'>
-                & { firstColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleHero_Fragment | ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleListing_Fragment | ContentModules_SanityModuleMarquee_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, secondColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleHero_Fragment | ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleListing_Fragment | ContentModules_SanityModuleMarquee_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, options?: Maybe<ModuleOptionsFragment> }
-                & ContentModules_SanityModuleTwoColumn_Fragment
-              ) | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, options?: Maybe<ModuleOptionsFragment> }
-            & ContentModules_SanityModuleTwoColumn_Fragment
-          ) | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, options?: Maybe<ModuleOptionsFragment> }
-        & ContentModules_SanityModuleTwoColumn_Fragment
-      ) | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, secondColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleHero_Fragment | ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleListing_Fragment | ContentModules_SanityModuleMarquee_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | (
-        Pick<SanityModuleTwoColumn, '_key' | '_type'>
-        & { firstColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleHero_Fragment | ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleListing_Fragment | ContentModules_SanityModuleMarquee_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | (
-            Pick<SanityModuleTwoColumn, '_key' | '_type'>
-            & { firstColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleHero_Fragment | ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleListing_Fragment | ContentModules_SanityModuleMarquee_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | (
-                Pick<SanityModuleTwoColumn, '_key' | '_type'>
-                & { firstColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleHero_Fragment | ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleListing_Fragment | ContentModules_SanityModuleMarquee_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, secondColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleHero_Fragment | ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleListing_Fragment | ContentModules_SanityModuleMarquee_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, options?: Maybe<ModuleOptionsFragment> }
-                & ContentModules_SanityModuleTwoColumn_Fragment
-              ) | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, secondColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleHero_Fragment | ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleListing_Fragment | ContentModules_SanityModuleMarquee_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | (
-                Pick<SanityModuleTwoColumn, '_key' | '_type'>
-                & { firstColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleHero_Fragment | ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleListing_Fragment | ContentModules_SanityModuleMarquee_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, secondColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleHero_Fragment | ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleListing_Fragment | ContentModules_SanityModuleMarquee_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, options?: Maybe<ModuleOptionsFragment> }
-                & ContentModules_SanityModuleTwoColumn_Fragment
-              ) | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, options?: Maybe<ModuleOptionsFragment> }
-            & ContentModules_SanityModuleTwoColumn_Fragment
-          ) | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, secondColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleHero_Fragment | ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleListing_Fragment | ContentModules_SanityModuleMarquee_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | (
-            Pick<SanityModuleTwoColumn, '_key' | '_type'>
-            & { firstColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleHero_Fragment | ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleListing_Fragment | ContentModules_SanityModuleMarquee_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | (
-                Pick<SanityModuleTwoColumn, '_key' | '_type'>
-                & { firstColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleHero_Fragment | ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleListing_Fragment | ContentModules_SanityModuleMarquee_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, secondColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleHero_Fragment | ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleListing_Fragment | ContentModules_SanityModuleMarquee_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, options?: Maybe<ModuleOptionsFragment> }
-                & ContentModules_SanityModuleTwoColumn_Fragment
-              ) | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, secondColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleHero_Fragment | ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleListing_Fragment | ContentModules_SanityModuleMarquee_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | (
-                Pick<SanityModuleTwoColumn, '_key' | '_type'>
-                & { firstColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleHero_Fragment | ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleListing_Fragment | ContentModules_SanityModuleMarquee_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, secondColumn?: Maybe<{ modules?: Maybe<Array<Maybe<ContentModules_SanityModuleHero_Fragment | ContentModules_SanityModuleImage_Fragment | ContentModules_SanityModuleListing_Fragment | ContentModules_SanityModuleMarquee_Fragment | ContentModules_SanityModuleRichText_Fragment | ContentModules_SanityModuleSpacer_Fragment | ContentModules_SanityModuleTwoColumn_Fragment | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, options?: Maybe<ModuleOptionsFragment> }
-                & ContentModules_SanityModuleTwoColumn_Fragment
-              ) | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, options?: Maybe<ModuleOptionsFragment> }
-            & ContentModules_SanityModuleTwoColumn_Fragment
-          ) | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, options?: Maybe<ModuleOptionsFragment> }
-        & ContentModules_SanityModuleTwoColumn_Fragment
-      ) | ContentModules_SanityModuleVideoEmbed_Fragment>>> }>, options?: Maybe<ModuleOptionsFragment> }
-    & ContentModules_SanityModuleTwoColumn_Fragment
-  ) | ContentModules_SanityModuleVideoEmbed_Fragment>>> };
-
-export type Unnamed_4_QueryVariables = Exact<{
-  id: Scalars['String'];
-}>;
-
-
-export type Unnamed_4_Query = { page?: Maybe<(
-    Pick<SanityPage, 'title'>
-    & { meta?: Maybe<MetaDataFragment>, contentModules?: Maybe<ContentModulesDataFragment> }
-  )> };
+export type ContentModulesDataFragment = { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined };
 
 export type Unnamed_5_QueryVariables = Exact<{
   id: Scalars['String'];
 }>;
 
 
-export type Unnamed_5_Query = { page?: Maybe<(
-    Pick<SanityPage, 'title'>
-    & { meta?: Maybe<MetaDataFragment>, contentModules?: Maybe<ContentModulesDataFragment> }
-  )> };
+export type Unnamed_5_Query = { page?: { title?: string | null | undefined, meta?: { robotsIndex?: boolean | null | undefined, metaTitle?: string | null | undefined, metaDescription?: string | null | undefined, ogImage?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, contentModules?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined } | null | undefined };
 
 export type Unnamed_6_QueryVariables = Exact<{
   id: Scalars['String'];
 }>;
 
 
-export type Unnamed_6_Query = { page?: Maybe<(
-    Pick<SanityPage, 'title'>
-    & { meta?: Maybe<MetaDataFragment>, contentModules?: Maybe<ContentModulesDataFragment> }
-  )> };
+export type Unnamed_6_Query = { page?: { title?: string | null | undefined, meta?: { robotsIndex?: boolean | null | undefined, metaTitle?: string | null | undefined, metaDescription?: string | null | undefined, ogImage?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, contentModules?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined } | null | undefined };
+
+export type Unnamed_7_QueryVariables = Exact<{
+  id: Scalars['String'];
+}>;
+
+
+export type Unnamed_7_Query = { page?: { title?: string | null | undefined, meta?: { robotsIndex?: boolean | null | undefined, metaTitle?: string | null | undefined, metaDescription?: string | null | undefined, ogImage?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, contentModules?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, firstColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, secondColumn?: { modules?: Array<{ _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, heroTitle?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined, heroImage?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, subtitle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, image?: { asset?: { _id?: string | null | undefined, altText?: string | null | undefined, metadata?: { lqip?: string | null | undefined, preview?: string | null | undefined, dimensions?: { aspectRatio?: number | null | undefined, width?: number | null | undefined, height?: number | null | undefined } | null | undefined } | null | undefined } | null | undefined, crop?: { _key?: string | null | undefined, _type?: string | null | undefined, top?: number | null | undefined, bottom?: number | null | undefined, left?: number | null | undefined, right?: number | null | undefined } | null | undefined, hotspot?: { _key?: string | null | undefined, _type?: string | null | undefined, x?: number | null | undefined, y?: number | null | undefined, height?: number | null | undefined, width?: number | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, marqueetext?: string | null | undefined, marqueestyle?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, text?: { alignment?: string | null | undefined, textRaw?: any | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, height?: number | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined } | { _key?: string | null | undefined, _type?: string | null | undefined, autoplay?: boolean | null | undefined, controls?: boolean | null | undefined, loop?: boolean | null | undefined, muted?: boolean | null | undefined, title?: string | null | undefined, options?: { activation?: { hidden?: boolean | null | undefined } | null | undefined, padding?: { container?: boolean | null | undefined, x?: number | null | undefined, y?: number | null | undefined } | null | undefined, theme?: { theme?: string | null | undefined, list?: { value?: string | null | undefined, title?: string | null | undefined } | null | undefined } | null | undefined } | null | undefined, video?: { url?: string | null | undefined } | null | undefined, aspectRatio?: { x?: number | null | undefined, y?: number | null | undefined } | null | undefined, posterFrame?: { asset?: { url?: string | null | undefined } | null | undefined } | null | undefined } | {} | null | undefined> | null | undefined } | null | undefined } | null | undefined };
+
+export type GatsbyImageSharpFixedFragment = { base64?: string | null | undefined, width: number, height: number, src: string, srcSet: string };
+
+export type GatsbyImageSharpFixed_TracedSvgFragment = { tracedSVG?: string | null | undefined, width: number, height: number, src: string, srcSet: string };
+
+export type GatsbyImageSharpFixed_WithWebpFragment = { base64?: string | null | undefined, width: number, height: number, src: string, srcSet: string, srcWebp?: string | null | undefined, srcSetWebp?: string | null | undefined };
+
+export type GatsbyImageSharpFixed_WithWebp_TracedSvgFragment = { tracedSVG?: string | null | undefined, width: number, height: number, src: string, srcSet: string, srcWebp?: string | null | undefined, srcSetWebp?: string | null | undefined };
+
+export type GatsbyImageSharpFixed_NoBase64Fragment = { width: number, height: number, src: string, srcSet: string };
+
+export type GatsbyImageSharpFixed_WithWebp_NoBase64Fragment = { width: number, height: number, src: string, srcSet: string, srcWebp?: string | null | undefined, srcSetWebp?: string | null | undefined };
+
+export type GatsbyImageSharpFluidFragment = { base64?: string | null | undefined, aspectRatio: number, src: string, srcSet: string, sizes: string };
+
+export type GatsbyImageSharpFluidLimitPresentationSizeFragment = { maxHeight: number, maxWidth: number };
+
+export type GatsbyImageSharpFluid_TracedSvgFragment = { tracedSVG?: string | null | undefined, aspectRatio: number, src: string, srcSet: string, sizes: string };
+
+export type GatsbyImageSharpFluid_WithWebpFragment = { base64?: string | null | undefined, aspectRatio: number, src: string, srcSet: string, srcWebp?: string | null | undefined, srcSetWebp?: string | null | undefined, sizes: string };
+
+export type GatsbyImageSharpFluid_WithWebp_TracedSvgFragment = { tracedSVG?: string | null | undefined, aspectRatio: number, src: string, srcSet: string, srcWebp?: string | null | undefined, srcSetWebp?: string | null | undefined, sizes: string };
+
+export type GatsbyImageSharpFluid_NoBase64Fragment = { aspectRatio: number, src: string, srcSet: string, sizes: string };
+
+export type GatsbyImageSharpFluid_WithWebp_NoBase64Fragment = { aspectRatio: number, src: string, srcSet: string, srcWebp?: string | null | undefined, srcSetWebp?: string | null | undefined, sizes: string };
