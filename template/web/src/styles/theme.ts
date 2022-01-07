@@ -9,12 +9,12 @@ export default {
   colors: {
     brand: Object.values(brandColors)[0],
     text: '#000',
-    background: '#fff'
+    background: 'rgba(1,1,1,0)'
   },
   fonts: {
-    sans: "'Archivo', sans-serif",
-    serif: "'EB Garamond', serif",
-    mono: "'Nanum Gothic Coding', monospace"
+    sans: '\'Archivo\', sans-serif',
+    serif: '\'EB Garamond\', serif',
+    mono: '\'Nanum Gothic Coding\', monospace'
   },
   buttons: {
     primary: {

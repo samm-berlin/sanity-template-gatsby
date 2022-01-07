@@ -21,7 +21,7 @@ export default {
     fontSize: 5,
     fontWeight: 900,
     textTransform: 'uppercase',
-    my: 2
+    py: 2
   },
   subhead: {
     fontFamily: theme.fonts.serif,
