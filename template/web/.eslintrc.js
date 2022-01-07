@@ -25,7 +25,6 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
-    'plugin:import/errors',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:prettier/recommended',
