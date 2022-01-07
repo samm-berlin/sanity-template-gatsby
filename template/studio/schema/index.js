@@ -14,6 +14,7 @@ import post from './documents/posts'
 import postCategory from './documents/posts/postCategory'
 import product from './documents/products'
 import productCategory from './documents/products/productCategory'
+import scrollySection from './documents/scrollySection'
 
 import contentModules from './modules'
 import imageWithArtDirection from './objects/imageWithArtDirection'
@@ -31,6 +32,7 @@ import card from './objects/card'
 import menuLink from './objects/menuLink'
 import cookie from './objects/cookie'
 import cookieCategory from './objects/cookieCategory'
+import sectionBackgroundOptions from './objects/sectionBackgroundOptions'
 
 import imageModule from './modules/image'
 import heroModule from './modules/hero'
@@ -41,6 +43,7 @@ import moduleDefaultFields from './modules/_defaultFields'
 import moduleVideoEmbed from './modules/videoEmbed'
 import moduleSpacer from './modules/spacer'
 import moduleMarquee from './modules/marquee'
+import moduleScrollySection from './modules/scrollySection'
 
 export default createSchema({
   name: 'default',
@@ -61,6 +64,7 @@ export default createSchema({
     postCategory,
     product,
     productCategory,
+    scrollySection,
 
     // fields
     imageField,
@@ -83,6 +87,7 @@ export default createSchema({
     menuLink,
     cookie,
     cookieCategory,
+    sectionBackgroundOptions,
 
     // modules
     moduleDefaultFields,
@@ -93,6 +98,7 @@ export default createSchema({
     moduleVideoEmbed,
     moduleSpacer,
     moduleMarquee,
-    moduleListing
+    moduleListing,
+    moduleScrollySection,
   ]
 })

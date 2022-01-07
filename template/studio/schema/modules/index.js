@@ -15,7 +15,8 @@ export default {
         {type: 'moduleTwoColumn'},
         {type: 'moduleSpacer'},
         {type: 'moduleMarquee'},
-        {type: 'moduleListing'}
+        {type: 'moduleListing'},
+        {type: 'moduleScrollySection'},
       ],
       options: {
         editModal: 'modal'
