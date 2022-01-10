@@ -7,17 +7,20 @@ import { SanityModuleScrollySection } from 'web/types/graphql-types'
 
 const ScrollySectionModule: FC = (props: SanityModuleScrollySection) => {
   const { scrollySectionRelation } = props
-  const { backgroundOptions, contentModules } = scrollySectionRelation
 
-  const backgroundColor = backgroundOptions?.backgroundType === 'color' && backgroundOptions?.color
-  const backgroundImage = backgroundOptions?.backgroundType === 'image' && backgroundOptions?.image
+  const backgroundColor =
+    scrollySectionRelation?.backgroundOptions?.backgroundType === 'color' &&
+    scrollySectionRelation?.backgroundOptions?.color
+  const backgroundImage =
+    scrollySectionRelation?.backgroundOptions?.backgroundType === 'image' &&
+    scrollySectionRelation?.backgroundOptions?.image
 
   useEffect(() => {
-    console.log(backgroundOptions, contentModules)
+    console.log(scrollySectionRelation?.backgroundOptions, scrollySectionRelation?.contentModules)
   }, [])
   return (
-    <Box backgroundColor={backgroundColor}>
-      <ModulesLoop modules={contentModules?.modules} />
+    <Box backgroundColor={backgroundColor || undefined}>
+      <ModulesLoop modules={scrollySectionRelation?.contentModules?.modules} />
     </Box>
   )
 }

@@ -7,7 +7,7 @@ const clientConfig = require('./client-config')
 
 const isProd = process.env.NODE_ENV === 'production'
 
-const SITE_URL = 'localhost:8000'
+const SITE_URL = 'https://samm-boiler.netlify.app'
 // const SITE_URL = '<#< deployments.web.url >#>';
 
 module.exports = {
@@ -57,7 +57,9 @@ module.exports = {
         overlayDrafts: !isProd
       }
     },
-    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-sitemap'
+    },
     'gatsby-plugin-netlify'
   ]
 }

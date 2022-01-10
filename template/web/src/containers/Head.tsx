@@ -2,7 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Helmet, { HelmetProps } from 'react-helmet'
 // import { mapToSingleObject } from '@/lib/helpers'
-import fonts from '@/assets/fonts.css'
+// import fonts from '@/assets/fonts.css'
 
 type MetaData = {
   robotsIndex: boolean
@@ -60,17 +60,17 @@ const Head = (props: HeadProps): JSX.Element => {
 
   return (
     <Helmet
-      titleTemplate={`%s — ${defaultMeta?.metaTitle}`}
-      defaultTitle={defaultMeta?.metaTitle || title}
-      {...props}
+    //titleTemplate={`%s — ${defaultMeta?.metaTitle}`}
+    //defaultTitle={defaultMeta?.metaTitle || title}
+    // {...props}
     >
       <html lang="en" />
 
       <style type="text/css">{}</style>
 
-      <meta name="robots" content={indexSafe} />
+      {/* <meta name="robots" content={indexSafe} />
 
-      <meta name="description" content={meta?.metaDescription || defaultMeta?.metaDescription} />
+  <meta name="description" content={meta?.metaDescription || defaultMeta?.metaDescription} /> */}
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
@@ -81,9 +81,9 @@ const Head = (props: HeadProps): JSX.Element => {
         rel="stylesheet"
         type="text/css"
       />
-      <style type="text/css">{fonts}</style>
+      {/* <style type="text/css">{fonts}</style> */}
 
-      {ogImage && <meta property="og:image" content={ogImage.asset.url} />}
+      {/* ogImage && <meta property="og:image" content={ogImage.asset.url} /> */}
     </Helmet>
   )
 }
