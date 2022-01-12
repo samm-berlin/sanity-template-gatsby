@@ -6,32 +6,26 @@ export default {
   icon: PageIcon,
   type: 'document',
 
-  fieldsets: [
-    {
-      name: 'settings',
-      title: 'Settings',
-      options: {
-        collapsible: true,
-        collapsed: true,
-      },
-    },
-  ],
-
   fields: [
     {
       name: 'title',
       title: 'Title',
       type: 'string',
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'backgroundOptions',
       title: 'Background Options',
-      type: 'sectionBackgroundOptions'
+      type: 'sectionBackgroundOptions',
+      options: {
+        collapsible: true,
+        collapsed: false
+      }
     },
     {
       name: 'scrollyContentModules',
       title: 'Scrolly Content',
       type: 'scrollyContentModules',
-    }
+    },
   ],
 }

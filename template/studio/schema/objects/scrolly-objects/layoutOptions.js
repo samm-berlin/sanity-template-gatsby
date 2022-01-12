@@ -9,8 +9,8 @@ export default {
       type: 'string',
       options: {
         list: [
-          { title: 'Left', value: 'left' },
-          { title: 'Right', value: 'right' },
+          { title: 'Left', value: 'flex-start' },
+          { title: 'Right', value: 'flex-end' },
           { title: 'Center', value: 'center' },
         ],
       },

@@ -9,8 +9,8 @@ export default {
       type: 'string',
       options: {
         list: [
-          { value: 'regular', title: 'regular' },
-          { value: 'pinned', title: 'pinned' },
+          { value: 'regular', title: 'Regular' },
+          { value: 'pinned', title: 'Pinned' },
         ],
       },
     },
@@ -32,5 +32,10 @@ export default {
         return parent.flow !== 'pinned'
       },
     },
+    {
+      name: 'pinSpacing',
+      label: 'Pin Spacing',
+      type: 'boolean',
+    }
   ],
 }

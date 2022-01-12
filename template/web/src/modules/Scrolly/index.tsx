@@ -25,9 +25,7 @@ const modulesMap = {
 const ScrollyModuleLoop: FC<SanityScrollyContentModules> = (props) => {
   const { modules } = props
 
-  useEffect(() => {
-    console.log(modules)
-  }, [])
+  useEffect(() => {}, [])
 
   return (
     <Box height="100%">
@@ -37,6 +35,7 @@ const ScrollyModuleLoop: FC<SanityScrollyContentModules> = (props) => {
             <ScrollyModuleContainer
               scrollOptions={module.options?.scrollOptions}
               layoutOptions={module.options?.layoutOptions}
+              anchor={module._key || undefined}
             >
               {modulesMap[module?._type]({ key: module?._key, ...module })}
             </ScrollyModuleContainer>
