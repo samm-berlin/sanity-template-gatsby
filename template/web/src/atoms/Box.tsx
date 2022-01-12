@@ -26,7 +26,7 @@ interface Props
     SpaceProps,
     BorderProps,
     ShadowProps {
-  children: React.ReactNode
+  children?: React.ReactNode
   transition?: string
 }
 
