@@ -2,6 +2,7 @@ export default {
   title: 'Background',
   name: 'sectionBackgroundOptions',
   type: 'object',
+
   fields: [
     {
       title: 'Type',
@@ -36,7 +37,7 @@ export default {
     {
       title: 'Video',
       name: 'video',
-      type: 'videoEmbed',
+      type: 'moduleVideoEmbed',
       hidden: ({ parent }) => {
         if (!parent) return true
         return parent.backgroundType !== 'video'

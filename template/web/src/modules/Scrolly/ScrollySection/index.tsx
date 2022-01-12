@@ -5,6 +5,7 @@ import ScrollyModulesLoop from '@/modules/Scrolly'
 import { SanityModuleScrollySection } from 'web/types/graphql-types'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+import BackgroundVideo from './BackgroundVideo'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -14,18 +15,24 @@ const ScrollySectionModule: FC<SanityModuleScrollySection> = (props) => {
   const backgroundColor =
     scrollySectionRelation?.backgroundOptions?.backgroundType === 'color' &&
     scrollySectionRelation?.backgroundOptions?.color
+
   const backgroundImage =
     scrollySectionRelation?.backgroundOptions?.backgroundType === 'image' &&
     scrollySectionRelation?.backgroundOptions?.image
 
-  useEffect(() => {
-    console.log(
-      scrollySectionRelation?.backgroundOptions,
-      scrollySectionRelation?.scrollyContentModules
-    )
-  }, [])
   return (
-    <Box backgroundColor={backgroundColor || undefined}>
+    <Box
+      className={scrollySectionRelation?._id || undefined}
+      backgroundColor={backgroundColor || undefined}
+    >
+      {scrollySectionRelation?.backgroundOptions?.backgroundType === 'image' && (
+        <Box position="absolute"></Box>
+      )}
+
+      {scrollySectionRelation?.backgroundOptions?.backgroundType === 'video' && (
+        <BackgroundVideo {...scrollySectionRelation.backgroundOptions.video}></BackgroundVideo>
+      )}
+
       <ScrollyModulesLoop modules={scrollySectionRelation?.scrollyContentModules?.modules} />
     </Box>
   )
@@ -36,6 +43,9 @@ export default ScrollySectionModule
 export const query = graphql`
   fragment moduleScrollySection on SanityModuleScrollySection {
     scrollySectionRelation {
+      _type
+      _id
+      title
       backgroundOptions {
         backgroundType
         color
@@ -45,7 +55,7 @@ export const query = graphql`
           }
         }
         video {
-          url
+          ...moduleVideoEmbedData
         }
       }
       scrollyContentModules {
