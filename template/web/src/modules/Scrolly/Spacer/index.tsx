@@ -8,7 +8,7 @@ const SpacerModule: FC<SanityModuleSpacer> = ({ height }) => <Box height={`${hei
 export default SpacerModule
 
 export const query = graphql`
-  fragment moduleSpacerData on SanityModuleSpacer {
+  fragment scrollyModuleSpacerData on SanityScrollyModuleSpacer {
     height
   }
 `
