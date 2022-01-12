@@ -20,7 +20,7 @@ import SpacerModule from './Spacer'
 import TwoColModule from './TwoColumns'
 import MarqueeModule from './Marquee'
 import HeroModule from './Hero'
-import ScrollySectionModule from './ScrollySection'
+import ScrollySectionModule from './Scrolly/ScrollySection'
 
 const modulesMap = {
   moduleRichText: (props: SanityModuleRichText) => <RichText {...props} />,

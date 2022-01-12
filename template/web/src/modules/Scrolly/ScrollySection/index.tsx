@@ -1,11 +1,14 @@
 import React, { FC, useEffect } from 'react'
 import { graphql } from 'gatsby'
 import Box from '@/atoms/Box'
-import ModulesLoop from '@/modules'
-import ImageModule from '@/modules/Image'
+import ScrollyModulesLoop from '@/modules/Scrolly'
 import { SanityModuleScrollySection } from 'web/types/graphql-types'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
-const ScrollySectionModule: FC = (props: SanityModuleScrollySection) => {
+gsap.registerPlugin(ScrollTrigger)
+
+const ScrollySectionModule: FC<SanityModuleScrollySection> = (props) => {
   const { scrollySectionRelation } = props
 
   const backgroundColor =
@@ -16,11 +19,14 @@ const ScrollySectionModule: FC = (props: SanityModuleScrollySection) => {
     scrollySectionRelation?.backgroundOptions?.image
 
   useEffect(() => {
-    console.log(scrollySectionRelation?.backgroundOptions, scrollySectionRelation?.contentModules)
+    console.log(
+      scrollySectionRelation?.backgroundOptions,
+      scrollySectionRelation?.scrollyContentModules
+    )
   }, [])
   return (
     <Box backgroundColor={backgroundColor || undefined}>
-      <ModulesLoop modules={scrollySectionRelation?.contentModules?.modules} />
+      <ScrollyModulesLoop modules={scrollySectionRelation?.scrollyContentModules?.modules} />
     </Box>
   )
 }
@@ -42,16 +48,16 @@ export const query = graphql`
           url
         }
       }
-      contentModules {
+      scrollyContentModules {
         _type
         ...CM
       }
     }
   }
 
-  fragment CM on SanityContentModules {
+  fragment CM on SanityScrollyContentModules {
     modules {
-      ...ContentModules
+      ...ScrollyContentModules
       ... on SanityModuleScrollySection {
         _key
         _type
@@ -61,10 +67,10 @@ export const query = graphql`
             backgroundType
             color
           }
-          contentModules {
+          scrollyContentModules {
             _type
             modules {
-              ...ContentModules
+              ...ScrollyContentModules
             }
           }
         }
