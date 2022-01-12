@@ -29,9 +29,9 @@ export default {
       type: 'sectionBackgroundOptions'
     },
     {
-      name: 'contentModules',
-      title: 'Content',
-      type: 'contentModules',
-    },
+      name: 'scrollyContentModules',
+      title: 'Scrolly Content',
+      type: 'scrollyContentModules',
+    }
   ],
 }

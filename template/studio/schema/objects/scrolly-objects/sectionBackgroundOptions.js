@@ -9,9 +9,9 @@ export default {
       type: 'string',
       options: {
         list: [
-          { value: 'color', title: 'color' },
-          { value: 'image', title: 'image' },
-          { value: 'video', title: 'video' },
+          { value: 'color', title: 'Color' },
+          { value: 'image', title: 'Image' },
+          { value: 'video', title: 'Video' },
         ],
       },
     },

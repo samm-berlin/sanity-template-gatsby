@@ -17,6 +17,7 @@ import productCategory from './documents/products/productCategory'
 import scrollySection from './documents/scrollySection'
 
 import contentModules from './modules'
+import scrollyContentModules from './modules/scrolly-modules'
 import imageWithArtDirection from './objects/imageWithArtDirection'
 import link from './objects/link'
 import meta from './objects/meta'
@@ -32,7 +33,9 @@ import card from './objects/card'
 import menuLink from './objects/menuLink'
 import cookie from './objects/cookie'
 import cookieCategory from './objects/cookieCategory'
-import sectionBackgroundOptions from './objects/sectionBackgroundOptions'
+import sectionBackgroundOptions from './objects/scrolly-objects/sectionBackgroundOptions'
+import scrollOptions from './objects/scrolly-objects/scrollOptions'
+import layoutOptions from './objects/scrolly-objects/layoutOptions'
 
 import imageModule from './modules/image'
 import heroModule from './modules/hero'
@@ -44,6 +47,11 @@ import moduleVideoEmbed from './modules/videoEmbed'
 import moduleSpacer from './modules/spacer'
 import moduleMarquee from './modules/marquee'
 import moduleScrollySection from './modules/scrollySection'
+import scrollyModuleDefaultFields from './modules/scrolly-modules/_defaultFields'
+import scrollyModuleRichText from './modules/scrolly-modules/richText'
+import scrollyModuleImage from './modules/scrolly-modules/image'
+import scrollyModuleSpacer from './modules/scrolly-modules/spacer'
+
 
 export default createSchema({
   name: 'default',
@@ -64,7 +72,6 @@ export default createSchema({
     postCategory,
     product,
     productCategory,
-    scrollySection,
 
     // fields
     imageField,
@@ -87,7 +94,6 @@ export default createSchema({
     menuLink,
     cookie,
     cookieCategory,
-    sectionBackgroundOptions,
 
     // modules
     moduleDefaultFields,
@@ -99,6 +105,26 @@ export default createSchema({
     moduleSpacer,
     moduleMarquee,
     moduleListing,
+
+    /**
+      Scrolly Sections
+    **/
+
+    scrollySection,
+
+    // objects
+    scrollyContentModules,
+
+    sectionBackgroundOptions,
+    scrollOptions,
+    layoutOptions,
+
     moduleScrollySection,
-  ]
+
+    // scrolly-modules
+    scrollyModuleDefaultFields,
+    scrollyModuleRichText,
+    scrollyModuleImage,
+    scrollyModuleSpacer,
+  ],
 })
