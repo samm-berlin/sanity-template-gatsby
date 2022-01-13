@@ -28,7 +28,7 @@ const ScrollyModuleLoop: FC<SanityScrollyContentModules> = (props) => {
   useEffect(() => {}, [])
 
   return (
-    <Box height="100%">
+    <Box height="100%" position="relative">
       {modules?.map((module) => {
         if (module?._type) {
           return (

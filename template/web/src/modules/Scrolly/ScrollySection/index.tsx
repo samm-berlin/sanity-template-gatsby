@@ -12,25 +12,23 @@ gsap.registerPlugin(ScrollTrigger)
 const ScrollySectionModule: FC<SanityModuleScrollySection> = (props) => {
   const { scrollySectionRelation } = props
 
-  const backgroundColor =
-    scrollySectionRelation?.backgroundOptions?.backgroundType === 'color' &&
-    scrollySectionRelation?.backgroundOptions?.color
+  const backgroundColor = scrollySectionRelation?.backgroundOptions?.color
 
   const backgroundImage =
     scrollySectionRelation?.backgroundOptions?.backgroundType === 'image' &&
     scrollySectionRelation?.backgroundOptions?.image
 
   return (
-    <Box
-      className={scrollySectionRelation?._id || undefined}
-      backgroundColor={backgroundColor || undefined}
-    >
+    <Box className={`s${scrollySectionRelation?._id}`} backgroundColor={backgroundColor}>
       {scrollySectionRelation?.backgroundOptions?.backgroundType === 'image' && (
         <Box position="absolute"></Box>
       )}
 
       {scrollySectionRelation?.backgroundOptions?.backgroundType === 'video' && (
-        <BackgroundVideo {...scrollySectionRelation.backgroundOptions.video}></BackgroundVideo>
+        <BackgroundVideo
+          sectionID={scrollySectionRelation._id}
+          {...scrollySectionRelation.backgroundOptions.video}
+        ></BackgroundVideo>
       )}
 
       <ScrollyModulesLoop modules={scrollySectionRelation?.scrollyContentModules?.modules} />

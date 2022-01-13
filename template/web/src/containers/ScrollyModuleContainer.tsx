@@ -16,8 +16,6 @@ const ModuleContainer: FC<ModuleContainerProps> = (props) => {
 
   useEffect(() => {
     if (scrollOptions?.flow === 'pinned') {
-      console.log(scrollOptions)
-
       const startTrigger =
         Number.isFinite(scrollOptions?.pinnedOffset) &&
         `top${scrollOptions?.pinnedOffset < 0 ? '-' : '+'}=${Math.abs(scrollOptions?.pinnedOffset)}`
@@ -25,7 +23,7 @@ const ModuleContainer: FC<ModuleContainerProps> = (props) => {
       ScrollTrigger.create({
         trigger: document.querySelector(`#a${anchor}`),
         start: `${startTrigger || 'top'} center`,
-        markers: true,
+        markers: false,
         end: `top+=${scrollOptions.pinnedDistance} center`,
         pin: true,
         pinSpacing: scrollOptions.pinSpacing
