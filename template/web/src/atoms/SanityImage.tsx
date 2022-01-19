@@ -28,6 +28,7 @@ interface Props
     ShadowProps,
     LayoutProps {
   image: any
+  loading: string
 }
 
 const IMG = styled(SImage)<Props>(compose(space, layout, position, border, shadow, flexbox), {
@@ -36,7 +37,9 @@ const IMG = styled(SImage)<Props>(compose(space, layout, position, border, shado
   objectFit: 'cover'
 })
 
-const SanityImage: FC<Props> = ({ image }) => <IMG {...image} width={4096} />
+const SanityImage: FC<Props> = ({ image, loading }) => (
+  <IMG {...image} width={4096} loading={loading} />
+)
 
 export default SanityImage
 

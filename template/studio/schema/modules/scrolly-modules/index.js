@@ -10,6 +10,7 @@ export default {
       of: [
         { type: 'scrollyModuleRichText' },
         { type: 'scrollyModuleImage' },
+        { type: 'scrollyModuleVideoEmbed' },
         { type: 'scrollyModuleSpacer' },
         { type: 'moduleScrollySection' },
       ],

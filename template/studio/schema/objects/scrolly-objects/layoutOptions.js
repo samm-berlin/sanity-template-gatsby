@@ -15,5 +15,11 @@ export default {
         ],
       },
     },
+    {
+      title: 'Height',
+      name: 'height',
+      type: 'number',
+      validation: Rule => Rule.min(0).max(100)
+    }
   ],
 }

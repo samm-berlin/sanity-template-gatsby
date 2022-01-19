@@ -42,40 +42,20 @@ const ScrollySectionBackground: FC<ScrollySectionsBackgroundProps> = (props) => 
     children
   } = props
 
-  const videoRef = useRef(null)
+  const videoRef = useRef<React.LegacyRef<ReactPlayer>>(null)
 
   const [playing, setPlaying] = useState(autoplay)
 
   const width = aspectRatio.x / aspectRatio.y
   const height = aspectRatio.y / aspectRatio.x
 
-  useEffect(() => {
-    console.log(document?.querySelector(`.s${sectionID}`)?.offsetHeight)
-    const st = ScrollTrigger.create({
-      trigger: videoRef?.current?.wrapper,
-      start: 'bottom bottom',
-      end: () => `${document?.querySelector(`.s${sectionID}`)?.offsetHeight} bottom`,
-      markers: true,
-      onToggle: (self) => {
-        console.log(self, playing, videoRef.current.wrapper.style.opacity)
-        setPlaying(!playing)
-        if (videoRef.current.wrapper.style.opacity === '1')
-          videoRef.current.wrapper.style.opacity = 0
-        else videoRef.current.wrapper.style.opacity = 1
-      },
-      onUpdate: (self) => {
-        console.log(self.progress)
-      }, // scrub
-      pin: true,
-      pinSpacing: true
-    })
-    return () => {
-      st.kill()
-    }
-  }, [])
+  // pinned --> distance
+  // pinned --> section
+
+  useEffect(() => {}, [])
 
   return (
-    <Box width="100%" height="100vh">
+    <Box width="100%" height="100vh" className="test1234">
       {video?.url && (
         <ReactPlayer
           ref={videoRef}
@@ -90,7 +70,7 @@ const ScrollySectionBackground: FC<ScrollySectionsBackgroundProps> = (props) => 
           height="100%"
           style={{
             objectFit: 'cover',
-            opacity: '0'
+            opacity: '1'
           }}
         >
           {children}
@@ -103,7 +83,7 @@ const ScrollySectionBackground: FC<ScrollySectionsBackgroundProps> = (props) => 
 export default ScrollySectionBackground
 
 export const query = graphql`
-  fragment moduleVideoEmbedData on SanityModuleVideoEmbed {
+  fragment scrollyModuleVideoEmbedData on SanityScrollyModuleVideoEmbed {
     _key
     _type
     autoplay

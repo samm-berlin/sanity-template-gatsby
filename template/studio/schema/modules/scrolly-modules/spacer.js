@@ -7,16 +7,17 @@ export default {
   ],
   fields: [
     {
-      title: 'Module Options',
-      type: 'scrollyModuleDefaultFields',
-      name: 'options',
-      fieldset: 'options'
-    },
-    {
       name: 'height',
       description: 'in % of screen height',
       type: 'number'
-    }
+    },
+    {
+      title: 'Module Options',
+      type: 'scrollyModuleDefaultFields',
+      name: 'options',
+      fieldset: 'options',
+      hidden: true
+    },
   ],
 
   preview: {
