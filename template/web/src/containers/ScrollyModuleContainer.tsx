@@ -38,10 +38,10 @@ const ModuleContainer: FC<ModuleContainerProps> = (props) => {
   return (
     <Box
       id={`a${anchor}`}
-      height={'100%'}
       display="flex"
       flexDirection="column"
       alignItems={layoutOptions?.alignment || 'center'}
+      height={layoutOptions?.height ? `${layoutOptions.height}vh` : undefined}
     >
       {children}
     </Box>

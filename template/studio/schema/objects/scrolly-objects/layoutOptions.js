@@ -15,5 +15,12 @@ export default {
         ],
       },
     },
+    {
+      title: 'Height',
+      name: 'height',
+      type: 'number',
+      description: 'Height in % of viewport height.',
+      validation: Rule => Rule.min(0).max(100)
+    }
   ],
 }
