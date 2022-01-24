@@ -60,7 +60,12 @@ const serializers = {
 }
 
 const RichTextModule: FC<any> = ({ text }) => (
-  <Box m={5} maxWidth={'33vw'} style={{ textAlign: text.alignment || 'justify' }}>
+  <Box
+    m={5}
+    maxWidth={'33vw'}
+    style={{ textAlign: text.alignment || 'justify' }}
+    position="relative"
+  >
     <BlockContent blocks={text.textRaw} serializers={serializers} />
   </Box>
 )

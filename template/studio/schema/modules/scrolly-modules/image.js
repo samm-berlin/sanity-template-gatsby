@@ -9,6 +9,7 @@ export default {
       type: 'scrollyModuleDefaultFields',
       name: 'options',
       fieldset: 'options',
+      hidden: ({document, parent}) => parent._key === document.backgroundOptions?.backgroundModule?.modules[0]?._key
     },
     {
       name: 'image',
