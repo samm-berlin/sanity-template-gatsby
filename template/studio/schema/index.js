@@ -18,6 +18,7 @@ import scrollySection from './documents/scrollySection'
 
 import contentModules from './modules'
 import scrollyContentModules from './modules/scrolly-modules'
+import scrollyBackgroundContentModules from './modules/scrolly-modules/backgroundContentModules'
 import imageWithArtDirection from './objects/imageWithArtDirection'
 import link from './objects/link'
 import meta from './objects/meta'
@@ -37,6 +38,7 @@ import sectionBackgroundOptions from './objects/scrolly-objects/sectionBackgroun
 import scrollOptions from './objects/scrolly-objects/scrollOptions'
 import layoutOptions from './objects/scrolly-objects/layoutOptions'
 
+
 import imageModule from './modules/image'
 import heroModule from './modules/hero'
 import moduleListing from './modules/listing'
@@ -51,6 +53,7 @@ import scrollyModuleDefaultFields from './modules/scrolly-modules/_defaultFields
 import scrollyModuleRichText from './modules/scrolly-modules/richText'
 import scrollyModuleImage from './modules/scrolly-modules/image'
 import scrollyModuleSpacer from './modules/scrolly-modules/spacer'
+import scrollyModuleVideoEmbed from './modules/scrolly-modules/videoEmbed'
 
 
 export default createSchema({
@@ -114,6 +117,7 @@ export default createSchema({
 
     // objects
     scrollyContentModules,
+    scrollyBackgroundContentModules,
 
     sectionBackgroundOptions,
     scrollOptions,
@@ -126,5 +130,6 @@ export default createSchema({
     scrollyModuleRichText,
     scrollyModuleImage,
     scrollyModuleSpacer,
+    scrollyModuleVideoEmbed,
   ],
 })
