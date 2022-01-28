@@ -11,6 +11,7 @@ export default {
         { type: 'scrollyModuleRichText' },
         { type: 'scrollyModuleImage' },
         { type: 'scrollyModuleVideoEmbed' },
+        { type: 'scrollyModuleVideoUploaded' },
         { type: 'scrollyModuleSpacer' },
         { type: 'moduleScrollySection' },
       ],

@@ -25,6 +25,7 @@ import meta from './objects/meta'
 import richTextExtended from './objects/richTextExtended'
 import colorTheme from './objects/colorTheme'
 import videoEmbed from './objects/videoEmbed'
+import videoUploaded from './objects/videoUploaded'
 import activation from './objects/activation'
 import modulePadding from './objects/modulePadding'
 import aspectRatio from './objects/aspectRatio'
@@ -54,6 +55,7 @@ import scrollyModuleRichText from './modules/scrolly-modules/richText'
 import scrollyModuleImage from './modules/scrolly-modules/image'
 import scrollyModuleSpacer from './modules/scrolly-modules/spacer'
 import scrollyModuleVideoEmbed from './modules/scrolly-modules/videoEmbed'
+import scrollyModuleVideoUploaded from './modules/scrolly-modules/videoUploaded'
 
 
 export default createSchema({
@@ -87,6 +89,7 @@ export default createSchema({
     richTextExtended,
     colorTheme,
     videoEmbed,
+    videoUploaded,
     activation,
     modulePadding,
     aspectRatio,
@@ -131,5 +134,6 @@ export default createSchema({
     scrollyModuleImage,
     scrollyModuleSpacer,
     scrollyModuleVideoEmbed,
+    scrollyModuleVideoUploaded,
   ],
 })

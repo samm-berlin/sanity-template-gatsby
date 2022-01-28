@@ -8,7 +8,11 @@ export default {
       title: 'Module',
       type: 'array',
       validation: (Rule) => Rule.length(1),
-      of: [{ type: 'scrollyModuleImage' }, { type: 'scrollyModuleVideoEmbed' }],
+      of: [
+        { type: 'scrollyModuleImage' },
+        { type: 'scrollyModuleVideoEmbed' },
+        { type: 'scrollyModuleVideoUploaded' },
+      ],
       options: {
         editModal: 'modal',
       },

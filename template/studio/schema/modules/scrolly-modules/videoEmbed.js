@@ -1,7 +1,7 @@
 export default {
   type: 'object',
   name: 'scrollyModuleVideoEmbed',
-  title: 'Video module',
+  title: 'Embedded Video',
   fieldsets: [
     {
       name: 'settings',
