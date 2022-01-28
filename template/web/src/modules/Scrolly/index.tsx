@@ -11,7 +11,8 @@ import ScrollyModuleContainer from '@/containers/ScrollyModuleContainer'
 import RichText from './RichText'
 import SpacerModule from './Spacer'
 import ImageModule from './Image'
-import VideoModule from './VideoEmbed'
+import VideoEmbedModule from './VideoEmbed'
+import VideoUploadedModule from './VideoUploaded'
 import ScrollySectionModule from './ScrollySection'
 import Box from '@/atoms/Box'
 import { graphql } from 'gatsby'
@@ -19,7 +20,12 @@ import { graphql } from 'gatsby'
 const modulesMap = {
   scrollyModuleRichText: (props: SanityScrollyModuleRichText) => <RichText {...props} />,
   scrollyModuleImage: (props: SanityScrollyModuleImage) => <ImageModule {...props} />,
-  scrollyModuleVideoEmbed: (props: SanityScrollyModuleVideoEmbed) => <VideoModule {...props} />,
+  scrollyModuleVideoEmbed: (props: SanityScrollyModuleVideoEmbed) => (
+    <VideoEmbedModule {...props} />
+  ),
+  scrollyModuleVideoUploaded: (props: SanityScrollyModuleVideoUploaded) => (
+    <VideoUploadedModule {...props} />
+  ),
   scrollyModuleSpacer: (props: SanityScrollyModuleSpacer) => <SpacerModule {...props} />,
   moduleScrollySection: (props: SanityModuleScrollySection) => <ScrollySectionModule {...props} />,
   fragment: <div />
@@ -62,7 +68,7 @@ const ScrollyModuleLoop: FC<ScrollyModulesLoopProps> = (props) => {
 export default ScrollyModuleLoop
 
 export const query = graphql`
-  fragment ScrollyBackgroundContentModules on SanityScrollyModuleImageOrScrollyModuleVideoEmbed {
+  fragment ScrollyBackgroundContentModules on SanityScrollyModuleImageOrScrollyModuleVideoEmbedOrScrollyModuleVideoUploaded {
     ... on SanityScrollyModuleImage {
       _key
       _type
@@ -79,9 +85,18 @@ export const query = graphql`
         ...ScrollModuleOptions
       }
     }
+
+    ... on SanityScrollyModuleVideoUploaded {
+      _key
+      _type
+      ...scrollyModuleVideoUploadedData
+      options {
+        ...ScrollModuleOptions
+      }
+    }
   }
 
-  fragment ScrollyContentModules on SanityModuleScrollySectionOrScrollyModuleImageOrScrollyModuleRichTextOrScrollyModuleSpacerOrScrollyModuleVideoEmbed {
+  fragment ScrollyContentModules on SanityModuleScrollySectionOrScrollyModuleImageOrScrollyModuleRichTextOrScrollyModuleSpacerOrScrollyModuleVideoEmbedOrScrollyModuleVideoUploaded {
     ... on SanityScrollyModuleRichText {
       _key
       _type
@@ -104,6 +119,15 @@ export const query = graphql`
       _key
       _type
       ...scrollyModuleVideoEmbedData
+      options {
+        ...ScrollModuleOptions
+      }
+    }
+
+    ... on SanityScrollyModuleVideoUploaded {
+      _key
+      _type
+      ...scrollyModuleVideoUploadedData
       options {
         ...ScrollModuleOptions
       }
