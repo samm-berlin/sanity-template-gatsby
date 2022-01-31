@@ -55,13 +55,16 @@ export default {
       name: 'aspectRatio',
       type: 'aspectRatio',
       title: 'Aspect Ratio',
+      hidden: ({ document, parent }) =>
+        parent._key === document.backgroundOptions?.backgroundModule?.modules[0]?._key,
     },
     {
       name: 'muted',
       title: 'Muted',
-      description: 'Must be true if autoplay',
       type: 'boolean',
       fieldset: 'settings',
+      hidden: ({ document, parent }) =>
+        parent._key === document.backgroundOptions?.backgroundModule?.modules[0]?._key,
     },
     {
       name: 'controls',
@@ -76,43 +79,5 @@ export default {
       type: 'boolean',
       fieldset: 'settings',
     },
-    // {
-    //   name: 'preload',
-    //   title: 'Preload',
-    //   type: 'string',
-    //   fieldset: 'settings',
-    //   options: {
-    //     list: ['auto', 'none', 'metadata']
-    //   }
-    // },
-    {
-      name: 'autoplay',
-      title: 'Auto play',
-      type: 'boolean',
-      fieldset: 'settings',
-    },
-    // {
-    //   name: 'autoplay',
-    //   title: 'Auto play',
-    //   type: 'string',
-    //   fieldset: 'settings',
-    //   options: {
-    //     layout: 'radio',
-    //     list: [
-    //       {
-    //         title: 'None',
-    //         value: 'off'
-    //       },
-    //       {
-    //         title: 'Always',
-    //         value: 'on'
-    //       },
-    //       {
-    //         title: 'When in viewport',
-    //         value: 'viewport'
-    //       }
-    //     ]
-    //   }
-    // }
   ],
 }

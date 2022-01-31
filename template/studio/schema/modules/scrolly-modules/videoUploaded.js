@@ -15,6 +15,10 @@ export default {
     {
       name: 'settings',
       title: 'Settings',
+      hidden: ({ parent }) => {
+        console.log(parent)
+        return parent?.animations?.scrubbed
+      },
       options: {
         collapsible: true,
         collapsed: true,
@@ -46,23 +50,11 @@ export default {
         parent._key === document.backgroundOptions?.backgroundModule?.modules[0]?._key,
     },
     {
-      title: 'Animation Options',
-      name: 'animations',
-      type: 'object',
-      fieldset: 'options',
-      options: {
-        collapsible: true,
-        collapsed: true,
-      },
-      fields: [
-        {
-          title: 'Scrubbed',
-          name: 'scrubbed',
-          type: 'boolean',
-        },
-      ],
+      title: 'Scrubbed',
+      name: 'scrubbed',
+      type: 'boolean',
+      fieldset: 'animation'
     },
-
     {
       name: 'title',
       type: 'string',
@@ -89,6 +81,7 @@ export default {
       description: 'Must be true if autoplay',
       type: 'boolean',
       fieldset: 'settings',
+      hidden: ({ parent }) => parent?.animations?.scrubbed,
     },
     {
       name: 'controls',
@@ -96,50 +89,17 @@ export default {
       description: 'Show controls like play/pause etc',
       type: 'boolean',
       fieldset: 'settings',
+      hidden: ({ parent }) => parent?.animations?.scrubbed,
     },
     {
       name: 'loop',
       title: 'Loop',
       type: 'boolean',
       fieldset: 'settings',
+      hidden: ({ parent }) => {
+        console.log(parent)
+        return parent?.animations?.scrubbed
+      },
     },
-    // {
-    //   name: 'preload',
-    //   title: 'Preload',
-    //   type: 'string',
-    //   fieldset: 'settings',
-    //   options: {
-    //     list: ['auto', 'none', 'metadata']
-    //   }
-    // },
-    {
-      name: 'autoplay',
-      title: 'Auto play',
-      type: 'boolean',
-      fieldset: 'settings',
-    },
-    // {
-    //   name: 'autoplay',
-    //   title: 'Auto play',
-    //   type: 'string',
-    //   fieldset: 'settings',
-    //   options: {
-    //     layout: 'radio',
-    //     list: [
-    //       {
-    //         title: 'None',
-    //         value: 'off'
-    //       },
-    //       {
-    //         title: 'Always',
-    //         value: 'on'
-    //       },
-    //       {
-    //         title: 'When in viewport',
-    //         value: 'viewport'
-    //       }
-    //     ]
-    //   }
-    // }
   ],
 }
