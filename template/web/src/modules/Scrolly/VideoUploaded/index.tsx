@@ -60,15 +60,22 @@ const ScrollyVideoUploaded: FC<ScrollySectionsBackgroundProps> = (props) => {
     }
   }, [])
 
+  // TODO: Finish !
+
   useEffect(() => {
     if (!background) {
       if (scrubbed) {
         ScrollTrigger.create({
-          trigger: `#${anchor}`
-          start: ``
+          trigger: `#${anchor}`,
+          start: 'top top',
+          end: 'bottom bottom'
         })
       } else {
-
+        ScrollTrigger.create({
+          trigger: `#${anchor}`,
+          start: 'top top',
+          end: 'bottom bottom'
+        })
       }
     }
   }, [])

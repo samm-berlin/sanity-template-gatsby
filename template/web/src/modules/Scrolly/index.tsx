@@ -3,6 +3,7 @@ import {
   SanityScrollyModuleRichText,
   SanityScrollyModuleImage,
   SanityScrollyModuleVideoEmbed,
+  SanityScrollyModuleVideoUploaded,
   SanityScrollyModuleSpacer,
   SanityScrollyContentModules,
   SanityModuleScrollySection

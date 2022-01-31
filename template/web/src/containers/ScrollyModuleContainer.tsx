@@ -3,7 +3,6 @@ import Box from '@/atoms/Box'
 import { graphql } from 'gatsby'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-import { useWindowSize } from 'usehooks-ts'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -68,11 +67,10 @@ const ModuleContainer: FC<ModuleContainerProps> = (props) => {
       scrollTriggerOptions.pin = scrollOptions?.pinned || false
       scrollTriggerOptions.pinSpacing = false
       scrollTriggerOptions.markers = scrollOptions?.markers || false
-      scrollTriggerOptions.start = getStartPosition(scrollOptions.pinnedPosition)
-      scrollTriggerOptions.end = getEndPosition(
-        scrollOptions.pinnedDistance,
-        scrollOptions.pinnedPosition
-      )
+      scrollTriggerOptions.start = () => getStartPosition(scrollOptions.pinnedPosition)
+      scrollTriggerOptions.end = () =>
+        getEndPosition(scrollOptions.pinnedDistance, scrollOptions.pinnedPosition)
+      scrollTriggerOptions.id = `${anchor}-trigger`
     }
     if (scrollOptions?.fadeIn) {
       scrollTriggerOptions.toggleActions = 'play reverse play reverse'

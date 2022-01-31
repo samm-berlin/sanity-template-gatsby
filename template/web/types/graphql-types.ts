@@ -239,8 +239,6 @@ export type DirectoryCtimeArgs = {
 export type Site = Node & {
   buildTime?: Maybe<Scalars['Date']>;
   siteMetadata?: Maybe<SiteSiteMetadata>;
-  port?: Maybe<Scalars['Int']>;
-  host?: Maybe<Scalars['String']>;
   polyfill?: Maybe<Scalars['Boolean']>;
   pathPrefix?: Maybe<Scalars['String']>;
   jsxRuntime?: Maybe<Scalars['String']>;
@@ -1862,7 +1860,6 @@ export type SanityScrollyModuleVideoEmbed = {
   muted?: Maybe<Scalars['Boolean']>;
   controls?: Maybe<Scalars['Boolean']>;
   loop?: Maybe<Scalars['Boolean']>;
-  autoplay?: Maybe<Scalars['Boolean']>;
   _rawOptions?: Maybe<Scalars['JSON']>;
   _rawVideo?: Maybe<Scalars['JSON']>;
   _rawPosterFrame?: Maybe<Scalars['JSON']>;
@@ -1893,6 +1890,7 @@ export type SanityScrollyModuleVideoUploaded = {
   _key?: Maybe<Scalars['String']>;
   _type?: Maybe<Scalars['String']>;
   options?: Maybe<SanityScrollyModuleDefaultFields>;
+  scrubbed?: Maybe<Scalars['Boolean']>;
   title?: Maybe<Scalars['String']>;
   video?: Maybe<SanityVideoUploaded>;
   posterFrame?: Maybe<SanityImageField>;
@@ -1900,7 +1898,6 @@ export type SanityScrollyModuleVideoUploaded = {
   muted?: Maybe<Scalars['Boolean']>;
   controls?: Maybe<Scalars['Boolean']>;
   loop?: Maybe<Scalars['Boolean']>;
-  autoplay?: Maybe<Scalars['Boolean']>;
   _rawOptions?: Maybe<Scalars['JSON']>;
   _rawVideo?: Maybe<Scalars['JSON']>;
   _rawPosterFrame?: Maybe<Scalars['JSON']>;
@@ -2364,8 +2361,6 @@ export type QueryAllDirectoryArgs = {
 export type QuerySiteArgs = {
   buildTime?: InputMaybe<DateQueryOperatorInput>;
   siteMetadata?: InputMaybe<SiteSiteMetadataFilterInput>;
-  port?: InputMaybe<IntQueryOperatorInput>;
-  host?: InputMaybe<StringQueryOperatorInput>;
   polyfill?: InputMaybe<BooleanQueryOperatorInput>;
   pathPrefix?: InputMaybe<StringQueryOperatorInput>;
   jsxRuntime?: InputMaybe<StringQueryOperatorInput>;
@@ -3740,8 +3735,6 @@ export type SiteFieldsEnum =
   | 'siteMetadata___title'
   | 'siteMetadata___description'
   | 'siteMetadata___siteUrl'
-  | 'port'
-  | 'host'
   | 'polyfill'
   | 'pathPrefix'
   | 'jsxRuntime'
@@ -3876,8 +3869,6 @@ export type SiteGroupConnectionGroupArgs = {
 export type SiteFilterInput = {
   buildTime?: InputMaybe<DateQueryOperatorInput>;
   siteMetadata?: InputMaybe<SiteSiteMetadataFilterInput>;
-  port?: InputMaybe<IntQueryOperatorInput>;
-  host?: InputMaybe<StringQueryOperatorInput>;
   polyfill?: InputMaybe<BooleanQueryOperatorInput>;
   pathPrefix?: InputMaybe<StringQueryOperatorInput>;
   jsxRuntime?: InputMaybe<StringQueryOperatorInput>;
