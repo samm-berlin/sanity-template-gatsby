@@ -59,9 +59,13 @@ const serializers = {
   }
 }
 
+export const RichTextBlockContent: FC<any> = ({ text }) => (
+  <BlockContent blocks={text.textRaw} serializers={serializers} />
+)
+
 const RichTextModule: FC<any> = ({ text }) => (
   <Box style={{ textAlign: text.alignment }}>
-    <BlockContent blocks={text.textRaw} serializers={serializers} />
+    <RichTextBlockContent text={text} />
   </Box>
 )
 

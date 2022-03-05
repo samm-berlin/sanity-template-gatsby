@@ -7,7 +7,9 @@ import {
   SanityModuleMarquee,
   SanityModuleRichText,
   SanityModuleSpacer,
-  SanityModuleTwoColumn
+  SanityModuleTwoColumn,
+  SanityModuleHero,
+  SanityModuleScrollySection
 } from 'web/types/graphql-types'
 import Box from '@/atoms/Box'
 import ImageModule from '@/modules/Image'
@@ -18,6 +20,7 @@ import SpacerModule from './Spacer'
 import TwoColModule from './TwoColumns'
 import MarqueeModule from './Marquee'
 import HeroModule from './Hero'
+import ScrollySectionModule from './Scrolly/ScrollySection'
 
 const modulesMap = {
   moduleRichText: (props: SanityModuleRichText) => <RichText {...props} />,
@@ -27,6 +30,7 @@ const modulesMap = {
   moduleTwoColumn: (props: SanityModuleTwoColumn) => <TwoColModule {...props} />,
   moduleMarquee: (props: SanityModuleMarquee) => <MarqueeModule {...props} />,
   moduleHero: (props: SanityModuleHero) => <HeroModule {...props} />,
+  moduleScrollySection: (props: SanityModuleScrollySection) => <ScrollySectionModule {...props} />,
   fragment: <div />
 }
 
@@ -47,7 +51,7 @@ const ModuleLoop: FC<SanityContentModules> = ({ modules, ...props }) => (
 export default ModuleLoop
 
 export const query = graphql`
-  fragment ContentModules on SanityModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleRichTextOrModuleSpacerOrModuleTwoColumnOrModuleVideoEmbed {
+  fragment ContentModules on SanityModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleTwoColumnOrModuleVideoEmbed {
     ... on SanityModuleRichText {
       _key
       _type
@@ -99,9 +103,18 @@ export const query = graphql`
     }
   }
 
+  fragment ScrollyContentModule on SanityModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleTwoColumnOrModuleVideoEmbed {
+    ... on SanityModuleScrollySection {
+      _key
+      _type
+      ...moduleScrollySection
+    }
+  }
+
   fragment contentModulesData on SanityContentModules {
     modules {
       ...ContentModules
+      ...ScrollyContentModule
       ... on SanityModuleTwoColumn {
         _key
         _type

@@ -3,12 +3,14 @@ import { graphql } from 'gatsby'
 import { SanityModuleSpacer } from 'web/types/graphql-types'
 import Box from '@/atoms/Box'
 
-const SpacerModule: FC<SanityModuleSpacer> = ({ height }) => <Box height={`${height}vh`}></Box>
+const SpacerModule: FC<SanityModuleSpacer> = ({ height }) => (
+  <Box position="relative" height={`${height}vh`}></Box>
+)
 
 export default SpacerModule
 
 export const query = graphql`
-  fragment moduleSpacerData on SanityModuleSpacer {
+  fragment scrollyModuleSpacerData on SanityScrollyModuleSpacer {
     height
   }
 `

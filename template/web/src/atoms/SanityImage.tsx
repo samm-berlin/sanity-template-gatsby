@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import {
   compose,
+  system,
   space,
   layout,
   position,
@@ -28,15 +29,24 @@ interface Props
     ShadowProps,
     LayoutProps {
   image: any
+  loading: string
+  objectFit?: string
 }
 
-const IMG = styled(SImage)<Props>(compose(space, layout, position, border, shadow, flexbox), {
-  width: '100%',
-  height: '100%',
-  objectFit: 'cover'
-})
+const IMG = styled(SImage)<Props>(
+  compose(space, layout, position, border, shadow, flexbox),
+  {
+    width: '100%',
+    height: '100%'
+  },
+  system({
+    objectFit: true
+  })
+)
 
-const SanityImage: FC<Props> = ({ image }) => <IMG {...image} width={4096} />
+const SanityImage: FC<Props> = ({ image, loading, objectFit }) => (
+  <IMG {...image} width={4096} loading={loading} objectFit={objectFit || 'cover'} />
+)
 
 export default SanityImage
 

@@ -70,6 +70,8 @@ export default VideoEmbedModule
 
 export const query = graphql`
   fragment moduleVideoEmbedData on SanityModuleVideoEmbed {
+    _key
+    _type
     autoplay
     controls
     loop
