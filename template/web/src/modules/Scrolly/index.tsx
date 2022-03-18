@@ -45,8 +45,8 @@ const ScrollyModuleLoop: FC<ScrollyModulesLoopProps> = (props) => {
         if (module?._type) {
           return (
             <ScrollyModuleContainer
-              scrollOptions={module.options?.scrollOptions}
-              layoutOptions={module.options?.layoutOptions}
+              scrollOptions={module.options.scrollOptions}
+              layoutOptions={module.options.layoutOptions}
               anchor={`a${module._key}` || undefined}
               sectionID={sectionID}
               background={module.background}
