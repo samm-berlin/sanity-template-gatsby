@@ -7,11 +7,11 @@ import {PreviewsStructure, previewUrl} from '../Preview'
 const resolvePreviewUrl = async document => {
   const siteSettings = await sanityClient.fetch(
     '*[_type == "siteSettingsNavigation"] { "frontpageId": frontpage->_id }'
-  )
+    )
 
-  const {frontpageId} = siteSettings[0]
+    const {frontpageId} = siteSettings[0]
 
-  return document._id === frontpageId
+  return document._id.includes(frontpageId)
     ? previewUrl
     : `${previewUrl}/${document.slug.current}`
 }
