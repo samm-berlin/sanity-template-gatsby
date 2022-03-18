@@ -19,23 +19,22 @@ export default {
       title: 'Alignment',
       options: {
         collapsible: true,
-        collapsed: true
-      }
-    }
+        collapsed: true,
+      },
+    },
   ],
   fields: [
     {
       title: 'Alignment',
       name: 'alignment',
       type: 'string',
-      fieldset: 'alignment',
       options: {
         list: [
-          {title: 'Left', value: 'left'},
-          {title: 'Right', value: 'right'},
-          {title: 'Center', value: 'center'}
-        ]
-      }
+          { title: 'Left', value: 'left' },
+          { title: 'Right', value: 'right' },
+          { title: 'Center', value: 'center' },
+        ],
+      },
     },
     {
       name: 'text',
@@ -49,72 +48,75 @@ export default {
               title: 'Normal',
               value: 'normal',
               blockEditor: {
-                render: props => StyledBlock(props, 'normal')
-              }
+                render: (props) => StyledBlock(props, 'normal'),
+              },
             },
             {
               title: 'Heading 1',
               value: 'h1',
               blockEditor: {
-                render: props => StyledBlock(props, 'head')
-              }
+                render: (props) => StyledBlock(props, 'head'),
+              },
             },
             {
               title: 'Heading 2',
               value: 'h2',
               blockEditor: {
-                render: props => StyledBlock(props, 'head')
-              }
+                render: (props) => StyledBlock(props, 'head'),
+              },
             },
             {
               title: 'Heading 3',
               value: 'h3',
               blockEditor: {
-                render: props => StyledBlock(props, 'subhead')
-              }
+                render: (props) => StyledBlock(props, 'subhead'),
+              },
             },
             {
               title: 'Heading 4',
               value: 'h4',
               blockEditor: {
-                render: props => StyledBlock(props, 'subhead')
-              }
+                render: (props) => StyledBlock(props, 'subhead'),
+              },
             },
             {
               title: 'Caption',
               value: 'caption',
               blockEditor: {
-                render: props => StyledBlock(props, 'caption')
-              }
-            }
+                render: (props) => StyledBlock(props, 'caption'),
+              },
+            },
           ],
           lists: [
-            {title: 'Bullets', value: 'bullet'},
-            {title: 'Numbered', value: 'number'}
+            { title: 'Bullets', value: 'bullet' },
+            { title: 'Numbered', value: 'number' },
           ],
           marks: {
             decorators: [
-              {title: 'Strong', value: 'strong'},
-              {title: 'Emphasis', value: 'em'}
+              { title: 'Strong', value: 'strong' },
+              { title: 'Emphasis', value: 'em' },
             ],
             annotations: [
-              {name: 'link', title: 'Link', type: 'link'},
+              { name: 'link', title: 'Link', type: 'link' },
               {
                 name: 'colorSanity',
                 title: 'Color',
                 type: 'color',
                 blockEditor: {
                   icon: IoIosColorPalette,
-                  render: props => <span style={{color: props.hex}}>{props.children}</span>
-                }
-              }
-            ]
-          }
+                  render: (props) => <span style={{ color: props.hex }}>{props.children}</span>,
+                },
+              },
+            ],
+          },
         },
         {
-          type: 'button'
-        }
-      ]
-    }
-  ]
+          type: 'button',
+        },
+      ],
+    },
+  ],
+  initialValue: {
+    alignment: 'left',
+  },
 }

@@ -4,8 +4,8 @@ export default {
   type: 'object',
   fields: [
     {
-      title: 'Alignment',
-      name: 'alignment',
+      title: 'Horizontal Position',
+      name: 'horizontalPosition',
       type: 'string',
       options: {
         list: [
@@ -16,11 +16,27 @@ export default {
       },
     },
     {
-      title: 'Height',
+      title: 'Height (optional)',
       name: 'height',
       type: 'number',
-      description: 'Height in % of viewport height.',
-      validation: Rule => Rule.min(0).max(100)
-    }
+      description: 'Height in % of viewport height. If empty, module has height of content.',
+      validation: (Rule) => Rule.min(0).max(100),
+    },
+    {
+      title: 'Width',
+      name: 'width',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Narrow', value: 'narrow' },
+          { title: 'Regular', value: 'regular' },
+          { title: 'Wide', value: 'wide' },
+        ],
+      },
+    },
   ],
+  initialValue: {
+    horizontalPosition: 'center',
+    width: 'regular',
+  },
 }
