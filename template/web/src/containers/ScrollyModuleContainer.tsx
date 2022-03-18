@@ -3,32 +3,12 @@ import Box from '@/atoms/Box'
 import { graphql } from 'gatsby'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+import { moduleWidth } from '@/styles/theme'
+import { ScrollyModuleDefaultFields } from 'web/types/custom-graphql-types'
 
 gsap.registerPlugin(ScrollTrigger)
 
-type SanityScrollOptions = {
-  _key?: string
-  _type?: string
-  flow?: 'regular' | 'pinned'
-  pinnedDistance?: number
-  pinnedOffset?: number
-  pinSpacing?: boolean
-}
-
-type SanityScrollyModuleDefaultFields = {
-  _key?: string
-  _type?: string
-  scrollOptions?: SanityScrollOptions
-  layoutOptions?: SanityLayoutOptions
-}
-
-type SanityLayoutOptions = {
-  _key?: string
-  _type?: string
-  alignment?: string
-}
-
-interface ModuleContainerProps extends SanityScrollyModuleDefaultFields {
+interface ModuleContainerProps extends ScrollyModuleDefaultFields {
   anchor?: string
   sectionID?: string
   background?: boolean
@@ -101,12 +81,14 @@ const ModuleContainer: FC<ModuleContainerProps> = (props) => {
       className="scrollyContainer"
       display="flex"
       flexDirection="column"
-      alignItems={layoutOptions?.alignment || 'center'}
+      alignItems={layoutOptions?.horizontalPosition || 'center'}
       justifyContent={layoutOptions?.height && 'center'}
       style={scrollOptions?.fadeIn ? { opacity: 0 } : undefined}
       height={layoutOptions?.height ? `${layoutOptions.height}vh` : undefined}
     >
-      {children}
+      <Box width={layoutOptions?.width && `${moduleWidth[layoutOptions.width] * 100}%`}>
+        {children}
+      </Box>
     </Box>
   )
 }
@@ -124,8 +106,9 @@ export const query = graphql`
       markers
     }
     layoutOptions {
-      alignment
+      horizontalPosition
       height
+      width
     }
   }
 `
