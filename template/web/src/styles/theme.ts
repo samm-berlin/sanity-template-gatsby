@@ -12,9 +12,9 @@ export default {
     background: 'rgba(1,1,1,0)'
   },
   fonts: {
-    sans: '\'Archivo\', sans-serif',
-    serif: '\'EB Garamond\', serif',
-    mono: '\'Nanum Gothic Coding\', monospace'
+    sans: "'Archivo', sans-serif",
+    serif: "'EB Garamond', serif",
+    mono: "'Nanum Gothic Coding', monospace"
   },
   buttons: {
     primary: {
@@ -72,4 +72,10 @@ export const brandTheme = {
     brand: '#000e1a',
     text: '#f3f3f3'
   }
+}
+
+export const moduleWidth = {
+  narrow: 4 / 12,
+  regular: 6 / 12,
+  wide: 8 / 12
 }
