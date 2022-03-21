@@ -6,7 +6,7 @@ import CodeIcon from 'part:@sanity/base/format-code-icon';
 import Iframe from './Iframe';
 import Json from './Json';
 
-export const previewUrl = 'https://nr2154-preview.herokuapp.com';
+export const previewUrl = 'https://preview-sanitytemplategatsbymain.gtsb.io';
 
 export const PreviewsStructure = (urlResolver, forceSlug = true) => [
   S.view.form().icon(EditIcon),

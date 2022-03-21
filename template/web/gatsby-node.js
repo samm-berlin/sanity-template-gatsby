@@ -75,7 +75,7 @@ exports.createPages = async (apiProps) => {
     apiProps
   )
 
-  const frontpageId = siteSettings.frontpage.id
+  const frontpageId = siteSettings?.frontpage?.id
 
   // pages
   const pages = createType(
