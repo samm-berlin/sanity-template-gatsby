@@ -13,6 +13,7 @@ export default {
         { type: 'scrollyModuleVideoEmbed' },
         { type: 'scrollyModuleVideoUploaded' },
         { type: 'scrollyModuleSpacer' },
+        { type: 'scrollyModuleMuxVideo' },
         { type: 'moduleScrollySection' },
       ],
       options: {
