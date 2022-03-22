@@ -14,9 +14,11 @@ import SpacerModule from './Spacer'
 import ImageModule from './Image'
 import VideoEmbedModule from './VideoEmbed'
 import VideoUploadedModule from './VideoUploaded'
+import MuxVideoModule from './MuxVideo'
 import ScrollySectionModule from './ScrollySection'
 import Box from '@/atoms/Box'
 import { graphql } from 'gatsby'
+import { ScrollyModuleMuxVideo } from 'web/types/custom-graphql-types'
 
 const modulesMap = {
   scrollyModuleRichText: (props: SanityScrollyModuleRichText) => <RichText {...props} />,
@@ -27,6 +29,7 @@ const modulesMap = {
   scrollyModuleVideoUploaded: (props: SanityScrollyModuleVideoUploaded) => (
     <VideoUploadedModule {...props} />
   ),
+  scrollyModuleMuxVideo: (props: ScrollyModuleMuxVideo) => <MuxVideoModule {...props} />,
   scrollyModuleSpacer: (props: SanityScrollyModuleSpacer) => <SpacerModule {...props} />,
   moduleScrollySection: (props: SanityModuleScrollySection) => <ScrollySectionModule {...props} />,
   fragment: <div />
@@ -45,8 +48,8 @@ const ScrollyModuleLoop: FC<ScrollyModulesLoopProps> = (props) => {
         if (module?._type) {
           return (
             <ScrollyModuleContainer
-              scrollOptions={module.options.scrollOptions}
-              layoutOptions={module.options.layoutOptions}
+              scrollOptions={module.options?.scrollOptions}
+              layoutOptions={module.options?.layoutOptions}
               anchor={`a${module._key}` || undefined}
               sectionID={sectionID}
               background={module.background}
@@ -69,7 +72,7 @@ const ScrollyModuleLoop: FC<ScrollyModulesLoopProps> = (props) => {
 export default ScrollyModuleLoop
 
 export const query = graphql`
-  fragment ScrollyBackgroundContentModules on SanityScrollyModuleImageOrScrollyModuleVideoEmbedOrScrollyModuleVideoUploaded {
+  fragment ScrollyBackgroundContentModules on SanityScrollyModuleImageOrScrollyModuleMuxVideoOrScrollyModuleVideoEmbedOrScrollyModuleVideoUploaded {
     ... on SanityScrollyModuleImage {
       _key
       _type
@@ -95,9 +98,17 @@ export const query = graphql`
         ...ScrollModuleOptions
       }
     }
+    ... on SanityScrollyModuleMuxVideo {
+      _key
+      _type
+      ...scrollyModuleVideoData
+      options {
+        ...ScrollModuleOptions
+      }
+    }
   }
 
-  fragment ScrollyContentModules on SanityModuleScrollySectionOrScrollyModuleImageOrScrollyModuleRichTextOrScrollyModuleSpacerOrScrollyModuleVideoEmbedOrScrollyModuleVideoUploaded {
+  fragment ScrollyContentModules on SanityModuleScrollySectionOrScrollyModuleImageOrScrollyModuleMuxVideoOrScrollyModuleRichTextOrScrollyModuleSpacerOrScrollyModuleVideoEmbedOrScrollyModuleVideoUploaded {
     ... on SanityScrollyModuleRichText {
       _key
       _type
@@ -129,6 +140,15 @@ export const query = graphql`
       _key
       _type
       ...scrollyModuleVideoUploadedData
+      options {
+        ...ScrollModuleOptions
+      }
+    }
+
+    ... on SanityScrollyModuleMuxVideo {
+      _key
+      _type
+      ...scrollyModuleVideoData
       options {
         ...ScrollModuleOptions
       }

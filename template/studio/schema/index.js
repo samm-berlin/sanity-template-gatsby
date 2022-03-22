@@ -56,6 +56,7 @@ import scrollyModuleImage from './modules/scrolly-modules/image'
 import scrollyModuleSpacer from './modules/scrolly-modules/spacer'
 import scrollyModuleVideoEmbed from './modules/scrolly-modules/videoEmbed'
 import scrollyModuleVideoUploaded from './modules/scrolly-modules/videoUploaded'
+import scrollyModulesMuxVideo from './modules/scrolly-modules/muxVideo'
 
 
 export default createSchema({
@@ -77,7 +78,6 @@ export default createSchema({
     postCategory,
     product,
     productCategory,
-
     // fields
     imageField,
 
@@ -135,5 +135,6 @@ export default createSchema({
     scrollyModuleSpacer,
     scrollyModuleVideoEmbed,
     scrollyModuleVideoUploaded,
+    scrollyModulesMuxVideo,
   ],
 })

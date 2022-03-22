@@ -12,6 +12,7 @@ export default {
         { type: 'scrollyModuleImage' },
         { type: 'scrollyModuleVideoEmbed' },
         { type: 'scrollyModuleVideoUploaded' },
+        { type: 'scrollyModuleMuxVideo'}
       ],
       options: {
         editModal: 'modal',
