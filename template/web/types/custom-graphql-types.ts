@@ -30,13 +30,13 @@ export type LayoutOptions = {
 // Video
 
 export type MuxVideoAsset = {
-  _key: string
+  _key: string | null
   _type: string
   status: string
   assetId: string
   playbackId: string
-  filename: string
-  thumbTime: number
+  filename: string | null
+  thumbTime: number | null
 }
 
 export type MuxVideo = {
@@ -58,8 +58,8 @@ export type ScrollyModuleMuxVideo = {
   options: ScrollyModuleDefaultFields
   video: MuxVideo
   aspectRatio: AspectRatio
-  autoplay: boolean
-  muted: boolean
-  controls: boolean
-  loop: boolean
+  autoplay: boolean | null
+  muted: boolean | null
+  controls: boolean | null
+  loop: boolean | null
 }
