@@ -14,6 +14,7 @@ import SpacerModule from './Spacer'
 import ImageModule from './Image'
 import VideoEmbedModule from './VideoEmbed'
 import VideoUploadedModule from './VideoUploaded'
+import MuxVideoModule, { ScrollyModuleMuxVideo } from './MuxVideo'
 import ScrollySectionModule from './ScrollySection'
 import Box from '@/atoms/Box'
 import { graphql } from 'gatsby'
@@ -27,6 +28,7 @@ const modulesMap = {
   scrollyModuleVideoUploaded: (props: SanityScrollyModuleVideoUploaded) => (
     <VideoUploadedModule {...props} />
   ),
+  scrollyModuleMuxVideo: (props: ScrollyModuleMuxVideo) => <MuxVideoModule {...props} />,
   scrollyModuleSpacer: (props: SanityScrollyModuleSpacer) => <SpacerModule {...props} />,
   moduleScrollySection: (props: SanityModuleScrollySection) => <ScrollySectionModule {...props} />,
   fragment: <div />
@@ -45,8 +47,8 @@ const ScrollyModuleLoop: FC<ScrollyModulesLoopProps> = (props) => {
         if (module?._type) {
           return (
             <ScrollyModuleContainer
-              scrollOptions={module.options.scrollOptions}
-              layoutOptions={module.options.layoutOptions}
+              scrollOptions={module.options?.scrollOptions}
+              layoutOptions={module.options?.layoutOptions}
               anchor={`a${module._key}` || undefined}
               sectionID={sectionID}
               background={module.background}
@@ -97,7 +99,7 @@ export const query = graphql`
     }
   }
 
-  fragment ScrollyContentModules on SanityModuleScrollySectionOrScrollyModuleImageOrScrollyModuleRichTextOrScrollyModuleSpacerOrScrollyModuleVideoEmbedOrScrollyModuleVideoUploaded {
+  fragment ScrollyContentModules on SanityModuleScrollySectionOrScrollyModuleImageOrScrollyModuleMuxVideoOrScrollyModuleRichTextOrScrollyModuleSpacerOrScrollyModuleVideoEmbedOrScrollyModuleVideoUploaded {
     ... on SanityScrollyModuleRichText {
       _key
       _type
@@ -129,6 +131,15 @@ export const query = graphql`
       _key
       _type
       ...scrollyModuleVideoUploadedData
+      options {
+        ...ScrollModuleOptions
+      }
+    }
+
+    ... on SanityScrollyModuleMuxVideo {
+      _key
+      _type
+      ...scrollyModuleVideoData
       options {
         ...ScrollModuleOptions
       }
