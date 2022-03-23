@@ -21,6 +21,7 @@ import TwoColModule from './TwoColumns'
 import MarqueeModule from './Marquee'
 import HeroModule from './Hero'
 import ScrollySectionModule from './Scrolly/ScrollySection'
+import TwoTextColumnsModule, { ModuleTwoTextColumns } from './TwoTextColumns'
 
 const modulesMap = {
   moduleRichText: (props: SanityModuleRichText) => <RichText {...props} />,
@@ -28,6 +29,7 @@ const modulesMap = {
   moduleVideoEmbed: (props: VideoEmbedModuleProps) => <VideoEmbedModule {...props} />,
   moduleSpacer: (props: SanityModuleSpacer) => <SpacerModule {...props} />,
   moduleTwoColumn: (props: SanityModuleTwoColumn) => <TwoColModule {...props} />,
+  moduleTwoTextColumns: (props: ModuleTwoTextColumns) => <TwoTextColumnsModule {...props} />,
   moduleMarquee: (props: SanityModuleMarquee) => <MarqueeModule {...props} />,
   moduleHero: (props: SanityModuleHero) => <HeroModule {...props} />,
   moduleScrollySection: (props: SanityModuleScrollySection) => <ScrollySectionModule {...props} />,
@@ -51,11 +53,19 @@ const ModuleLoop: FC<SanityContentModules> = ({ modules, ...props }) => (
 export default ModuleLoop
 
 export const query = graphql`
-  fragment ContentModules on SanityModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleTwoColumnOrModuleVideoEmbed {
+  fragment ContentModules on SanityModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleTwoColumnOrModuleTwoTextColumnsOrModuleVideoEmbed {
     ... on SanityModuleRichText {
       _key
       _type
       ...moduleRichTextData
+      options {
+        ...ModuleOptions
+      }
+    }
+    ... on SanityModuleTwoTextColumns {
+      _key
+      _type
+      ...moduleTwoTextColumnsData
       options {
         ...ModuleOptions
       }
@@ -92,7 +102,6 @@ export const query = graphql`
         ...ModuleOptions
       }
     }
-
     ... on SanityModuleHero {
       _key
       _type
@@ -103,7 +112,7 @@ export const query = graphql`
     }
   }
 
-  fragment ScrollyContentModule on SanityModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleTwoColumnOrModuleVideoEmbed {
+  fragment ScrollyContentModule on SanityModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleTwoColumnOrModuleTwoTextColumnsOrModuleVideoEmbed {
     ... on SanityModuleScrollySection {
       _key
       _type
