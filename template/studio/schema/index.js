@@ -53,6 +53,7 @@ import moduleScrollySection from './modules/scrollySection'
 import scrollyModuleDefaultFields from './modules/scrolly-modules/_defaultFields'
 import scrollyModuleRichText from './modules/scrolly-modules/richText'
 import scrollyModuleImage from './modules/scrolly-modules/image'
+import scrollyModuleMultiImages from './modules/scrolly-modules/multiImages'
 import scrollyModuleSpacer from './modules/scrolly-modules/spacer'
 import scrollyModuleVideoEmbed from './modules/scrolly-modules/videoEmbed'
 import scrollyModuleVideoUploaded from './modules/scrolly-modules/videoUploaded'
@@ -132,6 +133,7 @@ export default createSchema({
     scrollyModuleDefaultFields,
     scrollyModuleRichText,
     scrollyModuleImage,
+    scrollyModuleMultiImages,
     scrollyModuleSpacer,
     scrollyModuleVideoEmbed,
     scrollyModuleVideoUploaded,

@@ -10,6 +10,7 @@ export default {
       validation: (Rule) => Rule.length(1),
       of: [
         { type: 'scrollyModuleImage' },
+        { type: 'scrollyModuleMultiImages' },
         { type: 'scrollyModuleVideoEmbed' },
         { type: 'scrollyModuleVideoUploaded' },
       ],
