@@ -5,15 +5,4 @@ export default {
   options: {
     hotspot: true
   },
-  fields: [
-    {
-      name: 'alt',
-      title: 'Alternative text (for screen readers & SEO)',
-      type: 'string',
-      options: {
-        isHighlighted: true,
-        validation: Rule => Rule.required()
-      }
-    }
-  ]
 }
