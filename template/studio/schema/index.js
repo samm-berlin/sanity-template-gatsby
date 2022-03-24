@@ -17,6 +17,7 @@ import productCategory from './documents/products/productCategory'
 import news from './documents/news'
 import newsCategory from './documents/news/newsCategory'
 import tag from './documents/tag'
+import jobs from './documents/jobs'
 import scrollySection from './documents/scrollySection'
 
 import contentModules from './modules'
@@ -83,6 +84,7 @@ export default createSchema({
     news,
     newsCategory,
     tag,
+    jobs,
 
     // fields
     imageField,
