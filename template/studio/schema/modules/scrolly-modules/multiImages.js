@@ -24,10 +24,10 @@ export default {
       type: 'string',
       options: {
         list: [
-          { title: 'Scroll Horizontal', value: 0 },
-          { title: 'Scroll Vertical', value: 1 },
-          { title: 'Fade', value: 2 },
-          { title: 'Before / After', value: 3 },
+          { title: 'Scroll Horizontal', value: 'scrollHorizontal' },
+          { title: 'Scroll Vertical', value: 'scrollVertical' },
+          { title: 'Fade', value: 'fade' },
+          { title: 'Before / After', value: 'beforeAfter' },
         ],
       },
       validation: (Rule) => Rule.required(),
