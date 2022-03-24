@@ -4,6 +4,7 @@ import pages from './pages'
 import posts from './posts'
 import products from './products'
 import siteSettings from './siteSettings'
+import news from './news'
 
 const hiddenDocs = [
   'page',
@@ -11,6 +12,8 @@ const hiddenDocs = [
   'product',
   'postCategory',
   'productCategory',
+  'news',
+  'newsCategory',
   // 'tag',
   'siteSettingsCookies',
   'siteSettingsMeta',
@@ -38,6 +41,7 @@ export default () =>
       pages,
       posts,
       products,
+      news,
       ...S.documentTypeListItems().filter(hiddenDocTypes),
 
       S.divider(),

@@ -14,6 +14,8 @@ import post from './documents/posts'
 import postCategory from './documents/posts/postCategory'
 import product from './documents/products'
 import productCategory from './documents/products/productCategory'
+import news from './documents/news'
+import newsCategory from './documents/news/newsCategory'
 import scrollySection from './documents/scrollySection'
 
 import contentModules from './modules'
@@ -77,6 +79,8 @@ export default createSchema({
     postCategory,
     product,
     productCategory,
+    news,
+    newsCategory,
 
     // fields
     imageField,
