@@ -75,14 +75,17 @@ const ModuleContainer: FC<ModuleContainerProps> = (props) => {
     }
   }, [])
 
+  const alignItems = background ? undefined : layoutOptions?.horizontalPosition || 'center'
+  const justifyContent = background ? undefined : layoutOptions?.height && 'center'
+
   return (
     <Box
       id={`${anchor}`}
       className="scrollyContainer"
       display="flex"
       flexDirection="column"
-      alignItems={layoutOptions?.horizontalPosition || 'center'}
-      justifyContent={layoutOptions?.height && 'center'}
+      alignItems={alignItems}
+      justifyContent={justifyContent}
       style={scrollOptions?.fadeIn ? { opacity: 0 } : undefined}
       height={layoutOptions?.height ? `${layoutOptions.height}vh` : undefined}
     >

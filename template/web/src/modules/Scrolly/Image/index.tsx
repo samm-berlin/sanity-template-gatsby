@@ -5,8 +5,8 @@ import { ScrollyModuleDefaultFields } from 'web/types/custom-graphql-types'
 import Box from '@/atoms/Box'
 import SanityImage from '@/atoms/SanityImage'
 
-interface ImageModuleProps extends SanityModuleImage {
-  background: boolean
+export interface ImageModuleProps extends SanityModuleImage {
+  background?: boolean
   objectFit?: string
   options: ScrollyModuleDefaultFields
 }
