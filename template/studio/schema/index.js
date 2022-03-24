@@ -16,6 +16,7 @@ import product from './documents/products'
 import productCategory from './documents/products/productCategory'
 import news from './documents/news'
 import newsCategory from './documents/news/newsCategory'
+import projects from './documents/projects'
 import tag from './documents/tag'
 import jobs from './documents/jobs'
 import scrollySection from './documents/scrollySection'
@@ -62,6 +63,7 @@ import scrollyModuleVideoEmbed from './modules/scrolly-modules/videoEmbed'
 import scrollyModuleVideoUploaded from './modules/scrolly-modules/videoUploaded'
 
 
+
 export default createSchema({
   name: 'default',
   types: [
@@ -83,6 +85,7 @@ export default createSchema({
     productCategory,
     news,
     newsCategory,
+    projects,
     tag,
     jobs,
 
