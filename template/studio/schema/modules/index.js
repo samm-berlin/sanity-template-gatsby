@@ -17,6 +17,7 @@ export default {
         {type: 'moduleMarquee'},
         {type: 'moduleListing'},
         {type: 'moduleRelationalGrid'},
+        {type: 'moduleRelatedList'},
         {type: 'moduleScrollySection'},
       ],
       options: {
