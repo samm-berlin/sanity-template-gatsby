@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Box from '@/atoms/Box'
 import ListItemCard from '@/components/ListItemCard.tsx'
+import { Tag } from '@/components/TagList'
 
 export type RelationalGridItem = {
   _key?: string
@@ -10,7 +11,7 @@ export type RelationalGridItem = {
   featuredImage: any
   description: any
   excerpt: any
-  tags?: string[]
+  tags?: Tag[]
 }
 
 export type ModuleRelationalGrid = {
