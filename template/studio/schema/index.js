@@ -55,6 +55,7 @@ import moduleVideoEmbed from './modules/videoEmbed'
 import moduleSpacer from './modules/spacer'
 import moduleMarquee from './modules/marquee'
 import moduleScrollySection from './modules/scrollySection'
+import moduleRelationalGrid from './modules/relationalGrid'
 import scrollyModuleDefaultFields from './modules/scrolly-modules/_defaultFields'
 import scrollyModuleRichText from './modules/scrolly-modules/richText'
 import scrollyModuleImage from './modules/scrolly-modules/image'
@@ -122,6 +123,7 @@ export default createSchema({
     moduleSpacer,
     moduleMarquee,
     moduleListing,
+    moduleRelationalGrid,
 
     /**
       Scrolly Sections
