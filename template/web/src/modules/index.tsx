@@ -22,6 +22,7 @@ import MarqueeModule from './Marquee'
 import HeroModule from './Hero'
 import ScrollySectionModule from './Scrolly/ScrollySection'
 import RelationalGridModule, { ModuleRelationalGrid } from './RelationalGrid'
+import RelatedListModule, { ModuleRelatedList } from './RelatedList'
 
 const modulesMap = {
   moduleRichText: (props: SanityModuleRichText) => <RichText {...props} />,
@@ -32,6 +33,7 @@ const modulesMap = {
   moduleMarquee: (props: SanityModuleMarquee) => <MarqueeModule {...props} />,
   moduleHero: (props: SanityModuleHero) => <HeroModule {...props} />,
   moduleRelationalGrid: (props: ModuleRelationalGrid) => <RelationalGridModule {...props} />,
+  moduleRelatedList: (props: ModuleRelatedList) => <RelatedListModule {...props} />,
   moduleScrollySection: (props: SanityModuleScrollySection) => <ScrollySectionModule {...props} />,
   fragment: <div />
 }
@@ -53,7 +55,7 @@ const ModuleLoop: FC<SanityContentModules> = ({ modules, ...props }) => (
 export default ModuleLoop
 
 export const query = graphql`
-  fragment ContentModules on SanityModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleRelationalGridOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleTwoColumnOrModuleVideoEmbed {
+  fragment ContentModules on SanityModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleRelatedListOrModuleRelationalGridOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleTwoColumnOrModuleVideoEmbed {
     ... on SanityModuleRichText {
       _key
       _type
@@ -94,7 +96,6 @@ export const query = graphql`
         ...ModuleOptions
       }
     }
-
     ... on SanityModuleHero {
       _key
       _type
@@ -111,9 +112,17 @@ export const query = graphql`
         ...ModuleOptions
       }
     }
+    ... on SanityModuleRelatedList {
+      _key
+      _type
+      ...moduleRelatedListData
+      options {
+        ...ModuleOptions
+      }
+    }
   }
 
-  fragment ScrollyContentModule on SanityModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleRelationalGridOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleTwoColumnOrModuleVideoEmbed {
+  fragment ScrollyContentModule on SanityModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleRelatedListOrModuleRelationalGridOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleTwoColumnOrModuleVideoEmbed {
     ... on SanityModuleScrollySection {
       _key
       _type
