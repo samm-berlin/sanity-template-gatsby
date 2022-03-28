@@ -9,7 +9,8 @@ export type RelationalGridItem = {
   title: string
   featuredImage: any
   description: any
-  tags: string[]
+  excerpt: any
+  tags?: string[]
 }
 
 export type ModuleRelationalGrid = {
