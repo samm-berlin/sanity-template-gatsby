@@ -21,6 +21,7 @@ import TwoColModule from './TwoColumns'
 import MarqueeModule from './Marquee'
 import HeroModule from './Hero'
 import ScrollySectionModule from './Scrolly/ScrollySection'
+import RelationalGridModule, { ModuleRelationalGrid } from './RelationalGrid'
 
 const modulesMap = {
   moduleRichText: (props: SanityModuleRichText) => <RichText {...props} />,
@@ -30,6 +31,7 @@ const modulesMap = {
   moduleTwoColumn: (props: SanityModuleTwoColumn) => <TwoColModule {...props} />,
   moduleMarquee: (props: SanityModuleMarquee) => <MarqueeModule {...props} />,
   moduleHero: (props: SanityModuleHero) => <HeroModule {...props} />,
+  moduleRelationalGrid: (props: ModuleRelationalGrid) => <RelationalGridModule {...props} />,
   moduleScrollySection: (props: SanityModuleScrollySection) => <ScrollySectionModule {...props} />,
   fragment: <div />
 }
@@ -51,7 +53,7 @@ const ModuleLoop: FC<SanityContentModules> = ({ modules, ...props }) => (
 export default ModuleLoop
 
 export const query = graphql`
-  fragment ContentModules on SanityModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleTwoColumnOrModuleVideoEmbed {
+  fragment ContentModules on SanityModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleRelationalGridOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleTwoColumnOrModuleVideoEmbed {
     ... on SanityModuleRichText {
       _key
       _type
@@ -101,9 +103,17 @@ export const query = graphql`
         ...ModuleOptions
       }
     }
+    ... on SanityModuleRelationalGrid {
+      _key
+      _type
+      ...moduleRelationalGridData
+      options {
+        ...ModuleOptions
+      }
+    }
   }
 
-  fragment ScrollyContentModule on SanityModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleTwoColumnOrModuleVideoEmbed {
+  fragment ScrollyContentModule on SanityModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleRelationalGridOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleTwoColumnOrModuleVideoEmbed {
     ... on SanityModuleScrollySection {
       _key
       _type
