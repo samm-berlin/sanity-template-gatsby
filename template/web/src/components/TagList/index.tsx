@@ -34,7 +34,7 @@ const TagList: FC<TagListProps> = (props) => {
 export default TagList
 
 export const query = graphql`
-  fragment tags {
+  fragment tagsData on SanityTag {
     title
   }
 `
