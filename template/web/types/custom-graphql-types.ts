@@ -25,3 +25,15 @@ export type LayoutOptions = {
   height: string
   width: 'narrow' | 'regular' | 'wide'
 }
+
+export type Slug = {
+  _key?: string
+  _type?: string
+  current: string
+}
+
+export type Category = {
+  _key?: string
+  _type?: string
+  title: string
+}
