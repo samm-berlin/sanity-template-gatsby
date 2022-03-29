@@ -26,14 +26,18 @@ interface Props
     SpaceProps,
     BorderProps,
     ShadowProps {
-  children?: React.ReactNode
+  children?: React.ReactNode | void
   transition?: string
+  transform?: string
+  cursor?: string
 }
 
 const Box = styled('div')<Props>(
   compose(space, layout, color, position, border, shadow, flexbox),
   system({
-    transition: true
+    transition: true,
+    transform: true,
+    cursor: true
   })
 )
 
