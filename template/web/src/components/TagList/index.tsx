@@ -4,18 +4,6 @@ import styled from 'styled-components'
 import Box from '@/atoms/Box'
 import Text from '@/atoms/Text'
 
-const Tag = styled(Box)`
-  background-color: grey;
-  height: 31px;
-  margin-right: 1px;
-`
-
-const ButtonBox = styled(Box)`
-  cursor: pointer;
-  background-color: grey;
-  height: 31px;
-`
-
 export type Tag = {
   title: string
 }
@@ -39,24 +27,32 @@ const TagList: FC<TagListProps> = (props) => {
             showAll ? tags.length : index + 1 < (numberOfTags || numberOfTagsFallback)
           )
           .map((tag, index) => (
-            <Tag
+            <Box
               key={`tag-${tag.title}-${index}`}
+              height="5rem"
+              mb="1px"
+              mr="1px"
               display="flex"
               justifyContent="center"
               alignItems="center"
+              backgroundColor="grey"
             >
               <Text px="2">{tag.title}</Text>
-            </Tag>
+            </Box>
           ))}
       {tags && tags.length !== 0 && (numberOfTags || numberOfTagsFallback) < tags.length && (
-        <ButtonBox
+        <Box
+          height="5rem"
+          mb="1px"
           display="flex"
           justifyContent="center"
           alignItems="center"
           onClick={() => setShowAll(!showAll)}
+          cursor="pointer"
+          backgroundColor="grey"
         >
           <Text px="2">{showAll ? 'show less' : '...'}</Text>
-        </ButtonBox>
+        </Box>
       )}
     </Box>
   )
