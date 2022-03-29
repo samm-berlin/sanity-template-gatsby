@@ -22,22 +22,27 @@ export type ModuleRelatedList = {
 const RelatedList: FC<ModuleRelatedList> = (props) => {
   const { title, relatedPosts } = props
 
-  useEffect(() => {
-    console.log(relatedPosts)
-  }, [])
-
   return (
     <Box>
-      <Text>{title}</Text>
+      <Text px={2} pb={2} component="h2" variant="relatedTitle">
+        {title}
+      </Text>
       <Box display="flex" flexWrap="wrap">
-        {relatedPosts.map((post) => (
-          <ListItemCard
-            {...post}
+        {relatedPosts.map((post, index) => (
+          <Box
             key={post._key}
-            width={'calc(100% / 3)'}
-            title={post.title}
-            image={post.featuredImage}
-          />
+            width={['100%', 'calc(100% / 3)']}
+            pl={[2, index % 3 === 0 ? 2 : 4]}
+            pr={[2, index % 3 === 2 ? 2 : 4]}
+            mb={[4, 0]}
+          >
+            <ListItemCard
+              {...post}
+              title={post.title}
+              image={post.featuredImage}
+              imageAspectRatio={['16/9', '4/3']}
+            />
+          </Box>
         ))}
       </Box>
     </Box>

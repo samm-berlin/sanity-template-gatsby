@@ -65,8 +65,15 @@ const RelationalGrid: FC<ModuleRelationalGrid> = (props) => {
 
   return (
     <Box display="flex" flexWrap="wrap">
-      {gridItems.map((item) => (
-        <ListItemCard width="50%" key={item._key} image={item.featuredImage} {...item} />
+      {gridItems.map((item, index) => (
+        <Box
+          key={item._key}
+          width={['100%', '50%']}
+          pl={[2, index % 2 ? 4 : 2]}
+          pr={[2, index % 2 ? 2 : 4]}
+        >
+          <ListItemCard {...item} image={item.featuredImage} imageAspectRatio="16/9" />
+        </Box>
       ))}
     </Box>
   )
