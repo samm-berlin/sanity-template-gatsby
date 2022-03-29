@@ -18,6 +18,7 @@ export default {
         {type: 'moduleListing'},
         {type: 'moduleRelationalGrid'},
         {type: 'moduleRelatedList'},
+        {type: 'moduleNewsListMasonry'},
         {type: 'moduleScrollySection'},
       ],
       options: {

@@ -57,6 +57,7 @@ import moduleMarquee from './modules/marquee'
 import moduleScrollySection from './modules/scrollySection'
 import moduleRelationalGrid from './modules/relationalGrid'
 import moduleRelatedList from './modules/relatedList'
+import moduleNewsListMasonry from './modules/newsListMasonry'
 import scrollyModuleDefaultFields from './modules/scrolly-modules/_defaultFields'
 import scrollyModuleRichText from './modules/scrolly-modules/richText'
 import scrollyModuleImage from './modules/scrolly-modules/image'
@@ -126,6 +127,7 @@ export default createSchema({
     moduleListing,
     moduleRelationalGrid,
     moduleRelatedList,
+    moduleNewsListMasonry,
 
     /**
       Scrolly Sections
