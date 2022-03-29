@@ -1,5 +1,5 @@
 /* eslint-disable react/display-name */
-import React, { FC } from 'react'
+import React, { FC, useEffect } from 'react'
 import { graphql } from 'gatsby'
 import {
   SanityContentModules,
@@ -23,6 +23,7 @@ import HeroModule from './Hero'
 import ScrollySectionModule from './Scrolly/ScrollySection'
 import RelationalGridModule, { ModuleRelationalGrid } from './RelationalGrid'
 import RelatedListModule, { ModuleRelatedList } from './RelatedList'
+import NewsListMasonry from './NewsListMasonry'
 
 const modulesMap = {
   moduleRichText: (props: SanityModuleRichText) => <RichText {...props} />,
@@ -34,28 +35,35 @@ const modulesMap = {
   moduleHero: (props: SanityModuleHero) => <HeroModule {...props} />,
   moduleRelationalGrid: (props: ModuleRelationalGrid) => <RelationalGridModule {...props} />,
   moduleRelatedList: (props: ModuleRelatedList) => <RelatedListModule {...props} />,
+  moduleNewsListMasonry: () => <NewsListMasonry />,
   moduleScrollySection: (props: SanityModuleScrollySection) => <ScrollySectionModule {...props} />,
   fragment: <div />
 }
 
-const ModuleLoop: FC<SanityContentModules> = ({ modules, ...props }) => (
-  <Box height="100%" {...props}>
-    {modules?.map((module) => {
-      if (module?._type && !module?.options?.activation?.hidden) {
-        return (
-          <ModuleContainer options={module.options}>
-            {modulesMap[module?._type]({ key: module?._key, ...module })}
-          </ModuleContainer>
-        )
-      } else return <div />
-    })}
-  </Box>
-)
+const ModuleLoop: FC<SanityContentModules> = ({ modules, ...props }) => {
+  // useEffect(() => {
+  //   console.log(modules)
+  // }, [])
+
+  return (
+    <Box height="100%" {...props}>
+      {modules?.map((module) => {
+        if (module?._type && !module?.options?.activation?.hidden) {
+          return (
+            <ModuleContainer options={module.options}>
+              {modulesMap[module?._type]({ key: module?._key, ...module })}
+            </ModuleContainer>
+          )
+        } else return <div />
+      })}
+    </Box>
+  )
+}
 
 export default ModuleLoop
 
 export const query = graphql`
-  fragment ContentModules on SanityModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleRelatedListOrModuleRelationalGridOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleTwoColumnOrModuleVideoEmbed {
+  fragment ContentModules on SanityModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleNewsListMasonryOrModuleRelatedListOrModuleRelationalGridOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleTwoColumnOrModuleVideoEmbed {
     ... on SanityModuleRichText {
       _key
       _type
@@ -120,9 +128,16 @@ export const query = graphql`
         ...ModuleOptions
       }
     }
+    ... on SanityModuleNewsListMasonry {
+      _key
+      _type
+      options {
+        ...ModuleOptions
+      }
+    }
   }
 
-  fragment ScrollyContentModule on SanityModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleRelatedListOrModuleRelationalGridOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleTwoColumnOrModuleVideoEmbed {
+  fragment ScrollyContentModule on SanityModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleNewsListMasonryOrModuleRelatedListOrModuleRelationalGridOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleTwoColumnOrModuleVideoEmbed {
     ... on SanityModuleScrollySection {
       _key
       _type
