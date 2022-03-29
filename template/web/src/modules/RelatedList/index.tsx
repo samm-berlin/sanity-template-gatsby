@@ -59,6 +59,11 @@ export const query = graphql`
         _key
         _type
         title
+        slug {
+          _key
+          _type
+          current
+        }
         featuredImage {
           ...ImageWithPreview
         }
@@ -73,6 +78,11 @@ export const query = graphql`
         _key
         _type
         title
+        slug {
+          _key
+          _type
+          current
+        }
         featuredImage {
           ...ImageWithPreview
         }
