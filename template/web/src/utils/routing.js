@@ -4,7 +4,8 @@
 const PREFIXES = {
   page: null,
   product: 'product',
-  store: 'stores'
+  news: 'news',
+  project: 'project'
 }
 
 const getUri = (slug, type = 'page') => {

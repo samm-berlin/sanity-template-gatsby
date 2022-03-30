@@ -72,7 +72,7 @@ export const query = graphql`
           ...tagsData
         }
       }
-      ... on SanityProjects {
+      ... on SanityProject {
         _key
         _type
         title
