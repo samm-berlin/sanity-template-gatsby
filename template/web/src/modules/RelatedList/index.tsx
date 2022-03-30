@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react'
+import React, { FC } from 'react'
 import { graphql } from 'gatsby'
 import Box from '@/atoms/Box'
 import Text from '@/atoms/Text'
@@ -28,22 +28,25 @@ const RelatedList: FC<ModuleRelatedList> = (props) => {
         {title}
       </Text>
       <Box display="flex" flexWrap="wrap">
-        {relatedPosts.map((post, index) => (
-          <Box
-            key={post._key}
-            width={['100%', 'calc(100% / 3)']}
-            pl={[2, index % 3 === 0 ? 2 : 4]}
-            pr={[2, index % 3 === 2 ? 2 : 4]}
-            mb={[4, 0]}
-          >
-            <ListItemCard
-              {...post}
-              title={post.title}
-              image={post.featuredImage}
-              imageAspectRatio={['16/9', '4/3']}
-            />
-          </Box>
-        ))}
+        {relatedPosts.map(
+          (post, index) =>
+            post && (
+              <Box
+                key={post._key}
+                width={['100%', 'calc(100% / 3)']}
+                pl={[2, index % 3 === 0 ? 2 : 4]}
+                pr={[2, index % 3 === 2 ? 2 : 4]}
+                mb={[4, 0]}
+              >
+                <ListItemCard
+                  {...post}
+                  title={post.title}
+                  image={post.featuredImage}
+                  imageAspectRatio="4/3"
+                />
+              </Box>
+            )
+        )}
       </Box>
     </Box>
   )
