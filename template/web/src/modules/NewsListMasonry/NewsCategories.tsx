@@ -7,7 +7,6 @@ import { NewsCategory } from './index'
 
 const StyledText = styled(Text)`
   cursor: pointer;
-  color: #e4e4e4;
   &.active {
     color: black;
   }
@@ -35,7 +34,11 @@ const NewsCategories: FC<NewsCategoriesProps> = (props) => {
           alignItems="center"
           onClick={() => setFilteredCategory(cat.title)}
         >
-          <StyledText className={filteredCategory === cat.title ? 'active' : ''} px="2">
+          <StyledText
+            color="grey"
+            className={filteredCategory === cat.title ? 'active' : ''}
+            px="2"
+          >
             {cat.title}
           </StyledText>
         </Box>
