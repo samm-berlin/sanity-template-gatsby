@@ -96,6 +96,7 @@ const NewsListMasonry: FC = () => {
             >
               <ListItemCard
                 {...news}
+                isHeader={!index}
                 image={news.featuredImage}
                 imageAspectRatio={imageAspectRatioDict[index]}
                 date={toDateString(news._createdAt)}

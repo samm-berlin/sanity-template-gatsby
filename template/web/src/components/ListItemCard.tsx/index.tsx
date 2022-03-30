@@ -14,6 +14,7 @@ interface ListItemCardProps {
   excerpt?: string
   image?: any
   imageAspectRatio?: string | string[]
+  isHeader?: boolean
   tags?: Tag[]
   title?: string
   _type?: string // 'jobs' | 'news' | 'search'
@@ -24,8 +25,19 @@ interface ListItemCardProps {
 // width == 0, 1, 2
 
 const ListItemCard: FC<ListItemCardProps> = (props) => {
-  const { date, description, excerpt, image, imageAspectRatio, tags, title, _type, slug, width } =
-    props
+  const {
+    date,
+    description,
+    excerpt,
+    isHeader,
+    image,
+    imageAspectRatio,
+    tags,
+    title,
+    _type,
+    slug,
+    width
+  } = props
 
   const ListItemAsHeader = () => (
     <Box
@@ -42,7 +54,13 @@ const ListItemCard: FC<ListItemCardProps> = (props) => {
         />
       )}
       {title && (
-        <Box position="absolute" top="50%" left="50%" transform="translate(-50%, -50%)">
+        <Box
+          display={['none', 'unset']}
+          position="absolute"
+          top="50%"
+          left="50%"
+          transform="translate(-50%, -50%)"
+        >
           <Text variant="head" component="h1" color="white">
             {title}
           </Text>
@@ -53,7 +71,7 @@ const ListItemCard: FC<ListItemCardProps> = (props) => {
 
   return (
     <Box width={width}>
-      {width === '100%' ? (
+      {isHeader ? (
         ListItemAsHeader()
       ) : (
         <Box onClick={() => slug && navigate(slug.current)} cursor={slug && 'pointer'}>
@@ -72,10 +90,17 @@ const ListItemCard: FC<ListItemCardProps> = (props) => {
           {date}
         </Text>
       )}
-      {width !== '100%' && title && (
+      {!isHeader && title && (
         <Text pt="1" component="h4" variant="cardTitle">
           {title}
         </Text>
+      )}
+      {isHeader && title && (
+        <Box display={['unset', 'none']}>
+          <Text pt="1" component="h4" variant="cardTitle">
+            {title}
+          </Text>
+        </Box>
       )}
       {description && (
         <Box pt="1">
