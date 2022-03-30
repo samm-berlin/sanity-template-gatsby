@@ -11,7 +11,7 @@ import { Slug } from 'web/types/custom-graphql-types'
 interface ListItemCardProps {
   date?: string
   description?: any
-  excerpt?: any
+  excerpt?: string
   image?: any
   imageAspectRatio?: string | string[]
   tags?: Tag[]
@@ -84,7 +84,7 @@ const ListItemCard: FC<ListItemCardProps> = (props) => {
       )}
       {excerpt && (
         <Box pt="1">
-          <RichText text={excerpt} />
+          <Text>{excerpt}</Text>
         </Box>
       )}
       {tags && <TagList tags={tags}></TagList>}

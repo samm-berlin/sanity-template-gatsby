@@ -6,11 +6,11 @@ import ListItemCard from '@/components/ListItemCard.tsx'
 import { Tag } from '@/components/TagList'
 
 export type RelatedListItem = {
-  _key: string
-  _type: string
+  _key?: string
+  _type?: string
   title: string
   featuredImage: any
-  excerpt: any
+  excerpt?: string
   tags?: Tag[]
 }
 
@@ -67,9 +67,7 @@ export const query = graphql`
         featuredImage {
           ...ImageWithPreview
         }
-        excerpt {
-          ...RichTextData
-        }
+        excerpt
         tags {
           ...tagsData
         }
@@ -86,9 +84,7 @@ export const query = graphql`
         featuredImage {
           ...ImageWithPreview
         }
-        excerpt {
-          ...RichTextData
-        }
+        excerpt
         tags {
           ...tagsData
         }

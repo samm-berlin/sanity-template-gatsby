@@ -10,7 +10,7 @@ export type RelationalGridItem = {
   title: string
   featuredImage: any
   description: any
-  excerpt: any
+  excerpt?: string
   tags?: Tag[]
 }
 
@@ -48,9 +48,7 @@ const RelationalGrid: FC<ModuleRelationalGrid> = (props) => {
             featuredImage {
               ...ImageWithPreview
             }
-            excerpt {
-              ...RichTextData
-            }
+            excerpt
             tags {
               ...tagsData
             }

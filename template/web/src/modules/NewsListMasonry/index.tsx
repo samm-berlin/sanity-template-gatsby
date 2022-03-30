@@ -14,7 +14,7 @@ export type NewsListMasonryItem = {
   _createdAt: string
   title: string
   featuredImage: any
-  excerpt: any
+  excerpt?: string
   tags?: Tag[]
   category?: Category
 }
@@ -47,9 +47,7 @@ const NewsListMasonry: FC = () => {
             featuredImage {
               ...ImageWithPreview
             }
-            excerpt {
-              ...RichTextData
-            }
+            excerpt
             tags {
               ...tagsData
             }
