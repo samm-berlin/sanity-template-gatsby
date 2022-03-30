@@ -15,6 +15,13 @@ export default {
         collapsed: true,
       },
     },
+    {
+      name: 'metaInfo',
+      title: 'Meta Info',
+      options: {
+        collapsible: true,
+      },
+    },
   ],
 
   fields: [
@@ -36,28 +43,12 @@ export default {
     },
     {
       name: 'meta',
-      title: 'Meta',
+      title: 'SEO Settings',
       type: 'meta',
       options: {
         collapsible: true,
         collapsed: true,
       },
-    },
-    {
-      name: 'featuredImage',
-      title: 'Featured Image',
-      type: 'imageField',
-      validation: (Rule) => Rule.required(),
-    },
-    {
-      name: 'keyVisual',
-      title: 'Key Visual',
-      type: 'imageField',
-    },
-    {
-      name: 'excerpt',
-      title: 'Excerpt',
-      type: 'richTextExtended',
     },
     {
       name: 'category',
@@ -66,6 +57,7 @@ export default {
       to: {
         type: 'newsCategory',
       },
+      fieldset: 'metaInfo',
     },
     {
       name: 'tags',
@@ -79,8 +71,26 @@ export default {
           },
         },
       ],
+      fieldset: 'metaInfo',
     },
-
+    {
+      name: 'excerpt',
+      title: 'Excerpt',
+      type: 'text',
+      fieldset: 'metaInfo',
+    },
+    {
+      name: 'featuredImage',
+      title: 'Featured Image',
+      type: 'imageField',
+      validation: (Rule) => Rule.required(),
+      fieldset: 'metaInfo',
+    },
+    {
+      name: 'keyVisual',
+      title: 'Key Visual (optional)',
+      type: 'imageField',
+    },
     {
       name: 'contentModules',
       title: 'Content',
