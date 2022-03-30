@@ -43,12 +43,12 @@ export default S.listItem()
             // List out all tags
             S.documentTypeList('newsCategory')
               .title('News by category')
-              .child((cat) =>
+              .child((id) =>
                 S.documentList()
-                  .schemaType('news')
                   .title('News')
-                  .filter('_type == "news" && $cat == news._ref')
-                  .params({ cat })
+                  .schemaType('news')
+                  .filter('_type == "news" && $id == category._ref')
+                  .params({ id })
               )
           ),
 
