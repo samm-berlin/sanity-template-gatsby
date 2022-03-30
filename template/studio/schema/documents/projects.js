@@ -79,7 +79,7 @@ export default {
     },
     {
       name: 'keyVisual',
-      title: 'Key Visual',
+      title: 'Key Visual (optional)',
       type: 'imageField',
     },
     {

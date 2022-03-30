@@ -27,6 +27,7 @@ import scrollyBackgroundContentModules from './modules/scrolly-modules/backgroun
 import imageWithArtDirection from './objects/imageWithArtDirection'
 import link from './objects/link'
 import meta from './objects/meta'
+import richText from './objects/richText'
 import richTextExtended from './objects/richTextExtended'
 import colorTheme from './objects/colorTheme'
 import videoEmbed from './objects/videoEmbed'
@@ -100,6 +101,7 @@ export default createSchema({
     imageWithArtDirection,
     link,
     meta,
+    richText,
     richTextExtended,
     colorTheme,
     videoEmbed,

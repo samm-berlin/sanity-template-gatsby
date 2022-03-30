@@ -77,6 +77,10 @@ export const query = graphql`
     textRaw: _rawText(resolveReferences: { maxDepth: 6 })
   }
 
+  fragment OnlyRichTextData on SanityRichText {
+    textRaw: _rawText(resolveReferences: { maxDepth: 6 })
+  }
+
   fragment moduleRichTextData on SanityModuleRichText {
     text {
       ...RichTextData

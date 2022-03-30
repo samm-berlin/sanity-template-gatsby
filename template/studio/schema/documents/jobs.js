@@ -30,11 +30,10 @@ export default {
       type: 'imageField',
       validation: (Rule) => Rule.required(),
     },
-
     {
       name: 'description',
       title: 'Description',
-      type: 'richTextExtended',
+      type: 'richText',
     },
   ],
 }

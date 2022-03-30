@@ -87,7 +87,11 @@ const ListItemCard: FC<ListItemCardProps> = (props) => {
           <Text>{excerpt}</Text>
         </Box>
       )}
-      {tags && <TagList tags={tags}></TagList>}
+      {tags && (
+        <Box pt="2">
+          <TagList tags={tags}></TagList>
+        </Box>
+      )}
     </Box>
   )
 }

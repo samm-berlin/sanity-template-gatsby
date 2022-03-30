@@ -36,7 +36,7 @@ const RelationalGrid: FC<ModuleRelationalGrid> = (props) => {
               ...ImageWithPreview
             }
             description {
-              ...RichTextData
+              ...OnlyRichTextData
             }
           }
         }
