@@ -22,7 +22,7 @@ export default {
       title: 'Items',
       type: 'array',
       of: [
-        {type: 'reference', to: [{type: 'post'}, {type: 'page'}, {type: 'product'}]},
+        {type: 'reference', to: [{type: 'news'}, {type: 'page'}, {type: 'project'}, {type: 'product'}]},
         {type: 'card'}
       ]
     }

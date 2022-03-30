@@ -22,18 +22,18 @@ const resolvePreviewUrl = async (document) => {
 export default S.listItem()
   .title('Projects')
   .icon(ProjectsIcon)
-  .schemaType('projects')
+  .schemaType('project')
   .child(
     S.list()
       .title('Activities')
       .items([
-        S.documentTypeListItem('projects')
+        S.documentTypeListItem('project')
           .title('All Projects')
           .icon(ProjectsIcon)
           .child((documentId) =>
             S.document()
               .documentId(documentId)
-              .schemaType('projects')
+              .schemaType('project')
               .views(PreviewsStructure(resolvePreviewUrl))
           ),
 
@@ -45,9 +45,9 @@ export default S.listItem()
               .title('Projects by tag')
               .child((tagId) =>
                 S.documentList()
-                  .schemaType('projects')
+                  .schemaType('project')
                   .title('Projects')
-                  .filter('_type == "projects" && $tagId == tags[]._ref')
+                  .filter('_type == "project" && $tagId == tags[]._ref')
                   .params({ tagId })
               )
           ),

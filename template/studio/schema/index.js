@@ -10,13 +10,11 @@ import siteSettingsCookies from './singletons/siteSettingsCookies'
 import imageField from './fields/image'
 
 import page from './documents/page'
-import post from './documents/posts'
-import postCategory from './documents/posts/postCategory'
 import product from './documents/products'
 import productCategory from './documents/products/productCategory'
 import news from './documents/news'
 import newsCategory from './documents/news/newsCategory'
-import projects from './documents/projects'
+import project from './documents/project'
 import tag from './documents/tag'
 import jobs from './documents/jobs'
 import scrollySection from './documents/scrollySection'
@@ -83,13 +81,11 @@ export default createSchema({
 
     // documents
     page,
-    post,
-    postCategory,
     product,
     productCategory,
     news,
     newsCategory,
-    projects,
+    project,
     tag,
     jobs,
 

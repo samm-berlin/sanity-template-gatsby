@@ -1,7 +1,6 @@
 import S from '@sanity/desk-tool/structure-builder'
 
 import pages from './pages'
-import posts from './posts'
 import products from './products'
 import siteSettings from './siteSettings'
 import news from './news'
@@ -9,13 +8,11 @@ import projects from './projects'
 
 const hiddenDocs = [
   'page',
-  'post',
   'product',
-  'postCategory',
   'productCategory',
   'news',
   'newsCategory',
-  'projects',
+  'project',
   // 'tag',
   'siteSettingsCookies',
   'siteSettingsMeta',
@@ -41,7 +38,6 @@ export default () =>
     .title('Content')
     .items([
       pages,
-      posts,
       products,
       news,
       projects,

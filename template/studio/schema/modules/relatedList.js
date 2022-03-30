@@ -23,7 +23,7 @@ export default {
       of: [
         {
           type: 'reference',
-          to: [{ type: 'projects' }, { type: 'news' }],
+          to: [{ type: 'project' }, { type: 'news' }],
         },
       ],
     },

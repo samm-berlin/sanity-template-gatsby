@@ -1,7 +1,7 @@
 import { AiOutlineProject as Icon } from 'react-icons/ai'
 
 export default {
-  name: 'projects',
+  name: 'project',
   title: 'Projects',
   icon: Icon,
   type: 'document',
