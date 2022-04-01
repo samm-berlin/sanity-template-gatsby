@@ -24,7 +24,7 @@ const RelatedList: FC<ModuleRelatedList> = (props) => {
 
   return (
     <Box>
-      <Text px={2} pb={2} component="h2" variant="relatedTitle">
+      <Text px={2} pb={2} component="h2" variant="bodyTitle">
         {title}
       </Text>
       <Box display="flex" flexWrap="wrap">
