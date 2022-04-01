@@ -23,6 +23,16 @@ export type TextVariant =
   | 'captionSmall'
   | 'cardTitle'
   | 'relatedTitle'
+  | 'h1'
+  | 'h2'
+  | 'h3'
+  | 'h4'
+  | 'h5'
+  | 'h6'
+  | 'bodyS'
+  | 'bodyM'
+  | 'bodyL'
+  | 'bodyXL'
 
 export interface TextProps extends TypographyProps, SpaceProps, ColorProps {
   component?: TextComponent

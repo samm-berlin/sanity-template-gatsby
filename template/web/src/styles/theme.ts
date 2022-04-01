@@ -27,8 +27,10 @@ export default {
       bg: 'blue'
     }
   },
-  space: [0, '1rem', '2rem', '3rem', '4rem', '5rem'],
-  fontSizes: ['1.5rem', '1.75rem', '2.5rem', '3rem', '5rem', '10rem', '16rem'],
+  space: [0, '1rem', '2rem', '3rem', '4rem', '5rem', '6rem', '7rem', '8rem', '9rem', '10rem'],
+  fontSizes: [
+    14, 16, 18, 24, 25, 27, 30, 35, 40, 50, 55, 60, 70, 80, 100, 120, 140, 160, 180, 220, 20
+  ],
   radii: [0, 1, 2, 4, 6, 8, 16],
   containerWidth: '1200px',
   minComponentWidth: '300px',
