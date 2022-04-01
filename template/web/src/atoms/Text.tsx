@@ -17,12 +17,11 @@ export type TextComponent = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span' | '
 export type TextVariant =
   | 'head'
   | 'subhead'
-  | 'normal'
   | 'body'
+  | 'bodyTitle'
+  | 'bodyTitleSmall'
   | 'caption'
   | 'captionSmall'
-  | 'cardTitle'
-  | 'relatedTitle'
 
 export interface TextProps extends TypographyProps, SpaceProps, ColorProps {
   component?: TextComponent
