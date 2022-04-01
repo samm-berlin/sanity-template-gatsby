@@ -39,10 +39,11 @@ import card from './objects/card'
 import menuLink from './objects/menuLink'
 import cookie from './objects/cookie'
 import cookieCategory from './objects/cookieCategory'
+import fourPathGridItem from './objects/fourPathGridItem'
+
 import sectionBackgroundOptions from './objects/scrolly-objects/sectionBackgroundOptions'
 import scrollOptions from './objects/scrolly-objects/scrollOptions'
 import layoutOptions from './objects/scrolly-objects/layoutOptions'
-
 
 import imageModule from './modules/image'
 import heroModule from './modules/hero'
@@ -57,6 +58,8 @@ import moduleScrollySection from './modules/scrollySection'
 import moduleRelationalGrid from './modules/relationalGrid'
 import moduleRelatedList from './modules/relatedList'
 import moduleNewsListMasonry from './modules/newsListMasonry'
+import moduleFourPathGrid from './modules/fourPathGrid'
+
 import scrollyModuleDefaultFields from './modules/scrolly-modules/_defaultFields'
 import scrollyModuleRichText from './modules/scrolly-modules/richText'
 import scrollyModuleImage from './modules/scrolly-modules/image'
@@ -112,6 +115,7 @@ export default createSchema({
     menuLink,
     cookie,
     cookieCategory,
+    fourPathGridItem,
 
     // modules
     moduleDefaultFields,
@@ -126,6 +130,7 @@ export default createSchema({
     moduleRelationalGrid,
     moduleRelatedList,
     moduleNewsListMasonry,
+    moduleFourPathGrid,
 
     /**
       Scrolly Sections
