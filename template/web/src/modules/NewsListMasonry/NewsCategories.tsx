@@ -4,11 +4,12 @@ import styled from 'styled-components'
 import Box from '@/atoms/Box'
 import Text from '@/atoms/Text'
 import { NewsCategory } from './index'
+import theme from '@/styles/theme'
 
 const StyledText = styled(Text)`
   cursor: pointer;
   &.active {
-    color: black;
+    color: ${theme.colors.black};
   }
 `
 
