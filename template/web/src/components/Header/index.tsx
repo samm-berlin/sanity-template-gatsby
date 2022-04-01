@@ -48,7 +48,7 @@ const Header: FC = (props: Props) => {
         backdropFilter: 'blur(10px)'
       }}
     >
-      <Text as="h1" variant="head" color="white">
+      <Text as="h1" variant="bodyTitle" color="white">
         SAMM
       </Text>
       <Navigation

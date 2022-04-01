@@ -61,7 +61,7 @@ const ListItemCard: FC<ListItemCardProps> = (props) => {
           left="50%"
           transform="translate(-50%, -50%)"
         >
-          <Text variant="head" component="h1" color="white">
+          <Text variant="bodyTitle" component="h1" color="white">
             {title}
           </Text>
         </Box>
@@ -86,18 +86,18 @@ const ListItemCard: FC<ListItemCardProps> = (props) => {
         </Box>
       )}
       {date && (
-        <Text pt="1" variant="captionSmall">
+        <Text pt="1" variant="caption">
           {date}
         </Text>
       )}
       {!isHeader && title && (
-        <Text pt="1" component="h4" variant="cardTitle">
+        <Text pt="1" component="h4" variant="bodyTitleSmall">
           {title}
         </Text>
       )}
       {isHeader && title && (
         <Box display={['unset', 'none']}>
-          <Text pt="1" component="h4" variant="cardTitle">
+          <Text pt="1" component="h4" variant="bodyTitleSmall">
             {title}
           </Text>
         </Box>

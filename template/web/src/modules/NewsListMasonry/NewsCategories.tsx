@@ -8,7 +8,7 @@ import theme from '@/styles/theme'
 const StyledText = styled(Text)`
   cursor: pointer;
   &.active {
-    color: ${theme.colors.text};
+    color: ${theme.colors.black};
   }
 `
 
