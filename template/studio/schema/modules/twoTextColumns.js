@@ -13,12 +13,12 @@ export default {
     {
       title: 'First text column',
       name: 'firstTextColumn',
-      type: 'richTextExtended',
+      type: 'richText',
     },
     {
       title: 'Second text column',
       name: 'secondTextColumn',
-      type: 'richTextExtended',
+      type: 'richText',
     },
   ],
   preview: {

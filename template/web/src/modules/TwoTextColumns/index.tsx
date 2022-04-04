@@ -33,10 +33,10 @@ export default TwoTextColumnsModule
 export const query = graphql`
   fragment moduleTwoTextColumnsData on SanityModuleTwoTextColumns {
     firstTextColumn {
-      ...RichTextData
+      ...OnlyRichTextData
     }
     secondTextColumn {
-      ...RichTextData
+      ...OnlyRichTextData
     }
   }
 `
