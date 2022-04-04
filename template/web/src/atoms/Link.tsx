@@ -51,7 +51,13 @@ export const query = graphql`
           current
         }
       }
-      ... on SanityPost {
+      ... on SanityNews {
+        _type
+        slug {
+          current
+        }
+      }
+      ... on SanityProject {
         _type
         slug {
           current

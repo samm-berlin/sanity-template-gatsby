@@ -87,12 +87,22 @@ exports.createPages = async (apiProps) => {
     apiProps
   )
 
-  // blog posts stores
-  const posts = createType(
+  // news
+  const news = createType(
     {
-      type: 'post',
-      path: ({ slug }) => getUri(slug.current, 'post'),
-      component: path.resolve(__dirname, 'src/templates/Post.tsx')
+      type: 'news',
+      path: ({ slug }) => getUri(slug.current, 'news'),
+      component: path.resolve(__dirname, 'src/templates/News.tsx')
+    },
+    apiProps
+  )
+
+  // project
+  const project = createType(
+    {
+      type: 'project',
+      path: ({ slug }) => getUri(slug.current, 'project'),
+      component: path.resolve(__dirname, 'src/templates/Project.tsx')
     },
     apiProps
   )
@@ -107,6 +117,6 @@ exports.createPages = async (apiProps) => {
     apiProps
   )
 
-  const allContent = await Promise.all([pages /* , stores, posts */])
+  const allContent = await Promise.all([pages, news, project])
   return allContent
 }

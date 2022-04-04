@@ -1,19 +1,19 @@
 import React from 'react';
 
 export default {
-  title: 'Meta',
-  name: 'meta',
+  title: 'SEO-Settings',
+  name: 'seoSettings',
   type: 'object',
   fields: [
     {
-      name: 'metaTitle',
-      title: 'Meta Title',
+      name: 'seoTitle',
+      title: 'SEO Title',
       type: 'string',
       description: 'Page title, falls back to document title',
     },
     {
-      name: 'metaDescription',
-      title: 'Meta Description',
+      name: 'seoDescription',
+      title: 'SEO Description',
       type: 'text',
       rows: 3,
       description: 'Text that appears in search results',
@@ -37,4 +37,4 @@ export default {
       description: 'Tell search engines to list this content',
     },
   ],
-};
+}

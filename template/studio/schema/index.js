@@ -2,7 +2,7 @@ import createSchema from 'part:@sanity/base/schema-creator'
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 import siteSettingsInformation from './singletons/siteSettingsInformation'
-import siteSettingsMeta from './singletons/siteSettingsMeta'
+import siteSettingsSeo from './singletons/siteSettingsSeo'
 import siteSettingsNavigation from './singletons/siteSettingsNavigation'
 import siteSettingsCookies from './singletons/siteSettingsCookies'
 // import siteSettingsModules from './singletons/siteSettingsModules'
@@ -10,10 +10,13 @@ import siteSettingsCookies from './singletons/siteSettingsCookies'
 import imageField from './fields/image'
 
 import page from './documents/page'
-import post from './documents/posts'
-import postCategory from './documents/posts/postCategory'
 import product from './documents/products'
 import productCategory from './documents/products/productCategory'
+import news from './documents/news'
+import newsCategory from './documents/news/newsCategory'
+import project from './documents/project'
+import tag from './documents/tag'
+import jobs from './documents/jobs'
 import scrollySection from './documents/scrollySection'
 
 import contentModules from './modules'
@@ -21,7 +24,8 @@ import scrollyContentModules from './modules/scrolly-modules'
 import scrollyBackgroundContentModules from './modules/scrolly-modules/backgroundContentModules'
 import imageWithArtDirection from './objects/imageWithArtDirection'
 import link from './objects/link'
-import meta from './objects/meta'
+import seoSettings from './objects/seoSettings'
+import richText from './objects/richText'
 import richTextExtended from './objects/richTextExtended'
 import colorTheme from './objects/colorTheme'
 import videoEmbed from './objects/videoEmbed'
@@ -51,12 +55,16 @@ import moduleVideoEmbed from './modules/videoEmbed'
 import moduleSpacer from './modules/spacer'
 import moduleMarquee from './modules/marquee'
 import moduleScrollySection from './modules/scrollySection'
+import moduleRelationalGrid from './modules/relationalGrid'
+import moduleRelatedList from './modules/relatedList'
+import moduleNewsListMasonry from './modules/newsListMasonry'
 import scrollyModuleDefaultFields from './modules/scrolly-modules/_defaultFields'
 import scrollyModuleRichText from './modules/scrolly-modules/richText'
 import scrollyModuleImage from './modules/scrolly-modules/image'
 import scrollyModuleSpacer from './modules/scrolly-modules/spacer'
 import scrollyModuleVideoEmbed from './modules/scrolly-modules/videoEmbed'
 import scrollyModuleVideoUploaded from './modules/scrolly-modules/videoUploaded'
+
 
 
 export default createSchema({
@@ -66,7 +74,7 @@ export default createSchema({
 
     // singletons
     siteSettingsInformation,
-    siteSettingsMeta,
+    siteSettingsSeo,
     siteSettingsNavigation,
     /* contentmoduleSettings are deactivated for now */
     // siteSettingsModules,
@@ -74,10 +82,13 @@ export default createSchema({
 
     // documents
     page,
-    post,
-    postCategory,
     product,
     productCategory,
+    news,
+    newsCategory,
+    project,
+    tag,
+    jobs,
 
     // fields
     imageField,
@@ -86,7 +97,8 @@ export default createSchema({
     contentModules,
     imageWithArtDirection,
     link,
-    meta,
+    seoSettings,
+    richText,
     richTextExtended,
     colorTheme,
     videoEmbed,
@@ -113,6 +125,9 @@ export default createSchema({
     moduleSpacer,
     moduleMarquee,
     moduleListing,
+    moduleRelationalGrid,
+    moduleRelatedList,
+    moduleNewsListMasonry,
 
     /**
       Scrolly Sections

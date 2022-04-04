@@ -9,7 +9,8 @@ export default {
   colors: {
     brand: Object.values(brandColors)[0],
     text: '#000',
-    background: 'rgba(1,1,1,0)'
+    background: 'rgba(1,1,1,0)',
+    grey: '#E4E4E4'
   },
   fonts: {
     sans: "'Archivo', sans-serif",
@@ -27,7 +28,7 @@ export default {
     }
   },
   space: [0, '1rem', '2rem', '3rem', '4rem', '5rem'],
-  fontSizes: ['1.5rem', '1.75rem', '2rem', '3rem', '5rem', '6rem'],
+  fontSizes: ['1.5rem', '1.75rem', '2.5rem', '3rem', '5rem', '10rem', '16rem'],
   radii: [0, 1, 2, 4, 6, 8, 16],
   containerWidth: '1200px',
   minComponentWidth: '300px',
@@ -55,7 +56,8 @@ export const lightTheme = {
   colors: {
     brand: Object.values(brandColors)[0], // this is only a default and gets overriden by module options
     text: '#000e1a',
-    background: '#f3f3f3'
+    background: '#f3f3f3',
+    grey: '#E4E4E4'
   }
 }
 
@@ -63,14 +65,16 @@ export const darkTheme = {
   colors: {
     brand: Object.values(brandColors)[0], // this is only a default and gets overriden by module options
     text: '#f3f3f3',
-    background: '#000e1a'
+    background: '#000e1a',
+    grey: '#E4E4E4'
   }
 }
 
 export const brandTheme = {
   colors: {
     brand: '#000e1a',
-    text: '#f3f3f3'
+    text: '#f3f3f3',
+    grey: '#E4E4E4'
   }
 }
 
