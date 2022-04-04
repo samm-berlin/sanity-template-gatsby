@@ -8,24 +8,24 @@ export default {
       name: 'type',
       options: {
         list: ['internal', 'external'],
-        layout: 'radio'
-      }
+        layout: 'radio',
+      },
     },
     {
       name: 'internal',
       type: 'reference',
-      to: [{type: 'page'}, {type: 'post'}, {type: 'product'}],
-      hidden: ({parent}) => parent?.type === 'external'
+      to: [{ type: 'page' }, { type: 'news' }, { type: 'project' }, { type: 'product' }],
+      hidden: ({ parent }) => parent?.type === 'external',
     },
     {
       name: 'url',
       type: 'url',
-      hidden: ({parent}) => parent?.type === 'internal'
+      hidden: ({ parent }) => parent?.type === 'internal',
     },
     {
       name: 'targetBlank',
       title: 'Open in new Tab',
-      type: 'boolean'
-    }
-  ]
+      type: 'boolean',
+    },
+  ],
 }

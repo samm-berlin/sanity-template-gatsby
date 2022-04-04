@@ -1,6 +1,6 @@
 export const singletonTypes = [
-  'siteSettingsMeta',
+  'siteSettingsSeo',
   'siteSettingsNavigation',
   'siteSettingsInformation',
   'frontPageSettings',
-];
+]

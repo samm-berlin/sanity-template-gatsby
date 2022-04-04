@@ -16,6 +16,9 @@ export default {
         {type: 'moduleSpacer'},
         {type: 'moduleMarquee'},
         {type: 'moduleListing'},
+        {type: 'moduleRelationalGrid'},
+        {type: 'moduleRelatedList'},
+        {type: 'moduleNewsListMasonry'},
         {type: 'moduleScrollySection'},
       ],
       options: {

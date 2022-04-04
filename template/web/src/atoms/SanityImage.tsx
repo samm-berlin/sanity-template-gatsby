@@ -31,9 +31,14 @@ interface Props
   image: any
   loading: string
   objectFit?: string
+  aspectRatio?: string
 }
 
-const IMG = styled(SImage)<Props>(
+const i = styled(SImage)`
+  ${(props) => props.aspectRatio && `aspect-ratio: ${props.aspectRatio};`}
+`
+
+const IMG = styled(i)<Props>(
   compose(space, layout, position, border, shadow, flexbox),
   {
     width: '100%',
@@ -44,8 +49,14 @@ const IMG = styled(SImage)<Props>(
   })
 )
 
-const SanityImage: FC<Props> = ({ image, loading, objectFit }) => (
-  <IMG {...image} width={4096} loading={loading} objectFit={objectFit || 'cover'} />
+const SanityImage: FC<Props> = ({ image, loading, objectFit, aspectRatio }) => (
+  <IMG
+    {...image}
+    width={4096}
+    loading={loading}
+    objectFit={objectFit || 'cover'}
+    aspectRatio={aspectRatio}
+  />
 )
 
 export default SanityImage

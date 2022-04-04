@@ -14,7 +14,15 @@ import textVariants from '@/styles/textVariants'
 
 export type TextComponent = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span' | 'p' | 'li'
 
-export type TextVariant = 'head' | 'subhead' | 'normal' | 'body' | 'caption' | 'captionSmall'
+export type TextVariant =
+  | 'head'
+  | 'subhead'
+  | 'normal'
+  | 'body'
+  | 'caption'
+  | 'captionSmall'
+  | 'cardTitle'
+  | 'relatedTitle'
 
 export interface TextProps extends TypographyProps, SpaceProps, ColorProps {
   component?: TextComponent
@@ -41,7 +49,7 @@ export default styled('div')<TextProps>(
   ${(props: TextProps) =>
     props.mono &&
     `
-  `} 
+  `}
 
   ${(props: TextProps) =>
     props.uppercase &&
