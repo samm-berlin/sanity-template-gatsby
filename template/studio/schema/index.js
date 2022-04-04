@@ -49,6 +49,7 @@ import heroModule from './modules/hero'
 import moduleListing from './modules/listing'
 import richTextModule from './modules/richText'
 import twoColumnModule from './modules/twoColumn'
+import twoTextColumnsModule from './modules/twoTextColumns'
 import moduleDefaultFields from './modules/_defaultFields'
 import moduleVideoEmbed from './modules/videoEmbed'
 import moduleSpacer from './modules/spacer'
@@ -119,6 +120,7 @@ export default createSchema({
     heroModule,
     richTextModule,
     twoColumnModule,
+    twoTextColumnsModule,
     moduleVideoEmbed,
     moduleSpacer,
     moduleMarquee,

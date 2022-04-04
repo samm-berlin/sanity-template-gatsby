@@ -24,6 +24,7 @@ import ScrollySectionModule from './Scrolly/ScrollySection'
 import RelationalGridModule, { ModuleRelationalGrid } from './RelationalGrid'
 import RelatedListModule, { ModuleRelatedList } from './RelatedList'
 import NewsListMasonry from './NewsListMasonry'
+import TwoTextColumnsModule, { ModuleTwoTextColumns } from './TwoTextColumns'
 
 const modulesMap = {
   moduleRichText: (props: SanityModuleRichText) => <RichText {...props} />,
@@ -31,6 +32,7 @@ const modulesMap = {
   moduleVideoEmbed: (props: VideoEmbedModuleProps) => <VideoEmbedModule {...props} />,
   moduleSpacer: (props: SanityModuleSpacer) => <SpacerModule {...props} />,
   moduleTwoColumn: (props: SanityModuleTwoColumn) => <TwoColModule {...props} />,
+  moduleTwoTextColumns: (props: ModuleTwoTextColumns) => <TwoTextColumnsModule {...props} />,
   moduleMarquee: (props: SanityModuleMarquee) => <MarqueeModule {...props} />,
   moduleHero: (props: SanityModuleHero) => <HeroModule {...props} />,
   moduleRelationalGrid: (props: ModuleRelationalGrid) => <RelationalGridModule {...props} />,
@@ -63,11 +65,19 @@ const ModuleLoop: FC<SanityContentModules> = ({ modules, ...props }) => {
 export default ModuleLoop
 
 export const query = graphql`
-  fragment ContentModules on SanityModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleNewsListMasonryOrModuleRelatedListOrModuleRelationalGridOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleTwoColumnOrModuleVideoEmbed {
+  fragment ContentModules on SanityModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleNewsListMasonryOrModuleRelatedListOrModuleRelationalGridOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleTwoColumnOrModuleTwoTextColumnsOrModuleVideoEmbed {
     ... on SanityModuleRichText {
       _key
       _type
       ...moduleRichTextData
+      options {
+        ...ModuleOptions
+      }
+    }
+    ... on SanityModuleTwoTextColumns {
+      _key
+      _type
+      ...moduleTwoTextColumnsData
       options {
         ...ModuleOptions
       }
@@ -137,7 +147,7 @@ export const query = graphql`
     }
   }
 
-  fragment ScrollyContentModule on SanityModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleNewsListMasonryOrModuleRelatedListOrModuleRelationalGridOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleTwoColumnOrModuleVideoEmbed {
+  fragment ScrollyContentModule on SanityModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleNewsListMasonryOrModuleRelatedListOrModuleRelationalGridOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleTwoColumnOrModuleTwoTextColumnsOrModuleVideoEmbed {
     ... on SanityModuleScrollySection {
       _key
       _type
