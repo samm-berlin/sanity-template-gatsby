@@ -42,9 +42,9 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
-      name: 'meta',
+      name: 'seoSettings',
       title: 'SEO Settings',
-      type: 'meta',
+      type: 'seoSettings',
       options: {
         collapsible: true,
         collapsed: true,

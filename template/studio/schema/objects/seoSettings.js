@@ -2,17 +2,17 @@ import React from 'react';
 
 export default {
   title: 'SEO-Settings',
-  name: 'meta',
+  name: 'seoSettings',
   type: 'object',
   fields: [
     {
-      name: 'metaTitle',
+      name: 'seoTitle',
       title: 'SEO Title',
       type: 'string',
       description: 'Page title, falls back to document title',
     },
     {
-      name: 'metaDescription',
+      name: 'seoDescription',
       title: 'SEO Description',
       type: 'text',
       rows: 3,

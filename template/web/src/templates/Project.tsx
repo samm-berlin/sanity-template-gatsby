@@ -22,8 +22,8 @@ export const query = graphql`
   query ($id: String!) {
     project: sanityProject(id: { eq: $id }) {
       title
-      meta {
-        ...metaData
+      seoSettings {
+        ...seoSettingsData
       }
       contentModules {
         ...contentModulesData

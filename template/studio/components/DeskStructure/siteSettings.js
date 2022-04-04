@@ -2,8 +2,8 @@ import S from '@sanity/desk-tool/structure-builder'
 import {
   AiOutlineInfoCircle as InformationIcon,
   AiOutlineApartment as NavigationIcon,
-  AiOutlineFileSearch as MetaIcon,
-  AiOutlineSetting as SettingsIcon
+  AiOutlineFileSearch as SeoIcon,
+  AiOutlineSetting as SettingsIcon,
 } from 'react-icons/ai'
 import {BsLayoutWtf as ModulesIcon} from 'react-icons/bs'
 import {GiCookie} from 'react-icons/gi'
@@ -37,13 +37,13 @@ export default S.listItem()
           ),
 
         S.listItem()
-          .title('Meta')
-          .icon(MetaIcon)
+          .title('SEO-Settings')
+          .icon(SeoIcon)
           .child(
             S.document()
-              .schemaType('siteSettingsMeta')
-              .documentId('siteSettingsMeta')
-              .title('Meta Settings')
+              .schemaType('siteSettingsSeo')
+              .documentId('siteSettingsSeo')
+              .title('SEO-Settings')
           ),
 
         S.listItem()
@@ -54,7 +54,7 @@ export default S.listItem()
               .schemaType('siteSettingsCookies')
               .documentId('siteSettingsCookies')
               .title('Cookie Settings')
-          )
+          ),
 
         // contentmoduleSettings are deactivated for now
         // S.listItem()

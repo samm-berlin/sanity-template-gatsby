@@ -59,7 +59,7 @@ export const query = graphql`
         slug {
           current
         }
-        meta {
+        seoSettings {
           ogImage {
             asset {
               altText
@@ -74,7 +74,7 @@ export const query = graphql`
         slug {
           current
         }
-        meta {
+        seoSettings {
           ogImage {
             asset {
               url

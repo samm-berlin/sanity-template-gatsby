@@ -2,7 +2,7 @@ import createSchema from 'part:@sanity/base/schema-creator'
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 import siteSettingsInformation from './singletons/siteSettingsInformation'
-import siteSettingsMeta from './singletons/siteSettingsMeta'
+import siteSettingsSeo from './singletons/siteSettingsSeo'
 import siteSettingsNavigation from './singletons/siteSettingsNavigation'
 import siteSettingsCookies from './singletons/siteSettingsCookies'
 // import siteSettingsModules from './singletons/siteSettingsModules'
@@ -24,7 +24,7 @@ import scrollyContentModules from './modules/scrolly-modules'
 import scrollyBackgroundContentModules from './modules/scrolly-modules/backgroundContentModules'
 import imageWithArtDirection from './objects/imageWithArtDirection'
 import link from './objects/link'
-import meta from './objects/meta'
+import seoSettings from './objects/seoSettings'
 import richText from './objects/richText'
 import richTextExtended from './objects/richTextExtended'
 import colorTheme from './objects/colorTheme'
@@ -73,7 +73,7 @@ export default createSchema({
 
     // singletons
     siteSettingsInformation,
-    siteSettingsMeta,
+    siteSettingsSeo,
     siteSettingsNavigation,
     /* contentmoduleSettings are deactivated for now */
     // siteSettingsModules,
@@ -96,7 +96,7 @@ export default createSchema({
     contentModules,
     imageWithArtDirection,
     link,
-    meta,
+    seoSettings,
     richText,
     richTextExtended,
     colorTheme,
