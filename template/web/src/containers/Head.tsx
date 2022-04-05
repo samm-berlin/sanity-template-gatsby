@@ -4,7 +4,7 @@ import Helmet, { HelmetProps } from 'react-helmet'
 // import { mapToSingleObject } from '@/lib/helpers'
 // import fonts from '@/assets/fonts.css'
 
-type MetaData = {
+type SeoSettingsData = {
   robotsIndex: boolean
   metaTitle: string | null
   metaDescription: string | null
@@ -13,21 +13,21 @@ type MetaData = {
 
 type HeadProps = {
   title?: string
-  meta?: MetaData
+  seoSettings?: SeoSettingsData
 } & HelmetProps
 
 const Head = (props: HeadProps): JSX.Element => {
-  const { meta, title } = props
+  const { seoSettings, title } = props
 
   const { data } = useStaticQuery(graphql`
     query {
-      data: allSanitySiteSettingsMeta {
+      data: allSanitySiteSettingsSeo {
         edges {
           node {
-            meta {
+            seoSettings {
               robotsIndex
-              metaTitle
-              metaDescription
+              seoTitle
+              seoDescription
               ogImage {
                 asset {
                   url
@@ -46,17 +46,20 @@ const Head = (props: HeadProps): JSX.Element => {
   //   metaDescription: ''
   // }
 
-  const { meta: defaultMeta } = /* mapToSingleObject(data) */ data
+  const { seoSettings: defaultSeoSettings } = /* mapToSingleObject(data) */ data
 
   // if this is not the production environment, we don't want to index the site
   // noindex set in general siteSettings has priority over page-specific setting
   let indexSafe = 'noindex,nofollow'
 
   if (process.env.STAGE === 'production') {
-    indexSafe = defaultMeta?.robotsIndex && meta?.robotsIndex ? 'index,follow' : 'noindex,follow'
+    indexSafe =
+      defaultSeoSettings?.robotsIndex && seoSettings?.robotsIndex
+        ? 'index,follow'
+        : 'noindex,follow'
   }
 
-  const ogImage = meta?.ogImage || defaultMeta?.ogImage
+  const ogImage = seoSettings?.ogImage || defaultSeoSettings?.ogImage
 
   return (
     <Helmet
@@ -89,10 +92,10 @@ const Head = (props: HeadProps): JSX.Element => {
 }
 
 export const query = graphql`
-  fragment metaData on SanityMeta {
+  fragment seoSettingsData on SanitySeoSettings {
     robotsIndex
-    metaTitle
-    metaDescription
+    seoTitle
+    seoDescription
     ogImage {
       asset {
         url

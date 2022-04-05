@@ -12,9 +12,9 @@ export default {
       title: 'Settings',
       options: {
         collapsible: true,
-        collapsed: true
-      }
-    }
+        collapsed: true,
+      },
+    },
   ],
 
   fields: [
@@ -22,7 +22,7 @@ export default {
       name: 'title',
       title: 'Title',
       type: 'string',
-      validation: Rule => Rule.required()
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'slug',
@@ -30,27 +30,27 @@ export default {
       type: 'slug',
       options: {
         source: 'title',
-        maxLength: 96
+        maxLength: 96,
       },
-      validation: Rule => Rule.required()
+      validation: (Rule) => Rule.required(),
     },
     {
-      name: 'meta',
-      title: 'Meta',
-      type: 'meta',
+      name: 'seoSettings',
+      title: 'SEO-Settings',
+      type: 'seoSettings',
       options: {
         collapsible: true,
-        collapsed: true
-      }
+        collapsed: true,
+      },
     },
     {
       name: 'contentModules',
       title: 'Content',
-      type: 'contentModules'
-    }
+      type: 'contentModules',
+    },
   ],
 
   initialValue: {
-    meta: {_type: 'meta', robotsIndex: true}
-  }
+    seoSettings: { _type: 'seoSettings', robotsIndex: true },
+  },
 }

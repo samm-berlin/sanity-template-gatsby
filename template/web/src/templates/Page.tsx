@@ -22,8 +22,8 @@ export const query = graphql`
   query ($id: String!) {
     page: sanityPage(id: { eq: $id }) {
       title
-      meta {
-        ...metaData
+      seoSettings {
+        ...seoSettingsData
       }
       contentModules {
         ...contentModulesData

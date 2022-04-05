@@ -15,12 +15,12 @@ const hiddenDocs = [
   'project',
   // 'tag',
   'siteSettingsCookies',
-  'siteSettingsMeta',
+  'siteSettingsSeo',
   'siteSettingsNavigation',
   'siteSettingsInformation',
   'siteSettingsModules',
   'frontPageSettings',
-  'media.tag' // media plugin
+  'media.tag', // media plugin
 ]
 
 const hiddenDocsForStage =

@@ -26,6 +26,7 @@ import RelatedListModule, { ModuleRelatedList } from './RelatedList'
 import NewsListMasonry from './NewsListMasonry'
 import FourPathGrid, { ModuleFourPathGrid } from './FourPathGrid'
 import Listing, { ModuleListing } from './Listing'
+import TwoTextColumnsModule, { ModuleTwoTextColumns } from './TwoTextColumns'
 
 const modulesMap = {
   moduleRichText: (props: SanityModuleRichText) => <RichText {...props} />,
@@ -33,6 +34,7 @@ const modulesMap = {
   moduleVideoEmbed: (props: VideoEmbedModuleProps) => <VideoEmbedModule {...props} />,
   moduleSpacer: (props: SanityModuleSpacer) => <SpacerModule {...props} />,
   moduleTwoColumn: (props: SanityModuleTwoColumn) => <TwoColModule {...props} />,
+  moduleTwoTextColumns: (props: ModuleTwoTextColumns) => <TwoTextColumnsModule {...props} />,
   moduleMarquee: (props: SanityModuleMarquee) => <MarqueeModule {...props} />,
   moduleHero: (props: SanityModuleHero) => <HeroModule {...props} />,
   moduleRelationalGrid: (props: ModuleRelationalGrid) => <RelationalGridModule {...props} />,
@@ -67,11 +69,19 @@ const ModuleLoop: FC<SanityContentModules> = ({ modules, ...props }) => {
 export default ModuleLoop
 
 export const query = graphql`
-  fragment ContentModules on SanityModuleFourPathGridOrModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleNewsListMasonryOrModuleRelatedListOrModuleRelationalGridOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleTwoColumnOrModuleVideoEmbed {
+  fragment ContentModules on SanityModuleFourPathModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleNewsListMasonryOrModuleRelatedListOrModuleRelationalGridOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleTwoColumnOrModuleTwoTextColumnsOrModuleVideoEmbed {
     ... on SanityModuleRichText {
       _key
       _type
       ...moduleRichTextData
+      options {
+        ...ModuleOptions
+      }
+    }
+    ... on SanityModuleTwoTextColumns {
+      _key
+      _type
+      ...moduleTwoTextColumnsData
       options {
         ...ModuleOptions
       }
@@ -157,7 +167,7 @@ export const query = graphql`
     }
   }
 
-  fragment ScrollyContentModule on SanityModuleFourPathGridOrModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleNewsListMasonryOrModuleRelatedListOrModuleRelationalGridOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleTwoColumnOrModuleVideoEmbed {
+  fragment ScrollyContentModule on SanityModuleFourPathGridOrModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleNewsListMasonryOrModuleRelatedListOrModuleRelationalGridOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleTwoColumnOrModuleTwoTextColumnsOrModuleVideoEmbed {
     ... on SanityModuleScrollySection {
       _key
       _type
