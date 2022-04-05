@@ -1,4 +1,4 @@
-import React, { FC, ReactChild } from 'react'
+import React, { FC } from 'react'
 import { ThemeProvider } from 'styled-components'
 import Box from '@/atoms/Box'
 import { graphql } from 'gatsby'
@@ -6,7 +6,6 @@ import { SanityModuleDefaultFields } from 'web/types/graphql-types'
 import pageTheme, { lightTheme, darkTheme, brandTheme } from '@/styles/theme'
 
 type Props = {
-  children: ReactChild | ReactChild[] | JSX.Element
   options?: SanityModuleDefaultFields | null
 }
 

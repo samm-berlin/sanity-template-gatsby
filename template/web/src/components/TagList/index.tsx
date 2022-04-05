@@ -1,12 +1,8 @@
-import React, { FC, useEffect, useState } from 'react'
+import React, { FC, useState } from 'react'
 import { graphql } from 'gatsby'
-import styled from 'styled-components'
 import Box from '@/atoms/Box'
 import Text from '@/atoms/Text'
-
-export type Tag = {
-  title: string
-}
+import { Tag } from 'web/types/custom-graphql-types'
 
 export type TagListProps = {
   numberOfTags?: number
