@@ -15,7 +15,7 @@ interface NewsHeaderProps {
 const moduleOptionsContainerWide = {
   padding: {
     container: false,
-    x: -1,
+    x: 4,
     y: -1
   },
   theme: {
@@ -27,7 +27,7 @@ const moduleOptionsContainerWide = {
 const moduleOptionsContainerNarrow = {
   padding: {
     container: true,
-    x: '15rem',
+    x: [4, '15rem'],
     y: 4
   },
   theme: {
@@ -42,13 +42,43 @@ const NewsHeader: FC<NewsHeaderProps> = (props) => {
   return (
     <Box display="flex" flexDirection="column" justifyContent="center" alignItems="center">
       <ModuleContainer options={moduleOptionsContainerWide}>
-        <Text> {title} </Text>
-        {keyVisual && <Image image={keyVisual}></Image>}
+        {category && (
+          <Box pb="4" display={['unset', 'none']}>
+            <Text variant="bodyTitleSmall" textAlign="center">
+              {category.title}
+            </Text>
+          </Box>
+        )}
+        <Text variant="head" component="h1" textAlign="center">
+          {title}
+        </Text>
+        {keyVisual && (
+          <Box display={['unset', 'none']}>
+            <Image image={keyVisual} aspectRatio="1"></Image>
+          </Box>
+        )}
+        {keyVisual && (
+          <Box display={['none', 'unset']}>
+            <Image image={keyVisual}></Image>
+          </Box>
+        )}
       </ModuleContainer>
       <ModuleContainer options={moduleOptionsContainerNarrow}>
-        {category && <Text> {category.title} </Text>}
-        {excerpt && <Text> {excerpt}</Text>}
-        {tags && <TagList tags={tags} numberOfTags={tags.length} />}
+        {category && (
+          <Box pb="2" display={['none', 'unset']}>
+            <Text variant="bodyTitleSmall"> {category.title} </Text>
+          </Box>
+        )}
+        {excerpt && (
+          <Box pb="2">
+            <Text variant="bodyTitle"> {excerpt}</Text>
+          </Box>
+        )}
+        {tags && (
+          <Box pb="2">
+            <TagList tags={tags} numberOfTags={tags.length} />
+          </Box>
+        )}
         {_createdAt && <Text>{toDateString(_createdAt)}</Text>}
       </ModuleContainer>
     </Box>
