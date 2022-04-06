@@ -1,8 +1,9 @@
 import React, { FC, useState } from 'react'
-import { graphql } from 'gatsby'
+import { graphql, navigate } from 'gatsby'
 import Box from '@/atoms/Box'
 import Image from '@/atoms/SanityImage'
 import Text from '@/atoms/Text'
+import { getUri } from '@/utils/routing'
 
 export type PageReference = {
   _type: string
@@ -45,6 +46,10 @@ const ModuleFourPathGridItem: FC<ModuleFourPathGrid> = (props) => {
             width={['100%', '50%']}
             height={['25%', '50%']}
             onMouseEnter={() => setActiveImageIndex(index + 1)}
+            onClick={() =>
+              navigate(getUri(item.pageReference.slug.current, item.pageReference._type))
+            }
+            cursor="pointer"
             display="flex"
             alignItems="center"
           >
@@ -75,6 +80,10 @@ const ModuleFourPathGridItem: FC<ModuleFourPathGrid> = (props) => {
             width={['100%', '50%']}
             position="relative"
             aspectRatio="16/9"
+            onClick={() =>
+              navigate(getUri(item.pageReference.slug.current, item.pageReference._type))
+            }
+            cursor="pointer"
           >
             <Box
               position="absolute"
@@ -86,7 +95,7 @@ const ModuleFourPathGridItem: FC<ModuleFourPathGrid> = (props) => {
               justifyContent="center"
               zIndex="80"
             >
-              <Text component="h3" variant="bodyTitle" color="white">
+              <Text component="h3" variant="bodyTitle" color="white" textAlign="center">
                 {item.pageReference.title}
               </Text>
             </Box>
@@ -117,18 +126,38 @@ export const query = graphql`
         ... on SanityPage {
           _type
           title
+          slug {
+            _key
+            _type
+            current
+          }
         }
         ... on SanityNews {
           _type
           title
+          slug {
+            _key
+            _type
+            current
+          }
         }
         ... on SanityProject {
           _type
           title
+          slug {
+            _key
+            _type
+            current
+          }
         }
         ... on SanityProduct {
           _type
           title
+          slug {
+            _key
+            _type
+            current
+          }
         }
       }
     }
