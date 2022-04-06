@@ -3,11 +3,13 @@ import { graphql, navigate } from 'gatsby'
 import Box from '@/atoms/Box'
 import Image from '@/atoms/SanityImage'
 import Text from '@/atoms/Text'
-import { getUri } from '@/utils/routing'
+import { Slug } from 'web/types/custom-graphql-types'
+import Link from '@/atoms/Link'
 
 export type PageReference = {
   _type: string
   title: string
+  slug: Slug
 }
 
 export type FourPathGridItem = {
@@ -46,61 +48,58 @@ const ModuleFourPathGridItem: FC<ModuleFourPathGrid> = (props) => {
             width={['100%', '50%']}
             height={['25%', '50%']}
             onMouseEnter={() => setActiveImageIndex(index + 1)}
-            onClick={() =>
-              navigate(getUri(item.pageReference.slug.current, item.pageReference._type))
-            }
             cursor="pointer"
             display="flex"
             alignItems="center"
           >
-            <Box
-              display={'flex'}
-              opacity={activeImageIndex && activeImageIndex - 1 !== index ? 0 : 1}
-              width="100%"
-              height="100%"
-            >
-              <Box pl={5} display="flex" alignItems="center">
-                <Text
-                  color={activeImageIndex && activeImageIndex - 1 === index ? 'white' : 'black'}
-                  component="h3"
-                  variant="bodyTitle"
-                >
-                  {item.pageReference.title}
-                </Text>
+            <Link type="internal" internal={item.pageReference}>
+              <Box
+                display={'flex'}
+                opacity={activeImageIndex && activeImageIndex - 1 !== index ? 0 : 1}
+                width="100%"
+                height="100%"
+              >
+                <Box pl={5} display="flex" alignItems="center">
+                  <Text
+                    color={activeImageIndex && activeImageIndex - 1 === index ? 'white' : 'black'}
+                    component="h3"
+                    variant="bodyTitle"
+                  >
+                    {item.pageReference.title}
+                  </Text>
+                </Box>
               </Box>
-            </Box>
+            </Link>
           </Box>
         ))}
       </Box>
       <Box height="100vh" display={['flex', 'none']} flexDirection="column">
         {items.map((item) => (
-          <Box
-            key={item._key}
-            height="25%"
-            width={['100%', '50%']}
-            position="relative"
-            aspectRatio="16/9"
-            onClick={() =>
-              navigate(getUri(item.pageReference.slug.current, item.pageReference._type))
-            }
-            cursor="pointer"
-          >
+          <Link key={item._key} type="internal" internal={item.pageReference}>
             <Box
-              position="absolute"
-              top="50%"
-              left="50%"
-              transform="translate(-50%, -50%)"
-              display="flex"
-              alignItems="center"
-              justifyContent="center"
-              zIndex="80"
+              height="25%"
+              width={['100%', '50%']}
+              position="relative"
+              aspectRatio="16/9"
+              cursor="pointer"
             >
-              <Text component="h3" variant="bodyTitle" color="white" textAlign="center">
-                {item.pageReference.title}
-              </Text>
+              <Box
+                position="absolute"
+                top="50%"
+                left="50%"
+                transform="translate(-50%, -50%)"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                zIndex="80"
+              >
+                <Text component="h3" variant="bodyTitle" color="white" textAlign="center">
+                  {item.pageReference.title}
+                </Text>
+              </Box>
+              <Image image={item.image}></Image>
             </Box>
-            <Image image={item.image}></Image>
-          </Box>
+          </Link>
         ))}
       </Box>
     </Box>

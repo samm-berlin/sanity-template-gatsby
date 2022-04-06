@@ -20,9 +20,6 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
-    &:hover {
-      font-style: italic;
-    }
   }
 
   b, strong {

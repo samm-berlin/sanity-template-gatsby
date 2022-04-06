@@ -7,7 +7,7 @@ import { Tag } from '@/components/TagList'
 
 export type RelatedListItem = {
   _key?: string
-  _type?: string
+  _type: string
   title: string
   featuredImage: any
   excerpt?: string

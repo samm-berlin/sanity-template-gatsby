@@ -1,9 +1,10 @@
-import React, { FC, useState } from 'react'
+import React, { FC } from 'react'
 import { graphql, navigate, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import Box from '@/atoms/Box'
 import Text from '@/atoms/Text'
 import Image from '@/atoms/SanityImage'
+import Link from '@/atoms/Link'
 import theme from '@/styles/theme'
 import { getUri } from '@/utils/routing'
 
@@ -31,17 +32,19 @@ const ContainerBox = styled(Box)`
 
 const HoverBox = styled(Box)`
   @media screen and (min-width: ${theme.breakpoints[0]}) {
-    &:hover {
-      color: ${theme.colors.white};
+    &:hover a div {
+      color: white;
     }
   }
 `
 
 export type ListingItem = {
   _key?: string
-  _type?: string
+  _type: string
   title: string
-  slug?: {
+  slug: {
+    _key: string
+    _type: string
     current: string
   }
   featuredImage: {
@@ -119,9 +122,11 @@ const Listing: FC<ListingProps> = (props) => {
             cursor="pointer"
             onClick={() => item.slug && navigate(getUri(item.slug.current, item._type))}
           >
-            <Text component="h1" variant="head">
-              {item.title}
-            </Text>
+            <Link type="internal" internal={{ slug: item.slug, _type: item._type }}>
+              <Text component="h1" variant="head" color="black">
+                {item.title}
+              </Text>
+            </Link>
           </HoverBox>
           <Box
             display={['none', 'unset']}
