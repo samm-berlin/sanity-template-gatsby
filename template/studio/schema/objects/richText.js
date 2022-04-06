@@ -30,7 +30,7 @@ export default {
               title: 'Normal',
               value: 'normal',
               blockEditor: {
-                render: (props) => StyledBlock(props, 'normal'),
+                render: (props) => StyledBlock(props, 'body'),
               },
             },
             {
@@ -58,7 +58,7 @@ export default {
               title: 'Heading 4',
               value: 'h4',
               blockEditor: {
-                render: (props) => StyledBlock(props, 'subhead'),
+                render: (props) => StyledBlock(props, 'bodyTitle'),
               },
             },
             {

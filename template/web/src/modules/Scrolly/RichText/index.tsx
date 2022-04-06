@@ -24,7 +24,9 @@ export default RichTextModule
 export const query = graphql`
   fragment RichTextData on SanityRichTextExtended {
     alignment
-    textRaw: _rawText(resolveReferences: { maxDepth: 6 })
+    text {
+      textRaw: _rawText(resolveReferences: { maxDepth: 6 })
+    }
   }
 
   fragment scrollyModuleRichTextData on SanityScrollyModuleRichText {
