@@ -30,11 +30,21 @@ export default S.listItem()
         S.documentTypeListItem('news')
           .title('All News')
           .icon(NewsIcon)
-          .child((documentId) =>
-            S.document()
-              .documentId(documentId)
+          .child((id) =>
+            S.documentList()
+              .title('All News')
               .schemaType('news')
-              .views(PreviewsStructure(resolvePreviewUrl))
+              .filter('_type == "news"')
+              .params({ id })
+              .menuItems([
+                ...S.documentTypeList('news').getMenuItems(),
+              ])
+              .child((documentId) =>
+                S.document()
+                  .documentId(documentId)
+                  .schemaType('news')
+                  .views(PreviewsStructure(resolvePreviewUrl))
+              )
           ),
 
         S.listItem()
