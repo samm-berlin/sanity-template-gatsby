@@ -11,14 +11,7 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     font-family: ${theme.fonts.sans};
-    font-size: 6px;
-    ${({
-      theme: {
-        mediaQueries: { small }
-      }
-    }) => small} {
-      font-size: 6px;
-    }
+    font-size: 8px;
   }
 
   body {
@@ -27,9 +20,6 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
-    &:hover {
-      font-style: italic;
-    }
   }
 
   b, strong {
@@ -39,7 +29,7 @@ const GlobalStyle = createGlobalStyle`
   li {
     margin-left: 2em;
   }
-  
+
   p, ul, ol {
     margin-bottom: 1em;
   }

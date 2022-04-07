@@ -10,7 +10,9 @@ export default {
     brand: Object.values(brandColors)[0],
     text: '#000',
     background: 'rgba(1,1,1,0)',
-    grey: '#E4E4E4'
+    grey: '#E4E4E4',
+    black: '#000',
+    white: '#fff'
   },
   fonts: {
     sans: "'Archivo', sans-serif",
@@ -28,7 +30,27 @@ export default {
     }
   },
   space: [0, '1rem', '2rem', '3rem', '4rem', '5rem'],
-  fontSizes: ['1.5rem', '1.75rem', '2.5rem', '3rem', '5rem', '10rem', '16rem'],
+  fontSizes: [
+    '1.5rem', // 12 - 0
+    '1.75rem', // 14 - 1
+    '2rem', // 16 - 2
+    '2.5rem', // 20 - 3
+    '3rem', // 24 - 4
+    '4rem', // 32 - 5
+    '5rem', // 40 - 6
+    '6rem', // 48 - 7
+    '7rem', // 56 - 8
+    '8rem', // 64 - 9
+    '9rem', // 72 - 10
+    '10rem', // 80 - 11
+    '12rem', // 96 -12
+    '14rem', // 112 -13
+    '16rem', // 128 -14
+    '18rem', // 144 -15
+    '20rem', // 160 -16
+    '25rem', // 200 -17
+    '30rem' // 240 - 18
+  ],
   radii: [0, 1, 2, 4, 6, 8, 16],
   containerWidth: '1200px',
   minComponentWidth: '300px',
