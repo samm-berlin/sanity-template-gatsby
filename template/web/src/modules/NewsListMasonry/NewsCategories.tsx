@@ -22,8 +22,8 @@ const NewsCategories: FC<NewsCategoriesProps> = (props) => {
   const { categories, filteredCategory, setFilteredCategory } = props
 
   return (
-    <Box display="flex" px="2">
-      <Box onClick={() => setFilteredCategory(undefined)}>
+    <Box display="flex" px="2" flexWrap="wrap" justifyContent={['space-evenly', 'unset']}>
+      <Box display={['none', 'unset']} onClick={() => setFilteredCategory(undefined)}>
         <StyledText>Filter by category</StyledText>
       </Box>
       {categories?.map((cat) => (
@@ -32,7 +32,12 @@ const NewsCategories: FC<NewsCategoriesProps> = (props) => {
           display="flex"
           justifyContent="center"
           alignItems="center"
-          onClick={() => setFilteredCategory(cat.title)}
+          onClick={() =>
+            filteredCategory === cat.title
+              ? setFilteredCategory(undefined)
+              : setFilteredCategory(cat.title)
+          }
+          pb={[1, 0]}
         >
           <StyledText
             color="grey"

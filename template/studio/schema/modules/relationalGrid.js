@@ -12,7 +12,7 @@ export default {
     },
     {
       name: 'postType',
-      title: 'PostType',
+      title: 'Post Type',
       type: 'string',
       options: {
         list: [

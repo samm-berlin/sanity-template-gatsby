@@ -1,8 +1,10 @@
 import React from 'react'
 import { Link as GatsbyLink, GatsbyLinkProps, graphql } from 'gatsby'
 import { getUri } from '@/utils/routing'
+import { Slug } from 'web/types/custom-graphql-types'
+import Box from './Box'
 
-interface ALinkProps extends Omit<GatsbyLinkProps<any>, 'to'> {
+interface ALinkProps extends Omit<GatsbyLinkProps<unknown>, 'to'> {
   href: string
 }
 
@@ -12,18 +14,27 @@ const ALink: React.FC<ALinkProps> = ({ href, children, innerRef, ...other }) => 
   </a>
 )
 
-const Link = React.forwardRef(
-  (props: Omit<GatsbyLinkProps<unknown>, 'ref'>, ref: React.Ref<HTMLAnchorElement>) => {
-    const { to, url, activeClassName, partiallyActive, type, internal, ...other } = props
+interface LinkProps extends Omit<GatsbyLinkProps<unknown>, 'ref' | 'to'> {
+  ref: React.Ref<HTMLAnchorElement>
+  to?: string
+  internal?: {
+    slug: Slug
+    _type: string
+  }
+}
 
-    // Use Gatsby Link for internal links, and <a> for others
-    if (type === 'internal') {
-      const file = /\.[0-9a-z]+$/i.test(to)
+const Link = React.forwardRef((props: LinkProps) => {
+  const { to, activeClassName, partiallyActive, type, internal, ref, children, ...other } = props
 
-      if (file) {
-        return <ALink href={to} innerRef={ref} {...other} />
-      }
-      const uri = getUri(internal.slug.current, internal.type)
+  // Use Gatsby Link for internal links, and <a> for others
+  if (type === 'internal') {
+    const file = /\.[0-9a-z]+$/i.test(to || '')
+
+    if (file && to) {
+      return <ALink href={to} innerRef={ref} {...other} />
+    }
+    if (internal) {
+      const uri = getUri(internal?.slug.current, internal?._type)
       return (
         <GatsbyLink
           to={uri}
@@ -31,12 +42,16 @@ const Link = React.forwardRef(
           partiallyActive={partiallyActive}
           innerRef={ref}
           {...other}
-        />
+        >
+          {children}
+        </GatsbyLink>
       )
+    } else {
+      return <Box>{children}</Box>
     }
-    return <ALink href={url} innerRef={ref} {...other} />
   }
-)
+  return <ALink href={to || ''} innerRef={ref} {...other} />
+})
 
 export default Link
 
