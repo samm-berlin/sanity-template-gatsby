@@ -1,12 +1,22 @@
 import React, { FC } from 'react'
-import { SanityNews } from 'web/types/graphql-types'
 import ModulesLoop from '@/modules'
+import { News } from 'web/types/custom-graphql-types'
+import NewsHeader from '@/components/NewsHeader'
+import Box from '@/atoms/Box'
 
-interface NewsProps {
-  news: SanityNews
+interface NewsContainerProps {
+  news: News
 }
-const NewsContainer: FC<NewsProps> = ({ news: { title, meta, contentModules }, ...props }) => {
-  return <ModulesLoop modules={contentModules?.modules} />
+
+const NewsContainer: FC<NewsContainerProps> = (props) => {
+  const { news } = props
+
+  return (
+    <Box pt="12rem">
+      <NewsHeader news={news} />
+      <ModulesLoop modules={news.contentModules?.modules} />
+    </Box>
+  )
 }
 
 export default NewsContainer

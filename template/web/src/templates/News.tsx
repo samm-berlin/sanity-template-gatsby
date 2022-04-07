@@ -2,26 +2,37 @@ import { graphql } from 'gatsby'
 import React, { FC } from 'react'
 import Layout from '@/containers/Layout'
 import NewsContainer from '@/containers/NewsContainer'
-import { SanityNews } from 'web/graphql-types'
+import { News } from 'web/types/custom-graphql-types'
 
 interface NewsProps {
   data: {
-    news: SanityNews
+    news: News
   }
 }
 
-const News: FC<NewsProps> = ({ data: { news: sanityNews } }) => (
+const NewsPage: FC<NewsProps> = ({ data: { news: sanityNews } }) => (
   <Layout>
     <NewsContainer news={sanityNews} />
   </Layout>
 )
 
-export default News
+export default NewsPage
 
 export const query = graphql`
   query ($id: String!) {
     news: sanityNews(id: { eq: $id }) {
       title
+      keyVisual {
+        ...ImageWithPreview
+      }
+      category {
+        title
+      }
+      excerpt
+      tags {
+        ...tagsData
+      }
+      _createdAt
       seoSettings {
         ...seoSettingsData
       }

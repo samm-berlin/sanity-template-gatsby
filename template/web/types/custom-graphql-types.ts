@@ -1,3 +1,5 @@
+import { SanityContentModules } from "./graphql-types"
+
 export type ScrollyModuleDefaultFields = {
   _key?: string
   _type?: string
@@ -36,4 +38,33 @@ export type Category = {
   _key?: string
   _type?: string
   title: string
+}
+
+export type Tag = {
+  title: string
+}
+
+export type SeoSettings = {
+  _key?: string
+  _type?: string
+  seoTitle?: string
+  seoDescription?: string
+  ogImage?: any
+  robotsIndex?: boolean
+}
+
+export type News = {
+  _id?:string
+  _type?: string
+  _createdAt?: string
+  _key?: string
+  title: string
+  slug: Slug
+  seoSettings?: SeoSettings
+  category?: Category
+  tags?: Tag[]
+  excerpt?: string
+  featuredImage?: any
+  keyVisual?: any
+  contentModules?: SanityContentModules
 }

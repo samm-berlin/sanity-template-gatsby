@@ -15,9 +15,9 @@ export default {
     white: '#fff'
   },
   fonts: {
-    sans: "'Archivo', sans-serif",
-    serif: "'EB Garamond', serif",
-    mono: "'Nanum Gothic Coding', monospace"
+    sans: '\'Archivo\', sans-serif',
+    serif: '\'EB Garamond\', serif',
+    mono: '\'Nanum Gothic Coding\', monospace'
   },
   buttons: {
     primary: {
