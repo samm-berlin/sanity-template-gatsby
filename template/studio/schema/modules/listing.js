@@ -1,30 +1,38 @@
 export default {
+  title: 'Listing (all items)',
   name: 'moduleListing',
-  title: 'Card Listing',
   type: 'object',
-
-  preview: {
-    select: {
-      title: 'title'
-    },
-    prepare ({...selection}) {
-      return {...selection, subtitle: 'Card Listing'}
-    }
-  },
+  fieldsets: [{ name: 'options' }],
   fields: [
     {
-      name: 'title',
-      title: 'Title',
-      type: 'string'
+      title: 'Module Options',
+      type: 'moduleDefaultFields',
+      name: 'options',
+      fieldset: 'options',
     },
     {
-      name: 'items',
-      title: 'Items',
-      type: 'array',
-      of: [
-        {type: 'reference', to: [{type: 'news'}, {type: 'page'}, {type: 'project'}, {type: 'product'}]},
-        {type: 'card'}
-      ]
-    }
-  ]
+      name: 'postType',
+      title: 'Post Type',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Jobs', value: 'jobs' },
+          { title: 'News', value: 'news' },
+          { title: 'Projects', value: 'project' },
+        ],
+      },
+      validation: (Rule) => Rule.required(),
+    },
+  ],
+  preview: {
+    select: {
+      title: 'postType',
+    },
+    prepare({title}) {
+      return {
+        title: title,
+        subtitle: 'Listing',
+      }
+    },
+  },
 }

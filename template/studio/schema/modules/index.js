@@ -20,6 +20,8 @@ export default {
         {type: 'moduleRelationalGrid'},
         {type: 'moduleRelatedList'},
         {type: 'moduleNewsListMasonry'},
+        {type: 'moduleStatement'},
+        {type: 'moduleFourPathGrid'},
         {type: 'moduleScrollySection'},
       ],
       options: {

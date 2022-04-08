@@ -24,6 +24,9 @@ import ScrollySectionModule from './Scrolly/ScrollySection'
 import RelationalGridModule, { ModuleRelationalGrid } from './RelationalGrid'
 import RelatedListModule, { ModuleRelatedList } from './RelatedList'
 import NewsListMasonry from './NewsListMasonry'
+import FourPathGrid, { ModuleFourPathGrid } from './FourPathGrid'
+import Listing, { ModuleListing } from './Listing'
+import StatementModule, { ModuleStatement } from './Statement'
 import TwoTextColumnsModule, { ModuleTwoTextColumns } from './TwoTextColumns'
 
 const modulesMap = {
@@ -38,6 +41,9 @@ const modulesMap = {
   moduleRelationalGrid: (props: ModuleRelationalGrid) => <RelationalGridModule {...props} />,
   moduleRelatedList: (props: ModuleRelatedList) => <RelatedListModule {...props} />,
   moduleNewsListMasonry: () => <NewsListMasonry />,
+  moduleFourPathGrid: (props: ModuleFourPathGrid) => <FourPathGrid {...props} />,
+  moduleListing: (props: ModuleListing) => <Listing {...props} />,
+  moduleStatement: (props: ModuleStatement) => <StatementModule {...props} />,
   moduleScrollySection: (props: SanityModuleScrollySection) => <ScrollySectionModule {...props} />,
   fragment: <div />
 }
@@ -65,7 +71,7 @@ const ModuleLoop: FC<SanityContentModules> = ({ modules, ...props }) => {
 export default ModuleLoop
 
 export const query = graphql`
-  fragment ContentModules on SanityModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleNewsListMasonryOrModuleRelatedListOrModuleRelationalGridOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleTwoColumnOrModuleTwoTextColumnsOrModuleVideoEmbed {
+  fragment ContentModules on SanityModuleFourPathGridOrModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleNewsListMasonryOrModuleRelatedListOrModuleRelationalGridOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleStatementOrModuleTwoColumnOrModuleTwoTextColumnsOrModuleVideoEmbed {
     ... on SanityModuleRichText {
       _key
       _type
@@ -145,9 +151,33 @@ export const query = graphql`
         ...ModuleOptions
       }
     }
+    ... on SanityModuleFourPathGrid {
+      _key
+      _type
+      ...moduleFourPathGridData
+      options {
+        ...ModuleOptions
+      }
+    }
+    ... on SanityModuleListing {
+      _key
+      _type
+      ...moduleListingData
+      options {
+        ...ModuleOptions
+      }
+    }
+    ... on SanityModuleStatement {
+      _key
+      _type
+      ...moduleStatementData
+      options {
+        ...ModuleOptions
+      }
+    }
   }
 
-  fragment ScrollyContentModule on SanityModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleNewsListMasonryOrModuleRelatedListOrModuleRelationalGridOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleTwoColumnOrModuleTwoTextColumnsOrModuleVideoEmbed {
+  fragment ScrollyContentModule on SanityModuleFourPathGridOrModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleNewsListMasonryOrModuleRelatedListOrModuleRelationalGridOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleStatementOrModuleTwoColumnOrModuleTwoTextColumnsOrModuleVideoEmbed {
     ... on SanityModuleScrollySection {
       _key
       _type
