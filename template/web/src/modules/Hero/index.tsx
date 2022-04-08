@@ -9,10 +9,11 @@ import theme from '@/styles/theme'
 
 interface HeroModuleProps extends SanityModuleHero {
   heroTitleString: string
+  color: string
 }
 
 const HeroModule: FC<HeroModuleProps> = (props) => {
-  const { heroTitle, heroImage, heroTitleString } = props
+  const { heroTitle, heroImage, heroTitleString, color } = props
 
   return (
     <Box height="85vh" position="relative">
@@ -23,15 +24,15 @@ const HeroModule: FC<HeroModuleProps> = (props) => {
         maxWidth={theme.containerWidth}
         mx="auto"
         position="absolute"
-        bottom={0}
+        top="50%"
         left="50%"
         style={{
-          transform: 'translateX(-50%)'
+          transform: 'translate(-50%, -50%)'
         }}
       >
         {heroTitle && <RichTextModule text={heroTitle} />}
         {heroTitleString && (
-          <Text variant="head" component="h1">
+          <Text variant="head" component="h1" textAlign="center" color={color}>
             {heroTitleString}
           </Text>
         )}

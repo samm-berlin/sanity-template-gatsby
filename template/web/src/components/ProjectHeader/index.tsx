@@ -17,14 +17,14 @@ const moduleOptionsContainerWide = {
     y: -1
   },
   theme: {
-    theme: 'none',
+    theme: 'dark',
     value: '#00ffe0'
   }
 }
 
 const moduleOptionsContainerNarrow = {
   padding: {
-    container: true,
+    container: false,
     x: [4, '15rem'],
     y: 4
   },
