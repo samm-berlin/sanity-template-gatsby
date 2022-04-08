@@ -71,7 +71,7 @@ const ModuleLoop: FC<SanityContentModules> = ({ modules, ...props }) => {
 export default ModuleLoop
 
 export const query = graphql`
-  fragment ContentModules on SanityModuleFourPathGridOrModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleNewsListMasonryOrModuleRelatedListOrModuleRelationalGridOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleTwoColumnOrModuleTwoTextColumnsOrModuleVideoEmbed {
+  fragment ContentModules on SanityModuleFourPathGridOrModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleNewsListMasonryOrModuleRelatedListOrModuleRelationalGridOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleStatementOrModuleTwoColumnOrModuleTwoTextColumnsOrModuleVideoEmbed {
     ... on SanityModuleRichText {
       _key
       _type
@@ -177,7 +177,7 @@ export const query = graphql`
     }
   }
 
-  fragment ScrollyContentModule on SanityModuleFourPathGridOrModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleNewsListMasonryOrModuleRelatedListOrModuleRelationalGridOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleTwoColumnOrModuleTwoTextColumnsOrModuleVideoEmbed {
+  fragment ScrollyContentModule on SanityModuleFourPathGridOrModuleHeroOrModuleImageOrModuleListingOrModuleMarqueeOrModuleNewsListMasonryOrModuleRelatedListOrModuleRelationalGridOrModuleRichTextOrModuleScrollySectionOrModuleSpacerOrModuleStatementOrModuleTwoColumnOrModuleTwoTextColumnsOrModuleVideoEmbed {
     ... on SanityModuleScrollySection {
       _key
       _type
