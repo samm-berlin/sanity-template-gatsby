@@ -60,6 +60,7 @@ import moduleRelationalGrid from './modules/relationalGrid'
 import moduleRelatedList from './modules/relatedList'
 import moduleNewsListMasonry from './modules/newsListMasonry'
 import moduleFourPathGrid from './modules/fourPathGrid'
+import moduleStatement from './modules/statement'
 
 import scrollyModuleDefaultFields from './modules/scrolly-modules/_defaultFields'
 import scrollyModuleRichText from './modules/scrolly-modules/richText'
@@ -133,6 +134,7 @@ export default createSchema({
     moduleRelatedList,
     moduleNewsListMasonry,
     moduleFourPathGrid,
+    moduleStatement,
 
     /**
       Scrolly Sections
