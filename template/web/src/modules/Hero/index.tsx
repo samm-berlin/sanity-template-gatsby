@@ -9,11 +9,10 @@ import theme from '@/styles/theme'
 
 interface HeroModuleProps extends SanityModuleHero {
   heroTitleString: string
-  color: string
 }
 
 const HeroModule: FC<HeroModuleProps> = (props) => {
-  const { heroTitle, heroImage, heroTitleString, color } = props
+  const { heroTitle, heroImage, heroTitleString } = props
 
   return (
     <Box height="85vh" position="relative">
@@ -32,7 +31,7 @@ const HeroModule: FC<HeroModuleProps> = (props) => {
       >
         {heroTitle && <RichTextModule text={heroTitle} />}
         {heroTitleString && (
-          <Text variant="head" component="h1" textAlign="center" color={color}>
+          <Text variant="head" component="h1" textAlign="center">
             {heroTitleString}
           </Text>
         )}
