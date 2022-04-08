@@ -35,5 +35,10 @@
     "prettier": "^2.5.1",
     "prettier-eslint-cli": "^5.0.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@netlify/functions": "^1.0.0",
+    "algoliasearch": "^4.13.0",
+    "dotenv": "^16.0.0",
+    "sanity-algolia": "^1.0.2"
+  }
 }

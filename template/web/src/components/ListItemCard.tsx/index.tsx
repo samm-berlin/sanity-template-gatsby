@@ -7,17 +7,19 @@ import { graphql, navigate } from 'gatsby'
 import RichText from '@/modules/RichText'
 import styled from 'styled-components'
 import { Slug } from 'web/types/custom-graphql-types'
+import { getUri } from '@/utils/routing'
+import Link from '@/atoms/Link'
 
 interface ListItemCardProps {
   date?: string
   description?: any
   excerpt?: string
   image?: any
-  imageAspectRatio?: string | string[]
+  imageAspectRatio?: string | number
   isHeader?: boolean
   tags?: Tag[]
   title?: string
-  _type?: string // 'jobs' | 'news' | 'search'
+  _type: string // 'jobs' | 'news' | 'search'
   slug?: Slug
   width?: string
 }
@@ -40,32 +42,30 @@ const ListItemCard: FC<ListItemCardProps> = (props) => {
   } = props
 
   const ListItemAsHeader = () => (
-    <Box
-      position="relative"
-      onClick={() => slug && navigate(slug.current)}
-      cursor={slug && 'pointer'}
-    >
-      {image && (
-        <SanityImage
-          image={image}
-          height="100%"
-          loading="lazyLoading"
-          aspectRatio={imageAspectRatio}
-        />
-      )}
-      {title && (
-        <Box
-          display={['none', 'unset']}
-          position="absolute"
-          top="50%"
-          left="50%"
-          transform="translate(-50%, -50%)"
-        >
-          <Text variant="bodyTitle" component="h1" color="white">
-            {title}
-          </Text>
-        </Box>
-      )}
+    <Box position="relative" cursor={slug && 'pointer'}>
+      <Link type="internal" internal={slug ? { slug: slug, _type: _type } : undefined}>
+        {image && (
+          <SanityImage
+            image={image}
+            height="100%"
+            loading="lazyLoading"
+            aspectRatio={imageAspectRatio}
+          />
+        )}
+        {title && (
+          <Box
+            display={['none', 'unset']}
+            position="absolute"
+            top="50%"
+            left="50%"
+            transform="translate(-50%, -50%)"
+          >
+            <Text variant="bodyTitle" component="h1" color="white">
+              {title}
+            </Text>
+          </Box>
+        )}
+      </Link>
     </Box>
   )
 
@@ -74,15 +74,17 @@ const ListItemCard: FC<ListItemCardProps> = (props) => {
       {isHeader ? (
         ListItemAsHeader()
       ) : (
-        <Box onClick={() => slug && navigate(slug.current)} cursor={slug && 'pointer'}>
-          {image && (
-            <SanityImage
-              image={image}
-              height="100%"
-              loading="lazyLoading"
-              aspectRatio={imageAspectRatio}
-            />
-          )}
+        <Box cursor={slug && 'pointer'}>
+          <Link type="internal" internal={slug ? { slug: slug, _type: _type } : undefined}>
+            {image && (
+              <SanityImage
+                image={image}
+                height="100%"
+                loading="lazyLoading"
+                aspectRatio={imageAspectRatio}
+              />
+            )}
+          </Link>
         </Box>
       )}
       {date && (

@@ -16,9 +16,9 @@ const Block = (props: any): JSX.Element | null => {
     h3: 'subhead',
     h4: 'subhead',
     caption: 'caption',
-    p: 'normal',
-    span: 'normal',
-    normal: 'normal'
+    p: 'body',
+    span: 'body',
+    normal: 'body'
   }
   if (props.children) {
     return (
@@ -34,6 +34,7 @@ const Block = (props: any): JSX.Element | null => {
 
 const serializers = {
   types: {
+    richText: (props: any) => <>{JSON.stringify(props)}</>,
     h1: (props: any) => <Text as="h1" variant="head" {...props} />,
     h2: (props: any) => <Text as="h2" variant="head" {...props} />,
     h3: (props: any) => <Text as="h3" variant="subhead" {...props} />,
@@ -65,20 +66,22 @@ export const RichTextBlockContent: FC<any> = ({ text }) => (
 
 const RichTextModule: FC<any> = ({ text }) => (
   <Box style={{ textAlign: text.alignment }}>
-    <RichTextBlockContent text={text} />
+    <RichTextBlockContent text={text.text || text} />
   </Box>
 )
 
 export default RichTextModule
 
 export const query = graphql`
-  fragment RichTextData on SanityRichTextExtended {
-    alignment
+  fragment OnlyRichTextData on SanityRichText {
     textRaw: _rawText(resolveReferences: { maxDepth: 6 })
   }
 
-  fragment OnlyRichTextData on SanityRichText {
-    textRaw: _rawText(resolveReferences: { maxDepth: 6 })
+  fragment RichTextData on SanityRichTextExtended {
+    alignment
+    text {
+      textRaw: _rawText(resolveReferences: { maxDepth: 6 })
+    }
   }
 
   fragment moduleRichTextData on SanityModuleRichText {

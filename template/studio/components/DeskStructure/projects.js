@@ -30,11 +30,21 @@ export default S.listItem()
         S.documentTypeListItem('project')
           .title('All Projects')
           .icon(ProjectsIcon)
-          .child((documentId) =>
-            S.document()
-              .documentId(documentId)
+          .child((id) =>
+            S.documentList()
+              .title('All Projects')
               .schemaType('project')
-              .views(PreviewsStructure(resolvePreviewUrl))
+              .filter('_type == "project"')
+              .params({ id })
+              .menuItems([
+                ...S.documentTypeList('project').getMenuItems(),
+              ])
+              .child((documentId) =>
+                S.document()
+                  .documentId(documentId)
+                  .schemaType('project')
+                  .views(PreviewsStructure(resolvePreviewUrl))
+              )
           ),
 
         S.listItem()

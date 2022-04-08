@@ -29,6 +29,7 @@ interface Props
   children?: React.ReactNode | void
   transition?: string
   transform?: string
+  aspectRatio?: string | number
   cursor?: string
 }
 
@@ -37,7 +38,8 @@ const Box = styled('div')<Props>(
   system({
     transition: true,
     transform: true,
-    cursor: true
+    cursor: true,
+    aspectRatio: true
   })
 )
 
