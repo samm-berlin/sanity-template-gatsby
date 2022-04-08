@@ -1,34 +1,33 @@
 import algoliasearch from 'algoliasearch'
 import sanityClient from '@sanity/client'
 import indexer from 'sanity-algolia'
-require("dotenv").config()
+require('dotenv').config()
 
-const algolia = algoliasearch(
-  process.env.ALGOLIA_APPLICATION_ID,
-  process.env.ALGOLIA_ADMIN_API_KEY
-);
+const algolia = algoliasearch(process.env.ALGOLIA_APPLICATION_ID, process.env.ALGOLIA_ADMIN_API_KEY)
 const sanity = sanityClient({
   projectId: process.env.GATSBY_SANITY_PROJECT_ID,
   dataset: process.env.GATSBY_SANITY_DATASET,
   // If your dataset is private you need to add a read token.
   // You can mint one at https://manage.sanity.io,
   // token: "read-token",
-  apiVersion: "2022-04-07",
-  useCdn: false,
-});
+  apiVersion: '2022-04-07',
+  useCdn: false
+})
 
 export default function handler(req, res) {
   // Tip: Its good practice to include a shared secret in your webhook URLs and
   // validate it before proceeding with webhook handling. Omitted in this short
   // example.
-  if (req.headers["content-type"] !== "application/json") {
-    res.status(400);
-    res.json({ message: "Bad request" });
-    return;
+
+  console.log('HALLO')
+  if (req.headers['content-type'] !== 'application/json') {
+    res.status(400)
+    res.json({ message: 'Bad request' })
+    return
   }
 
   // Configure this to match an existing Algolia index name
-  const algoliaIndex = algolia.initIndex("samm-boiler-index")
+  const algoliaIndex = algolia.initIndex('samm-boiler-index')
 
   const sanityAlgolia = indexer(
     // The first parameter maps a Sanity document type to its respective Algolia
@@ -48,7 +47,7 @@ export default function handler(req, res) {
         "path": slug.current,
         excerpt,
         tags,
-      }`,
+      }`
       },
       projects: {
         index: algoliaIndex,
@@ -57,17 +56,17 @@ export default function handler(req, res) {
         "path": slug.current,
         excerpt,
         tags,
-      }`,
-      },
+      }`
+      }
     },
     // The second parameter is a function that maps from a fetched Sanity document
     // to an Algolia Record. Here you can do further mutations to the data before
     // it is sent to Algolia.
     (document) => {
       switch (document._type) {
-        case "news":
+        case 'news':
           return document
-        case "project":
+        case 'project':
           return document
         default:
           return document
@@ -75,7 +74,5 @@ export default function handler(req, res) {
     }
   )
 
-  return sanityAlgolia
-    .webhookSync(sanity, req.body)
-    .then(() => res.status(200).send("ok"))
+  return sanityAlgolia.webhookSync(sanity, req.body).then(() => res.status(200).send('ok'))
 }
