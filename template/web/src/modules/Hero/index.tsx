@@ -2,29 +2,44 @@ import React, { FC } from 'react'
 import { graphql } from 'gatsby'
 import { SanityModuleHero } from 'web/types/graphql-types'
 import Box from '@/atoms/Box'
+import Text from '@/atoms/Text'
 import RichTextModule from '@/modules/RichText'
 import SanityImage from '@/atoms/SanityImage'
 import theme from '@/styles/theme'
 
-const HeroModule: FC<SanityModuleHero> = ({ heroTitle, heroImage }) => (
-  <Box height="85vh" position="relative">
-    <SanityImage image={heroImage} />
-    <Box
-      p={4}
-      width="100%"
-      maxWidth={theme.containerWidth}
-      mx="auto"
-      position="absolute"
-      bottom={0}
-      left="50%"
-      style={{
-        transform: 'translateX(-50%)'
-      }}
-    >
-      {heroTitle && <RichTextModule text={heroTitle} />}
+interface HeroModuleProps extends SanityModuleHero {
+  heroTitleString: string
+  color: string
+}
+
+const HeroModule: FC<HeroModuleProps> = (props) => {
+  const { heroTitle, heroImage, heroTitleString, color } = props
+
+  return (
+    <Box height="85vh" position="relative">
+      <SanityImage image={heroImage} />
+      <Box
+        p={4}
+        width="100%"
+        maxWidth={theme.containerWidth}
+        mx="auto"
+        position="absolute"
+        top="50%"
+        left="50%"
+        style={{
+          transform: 'translate(-50%, -50%)'
+        }}
+      >
+        {heroTitle && <RichTextModule text={heroTitle} />}
+        {heroTitleString && (
+          <Text variant="head" component="h1" textAlign="center" color={color}>
+            {heroTitleString}
+          </Text>
+        )}
+      </Box>
     </Box>
-  </Box>
-)
+  )
+}
 
 export default HeroModule
 

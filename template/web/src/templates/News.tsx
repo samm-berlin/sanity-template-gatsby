@@ -21,6 +21,9 @@ export default NewsPage
 export const query = graphql`
   query ($id: String!) {
     news: sanityNews(id: { eq: $id }) {
+      _id
+      _key
+      _type
       title
       keyVisual {
         ...ImageWithPreview

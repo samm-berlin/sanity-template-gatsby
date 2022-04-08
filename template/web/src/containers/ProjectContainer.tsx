@@ -1,15 +1,21 @@
 import React, { FC } from 'react'
-import { SanityProject } from 'web/types/graphql-types'
 import ModulesLoop from '@/modules'
+import { Project } from 'web/types/custom-graphql-types'
+import Box from '@/atoms/Box'
+import ProjectHeader from '@/components/ProjectHeader'
 
-interface ProjectProps {
-  project: SanityProject
+interface ProjectContainerProps {
+  project: Project
 }
-const ProjectContainer: FC<ProjectProps> = ({
-  project: { title, meta, contentModules },
-  ...props
-}) => {
-  return <ModulesLoop modules={contentModules?.modules} />
+const ProjectContainer: FC<ProjectContainerProps> = (props) => {
+  const { project } = props
+
+  return (
+    <Box>
+      <ProjectHeader project={project} />
+      <ModulesLoop modules={project.contentModules?.modules} />
+    </Box>
+  )
 }
 
 export default ProjectContainer

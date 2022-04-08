@@ -2,26 +2,36 @@ import { graphql } from 'gatsby'
 import React, { FC } from 'react'
 import Layout from '@/containers/Layout'
 import ProjectContainer from '@/containers/ProjectContainer'
-import { SanityProject } from 'web/types/graphql-types'
+import { Project } from 'web/types/custom-graphql-types'
 
 interface ProjectProps {
   data: {
-    project: SanityProject
+    project: Project
   }
 }
 
-const Project: FC<ProjectProps> = ({ data: { project }, ...props }) => (
+const ProjectPage: FC<ProjectProps> = ({ data: { project: SanityProject } }) => (
   <Layout>
-    <ProjectContainer project={project} />
+    <ProjectContainer project={SanityProject} />
   </Layout>
 )
 
-export default Project
+export default ProjectPage
 
 export const query = graphql`
   query ($id: String!) {
     project: sanityProject(id: { eq: $id }) {
+      _id
+      _key
+      _type
       title
+      keyVisual {
+        ...ImageWithPreview
+      }
+      excerpt
+      tags {
+        ...tagsData
+      }
       seoSettings {
         ...seoSettingsData
       }

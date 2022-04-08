@@ -68,3 +68,17 @@ export type News = {
   keyVisual?: any
   contentModules?: SanityContentModules
 }
+
+export type Project = {
+  _id?: string
+  _type?:  string
+  _key?: string
+  title: string
+  slug: Slug
+  seoSettings?: SeoSettings
+  tags?: Tag[]
+  excerpt?: string
+  featuredImage?: any
+  keyVisual?: any
+  contentModules?: SanityContentModules
+}
