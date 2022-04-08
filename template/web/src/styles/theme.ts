@@ -11,6 +11,7 @@ export default {
     text: '#000',
     background: 'rgba(1,1,1,0)',
     grey: '#E4E4E4',
+    lightGrey: '#BFBFBF',
     black: '#000',
     white: '#fff'
   },

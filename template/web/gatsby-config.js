@@ -28,7 +28,14 @@ module.exports = {
 
     'gatsby-plugin-typescript',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-react-svg',
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /\.inline\.svg$/
+        }
+      }
+    },
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-graphql-codegen',
@@ -60,7 +67,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sitemap'
     },
-    `gatsby-plugin-gatsby-cloud`,
+    'gatsby-plugin-gatsby-cloud',
     'gatsby-plugin-netlify'
   ]
 }
