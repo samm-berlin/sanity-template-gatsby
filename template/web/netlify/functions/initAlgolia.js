@@ -3,10 +3,10 @@ const sanityClient = require('@sanity/client')
 const indexer = require('sanity-algolia').default
 require('dotenv').config()
 
-const algolia = algoliasearch(process.env.ALGOLIA_APPLICATION_ID, process.env.ALGOLIA_ADMIN_API_KEY)
+const algolia = algoliasearch('71VEX14UR3', 'e5ba4d816b7b3195f7f63548de4c7b12')
 const sanity = sanityClient({
-  projectId: process.env.GATSBY_SANITY_PROJECT_ID,
-  dataset: process.env.GATSBY_SANITY_DATASET,
+  projectId: '8mrvczjr',
+  dataset: 'production',
   // If your dataset is private you need to add a read token.
   // You can mint one at https://manage.sanity.io,
   // token: "read-token",
@@ -33,19 +33,30 @@ const sanityAlgolia = indexer(
     news: {
       index: algoliaIndex,
       projection: `{
+        date,
+        "image": featuredImage,
         title,
-        "path": slug.current,
+        slug,
+        _type,
         excerpt,
-        tags,
+        "tags": tags[]->{
+          _type,
+          title
+        }
       }`
     },
     projects: {
       index: algoliaIndex,
       projection: `{
         title,
-        "path": slug.current,
+        "image": featuredImage,
+        _type,
+        slug,
         excerpt,
-        tags,
+        "tags": tags[]->{
+          _type,
+          title
+        },
       }`
     }
   },
@@ -54,21 +65,13 @@ const sanityAlgolia = indexer(
   // it is sent to Algolia.
   (document) => {
     switch (document._type) {
-      case 'news':
-        return Object.assign({}, document, {
-          custom: 'A custom field'
-        })
-      case 'project':
-        return {
-          title: document.title
-        }
       default:
         return document
     }
   }
 )
 
-const types = ['news', 'jobs', 'project']
+const types = ['news', 'jobs', 'projects']
 const quqery = '* [_type in $types && !(_id in path("drafts.**"))][]._id'
 
 sanity.fetch(quqery, { types }).then((ids) =>
