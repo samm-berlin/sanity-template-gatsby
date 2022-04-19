@@ -20,14 +20,18 @@ const IconBox = styled(Box)`
   background-size: contain;
 `
 
+const StyledForm = styled.form`
+  width: 100%;
+`
+
 const iconBoxSize = [
   theme.fontSizes[textVariants.head.fontSize[0]],
   theme.fontSizes[textVariants.head.fontSize[1]]
 ]
 
 const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
-  <Box borderBottom="1px solid black" pb="1" display="inline-flex">
-    <form noValidate action="" role="search">
+  <Box borderBottom="1px solid black" pb="1" display="inline-flex" width="100%">
+    <StyledForm noValidate action="" role="search">
       <Input
         variant="head"
         width="100%"
@@ -36,7 +40,7 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
         value={currentRefinement}
         onChange={(event) => refine(event.currentTarget.value)}
       />
-    </form>
+    </StyledForm>
     <IconBox
       width={iconBoxSize}
       height={iconBoxSize}
@@ -52,10 +56,21 @@ const CustomSearchBox = connectSearchBox(SearchBox)
 
 const Hits = ({ hits }) => {
   return (
-    <Box display="flex" flexDirection="row" flexWrap="wrap">
-      {hits.map((hit) => (
-        <Box width="calc(100% / 3)" key={hit._key}>
-          <ListItemCard {...hit} />
+    <Box display="flex" flexDirection="row" flexWrap="wrap" my="4" justifyContent="space-between">
+      {hits.map((hit, index) => (
+        <Box
+          width={[
+            '100%',
+            index % 3 === 1
+              ? `calc(100% / 3 - ${theme.space[2]})`
+              : `calc(100% / 3 - 2 * ${theme.space[2]})`
+          ]}
+          key={hit._key}
+          pl={[0, index % 3 === 0 ? 0 : 2]}
+          pr={[0, index % 3 === 2 ? 0 : 2]}
+          mb={[4, 4]}
+        >
+          <ListItemCard {...hit} imageAspectRatio="1.3" />
         </Box>
       ))}
     </Box>

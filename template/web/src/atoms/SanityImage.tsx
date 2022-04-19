@@ -46,8 +46,14 @@ const IMG = styled(SImage)<Props>(
   })
 )
 
-const SanityImage: FC<Props> = ({ image, loading, objectFit }) => (
-  <IMG {...image} width={4096} loading={loading} objectFit={objectFit || 'cover'} />
+const SanityImage: FC<Props> = ({ image, loading, objectFit, aspectRatio }) => (
+  <IMG
+    {...image}
+    width={4096}
+    loading={loading}
+    objectFit={objectFit || 'cover'}
+    aspectRatio={aspectRatio}
+  />
 )
 
 export default SanityImage
