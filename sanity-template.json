@@ -1,6 +1,7 @@
 {
-  "version": 1,
+  "version": 2,
   "title": "SAMM starter template for netlify and gatsby",
+  "description": "You will find fantastic posibilites to kickstart you website here.",
   "technologies": [
     {
       "id": "netlify",
