@@ -41,6 +41,7 @@ export type Category = {
 }
 
 export type Tag = {
+  _type:  'tag'
   title: string
 }
 
