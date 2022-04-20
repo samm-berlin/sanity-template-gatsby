@@ -1,72 +1,57 @@
 {
-  "version": 0,
-  "title": "Kitchen Sink",
-  "description": "Our ever-evolving feature-rich demonstration studio.",
-  "previewMedia": {
-    "type": "image",
-    "src": "assets/frontend.png",
-    "alt": "A screenshot of the example Gatsby frontend"
-  },
-  "technologies": [{
-      "id": "gatsby",
-      "name": "Gatsby",
-      "url": "https://www.gatsbyjs.org/"
-    },
+  "version": 1,
+  "title": "SAMM starter template for netlify and gatsby",
+  "technologies": [
     {
       "id": "netlify",
       "name": "Netlify",
       "url": "https://www.netlify.com/"
-    }
-  ],
-  "deployments": [{
-      "id": "studio",
-      "type": "studio",
-      "title": "Sanity Studio",
-      "description": "The Sanity Studio is where you edit and structure your content.",
-      "dir": "./studio",
-      "provider": {
-        "name": "netlify",
-        "config": {
-          "base": "/",
-          "dir": "/studio/dist",
-          "cmd": "npm run build-studio && cp studio/netlify.toml studio/dist"
-        },
-        "requirements": ["build-hook"]
-      },
-      "previewMedia": {
-        "type": "image",
-        "src": "assets/studio.png",
-        "alt": "A preview image of the Sanity Studio."
-      }
     },
     {
-      "id": "web",
-      "type": "web",
-      "title": "Marketing Website",
-      "description": "A simple frontend showcasing page building and a blog.",
-      "dir": "./web",
-      "requiredTokens": [{
-        "role": "deploy-studio",
-        "label": "GraphQL API Deployer"
-      }],
-      "provider": {
-        "name": "netlify",
-        "config": {
-          "base": "/",
-          "dir": "/web/public",
-          "cmd": "npm run build-web"
+      "id": "gatsby",
+      "name": "Gatsby",
+      "url": "https://www.gatsbyjs.com/"
+    }
+  ],
+  "deployment": {
+    "provider": "netlify",
+    "sites": [
+      {
+        "id": "studio",
+        "type": "studio",
+        "title": "Sanity Studio",
+        "description": "The Sanity Studio is where you edit and structure your content.",
+        "dir": "./studio",
+        "previewMedia": {
+          "type": "image",
+          "src": "assets/studio.png",
+          "alt": "A preview image of the Sanity Studio."
+        },
+        "buildSettings": {
+          "base": "studio",
+          "dir": "dist",
+          "cmd": "yarn build && cp netlify.toml dist"
         },
         "requirements": ["build-hook"]
       },
-      "previewMedia": {
-        "type": "image",
-        "src": "assets/frontend.png",
-        "alt": "A preview image of the frontend"
-      },
-      "requiredCorsOrigins": [{
-        "origin": "http://localhost:8000",
-        "allowCredentials": false
-      }]
-    }
-  ]
+      {
+        "id": "web",
+        "type": "web",
+        "title": "SAMM Netlify Gatsby Boiler",
+        "description": "S",
+        "dir": "./web",
+        "previewMedia": {
+          "type": "image",
+          "src": "assets/frontend.png",
+          "alt": "A preview image of the webpage."
+        },
+        "buildSettings": {
+          "base": "web",
+          "dir": "public",
+          "cmd": "yarn build"
+        },
+        "requirements": ["build-hook"]
+      }
+    ]
+  }
 }
